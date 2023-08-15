@@ -1,0 +1,27 @@
+<template>
+    <div class="py-16 px-2 bg-white">
+        <div style="min-height: 450px;" class="flex flex-col lg:flex-row gap-4 md:gap-0 max-w-xl lg:max-w-none w-full md:w-10/12 shadow-md rounded-xl overflow-hidden mx-auto border">
+            
+            <div class="w-full !bg-cover lg:w-6/12" style="min-height: 400px; background: url('/images/home/mail-section.jpeg') no-repeat top;"></div>
+            
+            <div class="mx-auto w-full lg:w-6/12">
+                <div class="flex flex-col md:justify-center gap-12 py-6 lg:py-0 px-8 h-full ">
+                    <h6 class="text-lg md:text-2xl font-bold break-word">Profitez de conseils avisés pour réaliser des économies d'énergie</h6>
+                    
+                    <p>Interviews d'experts · Astuces · Actualités</p>
+                    
+                    <form class="flex lg:flex-row flex-col gap-4">
+                        <input type="email" placeholder="Votre adresse mail*" required class="p-4 rounded-md">
+                        <input type="submit" value="Je M'abonne" class="uppercase px-6 py-4 rounded-full text-white bg-slate-700 font-bold shadow">
+                    </form>
+                    
+                    <span class="text-xs">Soyez tranquille, vous pouvez vous désabonner de notre newsletter à tout instant !</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+* { /* border:1px solid */ }
+</style>
