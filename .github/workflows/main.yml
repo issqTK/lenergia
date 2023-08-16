@@ -30,6 +30,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-
 
+      - name: install
+        run: npm ci
+      - name: npm install
+        run: npm install
+      - name: build
+        run: npm run build --if-present
+
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
@@ -39,4 +46,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: public_html/
+          server-dir: /
