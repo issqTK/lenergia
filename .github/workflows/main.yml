@@ -16,10 +16,20 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.1
-      
-      - name: Copy .env file
-        run: |
-          cp .env.ci .env
+    
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.8
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          key: ${{ runner.OS }}-npm-cache-${{ hashFiles('package-lock.json') }}
+          path: |
+            ~/.cache
+            node_modules
+            packages/${{ matrix.adapter }}/tests/node_modules
 
       - name: Cache Composer packages
         id: composer-cache
@@ -30,9 +40,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-
 
-      - run: npm ci
-      - run: npm run build --if-present
+      - name: Copy .env file
+        run: |
+          cp .env.ci .env
 
+      - name: Build Inertia
+        run: |
+          npm install
+          cd packages/core && npm run build
+          cd ../${{ matrix.adapter }} && npm run build
+
+      - name: Build Playground
+        run: |
+          cd playgrounds/${{ matrix.adapter }} && npm run build
+          
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
