@@ -13,7 +13,8 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return Inertia::render('test');
+    Artisan::call('migrate:refresh');
+    return 'success';
 });
 
 Route::get('/dashboard', function () {
