@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - uses: actions/setup-node@master
 
       - name: Setup PHP
@@ -46,13 +46,8 @@ jobs:
 
       - name: Build Inertia
         run: |
-          npm install
-          cd packages/core && npm run build
-          cd ../${{ matrix.adapter }} && npm run build
-
-      - name: Build Playground
-        run: |
-          cd playgrounds/${{ matrix.adapter }} && npm run build
+          npm ci
+          npm run build --if-present
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
