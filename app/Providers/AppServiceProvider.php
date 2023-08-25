@@ -12,9 +12,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-       /*  if(config('app.env') === 'production') {
+        if(config('app.env') === 'production') {
             \URL::forceScheme('https');
-        } */
+        }
     }
 
     /**
