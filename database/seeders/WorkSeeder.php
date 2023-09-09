@@ -119,7 +119,7 @@ class WorkSeeder extends Seeder
                     'svg' => 'Murs-extérieur.png',
                     'img' => null,
                     'img_alt' => null,
-                    'title' => 'Tout savoir sur l\'isolation des murs par l\'intérieur',
+                    'title' => 'Tout savoir sur l\'isolation des murs par l\'extérieur',
                     'description' => 'Sans une isolation appropriée, votre maison peut être vulnérable aux intempéries, laissant entrer l\'humidité et les courants d\'air, entraînant des problèmes d\'humidité et de moisissures. Il est donc primordial de prendre des mesures pour isoler efficacement vos murs extérieurs afin de créer un intérieur confortable, sain et économe en énergie.',
                     'slug' => 'isolation-extérieur',
                     'meta_title' => 'isolation extérieur : isolation mur extérieur le guide complet, fonctionnement, prix .. ',

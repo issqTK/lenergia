@@ -11,19 +11,19 @@
         <!-- Show & Hide nav -->
         <div class="lg:hidden cursor-pointer text-center" style="width:30px">
             <i  class="fa-solid fa-bars text-black text-2xl" 
-                @click="showingNavigation=true" v-show="!showingNavigation"></i>
+                @click="showNav" v-show="!showingNavigation"></i>
             
             <i  class="fa-solid fa-xmark text-black text-2xl" 
                 @click="showingNavigation=false" v-show="showingNavigation"></i>
         </div>
 
         <!-- Navigation -->
-        <div class="absolute lg:static flex-1 z-10 h-full"
-            style="top:70px; transition: all 800ms ease-in-out"
+        <div id="mobile-nav" class="absolute lg:static flex-1 z-10 h-full w-full"
+            style="top:95px; transition: all 800ms ease-in-out"
             :style="showingNavigation ? 'right:0' : 'right:-100%'">
 
             <!-- lg less -->
-            <div class="relative bg-white lg:hidden flex flex-col gap-6 p-6 min-h-screen w-full ">
+            <div class="relative bg-white lg:hidden flex flex-col gap-6 p-6 min-h-screen w-full border">
                 <!-- primary nav -->
                 <ul class="flex flex-col gap-4 font-semibold">
                     <!-- Nos Offres -->
@@ -45,10 +45,10 @@
 
                             <div class="flex flex-col ">
                                 <h3 class="uppercase text-gray-500">Les Travaux</h3>
-                                <li><Link :href="route('intermediate', 'isolation-maison')" class="ins-link"><img src="/images/illustration/isolation_global.png" style="max-height: 30px;">Isolation globale</Link></li>
-                                <li><Link :href="route('landing', 'panneaux-solaires-photovoltaiques')" class="ins-link"><img src="/images/illustration/Panneaux_Photovoltaïques.png" style="max-height: 30px;">Panneaux photovoltaïques</Link></li>
-                                <li><Link :href="route('landing', 'pompe-à-chaleur')" class="ins-link"><img src="/images/illustration/pompe-a-chaleur.png" style="max-height: 30px;">Pompe à chaleur</Link></li>
-                                <li><Link :href="route('landing', 'système-solaire-combiné')" class="ins-link"><img src="/images/illustration/collaboration.png" style="max-height: 30px;">Système solaire combiné</Link></li>
+                                <li><Link @click="showingNavigation=false;" :href="route('intermediate', 'isolation-maison')" class="ins-link"><img src="/images/illustration/isolation_global.png" style="max-height: 30px;">Isolation globale</Link></li>
+                                <li><Link @click="showingNavigation=false;" :href="route('landing', 'panneaux-solaires-photovoltaiques')" class="ins-link"><img src="/images/illustration/Panneaux_Photovoltaïques.png" style="max-height: 30px;">Panneaux photovoltaïques</Link></li>
+                                <li><Link @click="showingNavigation=false;" :href="route('landing', 'pompe-à-chaleur')" class="ins-link"><img src="/images/illustration/pompe-a-chaleur.png" style="max-height: 30px;">Pompe à chaleur</Link></li>
+                                <li><Link @click="showingNavigation=false;" :href="route('landing', 'système-solaire-combiné')" class="ins-link"><img src="/images/illustration/collaboration.png" style="max-height: 30px;">Système solaire combiné</Link></li>
                             </div>
 
                             <div class="flex flex-col ">
@@ -78,7 +78,7 @@
                             <div class="flex flex-col ">
                                 <h3 class="uppercase text-gray-500">Énergie Solaire</h3>
                                 <li v-for="(work, i) in esWorks" :key="i">
-                                    <Link :href="route('landing',work.slug)" class="ins-link !flex gap-2 items-center">
+                                    <Link @click="showingNavigation=false;" :href="route('landing',work.slug)" class="ins-link !flex gap-2 items-center">
                                         <img :src="'/images/illustration/' + work.svg" :alt="work.img_alt" class="w-6">
                                         {{work.name}}
                                     </Link>
@@ -88,7 +88,7 @@
                             <div class="flex flex-col ">
                                 <h3 class="uppercase text-gray-500">Isolation</h3>
                                 <li v-for="work in iWorks" :key="work.id">
-                                    <Link :href="route('landing',work.slug)" class="ins-link !flex gap-2 items-center">
+                                    <Link @click="showingNavigation=false;" :href="route('landing',work.slug)" class="ins-link !flex gap-2 items-center">
                                         <img :src="'/images/illustration/' + work.svg" :alt="work.img_alt" class="w-6">
                                         {{work.name}}
                                     </Link>
@@ -98,7 +98,7 @@
                             <div class="flex flex-col ">
                                 <h3 class="uppercase text-gray-500">Chauffage</h3>
                                 <li v-for="work in chWorks" :key="work.id">
-                                    <Link :href="route('landing',work.slug)" class="ins-link !flex gap-2 items-center">
+                                    <Link @click="showingNavigation=false;" :href="route('landing',work.slug)" class="ins-link !flex gap-2 items-center">
                                         <img :src="'/images/illustration/' + work.svg" :alt="work.img_alt" class="w-6">
                                         {{work.name}}
                                     </Link>
@@ -119,7 +119,7 @@
                 <!-- buttons -->
                 <div class="flex flex-col gap-4">
                     <div >
-                        <Link v-if="$page.props.auth.user == null" :href="route('login')" class="m-auto table font-semibold py-5 px-12 rounded-full border shadow uppercase" >
+                        <Link v-if="$page.props.auth.user == null" :href="route('login')" class="m-auto table font-semibold px-9 py-4  rounded-full border shadow uppercase" >
                             <i class="fa-solid fa-circle-user mr-2 text-lg leading-4 align-middle" style="color: #73efa6;"></i>
                             Se Connecter
                         </Link>
@@ -285,6 +285,16 @@ export default {
         window.removeEventListener('scroll', this.handleScroll);
     },
     methods : {
+        showNav() {
+            const mobileNav = document.getElementById('mobile-nav');
+
+            if(window.scrollY >= 96)
+                mobileNav.classList.add('top-less')
+            else if(mobileNav.classList.contains('top-less'))
+                mobileNav.classList.remove('top-less')
+
+            this.showingNavigation=true;
+        },
         handleScroll() {
             if(window.scrollY >= 96) {
                 document.getElementById('navigation').classList.add('!h-16');
@@ -292,14 +302,17 @@ export default {
                 document.querySelectorAll('.interior').forEach((item) => {
                     item.classList.add('!top-16')
                 });
+
+                document.getElementById('mobile-nav').classList.add('top-less');
             }
             else {
                 document.getElementById('navigation').classList.remove('!h-16');
                 document.getElementById('solair-lg-plus-i').style.left = '130px';
                 document.querySelectorAll('.interior').forEach((item) => {
                     item.classList.remove('!top-16');
-                })
+                });
 
+                document.getElementById('mobile-nav').classList.remove('top-less');
             }    
         },
         fakeHeight() {
@@ -319,7 +332,9 @@ export default {
 </script>
 
 <style scoped>
-*{ box-sizing: border-box;}
+*{ box-sizing: border-box; }
+
+.top-less{top: 63px!important;}
 
 .fix-top{
     position: fixed;

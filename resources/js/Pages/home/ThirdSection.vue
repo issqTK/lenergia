@@ -6,7 +6,7 @@
 
     <p class="text-xl text-center mx-4">Nos conseillers experts vous guident de A à Z pour la réussite de votre projet.</p>
 
-    <div class="flex flex-col md:flex-row p-8 gap-8 sm:px-20 ">
+    <div class="flex flex-col md:flex-row px-4 py-8 gap-8 sm:px-20 ">
         <!-- img -->
         <div class="w-full h-36 h-96 md:w-7/12 rounded-md" style="background: url('/images/home/section3.jpg') no-repeat center center;"></div>
 

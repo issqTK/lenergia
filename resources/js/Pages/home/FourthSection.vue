@@ -1,10 +1,10 @@
 <template>
-    <div class="relative w-full md:w-10/12 px-8 py-16 mx-auto">
+    <div class="relative w-full md:w-10/12 px-4 py-16 mx-auto">
         <h2 class="text-4xl font-extrabold text-center mb-8">Avis de nos clients</h2>
         
         <div class="mb-8 flex flex-col gap-2 mx-auto" style="max-width: 550px;">
             <img src="/images/home/5Start_slate.png" alt="4 start" style="width: 150px; margin: auto;">
-            <p class="font-bold text-xl"><span style="color: #ff9000;">«</span>&nbsp;L'energia a fait un travail extraordinaire ! La qualité du service était impeccable, l'équipe était très sympathique et le résultat final a dépassé mes attentes.Je les recommande chaleureusement.&nbsp;<span style="color: #ff9000;">»</span></p>
+            <p class="font-bold text-lg break-words text-center md:text-xl"><span style="color: #ff9000;">«</span>&nbsp;L'energia a fait un travail extraordinaire ! La qualité du service était impeccable, l'équipe était très sympathique et le résultat final a dépassé mes attentes.Je les recommande chaleureusement.&nbsp;<span style="color: #ff9000;">»</span></p>
             <span>Nicolas D.</span>
             <span>le 03/06/2023</span>
         </div>

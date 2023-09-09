@@ -4,27 +4,25 @@
 
         <p class="text-xl text-center mb-16 mx-4 ">Des services conçus pour vous :</p>
 
-        <div class="relative flex flex-wrap justify-center gap-8
-                    py-12 px-4 md:mx-6
-                    bg-gradient-to-b to-slate-50 from-slate-100 md:rounded-xl ">
+        <div class="relative flex flex-wrap justify-center gap-8 py-12 px-4 md:mx-6 bg-gradient-to-b to-slate-50 from-slate-100 md:rounded-xl ">
            
             <!-- nav --> <!-- #b9f8d3 green ; #ffd0b6 pink ; #a8ecff blue -->
             <div class="absolute grid grid-cols-3 -top-16 md:-top-12   w-11/12 lg:w-10/12  ">
                 <a @click.prevent="showContent('solair')"
                     :style="solair ? 'background-color:#a8ecff' : ''"
-                    class="flex flex-col md:flex-row gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500">
+                    class="flex flex-col md:flex-row gap-0 md:gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500">
                     <img class="w-14 h-14" src="/images/illustration/solaire_icon.png" alt="Passer au solaire">
                     <span class="flex-1 text-center md:text-left">Branchez-vous sur le soleil</span>
                 </a>
                 <a @click.prevent="showContent('chauffage')" 
                     :style="chauffage ? 'background-color:#ffd0b6' : ''"
-                    class="flex flex-col md:flex-row gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500">
+                    class="flex flex-col md:flex-row gap-0 md:gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500">
                     <img class="w-14 h-14" src="/images/illustration/chauffage_icon.png" alt="Changer mon chauffage"> 
                     <span class="flex-1 text-center md:text-left">Chauffez-vous proprement</span>
                 </a>
                 <a @click.prevent="showContent('isolation')"
                     :style="isolation ? 'background-color: #b9f8d3' : ''"
-                    class="flex flex-col md:flex-row gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500">
+                    class="flex flex-col md:flex-row gap-0 md:gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500">
                     <img class="w-14 h-14" src="/images/illustration/isolation_icon.png" alt="Isoler ma maison"> 
                     <span class="flex-1 text-center md:text-left">Limiter les déperditions thermiques</span>
                 </a>
