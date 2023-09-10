@@ -54,9 +54,9 @@
 
                             <p class="text-center mt-3">Réaliser jusqu'à 60 % d'économies sur vos coûts énergétiques. </p>
 
-                            <a :href="route('parcour')" class="m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all">
+                            <Link :href="route('intermediate', 'passer-solaire')" class="text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all">
                                 JE PASSE AU SOLAIRE
-                            </a>
+                            </Link>
                         </div>
 
                     </div>
@@ -79,8 +79,9 @@
                                 <li>Distribution homogène de la chaleur</li>
                             </ul>
 
-                            
-                            <btnDevis class="text-xs text-center" text="J'INSTALLE UNE PAC"></btnDevis>
+                            <Link :href="route('intermediate', 'chauffage-maison')" class="text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all">
+                                J'INSTALLE UNE PAC
+                            </Link>
                         </div>
 
                     </div>
@@ -101,7 +102,10 @@
                                 <li>Faibles émissions</li>
                             </ul>
 
-                            <btnDevis class="text-xs text-center" text="J'INSTALLE UNE CHAUDIÈRE"></btnDevis>
+                            <Link :href="route('intermediate', 'chauffage-maison')" class="text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all">
+                                J'INSTALLE UNE CHAUDIÈRE
+                            </Link>
+
                         </div>
 
                     </div>
@@ -118,7 +122,9 @@
                             
                             <p class="leading-6 text-md">Chaleur efficace et combustible écologique, faites des économies d'énergie en optant pour un poêle à granulés.</p>
 
-                            <btnDevis class="text-xs text-center" text="JE CHOISIS MON CHAUFFAGE"></btnDevis>
+                            <Link :href="route('intermediate', 'chauffage-maison')" class="text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all">
+                                JE CHOISIS MON CHAUFFAGE
+                            </Link>
                         </div>
 
                     </div>
@@ -138,10 +144,11 @@
                                 <li class="mb-2">Capacité d'adaptation lors de l'installation</li>
                                 <li>Performance tout au long de l'année</li>
                             </ul>
-                            
-                            <a :href="route('parcour')" class="m-auto text-teal-500 hover:text-white text-center text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all">
+
+                            <Link :href="route('intermediate', 'chauffage-maison')" class="text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all">
                                 J'INSTALLE UN CHAUFFE-EAU
-                            </a>
+                            </Link>
+                            
                         </div>
 
                     </div>
@@ -161,8 +168,10 @@
                             <p class="leading-6">
                                 L'isolation des murs assure un confort accru, prévient les pertes d'énergie et permet des économies significatives
                             </p>
-
-                            <btnDevis class="text-xs text-center" text="J'ISOLE MES MURS"></btnDevis>
+                            
+                            <Link :href="route('intermediate', 'isolation-maison')" class="text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all">
+                                J'ISOLE MES MURS
+                            </Link>
                         </div>
 
                     </div>

@@ -71,7 +71,7 @@
                     <div v-for="work in chWorks" :key="work.id" class="flex flex-col gap-4 mb-6 py-4">
                         <h3 class="flex gap-4 p-4 items-center font-bold text-xl" :ref="work.name">
                             <img class="w-12" :src="'/images/illustration/'+work.svg" :alt="work.img_alt">
-                            {{ work.tile }}
+                            {{ work.title }}
                         </h3>
 
                         <div class="relative">

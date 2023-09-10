@@ -106,14 +106,6 @@
                             </div>
                         </ul>
                     </li>
-                    <!-- Actualités -->
-                    <li>
-                        <a  href="javascript:void(0)"
-                            class="flex flex-1 justify-between items-center p-2 active:px-4 rounded-md transition-all bg-gradient-to-r active:from-white active:to-green-100"
-                        >
-                            Actualités
-                        </a>
-                    </li>
                 </ul>
                 
                 <!-- buttons -->
@@ -223,8 +215,17 @@
                             </div>
                         </ul>
                     </li>
-                    <!-- Actualités -->
-                    <li class="show-interior"><a href="javascript:void(0)" class="link">Actualités</a></li>                    
+                    <!-- Découvrez-nous -->
+                    <li class="show-interior">
+                        <a href="javascript:void(0)" class="link">Découvrez-nous</a>
+                        <ul class="absolute bg-white flex flex-col p-8 rounded border-t-4 shadow border-green-300 interior" style="left:450px">
+                            <i id="decouvre-lg-plus-i" class="fa-solid fa-caret-up text-green-300 text-3xl absolute" style="top:-23px;left:90px"></i>
+                            <li><a href="javascript:void(0)" class="text-black">Nos offres de travaux</a></li>
+                            <li><a href="javascript:void(0)" class="text-black">Qui sommes-nous ?</a></li>
+                            <li><a href="javascript:void(0)" class="text-black">Nous Contacter</a></li>
+
+                        </ul>
+                    </li>
                 </ul>
 
                 <!--  -->
@@ -299,6 +300,7 @@ export default {
             if(window.scrollY >= 96) {
                 document.getElementById('navigation').classList.add('!h-16');
                 document.getElementById('solair-lg-plus-i').style.left = '50px';
+                document.getElementById('decouvre-lg-plus-i').style.left = '30px';
                 document.querySelectorAll('.interior').forEach((item) => {
                     item.classList.add('!top-16')
                 });
@@ -308,6 +310,7 @@ export default {
             else {
                 document.getElementById('navigation').classList.remove('!h-16');
                 document.getElementById('solair-lg-plus-i').style.left = '130px';
+                document.getElementById('decouvre-lg-plus-i').style.left = '90px';
                 document.querySelectorAll('.interior').forEach((item) => {
                     item.classList.remove('!top-16');
                 });
