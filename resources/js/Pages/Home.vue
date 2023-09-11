@@ -94,7 +94,7 @@ export default {
     }
     #header{
         min-height: 120vh;
-        background-image: url("./images/home/head-page.jpg");
+        background-image: url("/images/home/head-page.jpg");
         background-repeat: no-repeat ;
         background-size: cover;
         background-position: center;
