@@ -21,33 +21,33 @@
 
         <!-- header nav -->
         <div class="absolute bottom-0 flex flex-wrap p-2 lg:p-4 gap-2 lg:gap-4 justify-center lg:justify-center bg-gradient-to-r from-slate-50 to-slate-100 w-full lg:w-11/12 lg:rounded-tr-3xl">
-            <Link :href="route('parcour', 'panneaux-solaires-photovoltaiques')" class="relative solaire-parent p-2 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
-                <img class="w-12 h-12 z-10" src="/images/illustration/solaire_icon.png" alt="Passer au solaire">
-                <span class="font-bold capitalize text-slate-900 z-10">Passer au solaire</span>
+            <Link :href="route('parcour', 'panneaux-solaires-photovoltaiques')" class="relative solaire-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
+                <img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/solaire_icon.png" alt="Passer au solaire">
+                <span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10">Passer au solaire</span>
                 <span class="solaire-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"></span>
             </Link>
 
-            <Link :href="route('parcour', 'pompe-à-chaleur')" class="relative chauffage-parent p-2 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
-                <img class="w-12 h-12 z-10" src="/images/illustration/chauffage_icon.png" alt="Changer mon chauffage">
-                <span class="font-bold capitalize text-slate-900 z-10">Changer mon chauffage</span>
+            <Link :href="route('parcour', 'pompe-à-chaleur')" class="relative chauffage-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
+                <img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/chauffage_icon.png" alt="Changer mon chauffage">
+                <span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10">Changer mon chauffage</span>
                 <span class="chauffage-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"></span>
             </Link>
             
-            <Link :href="route('parcour')" class="relative isolation-parent p-2 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
-                <img class="w-12 h-12 z-10" src="/images/illustration/isolation_icon.png" alt="Isoler ma maison">
-                <span class="font-bold capitalize text-slate-900 z-10">Isoler ma maison</span>
+            <Link :href="route('parcour')" class="relative isolation-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
+                <img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/isolation_icon.png" alt="Isoler ma maison">
+                <span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10">Isoler ma maison</span>
                 <span class="isolation-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"></span>
             </Link>
            
-            <a href="javascript:void(0)" class="relative calcule-parent p-2 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
-                <img class="w-12 h-12 z-10" src="\images\illustration/calcule_icon.png" alt="Calculer prime & aides">
-                <span class="font-bold capitalize text-slate-900 z-10">Calculer prime & aides</span>
+            <a href="javascript:void(0)" class="relative calcule-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
+                <img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="\images\illustration/calcule_icon.png" alt="Calculer prime & aides">
+                <span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10">Calculer prime & aides</span>
                 <span class="calcule-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"></span>
             </a>
             
-            <a href="javascript:void(0)" class="relative bilan-parent p-2 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
-                <img class="w-12 h-12 z-10" src="/images/illustration/bilan_icon.png" alt="Mon bilan énergétique">
-                <span class="font-bold capitalize text-slate-900 z-10">Mon bilan énergétique*</span>
+            <a href="javascript:void(0)" class="relative bilan-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden">
+                <img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/bilan_icon.png" alt="Mon bilan énergétique">
+                <span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10">Mon bilan énergétique*</span>
                 <span class="bilan-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"></span>
             </a>
         </div>
