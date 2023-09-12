@@ -19,7 +19,7 @@ export default {
         </div>
     </div>
     
-    <footer v-if="!route().current('parcour')"  class="w-full bg-slate-500 text-slate-50 pb-8 border-t-4 border-white">
+    <footer v-if="!route().current('parcour')"  class="w-full bg-slate-500 text-slate-50 pb-8 border-t-4 border-white mt-8">
         <div class="flex flex-col md:flex-row items-center md:mb-4 mb-8">
             <img src="/images/logo-light.png" class="h-48" alt="">
             <h6 class="text-2xl md:text-3xl text-center flex-1">n°1 de la rénovation énergétique en ligne</h6>

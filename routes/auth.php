@@ -22,7 +22,7 @@ Route::middleware('guest')->group(function () {
 
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
-    //Route::redirect('register', 'login');
+    Route::redirect('register', 'login');
 
     Route::redirect('forgot-password', 'login');
 
