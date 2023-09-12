@@ -1,5 +1,5 @@
 <template>
-    <h3 class="text-xl md:text-2xl font-extrabold text-center mb-6">Dernière étape : entrer votre email</h3>
+    <h3 class="text-xl md:text-2xl font-extrabold text-center mb-6">Entrer votre email</h3>
     <p class="text-center mb-6">Vous bénéficierez de notre service mailing et serez accompagner dans votre projet.</p>
 
     <div class="flex flex-col gap-2 md:w-10/12 m-auto">

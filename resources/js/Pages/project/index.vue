@@ -50,7 +50,7 @@
                 <span class="font-semibold capitalize">retour</span>
             </div>
 
-            <div >
+            <div>
                 <LogementType 
                     v-if="this.current == 'type'"
                     @LogementType="getLogementType" 
@@ -83,9 +83,50 @@
                     @energie-type="getEnergieType"
                 ></EnergieType>
 
+                <!-- Personal infos -->
+                <utilisateurStatut  v-if="this.current == 'userStatut'"
+                    :UtilisateurStatus = this.FormData.UtilisateurStatus
+                    @utilisateur-status = getUtilisateurStatus
+                ></utilisateurStatut>
+
+                <menageComposition v-if="this.current == 'menageCompos'"
+                    :menageComposition = this.FormData.MenageComposition
+                    @update:modelValue= getMenageComposition
+                ></menageComposition>
+
+                <menageRevenus v-if="this.current == 'menageReven'" 
+                    :menageRevenus = this.FormData.MenageRevenus
+                    @menage-revenus = getMenageRevenue
+                ></menageRevenus>
+
+                <utilisateurIdentite v-if="this.current == 'utilisateurIdentite'"
+                    :firstName = this.FormData.Client.FirstName
+                    :lastName = this.FormData.Client.LastName
+                    :gender = this.FormData.Client.Gender
+                    :error = this.errors_text
+                    @update:first-name = getFirstName
+                    @update:last-name = getLastName
+                    @gender-value = getGender
+                ></utilisateurIdentite>
+
+                <utilisateurTelephone v-if="this.current == 'utilisateurTelephone'"
+                :phoneNumber = this.FormData.Client.PhoneNumber
+                :error = "this.errors_text"
+                :getNext="getNext"
+                @phone-number= getPhoneNumber
+                ></utilisateurTelephone>
+
+                <utilisateurEmail v-if="this.current == 'utilisateurEmail'"
+                    :eMail = this.FormData.Client.EMail
+                    :error = this.errors_text
+                    :getNext="getNext"
+                    @e-mail = getEmail
+                ></utilisateurEmail>
+
                 <!-- Votre Projet -->
                 <selectTravaux v-if="this.current == 'travaux'"
                     :worksIds = "this.FormData.TravauxIds"
+                    :currentWork = "this.currentWork"
                     @works-ids = "getWorksIds"
                 ></selectTravaux>
 
@@ -98,7 +139,6 @@
                 
                 <KilowattsPerYear v-if="this.current == 'kilowattsPerYear'" 
                     :modelValue="this.FormData.kilowattsPerYear"
-                    :error="errors_text"
                     :getNext="getNext"
                     @update:modelValue="getKilowattsPerYear"
                 ></KilowattsPerYear>
@@ -160,7 +200,6 @@
                    @espace-exterieur = "getEspaceExterieur"
                 ></spaceExterior>
 
-                <!--  -->
                 <statusProject v-if="this.current == 'statusProjet'"
                     :statusProject = this.FormData.StatusProject
                     @status-project = getStatusProject
@@ -172,46 +211,6 @@
                     :getNext="getNext"
                     @update:modelValue = getTravauxAdresse
                 ></travauxAddress>
-
-                <!-- Personal infos -->
-                <utilisateurStatut  v-if="this.current == 'userStatut'"
-                    :UtilisateurStatus = this.FormData.UtilisateurStatus
-                    @utilisateur-status = getUtilisateurStatus
-                ></utilisateurStatut>
-
-                <menageComposition v-if="this.current == 'menageCompos'"
-                    :menageComposition = this.FormData.MenageComposition
-                    @update:modelValue= getMenageComposition
-                ></menageComposition>
-
-                <menageRevenus v-if="this.current == 'menageReven'" 
-                    :menageRevenus = this.FormData.MenageRevenus
-                    @menage-revenus = getMenageRevenue
-                ></menageRevenus>
-
-                <utilisateurIdentite v-if="this.current == 'utilisateurIdentite'"
-                    :firstName = this.FormData.Client.FirstName
-                    :lastName = this.FormData.Client.LastName
-                    :gender = this.FormData.Client.Gender
-                    :error = this.errors_text
-                    @update:first-name = getFirstName
-                    @update:last-name = getLastName
-                    @gender-value = getGender
-                ></utilisateurIdentite>
-
-                <utilisateurTelephone v-if="this.current == 'utilisateurTelephone'"
-                :phoneNumber = this.FormData.Client.PhoneNumber
-                :error = "this.errors_text"
-                :getNext="getNext"
-                @phone-number= getPhoneNumber
-                ></utilisateurTelephone>
-
-                <utilisateurEmail v-if="this.current == 'utilisateurEmail'"
-                    :eMail = this.FormData.Client.EMail
-                    :error = this.errors_text
-                    :getNext="getNext"
-                    @e-mail = getEmail
-                ></utilisateurEmail>
 
                 <!-- done -->
 
@@ -226,6 +225,7 @@
 
             <!-- button next -->
             <div v-if="this.current != 'done'" id="fakeButton"></div>
+
             <div v-if="this.current != 'done'" class="fixed w-full py-4 bg-slate-100 flex left-0 bottom-0 md:left-1/4 md:w-9/12" ref="nextButton"> 
                 <a v-if="errors == false" 
                     @click="getNext" 
@@ -238,7 +238,6 @@
                 </a>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -273,7 +272,7 @@ import RoofType from '@/Pages/project/Work/RoofType.vue';
 import RoofOrientation from '@/Pages/project/Work/RoofOrientations.vue';
 
 export default {
-    props: ['params'],
+    props: ['currentWork'],
     layout:GuestLayout,
     components: {
         Head,
@@ -382,7 +381,7 @@ export default {
         getLogementEnergie(value) {
             if (value == 'Chauffage au fioul' || value == 'Chauffage électrique' || value == 'Chauffage au gaz')
                 this.next = 'typeEnergie';
-            else this.next = 'travaux';
+            else this.next = 'userStatut';
 
             this.FormData.LogementEnergie = value;
             this.getNext();
@@ -488,7 +487,7 @@ export default {
     mounted() { 
         this.fakeHeight();
 
-        if(this.params != null) this.FormData.TravauxIds.push(this.params)
+        if(this.currentWork != null) this.FormData.TravauxIds.push(this.currentWork.id)
     },
     updated() {
         // Logements
@@ -518,7 +517,7 @@ export default {
 
             if (value == 'Chauffage au fioul' || value == 'Chauffage électrique' || value == 'Chauffage au gaz') 
                 this.next = 'typeEnergie';
-            else this.next = 'travaux';
+            else this.next = 'userStatut';
 
             this.previous = 'surface';            
         }
@@ -526,9 +525,72 @@ export default {
             if(this.FormData.LogementEnergieType == '') this.errors = true;
             else this.errors = false;
 
-            this.next = 'travaux';
+            this.next = 'userStatut';
             this.previous = 'energie'
         } 
+        // Client infos
+        else if(this.current == 'userStatut') {
+            this.next = 'menageCompos';
+            this.previous = 'energie';
+        }
+        else if(this.current == 'menageCompos') {
+            this.previous = 'userStatut';
+            this.next = 'menageReven';
+        }
+        else if(this.current == 'menageReven') {
+            this.previous = 'menageCompos';
+            this.next = 'utilisateurIdentite';
+        }
+        else if(this.current == 'utilisateurIdentite') {
+            if(this.FormData.Client.FirstName == '') {
+                this.errors_text = 'Le prénom est requis';
+                this.errors = true;
+            } else if(this.FormData.Client.LastName == '') {
+                this.errors_text = 'Le nom est requis';
+                this.errors = true;                
+            } else if(this.FormData.Client.Gender == '') {
+                this.errors_text = 'Sélectionner le genre';
+                this.errors = true;                
+            } else {
+                this.errors_text = '';
+                this.errors = false;                                
+            }
+
+            this.previous = 'menageReven';
+            this.next = 'utilisateurTelephone';
+        }
+        else if(this.current == 'utilisateurTelephone') {
+            if(this.FormData.Client.PhoneNumber == '') {
+                this.errors_text = 'Le numero de téléphone est requis!';
+                this.errors = true;
+            } 
+            else if(this.FormData.Client.PhoneNumber.length < 10)
+                this.errors = true;
+            else {
+                this.errors_text = '';
+                this.errors = false;
+            }
+
+            this.previous = 'utilisateurIdentite';
+            this.next = 'utilisateurEmail';
+        }
+        else if(this.current == 'utilisateurEmail') {
+            if(this.FormData.Client.EMail == '') {
+                this.errors_text = 'Adresse mail est requis!';
+                this.errors = true;
+            }
+            else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.FormData.Client.EMail)){
+                this.errors_text = 'Adresse mail n\'est pas valide!';
+                this.errors = true;
+            }
+            else {
+                this.errors_text = '';
+                this.errors = false;
+            }
+
+            this.previous = 'utilisateurTelephone';
+            this.next = 'travaux';
+        }
         // Project
         else if(this.current == 'travaux') {
             if(this.FormData.TravauxIds.length == 0) this.errors = true;
@@ -541,7 +603,7 @@ export default {
             else if (this.FormData.TravauxIds.includes(5)) this.next = 'surfaceChauffee';
             else this.next = 'statusProjet';
 
-            this.previous = 'energie';
+            this.previous = 'utilisateurEmail';
         }
         else if(this.current == 'electricityBill') {
             if(this.FormData.currentElectricityBill.length == 0) {
@@ -557,14 +619,6 @@ export default {
 
         }
         else if(this.current == 'kilowattsPerYear') {
-            if(this.FormData.kilowattsPerYear.length == 0) {
-                this.errors_text = 'Ce champ est obligatoire';
-                this.errors = true;
-            } else {
-                this.errors_text = '';
-                this. errors = false;
-            }
-
             this.previous = 'electricityBill';
             this.next = 'taxIncome';
 
@@ -688,72 +742,8 @@ export default {
                 this. errors = false;
             }
 
-            this.next = 'userStatut';
-            this.previous = 'statusProjet';
-        }
-        // Client infos
-        else if(this.current == 'userStatut') {
-            this.next = 'menageCompos';
-            this.previous = 'travauxAdresse';
-        }
-        else if(this.current == 'menageCompos') {
-            this.previous = 'userStatut';
-            this.next = 'menageReven';
-
-        }
-        else if(this.current == 'menageReven') {
-            this.previous = 'menageCompos';
-            this.next = 'utilisateurIdentite';
-        }
-        else if(this.current == 'utilisateurIdentite') {
-            if(this.FormData.Client.FirstName == '') {
-                this.errors_text = 'Le prénom est requis';
-                this.errors = true;
-            } else if(this.FormData.Client.LastName == '') {
-                this.errors_text = 'Le nom est requis';
-                this.errors = true;                
-            } else if(this.FormData.Client.Gender == '') {
-                this.errors_text = 'Sélectionner le genre';
-                this.errors = true;                
-            } else {
-                this.errors_text = '';
-                this.errors = false;                                
-            }
-
-            this.previous = 'menageReven';
-            this.next = 'utilisateurTelephone';
-        }
-        else if(this.current == 'utilisateurTelephone') {
-            if(this.FormData.Client.PhoneNumber == '') {
-                this.errors_text = 'Le numero de téléphone est requis!';
-                this.errors = true;
-            } 
-            else if(this.FormData.Client.PhoneNumber.length < 10)
-                this.errors = true;
-            else {
-                this.errors_text = '';
-                this.errors = false;
-            }
-
-            this.previous = 'utilisateurIdentite';
-            this.next = 'utilisateurEmail';
-        }
-        else if(this.current == 'utilisateurEmail') {
-            if(this.FormData.Client.EMail == '') {
-                this.errors_text = 'Adresse mail est requis!';
-                this.errors = true;
-            }
-            else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.FormData.Client.EMail)){
-                this.errors_text = 'Adresse mail n\'est pas valide!';
-                this.errors = true;
-            }
-            else {
-                this.errors_text = '';
-                this.errors = false;
-            }
-
-            this.previous = 'utilisateurTelephone';
             this.next = 'done';
+            this.previous = 'statusProjet';
         }
         else if(this.current == 'done') {
             if(this.request == true) {

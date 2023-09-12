@@ -7,7 +7,6 @@
         
         <input type="number" id="Kilowatts" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" @keyup.enter="getNext" class="rounded"/>
 
-        <span class="text-red-400">{{error}}</span>
     </div>
     
 </template>
@@ -15,8 +14,6 @@
 <script>
 export default {
   emits:['update:modelValue'],
-  props:['modelValue', 'error', 'getNext'],  
-  methods: {
-  }
+  props:['modelValue', 'getNext'],  
 }
 </script>

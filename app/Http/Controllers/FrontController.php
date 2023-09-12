@@ -35,15 +35,17 @@ class FrontController extends Controller
     }
 
     public function getJourney($params = null) {
+        $currentWork = null;
+
         if($params != null) {
             $work = Work::where('slug', $params)->first();
         
             if(!$work) return redirect()->route('notFound');
         
-            else { $params = $work->id; }
+            else { $currentWork = $work; }
         }
 
-        return Inertia::render('project/index', ['params' => $params ]);
+        return Inertia::render('project/index', ['currentWork' => $currentWork ]);
     }
 
     public function saveJourney(Request $request) {

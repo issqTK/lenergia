@@ -8,14 +8,12 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-});
+Route::get('/', function () { return Inertia::render('Home'); });
 
-Route::get('/test', function () {
+/* Route::get('/test', function () {
     Artisan::call('migrate:refresh');
     return 'success';
-});
+}); */
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
