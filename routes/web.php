@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\mailController;
+
 
 
 Route::get('/', function () { return Inertia::render('Home'); });
@@ -14,6 +16,8 @@ Route::get('/', function () { return Inertia::render('Home'); });
     Artisan::call('migrate:refresh');
     return 'success';
 }); */
+
+Route::get('/view-mail-content', function() { return view('increasingSolution'); });
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -38,19 +42,22 @@ Route::middleware('auth')->group(function () {
     
     Route::post('/review-state/{idOrder}', [OrderController::class, 'reviewState']);
 
+    /*  */
+
+    Route::get('/send-mails', [mailController::class, 'index'])->name('increasingSolution');
+
 });
 
 Route::get('/parcour/{params?}', [FrontController::class, 'getJourney'])->name('parcour');
 
 Route::post('/parcour', [FrontController::class, 'saveJourney']);
 
-require __DIR__.'/auth.php';
-
 Route::inertia('/404', '404')->name('notFound');
 
-
-
 Route::get('/projet/{slug}',[FrontController::class, 'intermediatePage'])->where(['slug' => '[a-z0-9-àâçéèêëîïôûùüÿñ]+'])->name('intermediate');
+
+require __DIR__.'/auth.php';
+
 Route::get('/{slug}',[FrontController::class, 'landingPage'])->where(['slug' => '[a-z0-9-àâçéèêëîïôûùüÿñ]+'])->name('landing');
 
 
