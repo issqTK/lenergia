@@ -14,7 +14,7 @@ class mailController extends Controller
 {
     public function index() {
 
-        if(Auth::user()->type == 1) {
+        if(Auth::user()) {
             $subject = 'Augmentation de votre facture d\'électricité de 10% - Voici une solution intéressante !';
 
             //$mailAdresses = MailAdress::first();
