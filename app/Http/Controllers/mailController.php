@@ -17,13 +17,15 @@ class mailController extends Controller
         if(Auth::user()->type == 1) {
             $subject = 'Augmentation de votre facture d\'électricité de 10% - Voici une solution intéressante !';
 
-            $mailAdresses = MailAdress::all();
+            //$mailAdresses = MailAdress::first();
 
-            foreach($mailAdresses AS $mailAdr) {
+            Mail::to('eltakiissam@gmail.com')->send(new increasingSolution($subject, 'Taki Issam'));
+
+            /* foreach($mailAdresses AS $mailAdr) {
                 Mail::to($mailAdr->mailAdress)->send(new increasingSolution($subject, $mailAdr->name));
                 
                 sleep(2);
-            }
+            } */
 
             echo '<div class="text-center py-36 text-xl">Les mails ont bien été envoyé</div>';
 
