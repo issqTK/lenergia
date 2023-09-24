@@ -23,14 +23,14 @@
 
             #content {}
 
-            #separate{ display:block; background-color:#1e1e1e; height: 15px; }
+            #separate{ display:block; background-color:#1e1e1e; height: 15px; border-radius:5px}
 
             #content > div { background:white; width:96%; margin:auto; padding:25px;}
 
-            #content > div > p { text-align: justify; letter-spacing: .2px; padding: 15px; line-height: 30px; font-size: .9em; }
+            #content > div > p { text-align: justify; letter-spacing: .2px; padding: 8px; line-height: 30px; font-size: 1em; }
             #content > div > p span { display:block ;margin-bottom:20px}
 
-            #content > div > p a { color:#0284c7 }
+            #content > div > p a { color:#0284c7; text-decoration:none; }
 
             #visit{ display:table; margin: 25px auto ;padding:15px 25px; color:white; background-color:#0284c7; text-decoration:none; text-transform:uppercase; font-size:.9em }
 
@@ -40,8 +40,9 @@
             
             .img-socieux:last-child{ margin-right:0; }
 
-            .foot-link { color:white; font-size:.9em; padding: 0 8px; border-right:1px solid }
+            .foot-link { color:white; font-size:.9em; padding: 0 8px; text-decoration:none; border-right:1px solid }
             .foot-link:last-child { padding-right: 0; border-right: 0 }
+            .footer-merci{ font-size: 1.2em }
         </style>
     </head>
   
@@ -75,7 +76,7 @@
                                         <span>Je voulais simplement partager cette idée avec vous, car cela pourrait être une opportunité intéressante pour réduire vos coûts d'électricité.</span>
                                         <span>Si vous souhaitez en savoir plus sur <strong>l'énergie solaire</strong> ou si vous avez des questions à ce sujet, n'hésitez pas à nous contacter. </span>
                                         <span>Je serais ravi de vous fournir plus d'informations ou de vous mettre en relation avec un expert en la matière, </span>
-                                        <span>Ou bien, <a href="https://lenergia.fr/" >VISITEZ NOTRE SITE</a> pour plus de renseignement.</span>
+                                        <span>Ou bien, <a href="https://lenergia.fr/" ><strong>VISITEZ NOTRE SITE</strong></a> pour plus de renseignement.</span>
                                     </p>
 
 
@@ -91,7 +92,7 @@
 
     <table id="footer">
         <tr>
-            <td colspan="2">MERCI POUR VOTRE SOUTIEN 😍</td>
+            <td colspan="2"><strong class="footer-merci">MERCI POUR VOTRE SOUTIEN 😍</strong></td>
         </tr>
         <tr>
             <td colspan="2"><hr></td>
