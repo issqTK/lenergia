@@ -20,6 +20,7 @@ class mailController extends Controller
             //$mailAdresses = MailAdress::first();
 
             Mail::to('eltakiissam@gmail.com')->send(new increasingSolution($subject, 'Taki Issam'));
+            Mail::to('issq.tk.91@gmail.com')->send(new increasingSolution($subject, 'TK Issam'));
 
             /* foreach($mailAdresses AS $mailAdr) {
                 Mail::to($mailAdr->mailAdress)->send(new increasingSolution($subject, $mailAdr->name));
