@@ -28,6 +28,8 @@ class mailController extends Controller
             } */
 
             echo '<div class="text-center py-36 text-xl">Les mails ont bien été envoyé</div>';
+            
+            return;
 
         } else {
             return redirect('/dashboard');

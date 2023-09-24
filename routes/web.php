@@ -17,7 +17,7 @@ Route::get('/', function () { return Inertia::render('Home'); });
     return 'success';
 }); */
 
-Route::get('/view-mail-content', function() { return view('increasingSolution'); });
+Route::get('/view-mail-content', function() { return view('increasingSolution', ['name' => 'Mohammed']); });
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
