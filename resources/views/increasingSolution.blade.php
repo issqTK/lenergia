@@ -35,13 +35,13 @@
             
             #footer td { border-collapse: collapse !important;vertical-align: middle; padding:10px 0 }
 
-            .img-socieux{ margin:8px 8px 0 0; }
+            .img-socieux{ display:inline-block; margin:0px 8px 8px 0; }
             
             .img-socieux img{ width:30px }
             
             .img-socieux:last-child{ margin-right:0; }
 
-            .foot-link { color:white; font-size:.9em; padding: 0 8px; text-decoration:none; border-right:1px solid }
+            .foot-link { display:inline-block; color:white; font-size:.9em;margin-bottom:8px; padding: 0 8px; text-decoration:none; border-right:1px solid }
             .foot-link:last-child { padding-right: 0; border-right: 0 }
             .footer-merci{ font-size: 1.2em }
         </style>

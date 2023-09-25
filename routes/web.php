@@ -12,11 +12,6 @@ use App\Http\Controllers\mailController;
 
 Route::get('/', function () { return Inertia::render('Home'); });
 
-/* Route::get('/test', function () {
-    Artisan::call('migrate:refresh');
-    return 'success';
-}); */
-
 Route::get('/view-mail-content', function() { return view('increasingSolution', ['name' => 'Mohammed']); });
 
 Route::get('/dashboard', function () {
@@ -43,8 +38,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/review-state/{idOrder}', [OrderController::class, 'reviewState']);
 
     /*  */
+    Route::get('/mailer', [mailController::class, 'viewMailer'])->name('mailer');
 
     Route::get('/send-mails', [mailController::class, 'index'])->name('increasingSolution');
+
+    Route::get('/delete', [mailController::class, 'delete'])->name('delete');
+    
+    Route::post('create-new', [mailController::class, 'createNew']);
 
 });
 

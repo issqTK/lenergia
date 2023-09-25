@@ -42,6 +42,7 @@ class HandleInertiaRequests extends Middleware
             'works' => Work::all(),
             'flash' => [
                 'message' => fn () => $request->session()->get('message'),
+                'otherMSG' => fn () => $request->session()->get('otherMSG'),
                 'error' => fn () => $request->session()->get('error')
             ],
         ]);

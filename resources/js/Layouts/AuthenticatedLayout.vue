@@ -35,6 +35,9 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('orders')" :active="route().current('orders')">
                                     Commandes
                                 </NavLink>
+                                <NavLink v-if="$page.props.auth.user.type == 1" :href="route('mailer')" :active="route().current('mailer')">
+                                    Mailer
+                                </NavLink>
                             </div>
                         </div>
 
