@@ -18,7 +18,5 @@
     </head>
     <body class="font-sans antialiased bg-slate-100 transition-all">
         @inertia
-        <div class="bg-white fixed left-0 right-0 top-0 bottom-0 z-50 " style="background:url(/images/blocking.png);background-size:cover">
-        </div>
     </body>
 </html>
