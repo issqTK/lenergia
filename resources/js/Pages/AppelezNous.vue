@@ -1,12 +1,34 @@
 <template>
-    <div class="hidden md:flex gap-2 absolute right-16 top-4 w-96 h-14 text-slate-700 text-sm bg-gradient-to-r from-white to-slate-200 shadow rounded-lg leading-4 p-2">
-        <span class="grow">
-            <span class="font-bold text-base text-teal-600">Appelez-nous !</span> 
-            <br> du lundi au vendredi - 8h à 19h
-        </span>
+    <div class="absolute right-8 top-8 sm:right-12 sm:top-12 md:top-16 md:right-16 flex justify-center items-center gap-3 ">
+        <div class="absolute opacity-0 -right-60 w-60 bg-amber-200 p-2 overflow-hidden transition-all rounded-l-xl"
+            :class= "{ '!right-16 !opacity-100' : appel_label === true}"
+            >
+            <span class="grow">
+                <span class="font-bold text-base text-amber-500">Appelez-nous!</span>
+                <br />
+                <span class="text-white font-bold text-sm">du lundi au vendredi - 8h à 19h</span>
+            </span>
+        </div>
 
-        <div class="w-4/12 border flex justify-center items-center cursor-pointer text-slate-50 bg-slate-500 hover:shadow-lg hover:bg-slate-100 hover:text-slate-900 rounded-bl-full rounded-tr-full font-bold">
-            <a class="block" href="tel:0587878787">Appeler</a>
+        <div class="z-10">
+            <a class="flex justify-center items-center h-16 w-16 bg-amber-400 text-white font-bold rounded-full" 
+            :class= "{ 'rounded-l-none' : appel_label === true}"
+            href="tel:0985408779"
+            @mouseover.prevent="appel_label=true" 
+            @mouseleave.prevent="appel_label=false" 
+            >
+            
+            Appeler</a>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            appel_label: false
+        }
+    }
+}
+</script>
