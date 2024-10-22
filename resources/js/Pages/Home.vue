@@ -3,13 +3,13 @@
 
     <FirstS></FirstS>
 
-   <!--  <seconde_section></seconde_section>
+    <seconde_section></seconde_section>
 
     <third_section></third_section>
 
     <fourth_section></fourth_section>
 
-    <mail_section></mail_section> -->
+    <mail_section></mail_section>
 </template>
 
 <script>
