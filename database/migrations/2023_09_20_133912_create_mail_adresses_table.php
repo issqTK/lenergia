@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mail_adresses', function (Blueprint $table) {
-            #DB::statement('SET SESSION sql_require_primary_key=0');
+            DB::statement('SET SESSION sql_require_primary_key=0');
             $table->id();
             $table->string('name')->nullable();
             $table->string('mailAdress');

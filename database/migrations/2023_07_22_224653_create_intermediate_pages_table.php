@@ -14,7 +14,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('intermediate_pages', function (Blueprint $table) {
-            #DB::statement('SET SESSION sql_require_primary_key=0');
+            DB::statement('SET SESSION sql_require_primary_key=0');
             $table->id();
             $table->string('slug');
             $table->string('title');

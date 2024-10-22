@@ -14,7 +14,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('personal_access_tokens', function (Blueprint $table) {
-            #DB::statement('SET SESSION sql_require_primary_key=0');
+            DB::statement('SET SESSION sql_require_primary_key=0');
             $table->id();
             $table->morphs('tokenable');
             $table->string('name');
