@@ -1,0 +1,67 @@
+<template>
+    <div class="flex flex-col items-center gap-4 py-16 bg-white">
+        <h2 class="text-2xl md:text-4xl font-extrabold text-center mx-4">
+            Une équipe dévouée pour vous assurer<br class="hidden md:block" />
+            un chantier en toute tranquillité.
+        </h2>
+
+        <span class="h-2 w-12 bg-green-200 rounded-full"></span>
+
+        <p class="text-xl text-center mx-4">
+            Nos conseillers experts vous guident de A à Z pour la réussite de
+            votre projet.
+        </p>
+
+        <div class="flex flex-col md:flex-row px-4 py-8 gap-8 sm:px-20">
+            <!-- img -->
+            <div class="w-full h-36 h-96 md:w-7/12 rounded-md" style="
+                    background: url('/images/home/section3.jpg') no-repeat
+                        center center;
+                "></div>
+
+            <!-- items -->
+            <div class="grid grid-cols-2 w-full md:w-5/12 gap-4 text-sm md:text-md lg:text-base">
+                <div class="flex flex-col !justify-start gap-2">
+                    <img src="/images/illustration/1_section3.png" alt="Des conseillers à votre écoute"
+                        class="w-16 h-16" />
+                    <h6 class="font-bold">
+                        Nos conseillers sont à votre disposition
+                    </h6>
+                    <p class="text-gray-700">
+                        du lundi au vendredi, de 8h à 19h, pour répondre à vos
+                        besoins.
+                    </p>
+                </div>
+                <div class="flex flex-col !justify-start gap-2">
+                    <img src="/images/illustration/2_section3.png" alt="Des conseillers à votre écoute"
+                        class="w-16 h-16" />
+                    <h6 class="font-bold">
+                        Des experts qualifiés en rénovation
+                    </h6>
+                    <p class="text-gray-700">
+                        Maintenant leur expertise à jour avec les avancées du
+                        secteur.
+                    </p>
+                </div>
+                <div class="flex flex-col justify-start gap-2">
+                    <img src="/images/illustration/3_section3.png" alt="Des conseillers à votre écoute"
+                        class="w-16 h-16" />
+                    <h6 class="font-bold">Un accompagnement personnalisé</h6>
+                    <p class="text-gray-700">
+                        Nos conseils sont spécialement conçus pour s'adapter aux
+                        caractéristiques de votre logement.
+                    </p>
+                </div>
+                <div class="flex flex-col !justify-start gap-2">
+                    <img src="/images/illustration/4_section3.png" alt="Des conseillers à votre écoute"
+                        class="w-16 h-16" />
+                    <h6 class="font-bold">Simplifiez vos démarches</h6>
+                    <p class="text-gray-700">
+                        Une assistance personnalisée pour bénéficier de la Prime
+                        et MaPrimeRenov'
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

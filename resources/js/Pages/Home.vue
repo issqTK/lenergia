@@ -3,11 +3,11 @@
 
     <FirstS></FirstS>
 
-    <seconde_section></seconde_section>
+    <SecondeS></SecondeS>
 
-    <third_section></third_section>
+    <ThirdS></ThirdS>
 
-    <fourth_section></fourth_section>
+    <FourthS></FourthS>
 
     <mail_section></mail_section>
 </template>
@@ -17,19 +17,19 @@ import { Head } from '@inertiajs/vue3';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 
 import FirstS from '@/Pages/home/FirstS.vue';
-import seconde_section from '@/Pages/home/secondeSection.vue';
-import third_section from './home/ThirdSection.vue';
-import fourth_section from './home/FourthSection.vue';
-import mail_section from './home/MailSection.vue';
+import SecondeS from '@/Pages/home/SecondeS.vue';
+import ThirdS from '@/Pages/home/ThirdS.vue';
+import FourthS from '@/Pages/home/FourthS.vue';
+import mail_section from '@/Pages/home/MailSection.vue';
 
 export default {
     layout: GuestLayout,
     components: {
         Head,
         FirstS,
-        seconde_section,
-        third_section,
-        fourth_section,
+        SecondeS,
+        ThirdS,
+        FourthS,
         mail_section,
     },
 }

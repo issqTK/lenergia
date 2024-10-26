@@ -9,9 +9,5 @@ class Work extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'type',
-        'name',
-        'nav_svg',
-    ];
+    protected $fillable = [];
 }

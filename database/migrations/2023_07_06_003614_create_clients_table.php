@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('gender');
             $table->string('phone');
             $table->string('email');
+            $table->string('codePostal')->nullable();
             $table->timestamps();
         });
     }

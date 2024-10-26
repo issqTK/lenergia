@@ -58,6 +58,7 @@ class FrontController extends Controller
                 'gender' => $request->Client['Gender'],
                 'phone' => $request->Client['PhoneNumber'],
                 'email' => $request->Client['EMail'],
+                'codePostal' => $request->Client['CodePostal'],
             ]);
 
 
@@ -69,8 +70,6 @@ class FrontController extends Controller
             'logementEnergie' => $request->LogementEnergie,
             'logementEnergieType' => $request->LogementEnergieType,
             'currentElectricityBill' => $request->currentElectricityBill,
-            'kilowattsPerYear' => $request->kilowattsPerYear,
-            'taxIncome' => $request->taxIncome,
             'roofType' => $request->roofType,
             'roofOrientation' => $request->roofOrientation,
             'interieurSurface' => $request->InteriorSurface,
@@ -93,5 +92,13 @@ class FrontController extends Controller
             ]);
         }
 
+    }
+
+    public function aboutUs() {
+        return Inertia::render('AboutUs');
+    }
+    
+    public function contactUs() {
+        return Inertia::render('ContactUs');
     }
 }

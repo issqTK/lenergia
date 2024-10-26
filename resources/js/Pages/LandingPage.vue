@@ -1,4 +1,5 @@
 <template>
+
     <Head :title="work.meta_title" />
 
     <div class="py-4 px-4 md:px-12 lg:px-16">
@@ -33,7 +34,7 @@
             </div>
 
             <!-- right side -->
-            <div class="text-slate-800 w-full md:w-8/12 px-4 md:px-12 py-6 flex flex-col gap-8 bg-white rounded">
+            <div class="text-slate-800 w-full md:w-8/12 px-4 md:px-12 py-12 flex flex-col gap-8 bg-white rounded">
                 <!-- sommaire -->
                 <div class="md:hidden flex flex-col gap-2">
                     <a href="javascript:void(0)" @click="this.showInterior($event)"
@@ -52,47 +53,20 @@
                 </div>
 
                 <!-- entete -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-8">
                     <!-- title -->
-                    <h1 v-html="work.title" class="text-2xl lg:text-3xl font-bold"></h1>
+                    <h1 v-html="work.title" class="text-2xl lg:text-3xl text-center font-bold"></h1>
 
                     <!-- image -->
                     <img v-if="work.img" :src="'/images/works/img/' + work.img" class="w-full" />
 
                     <!-- description -->
-                    <p v-html="work.description" class="break-words leading-8"
+                    <p v-html="work.description" class="break-words text-justify leading-8"
                         style="word-spacing: 1px; letter-spacing: 0.5px"></p>
 
-                    <!--  -->
-                    <p style="
-                            word-spacing: 0.7px;
-                            letter-spacing: 0.2px;
-                            text-align: center;
-                        ">
-                        <strong v-if="work.id == 1" class="text-center">Optez pour l'offre Panneaux Solaires
-                            Photovoltaïques et commencez à produire votre propre
-                            électricité !</strong>
-                        <strong v-if="work.id == 2" class="text-center">Profitez d'une simulation gratuite pour estimer
-                            votre devis solaire et découvrir le montant
-                            potentiel de vos économies.</strong>
-                        <strong v-if="work.id == 3" class="text-center">Profitez de l'utilisation de panneaux hybrides pour
-                            réaliser jusqu'à 80 % d'économies sur vos coûts
-                            énergétiques. 👇</strong>
-                        <strong v-if="work.id == 4" class="text-center">Optez pour un choix gagnant avec le cumulus
-                            thermodynamique pour des économies d'énergie et une
-                            empreinte carbone réduite.</strong>
-                        <strong v-if="work.id == 5" class="text-center">Envie d'installer une pompe à chaleur ? Obtenez
-                            votre devis gratuit dès maintenant !</strong>
-                        <strong v-if="work.id == 6" class="text-center">Passez au poêle à granulés ! Obtenez votre devis
-                            gratuit aujourd'hui</strong>
-                        <strong v-if="work.id == 7" class="text-center">Dans cet article, nous allons explorer l'essentiel
-                            du Système Solaire Combiné, son fonctionnement,
-                            ainsi que les coûts associés et les subventions
-                            disponibles.</strong>
-                        <strong v-if="work.id == 8" class="text-center">Faites le calcule de vos aides pour l'isolation
-                            intérieure de vos murs !</strong>
-                        <strong v-if="work.id == 9" class="text-center">Calculez vos aides pour l'isolation des murs par
-                            l'extérieur !</strong>
+                    <!-- line text -->
+                    <p style=" word-spacing: 0.7px; letter-spacing: 0.2px; text-align: center; ">
+                        <strong class="text-center">{{ work.line_text }}</strong>
                     </p>
                 </div>
 
@@ -104,6 +78,7 @@
                     <btnDevis v-if="work.id == 7" text="JE CALCULE MES AIDES" :slug="work.slug"></btnDevis>
                     <btnDevis v-if="work.id == 8" text="JE CALCULE MES AIDES" :slug="work.slug"></btnDevis>
                     <btnDevis v-if="work.id == 9" text="JE CALCULE MES AIDES" :slug="work.slug"></btnDevis>
+                    <btnDevis v-if="work.id == 10" text="Commandez dès maintenant" :slug="work.slug"></btnDevis>
                     <i class="m-auto text-sm">Simulation gratuite en 2 minutes</i>
                 </div>
 
@@ -115,7 +90,11 @@
 
                     <div v-html="article.article" class="little-article flex flex-col gap-6"></div>
 
-                    <btnDevis v-if="article.btnText" :text="article.btnText"></btnDevis>
+                    <div v-if="article.btnText" class="flex items-center">
+                        <btnDevis v-if="[1,5,10].includes(work.id)" :text="article.btnText" :slug="work.slug"></btnDevis>
+                        <btnDevis v-else :text="article.btnText" ></btnDevis>
+
+                    </div>
                 </div>
 
                 <!-- FAQ -->
@@ -123,7 +102,8 @@
                     <h2 ref="faq" class="text-2xl font-bold">FAQ</h2>
                     <div v-for="faq in faqs" :key="faqs.id"
                         class="flex flex-col gap-3 p-3 bg-slate-200 text-black rounded hover:bg-slate-100">
-                        <h3 @click="showNext($event)" class="cursor-pointer !font-semibold !text-base" v-text="faq.h3"></h3>
+                        <h3 @click="showNext($event)" class="cursor-pointer !font-semibold !text-base" v-text="faq.h3">
+                        </h3>
                         <p class="hidden" v-text="faq.p"></p>
                     </div>
                 </div>
@@ -133,7 +113,7 @@
 </template>
 
 <script>
-import { Head, Link } from "@inertiajs/vue3";
+import { Head } from "@inertiajs/vue3";
 import GuestLayout from "@/Layouts/GuestLayout.vue";
 import btnDevis from "@/customComponents/btnDevis.vue";
 import { ref } from "vue";
@@ -192,14 +172,9 @@ export default {
 </script>
 
 <style>
-.shadow-text:hover {
-    text-shadow: 0.5px 0px 1px;
-}
+.shadow-text:hover { text-shadow: 0.5px 0px 1px; }
 
-.little-article img {
-    width: 90%;
-    margin: 0 auto;
-}
+.little-article img { width: 90%; margin: 0 auto; }
 
 #faq p,
 .little-article p,
@@ -212,19 +187,11 @@ export default {
     letter-spacing: 0.5px;
 }
 
-#faq h3 {
-    font-size: 1.1em !important;
-    font-weight: bold;
-}
+#faq h3 { font-size: 1.1em !important; font-weight: bold; }
 
-.little-article h3 {
-    font-size: 1.2em !important;
-    font-weight: bold;
-}
+.little-article h3 { font-size: 1.2em !important; font-weight: bold; }
 
-.little-article table th {
-    padding: 8px 0 !important;
-}
+.little-article table th { padding: 8px 0 !important; }
 
 .little-article table tr:first-child {
     background-color: #64748b;
@@ -233,9 +200,7 @@ export default {
     font-size: 0.75em !important;
 }
 
-.little-article table tr:nth-child(even) {
-    background-color: #f8fafc;
-}
+.little-article table tr:nth-child(even) { background-color: #f8fafc; }
 
 .little-article table td {
     padding: 15px;
@@ -249,19 +214,12 @@ export default {
     margin-left: 15px;
 }
 
-.little-article ul li {
-    margin-bottom: 15px;
-}
+.little-article ul li { margin-bottom: 15px; }
 
-.little-article .sans-style {
-    list-style-type: none !important;
-}
+.little-article .sans-style { list-style-type: none !important; }
 
-.little-article ul.number {
-    list-style-type: decimal !important;
-}
+.little-article ul.number { list-style-type: decimal !important; }
 
-.little-article ul.square {
-    list-style-type: square !important;
-}
+.little-article ul.square { list-style-type: square !important; }
+
 </style>

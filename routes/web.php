@@ -10,7 +10,7 @@ use App\Http\Controllers\mailController;
 
 
 
-Route::get('/', function () { return Inertia::render('Home'); });
+Route::get('/', function () { return Inertia::render('Home'); })->name('home');
 
 Route::get('/view-mail-content', function() { return view('increasingSolution', ['name' => 'Mohammed']); });
 
@@ -52,6 +52,10 @@ Route::middleware('auth')->group(function () {
     Route::post('create-new', [mailController::class, 'createNew']);
 
 });
+
+Route::get('/about', [FrontController::class, 'aboutUs'])->name('about');
+
+Route::get('/contact', [FrontController::class, 'contactUs'])->name('contact');
 
 Route::get('/parcour/{params?}', [FrontController::class, 'getJourney'])->name('parcour');
 

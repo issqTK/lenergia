@@ -16,6 +16,7 @@ class Client extends Model
         'gender',
         'phone',
         'email',
+        'codePostal'
     ];
 
     public function order(): HasMany

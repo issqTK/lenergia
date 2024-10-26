@@ -4,7 +4,16 @@
     <div class="flex">
         <!-- left side -->
         <div class="hidden md:block w-3/12 px-6 pt-12 bg-white overflow-hidden">
-            <div class="flex items-center gap-2 mb-4" v-if="this.current == 'type' || this.current == 'construc' || this.current == 'surface' || this.current == 'energie' || this.current == 'typeEnergie'"> 
+            <div class="flex items-center gap-2 mb-4" v-if="this.current == 'utilisateurIdentite' || this.current == 'utilisateurTelephone' || this.current == 'utilisateurEmail' || this.current == 'travauxAdresse' || this.current == 'codePostal'"> 
+                <span class="w-2 h-20 bg-green-200 rounded-lg">&nbsp;</span>
+                <p class="Capitalize font-bold text-black">Vos informations</p>
+            </div>
+            <div class="flex items-center gap-2 mb-4" v-else>
+                <span class="w-2 h-20 bg-gray-100 rounded-lg">&nbsp;</span>
+                <p class="Capitalize font-bold text-gray-200">Vos informations</p>
+            </div>
+            
+            <div class="flex items-center gap-2 mb-4" v-if="this.current == 'type' || this.current == 'construc' || this.current == 'surface' || this.current == 'energie' || this.current == 'typeEnergie' || this.current == 'userStatut' || this.current == 'menageCompos' || this.current == 'menageReven'"> 
                 <span class="w-2 h-12 bg-green-200 rounded-lg">&nbsp;</span>
                 <p class="Capitalize font-bold text-black leading-10">Votre logement</p>
             </div>
@@ -13,22 +22,13 @@
                 <p class="Capitalize font-bold text-gray-200 leading-10">Votre logement</p>
             </div>
             
-            <div class="flex items-center gap-2 mb-4" v-if="this.current == 'travaux' || this.current == 'electricityBill' || this.current == 'kilowattsPerYear' || this.current == 'taxIncome' || this.current == 'roofType' || this.current == 'roofOrientation' || this.current == 'interiorSurface' || this.current == 'exteriorSurface' || this.current == 'exteriorRevetement' || this.current == 'surfaceChauffee' || this.current == 'chaudeSanitaire' || this.current == 'espaceExterior' || this.current == 'statusProjet' || this.current == 'travauxAdresse'"> 
+            <div class="flex items-center gap-2 mb-4" v-if="this.current == 'travaux' || this.current == 'electricityBill' || this.current == 'kilowattsPerYear' || this.current == 'taxIncome' || this.current == 'roofType' || this.current == 'roofOrientation' || this.current == 'interiorSurface' || this.current == 'exteriorSurface' || this.current == 'exteriorRevetement' || this.current == 'surfaceChauffee' || this.current == 'chaudeSanitaire' || this.current == 'espaceExterior' || this.current == 'statusProjet'"> 
                 <span class="w-2 h-12 bg-green-200 rounded-lg">&nbsp;</span>
                 <p class="Capitalize font-bold text-black">Votre projet</p>
             </div>
             <div class="flex items-center gap-2 mb-4" v-else>
                 <span class="w-2 h-12 bg-gray-100 rounded-lg">&nbsp;</span>
                 <p class="Capitalize font-bold text-gray-200">Votre projet</p>
-            </div>
-
-            <div class="flex items-center gap-2 mb-4" v-if="this.current == 'userStatut' || this.current == 'menageCompos' || this.current == 'menageReven' || this.current == 'utilisateurIdentite' || this.current == 'utilisateurTelephone' || this.current == 'utilisateurEmail'"> 
-                <span class="w-2 h-20 bg-green-200 rounded-lg">&nbsp;</span>
-                <p class="Capitalize font-bold text-black">Vos informations</p>
-            </div>
-            <div class="flex items-center gap-2 mb-4" v-else>
-                <span class="w-2 h-20 bg-gray-100 rounded-lg">&nbsp;</span>
-                <p class="Capitalize font-bold text-gray-200">Vos informations</p>
             </div>
 
             <div class="flex items-center gap-2 mb-4" v-if="this.current == 'done' "> 
@@ -51,6 +51,46 @@
             </div>
 
             <div>
+                 <!-- Personal infos -->
+                 <utilisateurIdentite v-if="this.current == 'utilisateurIdentite'"
+                    :firstName = this.FormData.Client.FirstName
+                    :lastName = this.FormData.Client.LastName
+                    :gender = this.FormData.Client.Gender
+                    :error = this.errors_text
+                    @update:first-name = getFirstName
+                    @update:last-name = getLastName
+                    @gender-value = getGender
+                ></utilisateurIdentite>
+
+                <utilisateurTelephone v-if="this.current == 'utilisateurTelephone'"
+                :phoneNumber = this.FormData.Client.PhoneNumber
+                :error = "this.errors_text"
+                :getNext="getNext"
+                @phone-number= getPhoneNumber
+                ></utilisateurTelephone>
+
+                <utilisateurEmail v-if="this.current == 'utilisateurEmail'"
+                    :eMail = this.FormData.Client.EMail
+                    :error = this.errors_text
+                    :getNext="getNext"
+                    @e-mail = getEmail
+                ></utilisateurEmail>
+
+                <travauxAddress v-if="this.current == 'travauxAdresse'" 
+                    :TravauxAdresse = this.FormData.TravauxAdresse
+                    :error_address = this.errors_text
+                    :getNext="getNext"
+                    @update:modelValue = getTravauxAdresse
+                ></travauxAddress>
+                
+                <CodePostal v-if="this.current == 'codePostal'"
+                    :Code = this.FormData.Client.CodePostal
+                    :error_Postal = this.errors_text
+                    :getNext="getNext"
+                    @code-postal = getCodePostal
+                ></CodePostal>
+                
+                <!--  -->
                 <LogementType 
                     v-if="this.current == 'type'"
                     @LogementType="getLogementType" 
@@ -83,7 +123,6 @@
                     @energie-type="getEnergieType"
                 ></EnergieType>
 
-                <!-- Personal infos -->
                 <utilisateurStatut  v-if="this.current == 'userStatut'"
                     :UtilisateurStatus = this.FormData.UtilisateurStatus
                     @utilisateur-status = getUtilisateurStatus
@@ -99,30 +138,6 @@
                     @menage-revenus = getMenageRevenue
                 ></menageRevenus>
 
-                <utilisateurIdentite v-if="this.current == 'utilisateurIdentite'"
-                    :firstName = this.FormData.Client.FirstName
-                    :lastName = this.FormData.Client.LastName
-                    :gender = this.FormData.Client.Gender
-                    :error = this.errors_text
-                    @update:first-name = getFirstName
-                    @update:last-name = getLastName
-                    @gender-value = getGender
-                ></utilisateurIdentite>
-
-                <utilisateurTelephone v-if="this.current == 'utilisateurTelephone'"
-                :phoneNumber = this.FormData.Client.PhoneNumber
-                :error = "this.errors_text"
-                :getNext="getNext"
-                @phone-number= getPhoneNumber
-                ></utilisateurTelephone>
-
-                <utilisateurEmail v-if="this.current == 'utilisateurEmail'"
-                    :eMail = this.FormData.Client.EMail
-                    :error = this.errors_text
-                    :getNext="getNext"
-                    @e-mail = getEmail
-                ></utilisateurEmail>
-
                 <!-- Votre Projet -->
                 <selectTravaux v-if="this.current == 'travaux'"
                     :worksIds = "this.FormData.TravauxIds"
@@ -136,19 +151,6 @@
                     :getNext="getNext"
                     @update:modelValue="getCurrentElectricityBill"
                 ></electricityBill>
-                
-                <KilowattsPerYear v-if="this.current == 'kilowattsPerYear'" 
-                    :modelValue="this.FormData.kilowattsPerYear"
-                    :getNext="getNext"
-                    @update:modelValue="getKilowattsPerYear"
-                ></KilowattsPerYear>
-
-                <TaxIncome v-if="this.current == 'taxIncome'" 
-                    :modelValue="this.FormData.taxIncome"
-                    :error="errors_text"
-                    :getNext="getNext"
-                    @update:modelValue="getTaxIncome"
-                ></TaxIncome>
                 
                 <RoofType v-if="this.current == 'roofType'" 
                     :roofType="this.FormData.roofType"
@@ -205,21 +207,15 @@
                     @status-project = getStatusProject
                 ></statusProject>
 
-                <travauxAddress v-if="this.current == 'travauxAdresse'" 
-                    :TravauxAdresse = this.FormData.TravauxAdresse
-                    :error_address = this.errors_text
-                    :getNext="getNext"
-                    @update:modelValue = getTravauxAdresse
-                ></travauxAddress>
-
                 <!-- done -->
 
-                <div v-if="this.current == 'done'">
-                    <p class="break-word text-base md:text-lg text-center text-slate-900 font-bold w-10/12 md:w-8/12 md:p-10 p-4 m-auto bg-slate-50 shadow leading-10 rounded">
+                <div v-if="this.current == 'done'" class="mt-6 md:mt-12">
+                    <p class="text-sm md:text-base font-bold w-full md:w-8/12 text-center p-8 md:p-12 m-auto !leading-loose text-slate-900 bg-slate-50 shadow rounded">
                         Merci pour le temps que vous avez consacré sur ce parcours,
-                        On va vous contacter prochainement pour vous accompagner dans votre projet.<br><br>
-                        <a href="/" class="p-4 rounded text-white bg-slate-800">Ok Merci</a>
+                        On va vous contacter prochainement pour vous accompagner dans votre projet.
+                        <a href="/" class="table mx-auto mt-6 p-4 text-sm rounded text-white bg-slate-500 hover:bg-slate-600">Ok Merci</a>
                     </p>
+                    
                 </div>
             </div>
 
@@ -227,7 +223,7 @@
             <div v-if="this.current != 'done'" id="fakeButton"></div>
 
             <div v-if="this.current != 'done'" class="fixed w-full py-4 bg-slate-100 flex left-0 bottom-0 md:left-1/4 md:w-9/12" ref="nextButton"> 
-                <a v-if="errors == false" 
+                <a v-if="this.errors == false" 
                     @click="getNext" 
                     class="cursor-pointer m-auto uppercase bg-gradient-to-r from-teal-500 to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-20 py-3 rounded-full font-bold text-white">
                     Suivant
@@ -266,10 +262,9 @@ import utilisateurTelephone from '@/Pages/project/personalInfos/utilisateurTelep
 import utilisateurEmail from '@/Pages/project/personalInfos/utilisateurMail.vue';
 
 import electricityBill from '@/Pages/project/Work/ElectricityBill.vue';
-import KilowattsPerYear from '@/Pages/project/Work/KilowattsPerYear.vue';
-import TaxIncome from '@/Pages/project/Work/TaxIncome.vue';
 import RoofType from '@/Pages/project/Work/RoofType.vue';
 import RoofOrientation from '@/Pages/project/Work/RoofOrientations.vue';
+import CodePostal from '@/Pages/project/personalInfos/codePostal.vue';
 
 export default {
     props: ['currentWork'],
@@ -296,11 +291,10 @@ export default {
         menageRevenus,
         utilisateurIdentite,
         utilisateurTelephone,
+        CodePostal,
         utilisateurEmail,
 
         electricityBill,
-        KilowattsPerYear,
-        TaxIncome,
         RoofType,
         RoofOrientation
     },
@@ -311,9 +305,9 @@ export default {
             errors: false,
             errors_text: '',
             
-            current: 'type',
+            current: 'utilisateurIdentite',
             previous: '',
-            next: 'construc',
+            next: '',
 
             FormData: useForm({
                 LogementType : 'maison',
@@ -324,8 +318,6 @@ export default {
                 TravauxIds: [],
 
                 currentElectricityBill: '',
-                kilowattsPerYear: '',
-                taxIncome: '',
                 roofType: '',
                 roofOrientation: '',
 
@@ -345,6 +337,7 @@ export default {
                     LastName: '',
                     Gender: '',
                     PhoneNumber: '',
+                    CodePostal: '',
                     EMail: '',
                 }
             })
@@ -465,17 +458,14 @@ export default {
         getPhoneNumber(value){
             this.FormData.Client.PhoneNumber = value;
         },
+        getCodePostal(value){
+            this.FormData.Client.CodePostal = value;
+        },
         getEmail(value){
             this.FormData.Client.EMail = value;
         },
         getCurrentElectricityBill(value) {
             this.FormData.currentElectricityBill = value;
-        },
-        getKilowattsPerYear(value) {
-            this.FormData.kilowattsPerYear = value;
-        },
-        getTaxIncome(value) {
-            this.FormData.taxIncome = value;
         },
         getRoofType(value) {
             this.FormData.roofType = value;
@@ -490,8 +480,89 @@ export default {
         if(this.currentWork != null) this.FormData.TravauxIds.push(this.currentWork.id)
     },
     updated() {
+        // user infos
+        if(this.current == 'utilisateurIdentite') {
+            if(this.FormData.Client.FirstName == '') {
+                this.errors_text = 'Le prénom est requis';
+                this.errors = true;
+            } else if(this.FormData.Client.LastName == '') {
+                this.errors_text = 'Le nom est requis';
+                this.errors = true;                
+            } else if(this.FormData.Client.Gender == '') {
+                this.errors_text = 'Sélectionner le genre';
+                this.errors = true;                
+            } else {
+                this.errors_text = '';
+                this.errors = false;                                
+            }
+
+            this.next = 'utilisateurTelephone';
+        }
+        else if(this.current == 'utilisateurTelephone') {
+            if(this.FormData.Client.PhoneNumber == '') {
+                this.errors_text = 'Le numero de téléphone est requis!';
+                this.errors = true;
+            } 
+            else if(this.FormData.Client.PhoneNumber.length < 10)
+                this.errors = true;
+            else {
+                this.errors_text = '';
+                this.errors = false;
+            }
+
+            this.previous = 'utilisateurIdentite';
+            this.next = 'utilisateurEmail';
+        }
+        else if(this.current == 'utilisateurEmail') {
+            if(this.FormData.Client.EMail == '') {
+                this.errors_text = 'Adresse mail est requis!';
+                this.errors = true;
+            }
+            else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.FormData.Client.EMail)){
+                this.errors_text = 'Adresse mail n\'est pas valide!';
+                this.errors = true;
+            }
+            else {
+                this.errors_text = '';
+                this.errors = false;
+            }
+
+            this.previous = 'utilisateurTelephone';
+            this.next = 'travauxAdresse';
+        }
+        else if(this.current == 'travauxAdresse') {
+            if(this.FormData.TravauxAdresse.length == 0) {
+                this.errors_text = 'Ce champ est obligatoire';
+                this.errors = true;
+            } else {
+                this.errors_text = '';
+                this. errors = false;
+            }
+
+            this.previous = 'utilisateurEmail';
+            this.next = 'codePostal';
+            
+        }
+        else if(this.current == 'codePostal') {
+            if(this.FormData.Client.CodePostal == '') {
+                this.errors_text = 'Code Postal est requis!';
+                this.errors = true;
+            } else {
+                this.errors_text = '';
+                this.errors = false;
+            }
+
+            this.previous = 'travauxAdresse';
+
+            if(this.FormData.TravauxIds.includes(10)) this.next = 'travaux';
+            else this.next = 'type';
+        }
         // Logements
-        if(this.current == 'construc') {
+        else if(this.current == 'type') {
+            this.next = 'construc';
+            this.previous = 'travauxAdresse';
+        } 
+        else if(this.current == 'construc') {
             this.next = 'surface';
             this.previous = 'type';
         } 
@@ -528,7 +599,6 @@ export default {
             this.next = 'userStatut';
             this.previous = 'energie'
         } 
-        // Client infos
         else if(this.current == 'userStatut') {
             this.next = 'menageCompos';
             this.previous = 'energie';
@@ -539,56 +609,6 @@ export default {
         }
         else if(this.current == 'menageReven') {
             this.previous = 'menageCompos';
-            this.next = 'utilisateurIdentite';
-        }
-        else if(this.current == 'utilisateurIdentite') {
-            if(this.FormData.Client.FirstName == '') {
-                this.errors_text = 'Le prénom est requis';
-                this.errors = true;
-            } else if(this.FormData.Client.LastName == '') {
-                this.errors_text = 'Le nom est requis';
-                this.errors = true;                
-            } else if(this.FormData.Client.Gender == '') {
-                this.errors_text = 'Sélectionner le genre';
-                this.errors = true;                
-            } else {
-                this.errors_text = '';
-                this.errors = false;                                
-            }
-
-            this.previous = 'menageReven';
-            this.next = 'utilisateurTelephone';
-        }
-        else if(this.current == 'utilisateurTelephone') {
-            if(this.FormData.Client.PhoneNumber == '') {
-                this.errors_text = 'Le numero de téléphone est requis!';
-                this.errors = true;
-            } 
-            else if(this.FormData.Client.PhoneNumber.length < 10)
-                this.errors = true;
-            else {
-                this.errors_text = '';
-                this.errors = false;
-            }
-
-            this.previous = 'utilisateurIdentite';
-            this.next = 'utilisateurEmail';
-        }
-        else if(this.current == 'utilisateurEmail') {
-            if(this.FormData.Client.EMail == '') {
-                this.errors_text = 'Adresse mail est requis!';
-                this.errors = true;
-            }
-            else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.FormData.Client.EMail)){
-                this.errors_text = 'Adresse mail n\'est pas valide!';
-                this.errors = true;
-            }
-            else {
-                this.errors_text = '';
-                this.errors = false;
-            }
-
-            this.previous = 'utilisateurTelephone';
             this.next = 'travaux';
         }
         // Project
@@ -601,6 +621,7 @@ export default {
             else if(this.FormData.TravauxIds.includes(8)) this.next = 'interiorSurface';
             else if (this.FormData.TravauxIds.includes(9)) this.next = 'exteriorSurface';
             else if (this.FormData.TravauxIds.includes(5)) this.next = 'surfaceChauffee';
+            else if (this.FormData.TravauxIds.includes(10)) this.next = 'done';
             else this.next = 'statusProjet';
 
             this.previous = 'utilisateurEmail';
@@ -615,24 +636,6 @@ export default {
             }
 
             this.previous = 'travaux';
-            this.next = 'kilowattsPerYear'
-
-        }
-        else if(this.current == 'kilowattsPerYear') {
-            this.previous = 'electricityBill';
-            this.next = 'taxIncome';
-
-        }
-        else if(this.current == 'taxIncome') {
-            if(this.FormData.taxIncome.length == 0) {
-                this.errors_text = 'Ce champ est obligatoire';
-                this.errors = true;
-            } else {
-                this.errors_text = '';
-                this. errors = false;
-            }
-
-            this.previous = 'kilowattsPerYear';
             this.next = 'roofType'
 
         }
@@ -643,7 +646,7 @@ export default {
                 this. errors = false;
             }
 
-            this.previous = 'taxIncome';
+            this.previous = 'travaux';
             this.next = 'roofOrientation';
 
         }
@@ -730,20 +733,8 @@ export default {
             this.previous = 'chaudeSanitaire';
         }
         else if(this.current == 'statusProjet') {
-            this.next = 'travauxAdresse'
+            this.next = 'done'
             this.previous = 'travaux';
-        }
-        else if(this.current == 'travauxAdresse') {
-            if(this.FormData.TravauxAdresse.length == 0) {
-                this.errors_text = 'Ce champ est obligatoire';
-                this.errors = true;
-            } else {
-                this.errors_text = '';
-                this. errors = false;
-            }
-
-            this.next = 'done';
-            this.previous = 'statusProjet';
         }
         else if(this.current == 'done') {
             if(this.request == true) {

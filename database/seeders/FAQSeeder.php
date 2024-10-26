@@ -126,6 +126,32 @@ class FAQSeeder extends Seeder
                 ],
                 /*  */
                 [
+                    'work_id' => 6,
+                    'h3' => 'Ma pompe à chaleur aérothermique présente du givre sur l\'unité extérieure. Que faire pour y remédier ?',
+                    'p' => 'Si l\'unité extérieure de votre pompe à chaleur se couvre de givre, assurez-vous qu\'elle est dégagée de tout obstacle et nettoyez les éventuels dépôts de glace. Si le problème persiste, faites appel à un professionnel pour vérifier le bon fonctionnement de votre système.',
+                ],
+                [
+                    'work_id' => 6,
+                    'h3' => 'Comment optimiser l\'exposition de l\'unité extérieure d\'une pompe à chaleur aérothermique ?',
+                    'p' => 'Oui, l\'unité extérieure d\'une pompe à chaleur aérothermique doit être exposée dans un espace dégagé, loin des obstacles, pour favoriser son efficacité et son bon fonctionnement.',
+                ],
+                [
+                    'work_id' => 6,
+                    'h3' => 'Quel est le taux de TVA appliqué à l\'achat d\'une chaudière fioul à condensation ?',
+                    'p' => 'Le taux de TVA appliqué à une chaudière fioul à condensation est de 5,5%.',
+                ],
+                [
+                    'work_id' => 6,
+                    'h3' => 'Quelle est la durée de vie typique d\'une chaudière gaz basse température ?',
+                    'p' => 'La durée de vie moyenne d\'une chaudière gaz basse température est d\'environ 15 à 20 ans, selon son entretien et son utilisation.',
+                ],
+                [
+                    'work_id' => 6,
+                    'h3' => 'Est-ce que la température du sol fluctue entre le jour et la nuit, ainsi qu\'au fil des saisons ?',
+                    'p' => 'Oui, la température du sol peut varier entre le jour et la nuit, ainsi qu\'au fil des saisons, en raison des changements climatiques et des cycles naturels.',
+                ],
+                /*  */
+                [
                     'work_id' => 7,
                     'h3' => 'Est-ce que l\'installation d\'un Système Solaire Combiné nécessite des modifications importantes de ma maison ?',
                     'p' => 'Oui, l\'installation d\'un Système Solaire Combiné peut nécessiter des modifications mineures à votre maison pour intégrer les capteurs solaires et les panneaux photovoltaïques.',
@@ -176,6 +202,21 @@ class FAQSeeder extends Seeder
                     'work_id' => 9,
                     'h3' => 'Quel est le coût moyen de l\'isolation des murs par l\'extérieur ?',
                     'p' => 'Le coût varie en fonction de la surface à isoler et du matériau choisi, mais en général, le prix moyen se situe entre 100€ et 150€ par mètre carré.',
+                ],
+                [
+                    'work_id' => 10,
+                    'h3' => 'Quel type d\'isolation est le plus efficace avec un thermostat connecté ?',
+                    'p' => 'Une bonne isolation thermique est essentielle pour maximiser les bénéfices d\'un thermostat connecté. Les matériaux comme la laine de verre, le polystyrène expansé ou encore la cellulose sont très efficaces pour garder la chaleur à l\'intérieur.',
+                ],
+                [
+                    'work_id' => 10,
+                    'h3' => 'L\'installation est-elle vraiment simple ?',
+                    'p' => 'Oui, la plupart des thermostats connectés sont conçus pour être installés sans outils spécifiques. Un manuel d\'instructions détaillé est généralement fourni pour vous guider pas à pas.',
+                ],
+                [
+                    'work_id' => 10,
+                    'h3' => 'Quelle est la différence entre un thermostat connecté et un thermostat classique ?',
+                    'p' => 'Un thermostat classique ne permet pas de gestion à distance ni de programmation intelligente. Un thermostat connecté offre des fonctionnalités avancées, comme des rapports sur la consommation énergétique et la possibilité de le contrôler via une application mobile.',
                 ],
             ]
         );

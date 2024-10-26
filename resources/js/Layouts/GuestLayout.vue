@@ -4,6 +4,7 @@ import { computed } from "vue";
 import PrimaryNavigation from '@/customComponents/PrimaryNavigation.vue';
 export default {
     components:{
+        Link,
         PrimaryNavigation,
     }
 }
@@ -30,12 +31,11 @@ export default {
                 <div class="flex gap-2 mb-4">
                     <span class="italic">Suivez nous</span>
                     <span class="fb"></span>
-                    <span class="twitter"></span>
                     <span class="in"></span>
                 </div>
                 <div class="flex flex-col gap-4">
                     <p class="text-xl">Un projet ?</p>
-                    <a :href="route('parcour')" class="border rounded-full text-center px-8 py-4">DEMANDER UN DEVIS</a>
+                    <Link :href="route('parcour')" class="border rounded-full text-center px-8 py-4">DEMANDER UN DEVIS</Link>
                 </div>
             </div>
 
@@ -68,20 +68,18 @@ export default {
         </div>
 
         <div class="flex md:justify-between mx-12 flex-wrap gap-4">
-            <a href="javascript:void(0)">Qui somme nous</a>
-            <a href="javascript:void(0)">Nous Contacter</a>
+            <Link :href="route('about')">Qui somme nous</Link>
+            <Link :href="route('contact')">Nous Contacter</Link>
             <span>© {{ new Date().getFullYear() }} Lenergia. Tous les droits réservés</span>
         </div>
     </footer>
 </template>
 <style scoped>
 .fb{ background: url('/images/socieux/fb-light.png'); }
-.twitter{ background: url('/images/socieux/twitter-light.png');}
 .in{ background: url('/images/socieux/in-light.png');}
 .fb:hover{ background: url('/images/socieux/fb-dark.png'); background-size: contain;}
-.twitter:hover{ background: url('/images/socieux/twitter-dark.png'); background-size: contain;}
 .in:hover{ background: url('/images/socieux/in-dark.png'); background-size: contain;}
-.fb, .twitter, .in{
+.fb, .in{
     display: block;
     width: 30px;
     height: 30px;

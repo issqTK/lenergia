@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('img_alt')->nullable();
             $table->string('title');
             $table->text('description');
+            $table->string('line_text');
             $table->string('slug');
             $table->string('meta_title');
             //$table->text('meta_description');
