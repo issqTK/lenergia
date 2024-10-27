@@ -44,7 +44,7 @@
         <!-- right -->
         <div class="relative w-full md:w-9/12 p-4 md:p-6 min-h-screen">
             <!-- retour -->
-            <div v-if="this.current != 'type' && this.current != 'done'" @click="getPrevious" class="inline-block mb-8 p-4 rounded hover:bg-slate-200 cursor-pointer">
+            <div v-if="this.current != 'utilisateurIdentite' && this.current != 'done'" @click="getPrevious" class="inline-block mb-8 p-4 rounded hover:bg-slate-200 cursor-pointer">
                 <i class="fa-solid fa-arrow-left" style="color: #74efa6;"></i>
                 &nbsp;
                 <span class="font-semibold capitalize">retour</span>

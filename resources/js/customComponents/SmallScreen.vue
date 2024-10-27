@@ -14,24 +14,24 @@
                         <h3 class="uppercase text-gray-700 font-semibold">Les Travaux</h3>
                         
                         <li>
-                            <Link @click="showingNavigation = false;" :href="route('intermediate', 'isolation-maison')" class="flex gap-4 items-center pl-4 ins-link">
+                            <Link @click="this.$emit('showing-navigation', false)" :href="route('intermediate', 'isolation-maison')" class="flex gap-4 items-center pl-4 ins-link">
                                 <img src="/images/illustration/isolation_global.png" style="max-height: 30px;">
                                 Isolation globale
                             </Link>
                         </li>
                         <li>
-                            <Link @click="showingNavigation = false;" :href="route('landing', 'panneaux-solaires-photovoltaiques')"  class="flex gap-4 items-center pl-4 ins-link">
+                            <Link @click="this.$emit('showing-navigation', false)" :href="route('landing', 'panneaux-solaires-photovoltaiques')"  class="flex gap-4 items-center pl-4 ins-link">
                                 <img src="/images/illustration/Panneaux_Photovoltaïques.png" style="max-height: 30px;">Panneaux photovoltaïques
                             </Link>
                         </li>
                         <li>
-                            <Link @click="showingNavigation = false;" :href="route('landing', 'pompe-à-chaleur')"  class="flex gap-4 items-center pl-4 ins-link">
+                            <Link @click="this.$emit('showing-navigation', false)" :href="route('landing', 'pompe-à-chaleur')"  class="flex gap-4 items-center pl-4 ins-link">
                                 <img src="/images/illustration/pompe-a-chaleur.png" style="max-height: 30px;">
                                 Pompe à chaleur
                             </Link>
                         </li>
                         <li>
-                            <Link @click="showingNavigation = false;" :href="route('landing', 'système-solaire-combiné')" class="flex gap-4 items-center pl-4 ins-link">
+                            <Link @click="this.$emit('showing-navigation', false)" :href="route('landing', 'système-solaire-combiné')" class="flex gap-4 items-center pl-4 ins-link">
                                 <img src="/images/illustration/collaboration.png" style="max-height: 30px;">
                                 Système solaire combiné
                             </Link>
@@ -42,14 +42,14 @@
                         <h3 class="uppercase text-gray-700 font-semibold">Les Services</h3>
 
                         <li>
-                            <Link :href="route('parcour')" class="flex gap-4 items-center pl-4 ins-link">
+                            <Link @click="this.$emit('showing-navigation', false)" :href="route('parcour')" class="flex gap-4 items-center pl-4 ins-link">
                                 <img src="/images/illustration/bilan_icon.png" style="max-height: 30px;">
                                 Bilan énergétique gratuit
                             </Link>
                         </li>
                         
                         <li>
-                            <Link :href="route('parcour')" class="flex gap-4 items-center pl-4 ins-link">
+                            <Link @click="this.$emit('showing-navigation', false)" :href="route('parcour')" class="flex gap-4 items-center pl-4 ins-link">
                                 <img src="/images/illustration/audi-energitique.png" style="max-height: 30px;">
                                 Audit énergétique
                             </Link>
@@ -72,7 +72,7 @@
                         <h3 class="uppercase text-gray-700 font-semibold">Énergie Solaire</h3>
 
                         <li v-for="(work, i) in esWorks" :key="i">
-                            <Link @click="showingNavigation = false;" :href="route('landing', work.slug)" class="ins-link flex gap-4 pl-4 items-center">
+                            <Link @click="this.$emit('showing-navigation', false)" :href="route('landing', work.slug)" class="ins-link flex gap-4 pl-4 items-center">
                                 <img :src="'/images/illustration/' + work.svg" :alt="work.img_alt" class="w-6">
                                 {{ work.name }}
                             </Link>
@@ -84,7 +84,7 @@
                         <h3 class="uppercase text-gray-700 font-semibold">Isolation</h3>
 
                         <li v-for="work in iWorks" :key="work.id">
-                            <Link @click="showingNavigation = false;" :href="route('landing', work.slug)" class="ins-link flex gap-4 pl-4 items-center">
+                            <Link @click="this.$emit('showing-navigation', false)" :href="route('landing', work.slug)" class="ins-link flex gap-4 pl-4 items-center">
                                 <img :src="'/images/illustration/' + work.svg" :alt="work.img_alt" class="w-6">
                                 {{ work.name }}
                             </Link>
@@ -96,7 +96,7 @@
                         <h3 class="uppercase text-gray-700 font-semibold">Chauffage</h3>
 
                         <li v-for="work in chWorks" :key="work.id">
-                            <Link @click="showingNavigation = false;" :href="route('landing', work.slug)" class="ins-link flex gap-4 pl-4 items-center">
+                            <Link @click="this.$emit('showing-navigation', false)" :href="route('landing', work.slug)" class="ins-link flex gap-4 pl-4 items-center">
                                 <img :src="'/images/illustration/' + work.svg" :alt="work.img_alt" class="w-6">
                                 {{ work.name }}
                             </Link>
@@ -106,7 +106,7 @@
             </li>
 
             <!--  -->
-            <li> <Link :href="route('landing', 'thermostat-connecté')" class="ins-link"> <span>Thermostat Connecté</span> </Link> </li>
+            <li> <Link @click="this.$emit('showing-navigation', false)" :href="route('landing', 'thermostat-connecté')" class="ins-link"> <span>Thermostat Connecté</span> </Link> </li>
 
             <!-- Découvrez-nous -->
             <li>
@@ -118,12 +118,12 @@
                     <a href="javascript:void(0)" @click="this.hideInterior($event)"> <i class="fa-solid fa-chevron-left"></i> Retour </a>
                     
                     <li>
-                        <Link @click="showingNavigation = false;" :href="route('about')" class="flex gap-4 items-center pl-4 ins-link">
+                        <Link @click="this.$emit('showing-navigation', false)" :href="route('about')" class="flex gap-4 items-center pl-4 ins-link">
                             Qui sommes-nous ?
                         </Link>
                     </li>
                     <li>
-                        <Link @click="showingNavigation = false;" :href="route('contact')" class="flex gap-4 items-center pl-4 ins-link">
+                        <Link @click="this.$emit('showing-navigation', false)" :href="route('contact')" class="flex gap-4 items-center pl-4 ins-link">
                             Nous Contacter
                         </Link>
                     </li>
@@ -145,7 +145,7 @@
                 {{ $page.props.auth.user.name }}</Link>
             </div>
             <div class="flex">
-                <btn text="Demander un devis"></btn>
+                <btn text="Demander un devis" @click="this.$emit('showing-navigation', false)"></btn>
             </div>
         </div>
     </div>
@@ -156,7 +156,9 @@ import { Link } from '@inertiajs/vue3';
 import btn from "./btnDevis.vue";
 
 export default {
-    props: ['esWorks', 'chWorks', 'iWorks'],
+    props: ['esWorks', 'chWorks', 'iWorks', 'ShowingNavigation'],
+    emits:['showing-navigation'],
+
     components: { Link, btn },
 
     methods: {

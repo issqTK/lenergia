@@ -20,7 +20,7 @@
         <div id="mobile-nav" class="absolute lg:static lg:ml-6 flex-1 z-10 h-full w-full"
             style="top:95px; transition: all 800ms ease-in-out" :style="showingNavigation ? 'right:0' : 'right:-100%'">
 
-            <SmallScreenMenu :esWorks="this.esWorks" :chWorks="this.chWorks" :iWorks="this.iWorks"></SmallScreenMenu>
+            <SmallScreenMenu @showingNavigation="getShowingNav" :showingNavigation="this.showingNavigation"  :esWorks="this.esWorks" :chWorks="this.chWorks" :iWorks="this.iWorks"></SmallScreenMenu>
             <BigScreenMenu :esWorks="this.esWorks" :chWorks="this.chWorks" :iWorks="this.iWorks"></BigScreenMenu>
         </div>
 
@@ -102,6 +102,9 @@ export default {
         fakeHeight() {
             document.getElementById('fakerNavigation').style.height = this.$refs.navigation.clientHeight + 'px';
         },
+        getShowingNav(value) {
+            this.showingNavigation = value;
+        }
     }
 }
 </script>
