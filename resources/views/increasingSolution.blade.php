@@ -56,24 +56,24 @@
     }
 
     #content>div {
-        display:flex;
-        flex-direction:column;
-        gap:15px;
         background: white;
         width: 96%;
         margin: auto;
         padding: 25px;
+        border: 1px solid
     }
 
-    #content>div>p, #content>div>ul {
+    #content > div > p, #content ul {
+        text-align: justify;
         word-break: keep-all;
         letter-spacing: .2px;
         line-height: 24px;
         font-size: .9em;
+        margin-top:15px
     }
-    #content>div>ul { margin-left: 20px; }
+    #content > div > ul { margin-left: 20px; }
 
-    #content>div>p a {
+    #content > div > p a {
         color: #0284c7;
         text-decoration: none;
     }
@@ -89,8 +89,6 @@
         font-size: .9em
     }
 
-    /*  */
-
     #footer {
         width: 100%;
         max-width: 600px;
@@ -99,44 +97,6 @@
         margin: 0 auto;
         padding: 35px
     }
-
-    /* #footer td {
-        border-collapse: collapse !important;
-        vertical-align: middle;
-        padding: 10px 0
-    }
-
-    .img-socieux {
-        display: inline-block;
-        margin: 0px 8px 8px 0;
-    }
-
-    .img-socieux img {
-        width: 30px
-    }
-
-    .img-socieux:last-child {
-        margin-right: 0;
-    }
-
-    .foot-link {
-        display: inline-block;
-        color: white;
-        font-size: .9em;
-        margin-bottom: 8px;
-        padding: 0 8px;
-        text-decoration: none;
-        border-right: 1px solid
-    }
-
-    .foot-link:last-child {
-        padding-right: 0;
-        border-right: 0
-    }
-
-    .footer-merci {
-        font-size: 1.2em
-    } */
     </style>
 </head>
 
