@@ -1,74 +1,72 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\FrontController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\mailController;
+
+use App\Http\Controllers\{ ProfileController, FrontController, OrderController, mailController };
 
 
+Route::get('/', fn() => Inertia::render('Home'))->name('home');
+Route::get('/view-mail-content', fn() => view('increasingSolution', ['name' => 'Mohammed']));
+Route::get('/about', [FrontController::class, 'aboutUs'])->name('about');
+Route::get('/contact', [FrontController::class, 'contactUs'])->name('contact');
 
-Route::get('/', function () { return Inertia::render('Home'); })->name('home');
+// Dashboard Route (Requires both 'auth' and 'verified')
+Route::middleware(['auth', 'verified'])->get('/dashboard', fn() => Inertia::render('Dashboard'))->name('dashboard');
 
-Route::get('/view-mail-content', function() { return view('increasingSolution', ['name' => 'Mohammed']); });
+// Authenticated Routes (Require only 'auth' middleware)
+Route::middleware('auth')->group(function () {
+    // Profile Routes
+    Route::prefix('profile')->name('profile.')->group(function () {
+        Route::get('/', [ProfileController::class, 'edit'])->name('edit');
+        Route::patch('/', [ProfileController::class, 'update'])->name('update');
+        Route::delete('/', [ProfileController::class, 'destroy'])->name('destroy');
+    });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    // Order Routes
+    Route::prefix('orders')->name('orders.')->group(function () {
+        Route::get('/', [OrderController::class, 'viewAll'])->name('all');
+        Route::post('/update-client/{orderId}', [OrderController::class, 'storeClient']);
+        Route::post('/update-order/{orderId}', [OrderController::class, 'storeOrder']);
+        Route::post('/create-work/{orderId}', [OrderController::class, 'createWork']);
+        Route::get('/delete-work', [OrderController::class, 'deleteWork']);
+        Route::post('/review-state/{orderId}', [OrderController::class, 'reviewState']);
+    });
 
-Route::get('down', function() {
-    \Artisan::call('down');
-    echo 'DONE';
+    // Mailer Routes
+    Route::prefix('mailer')->name('mailer.')->group(function () {
+        Route::get('/', [mailController::class, 'viewMailer'])->name('view');
+        Route::get('/send-mails', [mailController::class, 'index'])->name('send');
+        Route::get('/delete', [mailController::class, 'delete'])->name('delete');
+        Route::post('/create-new', [mailController::class, 'createNew'])->name('createNew');
+    });
 });
 
+/*
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-    Route::get('/commandes', [OrderController::class, 'viewAll'])->name('orders');
-    
-    Route::post('/update-client/{idOrder}', [OrderController::class, 'storeClient']);
-    
-    Route::post('/update-order/{idOrder}', [OrderController::class, 'storeOrder']);
-    
-    Route::get('/delete-work', [OrderController::class, 'deleteWork']);
-    
-    Route::post('/create-work/{idOrder}', [OrderController::class, 'createNewWork']);
-    
-    Route::post('/review-state/{idOrder}', [OrderController::class, 'reviewState']);
-
-    /*  */
     Route::get('/mailer', [mailController::class, 'viewMailer'])->name('mailer');
-
     Route::get('/send-mails', [mailController::class, 'index'])->name('increasingSolution');
-
     Route::get('/delete', [mailController::class, 'delete'])->name('delete');
-    
     Route::post('create-new', [mailController::class, 'createNew']);
 
 });
+*/
 
-Route::get('/about', [FrontController::class, 'aboutUs'])->name('about');
+#Maintenance Route
+Route::get('down', fn() => \Artisan::call('down') ? 'DONE' : 'Failed');
+Route::get('up', fn() => \Artisan::call('up') ? 'DONE' : 'Failed');
 
-Route::get('/contact', [FrontController::class, 'contactUs'])->name('contact');
-
+#Dynamic Routes
 Route::get('/parcour/{params?}', [FrontController::class, 'getJourney'])->name('parcour');
-
 Route::post('/parcour', [FrontController::class, 'saveJourney']);
+Route::get('/projet/{slug}', [FrontController::class, 'intermediatePage'])->where('slug', '[a-z0-9-àâçéèêëîïôûùüÿñ]+')->name('intermediate');
 
 Route::inertia('/404', '404')->name('notFound');
 
-Route::get('/projet/{slug}',[FrontController::class, 'intermediatePage'])->where(['slug' => '[a-z0-9-àâçéèêëîïôûùüÿñ]+'])->name('intermediate');
-
 require __DIR__.'/auth.php';
 
-Route::get('/{slug}',[FrontController::class, 'landingPage'])->where(['slug' => '[a-z0-9-àâçéèêëîïôûùüÿñ]+'])->name('landing');
-
+Route::get('/{slug}', [FrontController::class, 'landingPage'])->where('slug', '[a-z0-9-àâçéèêëîïôûùüÿñ]+')->name('landing');
 
 
 

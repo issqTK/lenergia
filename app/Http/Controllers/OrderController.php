@@ -11,82 +11,6 @@ use App\Models\orderWork;
 
 class OrderController extends Controller
 {
-
-    public function createNewWork(Request $r, $idOrder) {
-        $exist = orderWork::where('order_id',$idOrder)->where('work_id', $r->work)->first();
-        $exceed =  orderWork::where('order_id', $idOrder)->count();
-
-        if($exceed == 5)
-            return back()->with(['error' => 'Veuillez ne pas dépasser 5 travaux!']);
-
-        if($exist)
-            return back()->with(['error' => 'Travaux déjà existant!']);
-
-        $order = Order::find($idOrder);
-
-        if($r->work == 1) {
-            $order->currentElectricityBill = $r->currentElectricityBill;
-            $order->kilowattsPerYear = $r->kilowattsPerYear;
-            $order->taxIncome = $r->taxIncome;
-            $order->roofType = $r->roofType;
-            $order->roofOrientation = $r->roofOrientation;
-        }
-        elseif($r->work == 8)
-            $order->interieurSurface = $r->interieurSurface;
-        elseif($r->work == 9) {
-            $order->exterieurSurface = $r->exterieurSurface;
-            $order->exterieurRevetement = $r->exterieurRevetement;
-
-        }
-        elseif($r->work == 5) {
-            $order->surfaceChauffee = $r->surfaceChauffee;
-            $order->eauChaudeSanitaire = $r->eauChaudeSanitaire;
-            $order->EspaceExterieur = $r->EspaceExterieur;
-        }
-
-        $order->save();
-        
-
-        orderWork::create([
-            'order_id' => $idOrder,
-            'work_id' => $r->work
-        ]);
-
-        return back()->with(['message' => 'Travaux a été créé avec succès']);
-    }
-
-    public function deleteWork(Request $r) {
-        $work = orderWork::where('order_id', $r->orderID)->where('work_id', $r->workID)->first();
-
-        $order = Order::find($r->orderID);
-
-
-        if($work->work_id == 1) {
-            $order->currentElectricityBill = null;
-            $order->kilowattsPerYear = null;
-            $order->taxIncome = null;
-            $order->roofType = null;
-            $order->roofOrientation = null;
-        }
-        elseif($work->work_id == 8)
-            $order->interieurSurface = null;
-        elseif($work->work_id == 9) {
-            $order->exterieurSurface = null;
-            $order->exterieurRevetement = null;
-
-        }
-        elseif($work->work_id == 5) {
-            $order->surfaceChauffee = null;
-            $order->eauChaudeSanitaire = null;
-        }
-
-        $order->save();
-
-        $work->delete();
-
-        return back()->with(['message' => 'Travaux a été supprimer avec succès']);
-    }
-
     public function viewAll() {
         $orders = Order::orderBy('id', 'DESC')->get();
 
@@ -132,11 +56,9 @@ class OrderController extends Controller
         return Inertia::render('Orders', ['data' => $data]);
     }
 
-    /* update client */
-
-    public function storeClient(Request $request, $idOrder)
+    #update client
+    public function storeClient(Request $request, $orderId)
     {
-        #validation
         $validated = $request->validate([
             "lastName" => "required|max:120",
             "firstName" => "required|max:120",
@@ -145,7 +67,7 @@ class OrderController extends Controller
             "logementSurface" => "required",
         ]);
 
-        $order = Order::where('id', $idOrder)->first();
+        $order = Order::where('id', $orderId)->first();
 
         $client = Client::where('id', $order->client_id)->first();
 
@@ -173,16 +95,13 @@ class OrderController extends Controller
         return back();
     }
 
-    /* update order */
-
-    public function storeOrder(Request $request, $idOrder)
+    #update order
+    public function storeOrder(Request $request, $orderId)
     {
-        $order = Order::where('id', $idOrder)->first();
+        $order = Order::where('id', $orderId)->first();
 
         $order->update([
             'currentElectricityBill' => $request->currentElectricityBill,
-            'kilowattsPerYear' => $request->kilowattsPerYear,
-            'taxIncome' => $request->taxIncome,
             'roofType' => $request->roofType,
             'roofOrientation' => $request->roofOrientation,
             'interieurSurface' => $request->interieurSurface,
@@ -201,10 +120,80 @@ class OrderController extends Controller
         return back();
     }
 
-    /*  */
+    #Edit Work
+    public function createWork(Request $r, $orderId) {
+        $exist = orderWork::where('order_id',$orderId)->where('work_id', $r->work)->first();
+        $exceed =  orderWork::where('order_id', $orderId)->count();
 
-    public function reviewState(Request $r, $idOrder) {
-        $order = Order::where('id', $idOrder)->first();
+        if($exceed == 5)
+            return back()->with(['error' => 'Veuillez ne pas dépasser 5 travaux!']);
+
+        if($exist)
+            return back()->with(['error' => 'Travaux déjà existant!']);
+
+        $order = Order::find($orderId);
+
+        if($r->work == 1) {
+            $order->currentElectricityBill = $r->currentElectricityBill;
+            $order->roofType = $r->roofType;
+            $order->roofOrientation = $r->roofOrientation;
+        }
+        elseif($r->work == 8)
+            $order->interieurSurface = $r->interieurSurface;
+        elseif($r->work == 9) {
+            $order->exterieurSurface = $r->exterieurSurface;
+            $order->exterieurRevetement = $r->exterieurRevetement;
+
+        }
+        elseif($r->work == 5) {
+            $order->surfaceChauffee = $r->surfaceChauffee;
+            $order->eauChaudeSanitaire = $r->eauChaudeSanitaire;
+            $order->EspaceExterieur = $r->EspaceExterieur;
+        }
+
+        $order->save();
+        
+
+        orderWork::create([
+            'order_id' => $orderId,
+            'work_id' => $r->work
+        ]);
+
+        return back()->with(['message' => 'Travaux a été créé avec succès']);
+    }
+
+    public function deleteWork(Request $r) {
+        $work = orderWork::where('order_id', $r->orderID)->where('work_id', $r->workID)->first();
+
+        $order = Order::find($r->orderID);
+
+        if($work->work_id == 1) {
+            $order->currentElectricityBill = null;
+            $order->roofType = null;
+            $order->roofOrientation = null;
+        }
+        elseif($work->work_id == 8)
+            $order->interieurSurface = null;
+        elseif($work->work_id == 9) {
+            $order->exterieurSurface = null;
+            $order->exterieurRevetement = null;
+
+        }
+        elseif($work->work_id == 5) {
+            $order->surfaceChauffee = null;
+            $order->eauChaudeSanitaire = null;
+        }
+
+        $order->save();
+
+        $work->delete();
+
+        return back()->with(['message' => 'Travaux a été supprimer avec succès']);
+    }
+
+    #review state
+    public function reviewState(Request $r, $orderId) {
+        $order = Order::where('id', $orderId)->first();
 
         $order->reviewState = $r->state;
 

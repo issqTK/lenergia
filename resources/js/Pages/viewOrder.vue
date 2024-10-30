@@ -1,6 +1,5 @@
 <template>
-    <span @click="this.$emit('current', 'list')"
-        class="table cursor-pointer mb-8 bg-slate-50 hover:bg-slate-100 font-semibold py-3 px-4 rounded">Retour</span>
+    <span @click="this.$emit('current', 'list')" class="table cursor-pointer mb-8 bg-slate-50 hover:bg-slate-100 font-semibold py-3 px-4 rounded">Retour</span>
 
 
     <form class="flex flex-col gap-4 md:gap-8 p-6 mb-8 relative">
@@ -26,7 +25,8 @@
     </form>
 
     <form class="flex flex-col gap-4 md:gap-8 p-6 mb-8 border rounded relative">
-        <legend class="text-xl capitalize font-bold bg-white px-2 absolute" style="top:-20px">information client</legend>
+        <legend class="text-xl capitalize font-bold bg-white px-2 absolute" style="top:-20px">information client
+        </legend>
 
         <div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4">
             <!-- gender -->
@@ -99,7 +99,8 @@
                 <label for="logementSurface">Logement Surface m²</label>
                 <input type="number" id="logementSurface" v-model="clientInfos.logementSurface"
                     :class="clientInfos.errors.logementSurface ? 'border-red-400' : ''">
-                <span class="text-red-400 text-lg absolute right-2 top-9" v-if="clientInfos.errors.logementSurface">*</span>
+                <span class="text-red-400 text-lg absolute right-2 top-9"
+                    v-if="clientInfos.errors.logementSurface">*</span>
                 <span class="text-red-400 text-sm">{{ clientInfos.errors.logementSurface }}</span>
             </div>
         </div>
@@ -109,15 +110,19 @@
             <div class="flex flex-col gap-2 w-full md:w-6/12">
                 <label for="logementEnergie">Logement Energie</label>
                 <select id="logementEnergie" v-model="clientInfos.logementEnergie">
-                    <option value="Chauffage au fioul" :selected="view.logementEnergie == 'Chauffage au fioul'">Chauffage au
+                    <option value="Chauffage au fioul" :selected="view.logementEnergie == 'Chauffage au fioul'">
+                        Chauffage au
                         fioul</option>
                     <option value="Chauffage électrique" :selected="view.logementEnergie == 'Chauffage électrique'">
                         Chauffage électrique</option>
-                    <option value="Chauffage au gaz" :selected="view.logementEnergie == 'Chauffage au gaz'">Chauffage au gaz
+                    <option value="Chauffage au gaz" :selected="view.logementEnergie == 'Chauffage au gaz'">Chauffage au
+                        gaz
                     </option>
-                    <option value="Chauffage au bois" :selected="view.logementEnergie == 'Chauffage au bois'">Chauffage au
+                    <option value="Chauffage au bois" :selected="view.logementEnergie == 'Chauffage au bois'">Chauffage
+                        au
                         bois</option>
-                    <option value="Pompe à chaleur" :selected="view.logementEnergie == 'Pompe à chaleur'">Pompe à chaleur
+                    <option value="Pompe à chaleur" :selected="view.logementEnergie == 'Pompe à chaleur'">Pompe à
+                        chaleur
                     </option>
                     <option value="Chauffage au charbon" :selected="view.logementEnergie == 'Chauffage au charbon'">
                         Chauffage au charbon</option>
@@ -133,17 +138,20 @@
                     :class="clientInfos.errors.logementEnergieType ? 'border-red-400' : ''" ref="energyType"
                     v-model="clientInfos.logementEnergieType">
                     <option value="Chaudière à condensation"
-                        :selected="clientInfos.logementEnergieType == 'Chaudière à condensation'">Chaudière à condensation
+                        :selected="clientInfos.logementEnergieType == 'Chaudière à condensation'">Chaudière à
+                        condensation
                     </option>
                     <option value="Chaudière classique"
-                        :selected="clientInfos.logementEnergieType == 'Chaudière classique'">Chaudière classique</option>
+                        :selected="clientInfos.logementEnergieType == 'Chaudière classique'">Chaudière classique
+                    </option>
                     <option value="Poêle" :selected="clientInfos.logementEnergieType == 'Poêle'">Poêle</option>
                 </select>
                 <select v-if="clientInfos.logementEnergie == 'Chauffage électrique'" id="energieType"
                     :class="clientInfos.errors.logementEnergieType ? 'border-red-400' : ''" ref="energyType"
                     v-model="clientInfos.logementEnergieType">
                     <option value="Chaudière électrique"
-                        :selected="clientInfos.logementEnergieType == 'Chaudière électrique'">Chaudière électrique</option>
+                        :selected="clientInfos.logementEnergieType == 'Chaudière électrique'">Chaudière électrique
+                    </option>
                     <option value="Plafonds ou planchers chauffants"
                         :selected="clientInfos.logementEnergieType == 'Plafonds ou planchers chauffants'">Plafonds ou
                         planchers chauffants</option>
@@ -161,8 +169,10 @@
                         :selected="clientInfos.logementEnergieType == 'Chaudière classique gaz'">Chaudière classique gaz
                     </option>
                     <option value="Radiateurs électriques"
-                        :selected="clientInfos.logementEnergieType == 'Radiateurs électriques'">Radiateur au gaz</option>
-                    <option value="Poêle au gaz" :selected="clientInfos.logementEnergieType == 'Poêle au gaz'">Poêle au gaz
+                        :selected="clientInfos.logementEnergieType == 'Radiateurs électriques'">Radiateur au gaz
+                    </option>
+                    <option value="Poêle au gaz" :selected="clientInfos.logementEnergieType == 'Poêle au gaz'">Poêle au
+                        gaz
                     </option>
                 </select>
                 <span class="text-red-400 text-lg absolute right-8 top-9 z-50"
@@ -171,7 +181,8 @@
             </div>
         </div>
 
-        <div v-if="this.clientInfos.recentlySuccessful" class="text-center font-semibold text-green-400">Enregistrée avec
+        <div v-if="this.clientInfos.recentlySuccessful" class="text-center font-semibold text-green-400">Enregistrée
+            avec
             succès</div>
 
         <input type="button" @click.prevent="UpdateClientInfos" value="Enregister"
@@ -179,14 +190,15 @@
     </form>
 
     <form class="flex flex-col gap-4 md:gap-8 p-6 border rounded relative">
-        <legend class="text-xl capitalize font-bold bg-white px-2 absolute" style="top:-20px">l'étude de projet </legend>
+        <legend class="text-xl capitalize font-bold bg-white px-2 absolute" style="top:-20px">l'étude de projet
+        </legend>
 
         <!-- Travaux -->
         <div class="flex flex-col gap-4">
             <div class="flex gap-4 items-center">
                 <label>Travaux demandés</label>
-                <a @click.prevent="this.viewCreateWork = true"
-                    class="text-sm font-semibold bg-slate-50 hover:bg-slate-100 cursor-pointer p-2 rounded">Créé travaux</a>
+                <a @click.prevent="this.viewCreateWork = true" class="text-sm font-semibold bg-slate-50 hover:bg-slate-100 cursor-pointer p-2 rounded">
+                    Créé travaux</a>
             </div>
 
 
@@ -203,8 +215,9 @@
             </div>
 
             <span class="text-green-400 text-sm font-semibold" v-if="this.successMessage != null">{{ this.successMessage
-            }}</span>
-            <span class="text-red-400 text-sm font-semibold" v-if="this.errorMessage != null">{{ this.errorMessage }}</span>
+                }}</span>
+            <span class="text-red-400 text-sm font-semibold" v-if="this.errorMessage != null">{{ this.errorMessage
+                }}</span>
 
         </div>
 
@@ -220,26 +233,7 @@
                 <span class="text-red-400 text-sm" v-if="projectForm.errors.currentElectricityBill">{{
                     projectForm.errors.currentElectricityBill }}</span>
             </div>
-
-            <div v-if="this.photovoltaique" class="flex flex-col gap-2 relative">
-                <label for="kilowattsPerYear">Combien de kilowatts consommer par an ?</label>
-                <input type="number" id="kilowattsPerYear" v-model="projectForm.kilowattsPerYear"
-                    :class="projectForm.errors.kilowattsPerYear ? 'border-red-400' : ''">
-                <span class="text-red-400 text-lg absolute right-2 top-9"
-                    v-if="projectForm.errors.kilowattsPerYear">*</span>
-                <span class="text-red-400 text-sm" v-if="projectForm.errors.kilowattsPerYear">{{
-                    projectForm.errors.kilowattsPerYear }}</span>
-            </div>
-
-            <div v-if="this.photovoltaique" class="flex flex-col gap-2 relative">
-                <label for="taxIncome">Quel est le revenu total de votre foyer fiscal ?</label>
-                <input type="number" id="taxIncome" v-model="projectForm.taxIncome"
-                    :class="projectForm.errors.taxIncome ? 'border-red-400' : ''">
-                <span class="text-red-400 text-lg absolute right-2 top-9" v-if="projectForm.errors.taxIncome">*</span>
-                <span class="text-red-400 text-sm" v-if="projectForm.errors.taxIncome">{{ projectForm.errors.taxIncome
-                }}</span>
-            </div>
-
+            
             <div v-if="this.photovoltaique" class="flex flex-col gap-2 relative">
                 <label for="roofType">Vous avez quel type de toiture ?</label>
                 <select id="roofType" v-model="projectForm.roofType"
@@ -249,7 +243,7 @@
                     <option value="La toiture en pente">La toiture en pente</option>
                 </select>
                 <span class="text-red-400 text-sm" v-if="projectForm.errors.roofType">{{ projectForm.errors.roofType
-                }}</span>
+                    }}</span>
             </div>
 
             <div v-if="this.photovoltaique" class="flex flex-col gap-2 relative">
@@ -262,8 +256,8 @@
                     <option value="Sud - Est">Sud - Est</option>
                     <option value="Sud - Ouest">Sud - Ouest</option>
                 </select>
-                <span class="text-red-400 text-sm"
-                    v-if="projectForm.errors.roofOrientation">{{ projectForm.errors.roofOrientation }}</span>
+                <span class="text-red-400 text-sm" v-if="projectForm.errors.roofOrientation">{{
+                    projectForm.errors.roofOrientation }}</span>
             </div>
 
             <!-- interieurSurface -->
@@ -301,17 +295,20 @@
                 <label for="surfaceChauffee">Surface chauffee par la pompe à chaleur m²</label>
                 <input type="number" id="surfaceChauffee" v-model="projectForm.surfaceChauffee"
                     :class="projectForm.errors.surfaceChauffee ? 'border-red-400' : ''">
-                <span class="text-red-400 text-lg absolute right-2 top-9" v-if="projectForm.errors.surfaceChauffee">*</span>
+                <span class="text-red-400 text-lg absolute right-2 top-9"
+                    v-if="projectForm.errors.surfaceChauffee">*</span>
                 <span class="text-red-400 text-sm">{{ projectForm.errors.surfaceChauffee }}</span>
             </div>
             <!-- eauChaudeSanitaire -->
             <div v-if="this.pompe" class="flex flex-col gap-2">
                 <label for="eauChaudeSanitaire">Eau Chaude Sanitaire</label>
                 <select id="eauChaudeSanitaire" v-model="projectForm.eauChaudeSanitaire">
-                    <option value="Chauffage seul" :selected="projectForm.eauChaudeSanitaire == 'Chauffage seul'">Chauffage
+                    <option value="Chauffage seul" :selected="projectForm.eauChaudeSanitaire == 'Chauffage seul'">
+                        Chauffage
                         seul</option>
                     <option value="Chauffage eau chaude sanitaire"
-                        :selected="projectForm.eauChaudeSanitaire == 'Chauffage eau chaude sanitaire'">Chauffage eau chaude
+                        :selected="projectForm.eauChaudeSanitaire == 'Chauffage eau chaude sanitaire'">Chauffage eau
+                        chaude
                         sanitaire</option>
                 </select>
             </div>
@@ -326,6 +323,7 @@
 
         </div>
 
+        <!--  -->
         <div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4">
             <!-- statusProjet -->
             <div class="flex flex-col gap-2 w-full md:w-4/12">
@@ -335,10 +333,12 @@
                         :selected="projectForm.statusProjet == 'Je réfléchis à mes travaux'">Je réfléchis à mes travaux
                     </option>
                     <option value="Je recherche un artisan RGE"
-                        :selected="projectForm.statusProjet == 'Je recherche un artisan RGE'">Je recherche un artisan RGE
+                        :selected="projectForm.statusProjet == 'Je recherche un artisan RGE'">Je recherche un artisan
+                        RGE
                     </option>
                     <option value="Je vais signer mon devis"
-                        :selected="projectForm.statusProjet == 'Je vais signer mon devis'">Je vais signer mon devis</option>
+                        :selected="projectForm.statusProjet == 'Je vais signer mon devis'">Je vais signer mon devis
+                    </option>
                 </select>
             </div>
             <!-- travauxAdresse -->
@@ -346,7 +346,8 @@
                 <label for="travauxAdresse">Travaux Adresse</label>
                 <input type="text" id="travauxAdresse" v-model="projectForm.travauxAdresse"
                     :class="projectForm.errors.travauxAdresse ? 'border-red-400' : ''">
-                <span class="text-red-400 text-lg absolute right-2 top-9" v-if="projectForm.errors.travauxAdresse">*</span>
+                <span class="text-red-400 text-lg absolute right-2 top-9"
+                    v-if="projectForm.errors.travauxAdresse">*</span>
                 <span class="text-red-400 text-sm">{{ projectForm.errors.travauxAdresse }}</span>
             </div>
             <!-- utilisateurStatus -->
@@ -354,17 +355,22 @@
                 <label for="utilisateurStatus">Utilisateur Status</label>
                 <select id="utilisateurStatus" v-model="projectForm.utilisateurStatus">
                     <option value="Propriétaire occupant"
-                        :selected="projectForm.utilisateurStatus == 'Propriétaire occupant'">Propriétaire occupant</option>
+                        :selected="projectForm.utilisateurStatus == 'Propriétaire occupant'">Propriétaire occupant
+                    </option>
                     <option value="Propriétaire d'une résidence secondaire"
-                        :selected="projectForm.utilisateurStatus == 'Propriétaire d\'une résidence secondaire'">Propriétaire
+                        :selected="projectForm.utilisateurStatus == 'Propriétaire d\'une résidence secondaire'">
+                        Propriétaire
                         d'une résidence secondaire</option>
                     <option value="Propriétaire bailleur"
-                        :selected="projectForm.utilisateurStatus == 'Propriétaire bailleur'">Propriétaire bailleur</option>
-                    <option value="Locataire" :selected="projectForm.utilisateurStatus == 'Locataire'">Locataire</option>
+                        :selected="projectForm.utilisateurStatus == 'Propriétaire bailleur'">Propriétaire bailleur
+                    </option>
+                    <option value="Locataire" :selected="projectForm.utilisateurStatus == 'Locataire'">Locataire
+                    </option>
                 </select>
             </div>
         </div>
 
+        <!--  -->
         <div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4">
             <!-- menageComposition -->
             <div class="flex flex-col gap-2 w-full md:w-6/12 relative">
@@ -380,7 +386,8 @@
             <div class="flex flex-col gap-2 w-full md:w-6/12">
                 <label for="menageRevenus">Menage Revenus</label>
                 <select id="menageRevenus" v-model="projectForm.menageRevenus">
-                    <option value="Inférieur à 16 229 €" :selected="projectForm.menageRevenus == 'Inférieur à 16 229 €'">
+                    <option value="Inférieur à 16 229 €"
+                        :selected="projectForm.menageRevenus == 'Inférieur à 16 229 €'">
                         Inférieur à 16 229 €</option>
                     <option value="Entre 16 229 € et 20 805 €"
                         :selected="projectForm.menageRevenus == 'Entre 16 229 € et 20 805 €'">Entre 16 229 € et 20 805 €
@@ -388,24 +395,23 @@
                     <option value="Entre 20 805 € et 29 148 €"
                         :selected="projectForm.menageRevenus == 'Entre 20 805 € et 29 148 €'">Entre 20 805 € et 29 148 €
                     </option>
-                    <option value="Supérieur à 29 148 €" :selected="projectForm.menageRevenus == 'Supérieur à 29 148 €'">
+                    <option value="Supérieur à 29 148 €"
+                        :selected="projectForm.menageRevenus == 'Supérieur à 29 148 €'">
                         Supérieur à 29 148 €</option>
                 </select>
             </div>
         </div>
 
-        <div v-if="this.projectForm.recentlySuccessful" class=" text-center font-semibold text-green-400">Enregistrée avec
+        <!-- msg success -->
+        <div v-if="this.projectForm.recentlySuccessful" class=" text-center font-semibold text-green-400">Enregistrée
+            avec
             succès</div>
 
-        <input type="button" @click.prevent="UpdateProjectForm" value="Enregister"
-            class="uppercase m-auto py-4 px-12 font-bold cursor-pointer bg-slate-100 hover:bg-slate-200">
+        <input type="button" @click.prevent="UpdateProjectForm" value="Enregister" class="uppercase m-auto py-4 px-12 font-bold cursor-pointer bg-slate-100 hover:bg-slate-200">
     </form>
 
-    <div v-if="viewCreateWork == true"
-        class="fixed top-0 left-0 right-0 bottom-0 bg-slate-100 py-2 px-12 md:px-36 md:py-6 overflow-y-scroll"
-        style="-ms-overflow-style:none;scrollbar-width:none">
-        <span @click="this.viewCreateWork = false"
-            class="table cursor-pointer mb-8 bg-white hover:bg-slate-50 font-semibold py-3 px-4 rounded">
+    <div v-if="viewCreateWork == true" class="fixed top-0 left-0 right-0 bottom-0 bg-slate-100 py-2 px-12 md:px-36 md:py-6 overflow-y-scroll" style="-ms-overflow-style:none;scrollbar-width:none">
+        <span @click="this.viewCreateWork = false" class="table cursor-pointer mb-8 bg-white hover:bg-slate-50 font-semibold py-3 px-4 rounded">
             Annuler</span>
 
         <form class="flex flex-col gap-6 md:w-8/12 md:mx-auto">
@@ -414,13 +420,14 @@
                 <select id="travaux" @change="loadQuestions($event)" v-model="createWorkForm.work"
                     :class="createWorkForm.errors.work ? 'border-red-400' : ''">
                     <option value="" selected disabled hidden>Choisir ici</option>
-                    <option v-for="work in this.$page.props.works" :key="work.id" :value="work.id">{{ work.name }}</option>
+                    <option v-for="work in this.$page.props.works" :key="work.id" :value="work.id">{{ work.name }}
+                    </option>
                 </select>
-                <span class="text-red-400 text-sm" v-if="createWorkForm.errors.work">{{ createWorkForm.errors.work }}</span>
+                <span class="text-red-400 text-sm" v-if="createWorkForm.errors.work">{{ createWorkForm.errors.work
+                    }}</span>
             </div>
 
-            <!-- pannaux photovoltaique 
-            -->
+            <!-- pannaux photovoltaique -->
             <div v-if="this.activeWork == 1" class="flex flex-col gap-2 relative">
                 <label for="ElectricityBill">Le montant actuelle de la facture d'électricité</label>
                 <input type="number" id="ElectricityBill" v-model="createWorkForm.currentElectricityBill"
@@ -431,23 +438,6 @@
                     createWorkForm.errors.currentElectricityBill }}</span>
             </div>
             <div v-if="this.activeWork == 1" class="flex flex-col gap-2 relative">
-                <label for="kilowattsPerYear">Combien de kilowatts consommer par an ?</label>
-                <input type="number" id="kilowattsPerYear" v-model="createWorkForm.kilowattsPerYear"
-                    :class="createWorkForm.errors.kilowattsPerYear ? 'border-red-400' : ''">
-                <span class="text-red-400 text-lg absolute right-2 top-9"
-                    v-if="createWorkForm.errors.kilowattsPerYear">*</span>
-                <span class="text-red-400 text-sm" v-if="createWorkForm.errors.kilowattsPerYear">{{
-                    createWorkForm.errors.kilowattsPerYear }}</span>
-            </div>
-            <div v-if="this.activeWork == 1" class="flex flex-col gap-2 relative">
-                <label for="taxIncome">Quel est le revenu total de votre foyer fiscal ?</label>
-                <input type="number" id="taxIncome" v-model="createWorkForm.taxIncome"
-                    :class="createWorkForm.errors.taxIncome ? 'border-red-400' : ''">
-                <span class="text-red-400 text-lg absolute right-2 top-9" v-if="createWorkForm.errors.taxIncome">*</span>
-                <span class="text-red-400 text-sm" v-if="createWorkForm.errors.taxIncome">{{ createWorkForm.errors.taxIncome
-                }}</span>
-            </div>
-            <div v-if="this.activeWork == 1" class="flex flex-col gap-2 relative">
                 <label for="roofType">Vous avez quel type de toiture ?</label>
                 <select id="roofType" v-model="createWorkForm.roofType"
                     :class="createWorkForm.errors.roofType ? 'border-red-400' : ''">
@@ -455,8 +445,9 @@
                     <option value="La toiture plate">La toiture plate</option>
                     <option value="La toiture en pente">La toiture en pente</option>
                 </select>
-                <span class="text-red-400 text-sm" v-if="createWorkForm.errors.roofType">{{ createWorkForm.errors.roofType
-                }}</span>
+                <span class="text-red-400 text-sm" v-if="createWorkForm.errors.roofType">{{
+                    createWorkForm.errors.roofType
+                    }}</span>
 
             </div>
             <div v-if="this.activeWork == 1" class="flex flex-col gap-2 relative">
@@ -504,7 +495,8 @@
                         :selected="createWorkForm.exterieurRevetement == 'extérieur sous enduit'">Extérieur sous enduit
                     </option>
                     <option value="extérieur sous bardage"
-                        :selected="createWorkForm.exterieurRevetement == 'extérieur sous bardage'">Extérieur sous bardage
+                        :selected="createWorkForm.exterieurRevetement == 'extérieur sous bardage'">Extérieur sous
+                        bardage
                     </option>
                 </select>
                 <span class="text-red-400 text-sm" v-if="createWorkForm.errors.exterieurRevetement">{{
@@ -590,8 +582,6 @@ export default {
             }),
             projectForm: useForm({
                 currentElectricityBill: this.view.currentElectricityBill,
-                kilowattsPerYear: this.view.kilowattsPerYear,
-                taxIncome: this.view.taxIncome,
                 roofType: this.view.roofType,
                 roofOrientation: this.view.roofOrientation,
                 interieurSurface: this.view.interieurSurface,
@@ -615,8 +605,6 @@ export default {
                 eauChaudeSanitaire: '',
                 EspaceExterieur: '',
                 currentElectricityBill: '',
-                kilowattsPerYear: '',
-                taxIncome: '',
                 roofType: '',
                 roofOrientation: '',
             }),
@@ -666,7 +654,7 @@ export default {
         delete(workId, i) {
             let orderId = this.view.id;
 
-            router.get('/delete-work', { workID: workId, orderID: orderId }, {
+            router.get('/orders/delete-work', { workID: workId, orderID: orderId }, {
                 preserveState: true,
                 preserveScroll: true,
                 onBefore: () => confirm('Est ce que vous etes sur de vouloir supprimer le travaux?'),
@@ -732,7 +720,7 @@ export default {
             } else errors.logementEnergieType = null;
 
             if (errors.firstName == null && errors.lastName == null && errors.phone == null && errors.email == null && errors.logementSurface == null && errors.logementEnergieType == null)
-                this.clientInfos.post('/update-client/' + this.view.id, {
+                this.clientInfos.post('/orders/update-client/' + this.view.id, {
                     preserveScroll: true,
                     preserveState: true,
                 });
@@ -749,16 +737,6 @@ export default {
                 errors.currentElectricityBill = 'Le champ requis. contenant des chiffres au max!';
                 return;
             } else errors.currentElectricityBill = null;
-
-            if (this.photovoltaique && !pattern_number.test(form.kilowattsPerYear)) {
-                errors.kilowattsPerYear = 'Le champ requis. contenant des chiffres au max!';
-                return;
-            } else errors.kilowattsPerYear = null;
-
-            if (this.photovoltaique && !pattern_number.test(form.taxIncome)) {
-                errors.taxIncome = 'Le champ requis. contenant des chiffres au max!';
-                return;
-            } else errors.taxIncome = null;
 
             if (this.photovoltaique && form.roofType == '') {
                 errors.roofType = 'Le champ requis!';
@@ -802,7 +780,7 @@ export default {
 
 
             if (errors.interieurSurface == null && errors.exterieurSurface == null && errors.surfaceChauffee == null && errors.travauxAdresse == null && errors.menageComposition == null)
-                this.projectForm.post('/update-order/' + this.view.id, {
+                this.projectForm.post('/orders/update-order/' + this.view.id, {
                     preserveScroll: true,
                     preserveState: true,
                 });
@@ -823,16 +801,6 @@ export default {
                 errors.currentElectricityBill = 'Le champ requis. contenant des chiffres au max!';
                 return;
             } else errors.currentElectricityBill = null;
-
-            if (this.activeWork == 1 && !pattern_number.test(form.kilowattsPerYear)) {
-                errors.kilowattsPerYear = 'Le champ requis. contenant des chiffres au max!';
-                return;
-            } else errors.kilowattsPerYear = null;
-
-            if (this.activeWork == 1 && !pattern_number.test(form.taxIncome)) {
-                errors.taxIncome = 'Le champ requis. contenant des chiffres au max!';
-                return;
-            } else errors.taxIncome = null;
 
             if (this.activeWork == 1 && form.roofType == '') {
                 errors.roofType = 'Le champ requis!';
@@ -882,8 +850,6 @@ export default {
             if (
                 errors.work == null &&
                 errors.currentElectricityBill == null &&
-                errors.kilowattsPerYear == null &&
-                errors.taxIncome == null &&
                 errors.roofType == null &&
                 errors.roofOrientation == null &&
                 errors.interieurSurface == null &&
@@ -894,7 +860,7 @@ export default {
                 errors.EspaceExterieur == null
             )
 
-                this.createWorkForm.post('/create-work/' + this.view.id, {
+                this.createWorkForm.post('/orders/create-work/' + this.view.id, {
                     preserveScroll: true,
                     onSuccess: () => {
                         this.viewCreateWork = false;
@@ -909,8 +875,6 @@ export default {
 
                             if (form.work == 1) {
                                 this.projectForm.currentElectricityBill = this.createWorkForm.currentElectricityBill;
-                                this.projectForm.kilowattsPerYear = this.createWorkForm.kilowattsPerYear;
-                                this.projectForm.taxIncome = this.createWorkForm.taxIncome;
                                 this.projectForm.roofType = this.createWorkForm.roofType;
                                 this.projectForm.roofOrientation = this.createWorkForm.roofOrientation;
                                 this.photovoltaique = true;
@@ -943,7 +907,7 @@ export default {
                 });
         },
         UpdateReviewState() {
-            this.reviewState.post('/review-state/' + this.view.id, {
+            this.reviewState.post('/orders/review-state/' + this.view.id, {
                 preserveScroll: true,
             });
         }
@@ -951,7 +915,8 @@ export default {
 }
 </script>
 
-<style scoped>form label {
+<style scoped>
+form label {
     font-weight: bold;
     font-size: .8em;
 }
@@ -965,4 +930,5 @@ input,
 select {
     font-size: .9em;
     border-radius: 3px;
-}</style>
+}
+</style>

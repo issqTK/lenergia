@@ -19,8 +19,6 @@ class Order extends Model
         'logementEnergie',
         'logementEnergieType',
         'currentElectricityBill',
-        'kilowattsPerYear',
-        'taxIncome',
         'roofType',
         'roofOrientation',
         'interieurSurface',
