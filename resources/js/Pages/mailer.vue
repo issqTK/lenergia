@@ -59,7 +59,7 @@
                     <span v-if="this.$page.props.flash.otherMSG" class="text-green-700 font-semibold">{{
                         $page.props.flash.otherMSG }}</span>
 
-                    <a :href="route('increasingSolution')"
+                    <a :href="route('mailer.send')"
                         class="block w-10/12 text-center py-3 bg-blue-400 hover:bg-blue-500 text-white font-bold uppercase text-sm rounded">Envoyer
                         les emails</a>
                 </div>
@@ -94,7 +94,7 @@ export default {
     methods: {
         delete(ID) {
             router.get(
-                "delete",
+                "/orders/delete",
                 { mailID: ID },
                 {
                     preserveState: true,
@@ -124,7 +124,7 @@ export default {
                 return;
             } else this.errorEmail = null;
 
-            this.new.post("/create-new", {
+            this.new.post("/orders/create", {
                 preserveState: true,
                 preserveScroll: true,
                 onSuccess: () => {

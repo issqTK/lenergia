@@ -37,20 +37,20 @@ Route::middleware('auth')->group(function () {
     // Mailer Routes
     Route::prefix('mailer')->name('mailer.')->group(function () {
         Route::get('/', [mailController::class, 'viewMailer'])->name('view');
-        Route::get('/send-mails', [mailController::class, 'index'])->name('send');
+        Route::get('/send', [mailController::class, 'index'])->name('send');
         Route::get('/delete', [mailController::class, 'delete'])->name('delete');
-        Route::post('/create-new', [mailController::class, 'createNew'])->name('createNew');
+        Route::post('/create', [mailController::class, 'createNew'])->name('createNew');
     });
 });
 
 /*
-Route::middleware('auth')->group(function () {
-    Route::get('/mailer', [mailController::class, 'viewMailer'])->name('mailer');
-    Route::get('/send-mails', [mailController::class, 'index'])->name('increasingSolution');
-    Route::get('/delete', [mailController::class, 'delete'])->name('delete');
-    Route::post('create-new', [mailController::class, 'createNew']);
+    Route::middleware('auth')->group(function () {
+        Route::get('/mailer', [mailController::class, 'viewMailer'])->name('mailer');
+        Route::get('/send-mails', [mailController::class, 'index'])->name('increasingSolution');
+        Route::get('/delete', [mailController::class, 'delete'])->name('delete');
+        Route::post('create-new', [mailController::class, 'createNew']);
 
-});
+    });
 */
 
 #Maintenance Route

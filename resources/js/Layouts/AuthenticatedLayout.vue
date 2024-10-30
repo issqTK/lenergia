@@ -32,12 +32,14 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Tableau de bord
                                 </NavLink>
+                                
                                 <NavLink :href="route('orders.all')" :active="route().current('orders.')">
                                     Commandes
                                 </NavLink>
-                                <!-- <NavLink v-if="$page.props.auth.user.type == 1" :href="route('mailer.view')" :active="route().current('mailer.')">
+                                
+                                <NavLink v-if="$page.props.auth.user.type == 1" :href="route('mailer.view')" :active="route().current('mailer.')">
                                     Mailer
-                                </NavLink> -->
+                                </NavLink>
                             </div>
                         </div>
 
@@ -125,6 +127,12 @@ const showingNavigationDropdown = ref(false);
 
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('orders.all')" :active="route().current('orders.')">
+                            Commandes
+                        </ResponsiveNavLink>
+                    </div>
+                    
+                    <div class="pt-2 pb-3 space-y-1">
+                        <ResponsiveNavLink :href="route('mailer.view')" :active="route().current('mailer.')">
                             Commandes
                         </ResponsiveNavLink>
                     </div>
