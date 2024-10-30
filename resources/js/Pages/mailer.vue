@@ -94,7 +94,7 @@ export default {
     methods: {
         delete(ID) {
             router.get(
-                "/orders/delete",
+                "/mailer/delete",
                 { mailID: ID },
                 {
                     preserveState: true,
@@ -124,7 +124,7 @@ export default {
                 return;
             } else this.errorEmail = null;
 
-            this.new.post("/orders/create", {
+            this.new.post("/mailer/create", {
                 preserveState: true,
                 preserveScroll: true,
                 onSuccess: () => {
