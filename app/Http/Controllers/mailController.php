@@ -14,19 +14,22 @@ class mailController extends Controller
 {
     public function index() {
 
-        if(Auth::user()->type == false) return redirect('/dashboard');
-
-        $subject = 'Augmentation de votre facture d\'électricité de 10% - Voici une solution intéressante !';
-
-        $mailAdresses = MailAdress::all();
-
-        foreach($mailAdresses AS $mailAdr) {
-            Mail::to($mailAdr->mailAdress)->send(new increasingSolution($subject, $mailAdr->name));
+        if (Auth::user()->type == false) {
+            return redirect('/dashboard');
+        }
+        
+        $mailAddresses = MailAdress::all();
+        
+        foreach ($mailAddresses as $mailAdr) {
+            $subject = 'Monsieur ' . $mailAdr->name . ', la prochaine étape pour vos travaux de rénovation avec Lenergia';
+        
+            Mail::to($mailAdr->mailAdress)->send(new IncreasingSolution($subject, $mailAdr->name));
             
-            sleep(2);
+            sleep(2); // Ideally, replace this with queue processing
         }
         
         return back()->with('otherMSG', 'Les messages ont bien été envoyés');
+        
     }
 
     public function viewMailer() {

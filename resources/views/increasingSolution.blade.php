@@ -120,7 +120,6 @@
                                 <span id="separate"></span>
 
                                 <div>
-                                    <p><em><strong>Objet</strong> : Monsieur {{$name}}, la prochaine étape pour vos travaux de rénovation avec Lenergia</em></p>
                                     <p><strong>Monsieur {{$name}},</strong></p>
                                     <p>Merci d'avoir choisi <strong>Lenergia</strong> pour vos travaux de rénovation énergétique ! Comme convenu lors de notre dernier échange, nous avançons ensemble dans votre projet d’installation de <em>[ pompe à chaleur / système solaire combiné / ballon thermodynamique ]</em> avec l’aide MaPrimeRénov’.</p>
                                     <p>Pour finaliser votre dossier et garantir l’accès aux aides disponibles, nous vous invitons à nous envoyer, en réponse directe à cet email, les documents suivants :</p>
