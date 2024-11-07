@@ -43,16 +43,6 @@ Route::middleware('auth')->group(function () {
     });
 });
 
-/*
-    Route::middleware('auth')->group(function () {
-        Route::get('/mailer', [mailController::class, 'viewMailer'])->name('mailer');
-        Route::get('/send-mails', [mailController::class, 'index'])->name('increasingSolution');
-        Route::get('/delete', [mailController::class, 'delete'])->name('delete');
-        Route::post('create-new', [mailController::class, 'createNew']);
-
-    });
-*/
-
 #Maintenance Route
 Route::get('down', fn() => \Artisan::call('down') ? 'DONE' : 'Failed');
 Route::get('up', fn() => \Artisan::call('up') ? 'DONE' : 'Failed');
