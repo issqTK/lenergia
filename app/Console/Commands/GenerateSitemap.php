@@ -27,18 +27,24 @@ class GenerateSitemap extends Command
      */
     public function handle()
     {
-        // Manually create sitemap
-        $sitemap = Sitemap::create('https://lenergia.fr');
+        if (file_exists(public_path('sitemap.xml'))) {
+            unlink(public_path('sitemap.xml'));
+        }
+        $sitemap = Sitemap::create();
+
+        // Set the base URL to avoid "localhost" in URLs
+        $baseUrl = config('app_url');
 
         // Static pages
-        $sitemap->add('/');
+        $sitemap->add("{$baseUrl}/");
 
         // Dynamic pages
         $articles = Work::all();
         foreach ($articles as $article) {
-            $sitemap->add("/{$article->slug}");
+            $sitemap->add("{$baseUrl}/{$article->slug}");
         }
 
+        // Save the sitemap
         $sitemap->writeToFile(public_path('sitemap.xml'));
     }
 }
