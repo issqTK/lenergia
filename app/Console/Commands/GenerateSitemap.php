@@ -28,7 +28,7 @@ class GenerateSitemap extends Command
     public function handle()
     {
         // Manually create sitemap
-        $sitemap = Sitemap::create();
+        $sitemap = Sitemap::create('https://lenergia.fr');
 
         // Static pages
         $sitemap->add('/');
