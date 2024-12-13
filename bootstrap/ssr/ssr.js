@@ -1,6 +1,6 @@
 import { mergeProps, useSSRContext, resolveComponent, withCtx, createTextVNode, toDisplayString, createVNode, ref, onMounted, unref, withModifiers, openBlock, createBlock, createCommentVNode, computed, onUnmounted, renderSlot, watch, withKeys, nextTick, createSSRApp, h } from "vue";
-import { ssrRenderAttrs, ssrRenderStyle, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderAttr, ssrRenderSlot, ssrLooseContain, ssrGetDynamicModelProps, ssrRenderClass, ssrIncludeBooleanAttr, ssrRenderTeleport } from "vue/server-renderer";
-import { Link, useForm, Head, router, usePage, createInertiaApp } from "@inertiajs/vue3";
+import { ssrRenderAttrs, ssrRenderStyle, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderAttr, ssrRenderSlot, ssrRenderClass, ssrLooseContain, ssrGetDynamicModelProps, ssrIncludeBooleanAttr, ssrRenderTeleport } from "vue/server-renderer";
+import { Link, Head, useForm, router, usePage, createInertiaApp } from "@inertiajs/vue3";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
 const _404_vue_vue_type_style_index_0_lang = "";
@@ -11,41 +11,26 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$10 = {};
-function _sfc_ssrRender$H(_ctx, _push, _parent, _attrs) {
+const _sfc_main$14 = {};
+function _sfc_ssrRender$L(_ctx, _push, _parent, _attrs) {
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "container" }, _attrs))}><p class="mb-6 text-lg text-center text-slate-700 font-bold w-8/12 border py-8 px-4 m-auto bg-white shadow leading-10 rounded"><i class="fa-solid fa-circle-exclamation" style="${ssrRenderStyle({ "color": "#c72a1f" })}"></i>    oups quelque chose ne va pas </p><a href="/" class="table p-4 m-auto font-semibold text-white rounded border"> Retour à la page d&#39;accueil </a></div>`);
 }
-const _sfc_setup$10 = _sfc_main$10.setup;
-_sfc_main$10.setup = (props, ctx) => {
+const _sfc_setup$14 = _sfc_main$14.setup;
+_sfc_main$14.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/404.vue");
-  return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
+  return _sfc_setup$14 ? _sfc_setup$14(props, ctx) : void 0;
 };
-const _404 = /* @__PURE__ */ _export_sfc(_sfc_main$10, [["ssrRender", _sfc_ssrRender$H]]);
+const _404 = /* @__PURE__ */ _export_sfc(_sfc_main$14, [["ssrRender", _sfc_ssrRender$L]]);
 const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _404
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$$ = {};
-function _sfc_ssrRender$G(_ctx, _push, _parent, _attrs) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "hidden md:flex gap-2 absolute right-16 top-4 w-96 h-14 text-slate-700 text-sm bg-gradient-to-r from-white to-slate-200 shadow rounded-lg leading-4 p-2" }, _attrs))}><span class="grow"><span class="font-bold text-base text-teal-600">Appelez-nous !</span><br> du lundi au vendredi - 8h à 19h </span><div class="w-4/12 border flex justify-center items-center cursor-pointer text-slate-50 bg-slate-500 hover:shadow-lg hover:bg-slate-100 hover:text-slate-900 rounded-bl-full rounded-tr-full font-bold"><a class="block" href="tel:0587878787">Appeler</a></div></div>`);
-}
-const _sfc_setup$$ = _sfc_main$$.setup;
-_sfc_main$$.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/AppelezNous.vue");
-  return _sfc_setup$$ ? _sfc_setup$$(props, ctx) : void 0;
-};
-const Appelez_nous = /* @__PURE__ */ _export_sfc(_sfc_main$$, [["ssrRender", _sfc_ssrRender$G]]);
-const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: Appelez_nous
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$_ = {
+const _sfc_main$13 = {
   components: { Link },
   props: ["text", "slug"]
 };
-function _sfc_ssrRender$F(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$K(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_Link = resolveComponent("Link");
   _push(ssrRenderComponent(_component_Link, mergeProps({
     href: _ctx.route("parcour", $props.slug),
@@ -63,16 +48,604 @@ function _sfc_ssrRender$F(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     _: 1
   }, _parent));
 }
-const _sfc_setup$_ = _sfc_main$_.setup;
-_sfc_main$_.setup = (props, ctx) => {
+const _sfc_setup$13 = _sfc_main$13.setup;
+_sfc_main$13.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/customComponents/btnDevis.vue");
-  return _sfc_setup$_ ? _sfc_setup$_(props, ctx) : void 0;
+  return _sfc_setup$13 ? _sfc_setup$13(props, ctx) : void 0;
 };
-const btnDevis = /* @__PURE__ */ _export_sfc(_sfc_main$_, [["ssrRender", _sfc_ssrRender$F]]);
-const PrimaryNavigation_vue_vue_type_style_index_0_scoped_efd65329_lang = "";
-const _sfc_main$Z = {
-  components: { btn: btnDevis, Link },
+const btnDevis = /* @__PURE__ */ _export_sfc(_sfc_main$13, [["ssrRender", _sfc_ssrRender$K]]);
+const BigScreen_vue_vue_type_style_index_0_scoped_6096380e_lang = "";
+const _sfc_main$12 = {
+  props: ["esWorks", "chWorks", "iWorks"],
+  components: { Link, btn: btnDevis }
+};
+function _sfc_ssrRender$J(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  const _component_Link = resolveComponent("Link");
+  const _component_btn = resolveComponent("btn");
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "hidden lg:flex justify-between h-full overflow-hidden bg-white" }, _attrs))} data-v-6096380e><ul class="flex items-center h-full gap-4" data-v-6096380e><li class="show-interior" data-v-6096380e><a href="javascript:void(0)" class="py-8 block" data-v-6096380e>Nos Offres</a><ul class="absolute bg-white flex py-6 rounded border-t-4 shadow border-green-300 interior" data-v-6096380e><i class="fa-solid fa-caret-up text-green-300 text-3xl absolute" style="${ssrRenderStyle({ "top": "-23px", "left": "30px" })}" data-v-6096380e></i><div class="flex flex-col gap-6 px-9 border-r" data-v-6096380e><h3 class="uppercase text-gray-700 font-semibold" data-v-6096380e>Les Travaux</h3><li data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("intermediate", "isolation-maison"),
+    class: "!flex items-center gap-2"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/isolation_global.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-6096380e${_scopeId}> Isolation globale `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/isolation_global.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Isolation globale ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("landing", "panneaux-solaires-photovoltaiques"),
+    class: "!flex items-center gap-2"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/Panneaux_Photovoltaïques.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-6096380e${_scopeId}> Panneaux photovoltaïques `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/Panneaux_Photovoltaïques.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Panneaux photovoltaïques ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("landing", "pompe-à-chaleur"),
+    class: "!flex items-center gap-2"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/pompe-a-chaleur.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-6096380e${_scopeId}> Pompe à chaleur `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/pompe-a-chaleur.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Pompe à chaleur ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("landing", "système-solaire-combiné"),
+    class: "!flex items-center gap-2"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/collaboration.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-6096380e${_scopeId}> Système solaire combiné `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/collaboration.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Système solaire combiné ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li></div><div class="flex flex-col gap-6 px-9" data-v-6096380e><h3 class="uppercase text-gray-700 font-semibold" data-v-6096380e>Les Services</h3><li data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("parcour"),
+    class: "!flex items-center gap-2"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/bilan_icon.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-6096380e${_scopeId}> Bilan énergétique gratuit `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/bilan_icon.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Bilan énergétique gratuit ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("parcour"),
+    class: "!flex items-center gap-2"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/audi-energitique.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-6096380e${_scopeId}> Audit énergétique `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/audi-energitique.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Audit énergétique ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li></div></ul></li><li class="show-interior" data-v-6096380e><a href="javascript:void(0)" class="py-8 block" data-v-6096380e>Conseils Travaux</a><ul class="absolute bg-white flex py-6 rounded border-t-4 shadow border-green-300 interior" data-v-6096380e><i id="solair-lg-plus-i" class="fa-solid fa-caret-up text-green-300 text-3xl absolute" style="${ssrRenderStyle({ "top": "-23px", "left": "40px" })}" data-v-6096380e></i><div class="flex flex-col gap-6 px-9 border-r" data-v-6096380e><h3 class="uppercase text-gray-700 font-semibold" data-v-6096380e>Énergie Solaire</h3><!--[-->`);
+  ssrRenderList($props.esWorks, (work) => {
+    _push(`<li data-v-6096380e>`);
+    _push(ssrRenderComponent(_component_Link, {
+      href: _ctx.route("landing", work.slug),
+      class: "!flex !items-center gap-2"
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)} style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-6096380e${_scopeId}><span data-v-6096380e${_scopeId}>${ssrInterpolate(work.name)}</span>`);
+        } else {
+          return [
+            createVNode("img", {
+              src: "/images/illustration/" + work.svg,
+              style: { "max-height": "30px" }
+            }, null, 8, ["src"]),
+            createVNode("span", null, toDisplayString(work.name), 1)
+          ];
+        }
+      }),
+      _: 2
+    }, _parent));
+    _push(`</li>`);
+  });
+  _push(`<!--]--></div><div class="flex flex-col gap-6 px-9 border-r" data-v-6096380e><h3 class="uppercase text-gray-700 font-semibold" data-v-6096380e>Chauffage</h3><!--[-->`);
+  ssrRenderList($props.chWorks, (work) => {
+    _push(`<li data-v-6096380e>`);
+    _push(ssrRenderComponent(_component_Link, {
+      href: _ctx.route("landing", work.slug),
+      class: "!flex !items-center gap-2"
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)} style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-6096380e${_scopeId}><span class="!leading-8" data-v-6096380e${_scopeId}>${ssrInterpolate(work.name)}</span>`);
+        } else {
+          return [
+            createVNode("img", {
+              src: "/images/illustration/" + work.svg,
+              style: { "max-height": "30px" }
+            }, null, 8, ["src"]),
+            createVNode("span", { class: "!leading-8" }, toDisplayString(work.name), 1)
+          ];
+        }
+      }),
+      _: 2
+    }, _parent));
+    _push(`</li>`);
+  });
+  _push(`<!--]--></div><div class="flex flex-col gap-6 px-9" data-v-6096380e><h3 class="uppercase text-gray-700 font-semibold" data-v-6096380e>Isolation</h3><!--[-->`);
+  ssrRenderList($props.iWorks, (work) => {
+    _push(`<li data-v-6096380e>`);
+    _push(ssrRenderComponent(_component_Link, {
+      href: _ctx.route("landing", work.slug),
+      class: "!flex !items-center gap-2"
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)} style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-6096380e${_scopeId}><span data-v-6096380e${_scopeId}>${ssrInterpolate(work.name)}</span>`);
+        } else {
+          return [
+            createVNode("img", {
+              src: "/images/illustration/" + work.svg,
+              style: { "max-height": "30px" }
+            }, null, 8, ["src"]),
+            createVNode("span", null, toDisplayString(work.name), 1)
+          ];
+        }
+      }),
+      _: 2
+    }, _parent));
+    _push(`</li>`);
+  });
+  _push(`<!--]--></div></ul></li><li class="thermostat" data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("landing", "thermostat-connecté"),
+    class: "py-8 block"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<span data-v-6096380e${_scopeId}>Thermostat Connecté</span>`);
+      } else {
+        return [
+          createVNode("span", null, "Thermostat Connecté")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li class="show-interior" data-v-6096380e><a href="javascript:void(0)" class="py-8 block" data-v-6096380e>Découvrez-nous</a><ul class="absolute bg-white flex flex-col gap-6 p-6 rounded border-t-4 shadow border-green-300 interior" data-v-6096380e><i id="decouvre-lg-plus-i" class="fa-solid fa-caret-up text-green-300 text-3xl absolute" style="${ssrRenderStyle({ "top": "-23px", "left": "40px" })}" data-v-6096380e></i><li data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("about"),
+    class: "text-black flex"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(` Qui sommes-nous ? `);
+      } else {
+        return [
+          createTextVNode(" Qui sommes-nous ? ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("contact"),
+    class: "text-black flex"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(` Nous Contacter `);
+      } else {
+        return [
+          createTextVNode(" Nous Contacter ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li></ul></li></ul><div class="flex items-center" data-v-6096380e>`);
+  _push(ssrRenderComponent(_component_btn, {
+    class: "!shadow-none",
+    text: "Demander un devis"
+  }, null, _parent));
+  _push(`</div></div>`);
+}
+const _sfc_setup$12 = _sfc_main$12.setup;
+_sfc_main$12.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/customComponents/BigScreen.vue");
+  return _sfc_setup$12 ? _sfc_setup$12(props, ctx) : void 0;
+};
+const BigScreenMenu = /* @__PURE__ */ _export_sfc(_sfc_main$12, [["ssrRender", _sfc_ssrRender$J], ["__scopeId", "data-v-6096380e"]]);
+const SmallScreen_vue_vue_type_style_index_0_scoped_b12940b9_lang = "";
+const _sfc_main$11 = {
+  props: ["esWorks", "chWorks", "iWorks", "ShowingNavigation"],
+  emits: ["showing-navigation"],
+  components: { Link, btn: btnDevis },
+  methods: {
+    showInterior(event) {
+      const item = event.target.parentNode.querySelector("ul");
+      if (item)
+        item.classList.add("!right-0");
+    },
+    hideInterior(event) {
+      event.target.parentNode.classList.remove("!right-0");
+    }
+  }
+};
+function _sfc_ssrRender$I(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  const _component_Link = resolveComponent("Link");
+  const _component_btn = resolveComponent("btn");
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative bg-white lg:hidden flex flex-col gap-9 p-9 min-h-screen w-full border" }, _attrs))} data-v-b12940b9><ul class="flex flex-col gap-6" data-v-b12940b9><li data-v-b12940b9><a href="javascript:void(0)" class="flex justify-between items-center" data-v-b12940b9> Nos offres <i class="fa-solid fa-chevron-right leading-3" data-v-b12940b9></i></a><ul class="absolute w-full min-h-screen top-0 -right-full flex flex-col gap-6 p-9 bg-white transi" data-v-b12940b9><a href="javascript:void(0)" data-v-b12940b9><i class="fa-solid fa-chevron-left" data-v-b12940b9></i> Retour </a><div class="flex flex-col gap-4" data-v-b12940b9><h3 class="uppercase text-gray-700 font-semibold" data-v-b12940b9>Les Travaux</h3><li data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_Link, {
+    onClick: ($event) => this.$emit("showing-navigation", false),
+    href: _ctx.route("intermediate", "isolation-maison"),
+    class: "flex gap-4 items-center pl-4 ins-link"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/isolation_global.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-b12940b9${_scopeId}> Isolation globale `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/isolation_global.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Isolation globale ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_Link, {
+    onClick: ($event) => this.$emit("showing-navigation", false),
+    href: _ctx.route("landing", "panneaux-solaires-photovoltaiques"),
+    class: "flex gap-4 items-center pl-4 ins-link"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/Panneaux_Photovoltaïques.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-b12940b9${_scopeId}>Panneaux photovoltaïques `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/Panneaux_Photovoltaïques.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode("Panneaux photovoltaïques ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_Link, {
+    onClick: ($event) => this.$emit("showing-navigation", false),
+    href: _ctx.route("landing", "pompe-à-chaleur"),
+    class: "flex gap-4 items-center pl-4 ins-link"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/pompe-a-chaleur.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-b12940b9${_scopeId}> Pompe à chaleur `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/pompe-a-chaleur.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Pompe à chaleur ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_Link, {
+    onClick: ($event) => this.$emit("showing-navigation", false),
+    href: _ctx.route("landing", "système-solaire-combiné"),
+    class: "flex gap-4 items-center pl-4 ins-link"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/collaboration.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-b12940b9${_scopeId}> Système solaire combiné `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/collaboration.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Système solaire combiné ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li></div><div class="flex flex-col gap-4" data-v-b12940b9><h3 class="uppercase text-gray-700 font-semibold" data-v-b12940b9>Les Services</h3><li data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_Link, {
+    onClick: ($event) => this.$emit("showing-navigation", false),
+    href: _ctx.route("parcour"),
+    class: "flex gap-4 items-center pl-4 ins-link"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/bilan_icon.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-b12940b9${_scopeId}> Bilan énergétique gratuit `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/bilan_icon.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Bilan énergétique gratuit ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_Link, {
+    onClick: ($event) => this.$emit("showing-navigation", false),
+    href: _ctx.route("parcour"),
+    class: "flex gap-4 items-center pl-4 ins-link"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img src="/images/illustration/audi-energitique.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-b12940b9${_scopeId}> Audit énergétique `);
+      } else {
+        return [
+          createVNode("img", {
+            src: "/images/illustration/audi-energitique.png",
+            style: { "max-height": "30px" }
+          }),
+          createTextVNode(" Audit énergétique ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li></div></ul></li><li data-v-b12940b9><a href="javascript:void(0)" class="flex justify-between items-center" data-v-b12940b9> Conseils travaux <i class="fa-solid fa-chevron-right" data-v-b12940b9></i></a><ul class="absolute w-full min-h-screen top-0 -right-full flex flex-col gap-6 p-9 bg-white transi" data-v-b12940b9><a href="javascript:void(0)" data-v-b12940b9><i class="fa-solid fa-chevron-left" data-v-b12940b9></i> Retour </a><div class="flex flex-col gap-4" data-v-b12940b9><h3 class="uppercase text-gray-700 font-semibold" data-v-b12940b9>Énergie Solaire</h3><!--[-->`);
+  ssrRenderList($props.esWorks, (work, i) => {
+    _push(`<li data-v-b12940b9>`);
+    _push(ssrRenderComponent(_component_Link, {
+      onClick: ($event) => this.$emit("showing-navigation", false),
+      href: _ctx.route("landing", work.slug),
+      class: "ins-link flex gap-4 pl-4 items-center"
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)}${ssrRenderAttr("alt", work.img_alt)} class="w-6" data-v-b12940b9${_scopeId}> ${ssrInterpolate(work.name)}`);
+        } else {
+          return [
+            createVNode("img", {
+              src: "/images/illustration/" + work.svg,
+              alt: work.img_alt,
+              class: "w-6"
+            }, null, 8, ["src", "alt"]),
+            createTextVNode(" " + toDisplayString(work.name), 1)
+          ];
+        }
+      }),
+      _: 2
+    }, _parent));
+    _push(`</li>`);
+  });
+  _push(`<!--]--></div><div class="flex flex-col gap-4" data-v-b12940b9><h3 class="uppercase text-gray-700 font-semibold" data-v-b12940b9>Isolation</h3><!--[-->`);
+  ssrRenderList($props.iWorks, (work) => {
+    _push(`<li data-v-b12940b9>`);
+    _push(ssrRenderComponent(_component_Link, {
+      onClick: ($event) => this.$emit("showing-navigation", false),
+      href: _ctx.route("landing", work.slug),
+      class: "ins-link flex gap-4 pl-4 items-center"
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)}${ssrRenderAttr("alt", work.img_alt)} class="w-6" data-v-b12940b9${_scopeId}> ${ssrInterpolate(work.name)}`);
+        } else {
+          return [
+            createVNode("img", {
+              src: "/images/illustration/" + work.svg,
+              alt: work.img_alt,
+              class: "w-6"
+            }, null, 8, ["src", "alt"]),
+            createTextVNode(" " + toDisplayString(work.name), 1)
+          ];
+        }
+      }),
+      _: 2
+    }, _parent));
+    _push(`</li>`);
+  });
+  _push(`<!--]--></div><div class="flex flex-col gap-4" data-v-b12940b9><h3 class="uppercase text-gray-700 font-semibold" data-v-b12940b9>Chauffage</h3><!--[-->`);
+  ssrRenderList($props.chWorks, (work) => {
+    _push(`<li data-v-b12940b9>`);
+    _push(ssrRenderComponent(_component_Link, {
+      onClick: ($event) => this.$emit("showing-navigation", false),
+      href: _ctx.route("landing", work.slug),
+      class: "ins-link flex gap-4 pl-4 items-center"
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)}${ssrRenderAttr("alt", work.img_alt)} class="w-6" data-v-b12940b9${_scopeId}> ${ssrInterpolate(work.name)}`);
+        } else {
+          return [
+            createVNode("img", {
+              src: "/images/illustration/" + work.svg,
+              alt: work.img_alt,
+              class: "w-6"
+            }, null, 8, ["src", "alt"]),
+            createTextVNode(" " + toDisplayString(work.name), 1)
+          ];
+        }
+      }),
+      _: 2
+    }, _parent));
+    _push(`</li>`);
+  });
+  _push(`<!--]--></div></ul></li><li data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_Link, {
+    onClick: ($event) => this.$emit("showing-navigation", false),
+    href: _ctx.route("landing", "thermostat-connecté"),
+    class: "ins-link"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<span data-v-b12940b9${_scopeId}>Thermostat Connecté</span>`);
+      } else {
+        return [
+          createVNode("span", null, "Thermostat Connecté")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-b12940b9><a href="javascript:void(0)" class="flex justify-between items-center" data-v-b12940b9> Découvrez-nous <i class="fa-solid fa-chevron-right" data-v-b12940b9></i></a><ul class="absolute w-full min-h-screen top-0 -right-full flex flex-col gap-6 p-9 bg-white transi" data-v-b12940b9><a href="javascript:void(0)" data-v-b12940b9><i class="fa-solid fa-chevron-left" data-v-b12940b9></i> Retour </a><li data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_Link, {
+    onClick: ($event) => this.$emit("showing-navigation", false),
+    href: _ctx.route("about"),
+    class: "flex gap-4 items-center pl-4 ins-link"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(` Qui sommes-nous ? `);
+      } else {
+        return [
+          createTextVNode(" Qui sommes-nous ? ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_Link, {
+    onClick: ($event) => this.$emit("showing-navigation", false),
+    href: _ctx.route("contact"),
+    class: "flex gap-4 items-center pl-4 ins-link"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(` Nous Contacter `);
+      } else {
+        return [
+          createTextVNode(" Nous Contacter ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li></ul></li></ul><div class="flex gap-4 !text-xs" data-v-b12940b9><div data-v-b12940b9>`);
+  if (_ctx.$page.props.auth.user == null) {
+    _push(ssrRenderComponent(_component_Link, {
+      href: _ctx.route("login"),
+      class: "m-auto table font-semibold px-9 py-4 rounded-full border shadow uppercase"
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`<i class="fa-solid fa-circle-user mr-2 text-lg leading-4 align-middle" style="${ssrRenderStyle({ "color": "#73efa6" })}" data-v-b12940b9${_scopeId}></i> Se Connecter `);
+        } else {
+          return [
+            createVNode("i", {
+              class: "fa-solid fa-circle-user mr-2 text-lg leading-4 align-middle",
+              style: { "color": "#73efa6" }
+            }),
+            createTextVNode(" Se Connecter ")
+          ];
+        }
+      }),
+      _: 1
+    }, _parent));
+  } else {
+    _push(ssrRenderComponent(_component_Link, {
+      href: _ctx.route("dashboard"),
+      class: "m-auto table font-semibold py-5 px-12 uppercase"
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`${ssrInterpolate(_ctx.$page.props.auth.user.name)}`);
+        } else {
+          return [
+            createTextVNode(toDisplayString(_ctx.$page.props.auth.user.name), 1)
+          ];
+        }
+      }),
+      _: 1
+    }, _parent));
+  }
+  _push(`</div><div class="flex" data-v-b12940b9>`);
+  _push(ssrRenderComponent(_component_btn, {
+    text: "Demander un devis",
+    onClick: ($event) => this.$emit("showing-navigation", false)
+  }, null, _parent));
+  _push(`</div></div></div>`);
+}
+const _sfc_setup$11 = _sfc_main$11.setup;
+_sfc_main$11.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/customComponents/SmallScreen.vue");
+  return _sfc_setup$11 ? _sfc_setup$11(props, ctx) : void 0;
+};
+const SmallScreenMenu = /* @__PURE__ */ _export_sfc(_sfc_main$11, [["ssrRender", _sfc_ssrRender$I], ["__scopeId", "data-v-b12940b9"]]);
+const PrimaryNavigation_vue_vue_type_style_index_0_scoped_66a9e29b_lang = "";
+const _sfc_main$10 = {
+  components: { Link, BigScreenMenu, SmallScreenMenu },
   data() {
     return {
       showingNavigation: false
@@ -119,16 +692,12 @@ const _sfc_main$Z = {
     handleScroll() {
       if (window.scrollY >= 96) {
         document.getElementById("navigation").classList.add("!h-16");
-        document.getElementById("solair-lg-plus-i").style.left = "50px";
-        document.getElementById("decouvre-lg-plus-i").style.left = "30px";
         document.querySelectorAll(".interior").forEach((item) => {
           item.classList.add("!top-16");
         });
         document.getElementById("mobile-nav").classList.add("top-less");
       } else {
         document.getElementById("navigation").classList.remove("!h-16");
-        document.getElementById("solair-lg-plus-i").style.left = "130px";
-        document.getElementById("decouvre-lg-plus-i").style.left = "90px";
         document.querySelectorAll(".interior").forEach((item) => {
           item.classList.remove("!top-16");
         });
@@ -138,463 +707,182 @@ const _sfc_main$Z = {
     fakeHeight() {
       document.getElementById("fakerNavigation").style.height = this.$refs.navigation.clientHeight + "px";
     },
-    showInterior(event) {
-      const item = event.target.parentNode.querySelector("ul");
-      if (item)
-        item.classList.add("!right-0");
-    },
-    hideInterior(event) {
-      event.target.parentNode.classList.remove("!right-0");
+    getShowingNav(value) {
+      this.showingNavigation = value;
     }
   }
 };
-function _sfc_ssrRender$E(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$H(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_Link = resolveComponent("Link");
-  const _component_btn = resolveComponent("btn");
-  _push(`<!--[--><div id="navigation" class="fix-top flex relative items-center justify-between text-sm px-4 bg-white h-24 w-full z-10" data-v-efd65329><a href="/" class="block lg:!left-0 h-full relative max-w-3/12" style="${ssrRenderStyle([{ "transition": "all 800ms ease-in-out" }, $data.showingNavigation ? "left:0" : "left: calc(50% - 155px);"])}" data-v-efd65329><img src="/images/logo.png" alt="Logo" id="logo" draggable="false" class="h-full z-10" style="${ssrRenderStyle({ "max-width": "250px" })}" data-v-efd65329></a><div class="lg:hidden cursor-pointer text-center" style="${ssrRenderStyle({ "width": "30px" })}" data-v-efd65329><i class="fa-solid fa-bars text-black text-2xl" style="${ssrRenderStyle(!$data.showingNavigation ? null : { display: "none" })}" data-v-efd65329></i><i class="fa-solid fa-xmark text-black text-2xl" style="${ssrRenderStyle($data.showingNavigation ? null : { display: "none" })}" data-v-efd65329></i></div><div id="mobile-nav" class="absolute lg:static flex-1 z-10 h-full w-full" style="${ssrRenderStyle([{ "top": "95px", "transition": "all 800ms ease-in-out" }, $data.showingNavigation ? "right:0" : "right:-100%"])}" data-v-efd65329><div class="relative bg-white lg:hidden flex flex-col gap-6 p-6 min-h-screen w-full border" data-v-efd65329><ul class="flex flex-col gap-4 font-semibold" data-v-efd65329><li data-v-efd65329><a href="javascript:void(0)" class="flex flex-1 justify-between items-center p-2 active:px-4 rounded-md transition-all bg-gradient-to-r active:from-white active:to-green-100" data-v-efd65329> Nos offres <i class="fa-solid fa-chevron-right leading-3" data-v-efd65329></i></a><ul class="absolute w-full min-h-screen top-0 -right-full flex flex-col gap-5 p-6 font-semibold bg-white" style="${ssrRenderStyle({ "transition": "all 800ms ease-in-out" })}" data-v-efd65329><a href="javascript:void(0)" data-v-efd65329><i class="fa-solid fa-chevron-left" data-v-efd65329></i> Retour </a><div class="flex flex-col" data-v-efd65329><h3 class="uppercase text-gray-500" data-v-efd65329>Les Travaux</h3><li data-v-efd65329>`);
+  const _component_SmallScreenMenu = resolveComponent("SmallScreenMenu");
+  const _component_BigScreenMenu = resolveComponent("BigScreenMenu");
+  _push(`<!--[--><div id="navigation" class="!fixed top-0 left-0 flex relative items-center justify-between text-sm px-4 bg-white h-24 w-full z-20" data-v-66a9e29b>`);
   _push(ssrRenderComponent(_component_Link, {
-    onClick: ($event) => {
-      $data.showingNavigation = false;
-    },
-    href: _ctx.route("intermediate", "isolation-maison"),
-    class: "ins-link"
+    href: _ctx.route("home"),
+    class: "block lg:!left-0 h-full relative max-w-3/12",
+    style: [{ "transition": "all 800ms ease-in-out" }, $data.showingNavigation ? "left:0" : "left: calc(50% - 155px);"]
   }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<img src="/images/illustration/isolation_global.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}>Isolation globale`);
+        _push2(`<img src="/images/logo.png" alt="Lenergia" id="logo" draggable="false" class="h-full z-10" style="${ssrRenderStyle({ "max-width": "250px" })}" data-v-66a9e29b${_scopeId}>`);
       } else {
         return [
           createVNode("img", {
-            src: "/images/illustration/isolation_global.png",
-            style: { "max-height": "30px" }
-          }),
-          createTextVNode("Isolation globale")
+            src: "/images/logo.png",
+            alt: "Lenergia",
+            id: "logo",
+            draggable: "false",
+            class: "h-full z-10",
+            style: { "max-width": "250px" }
+          })
         ];
       }
     }),
     _: 1
   }, _parent));
-  _push(`</li><li data-v-efd65329>`);
-  _push(ssrRenderComponent(_component_Link, {
-    onClick: ($event) => {
-      $data.showingNavigation = false;
-    },
-    href: _ctx.route("landing", "panneaux-solaires-photovoltaiques"),
-    class: "ins-link"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img src="/images/illustration/Panneaux_Photovoltaïques.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}>Panneaux photovoltaïques`);
-      } else {
-        return [
-          createVNode("img", {
-            src: "/images/illustration/Panneaux_Photovoltaïques.png",
-            style: { "max-height": "30px" }
-          }),
-          createTextVNode("Panneaux photovoltaïques")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-efd65329>`);
-  _push(ssrRenderComponent(_component_Link, {
-    onClick: ($event) => {
-      $data.showingNavigation = false;
-    },
-    href: _ctx.route("landing", "pompe-à-chaleur"),
-    class: "ins-link"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img src="/images/illustration/pompe-a-chaleur.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}>Pompe à chaleur`);
-      } else {
-        return [
-          createVNode("img", {
-            src: "/images/illustration/pompe-a-chaleur.png",
-            style: { "max-height": "30px" }
-          }),
-          createTextVNode("Pompe à chaleur")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-efd65329>`);
-  _push(ssrRenderComponent(_component_Link, {
-    onClick: ($event) => {
-      $data.showingNavigation = false;
-    },
-    href: _ctx.route("landing", "système-solaire-combiné"),
-    class: "ins-link"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img src="/images/illustration/collaboration.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}>Système solaire combiné`);
-      } else {
-        return [
-          createVNode("img", {
-            src: "/images/illustration/collaboration.png",
-            style: { "max-height": "30px" }
-          }),
-          createTextVNode("Système solaire combiné")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li></div><div class="flex flex-col" data-v-efd65329><h3 class="uppercase text-gray-500" data-v-efd65329>Les Services</h3><li data-v-efd65329><a href="#" class="ins-link" data-v-efd65329>Bilan énergétique gratuit</a></li><li data-v-efd65329><a href="#" class="ins-link" data-v-efd65329>Audit énergétique</a></li></div></ul></li><li class="w-full" data-v-efd65329><a href="javascript:void(0)" class="flex flex-1 justify-between items-center p-2 active:px-4 rounded-md transition-all bg-gradient-to-r active:from-white active:to-green-100" data-v-efd65329> Conseils travaux <i class="fa-solid fa-chevron-right" data-v-efd65329></i></a><ul class="absolute w-full min-h-screen top-0 -right-full flex flex-col gap-5 p-6 font-semibold bg-white" style="${ssrRenderStyle({ "transition": "all 800ms ease-in-out" })}" data-v-efd65329><a href="javascript:void(0)" data-v-efd65329><i class="fa-solid fa-chevron-left" data-v-efd65329></i> Retour </a><div class="flex flex-col" data-v-efd65329><h3 class="uppercase text-gray-500" data-v-efd65329>Énergie Solaire</h3><!--[-->`);
-  ssrRenderList($options.esWorks, (work, i) => {
-    _push(`<li data-v-efd65329>`);
-    _push(ssrRenderComponent(_component_Link, {
-      onClick: ($event) => {
-        $data.showingNavigation = false;
-      },
-      href: _ctx.route("landing", work.slug),
-      class: "ins-link !flex gap-2 items-center"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)}${ssrRenderAttr("alt", work.img_alt)} class="w-6" data-v-efd65329${_scopeId}> ${ssrInterpolate(work.name)}`);
-        } else {
-          return [
-            createVNode("img", {
-              src: "/images/illustration/" + work.svg,
-              alt: work.img_alt,
-              class: "w-6"
-            }, null, 8, ["src", "alt"]),
-            createTextVNode(" " + toDisplayString(work.name), 1)
-          ];
-        }
-      }),
-      _: 2
-    }, _parent));
-    _push(`</li>`);
-  });
-  _push(`<!--]--></div><div class="flex flex-col" data-v-efd65329><h3 class="uppercase text-gray-500" data-v-efd65329>Isolation</h3><!--[-->`);
-  ssrRenderList($options.iWorks, (work) => {
-    _push(`<li data-v-efd65329>`);
-    _push(ssrRenderComponent(_component_Link, {
-      onClick: ($event) => {
-        $data.showingNavigation = false;
-      },
-      href: _ctx.route("landing", work.slug),
-      class: "ins-link !flex gap-2 items-center"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)}${ssrRenderAttr("alt", work.img_alt)} class="w-6" data-v-efd65329${_scopeId}> ${ssrInterpolate(work.name)}`);
-        } else {
-          return [
-            createVNode("img", {
-              src: "/images/illustration/" + work.svg,
-              alt: work.img_alt,
-              class: "w-6"
-            }, null, 8, ["src", "alt"]),
-            createTextVNode(" " + toDisplayString(work.name), 1)
-          ];
-        }
-      }),
-      _: 2
-    }, _parent));
-    _push(`</li>`);
-  });
-  _push(`<!--]--></div><div class="flex flex-col" data-v-efd65329><h3 class="uppercase text-gray-500" data-v-efd65329>Chauffage</h3><!--[-->`);
-  ssrRenderList($options.chWorks, (work) => {
-    _push(`<li data-v-efd65329>`);
-    _push(ssrRenderComponent(_component_Link, {
-      onClick: ($event) => {
-        $data.showingNavigation = false;
-      },
-      href: _ctx.route("landing", work.slug),
-      class: "ins-link !flex gap-2 items-center"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)}${ssrRenderAttr("alt", work.img_alt)} class="w-6" data-v-efd65329${_scopeId}> ${ssrInterpolate(work.name)}`);
-        } else {
-          return [
-            createVNode("img", {
-              src: "/images/illustration/" + work.svg,
-              alt: work.img_alt,
-              class: "w-6"
-            }, null, 8, ["src", "alt"]),
-            createTextVNode(" " + toDisplayString(work.name), 1)
-          ];
-        }
-      }),
-      _: 2
-    }, _parent));
-    _push(`</li>`);
-  });
-  _push(`<!--]--></div></ul></li></ul><div class="flex flex-col gap-4" data-v-efd65329><div data-v-efd65329>`);
-  if (_ctx.$page.props.auth.user == null) {
-    _push(ssrRenderComponent(_component_Link, {
-      href: _ctx.route("login"),
-      class: "m-auto table font-semibold px-9 py-4 rounded-full border shadow uppercase"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`<i class="fa-solid fa-circle-user mr-2 text-lg leading-4 align-middle" style="${ssrRenderStyle({ "color": "#73efa6" })}" data-v-efd65329${_scopeId}></i> Se Connecter `);
-        } else {
-          return [
-            createVNode("i", {
-              class: "fa-solid fa-circle-user mr-2 text-lg leading-4 align-middle",
-              style: { "color": "#73efa6" }
-            }),
-            createTextVNode(" Se Connecter ")
-          ];
-        }
-      }),
-      _: 1
-    }, _parent));
-  } else {
-    _push(ssrRenderComponent(_component_Link, {
-      href: _ctx.route("dashboard"),
-      class: "m-auto table font-semibold py-5 px-12 uppercase"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`${ssrInterpolate(_ctx.$page.props.auth.user.name)}`);
-        } else {
-          return [
-            createTextVNode(toDisplayString(_ctx.$page.props.auth.user.name), 1)
-          ];
-        }
-      }),
-      _: 1
-    }, _parent));
-  }
-  _push(`</div><div class="flex" data-v-efd65329>`);
-  _push(ssrRenderComponent(_component_btn, { text: "Demander un devis" }, null, _parent));
-  _push(`</div></div></div><div class="hidden lg:flex justify-between h-full overflow-hidden rounded-br-2xl rounded-bl-2xl bg-white" data-v-efd65329><ul class="flex items-center h-full" data-v-efd65329><li class="show-interior" data-v-efd65329><a href="javascript:void(0)" class="link" data-v-efd65329>Nos Offres</a><ul class="absolute bg-white flex py-8 rounded border-t-4 shadow border-green-300 interior" data-v-efd65329><i class="fa-solid fa-caret-up text-green-300 text-3xl absolute" style="${ssrRenderStyle({ "top": "-23px", "left": "30px" })}" data-v-efd65329></i><div class="flex flex-col gap-2 border-r" data-v-efd65329><h3 data-v-efd65329>Les Travaux</h3><li data-v-efd65329>`);
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("intermediate", "isolation-maison"),
-    class: "!flex items-center gap-2"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img src="/images/illustration/isolation_global.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}> Isolation globale `);
-      } else {
-        return [
-          createVNode("img", {
-            src: "/images/illustration/isolation_global.png",
-            style: { "max-height": "30px" }
-          }),
-          createTextVNode(" Isolation globale ")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-efd65329>`);
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("landing", "panneaux-solaires-photovoltaiques"),
-    class: "!flex items-center gap-2"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img src="/images/illustration/Panneaux_Photovoltaïques.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}> Panneaux photovoltaïques `);
-      } else {
-        return [
-          createVNode("img", {
-            src: "/images/illustration/Panneaux_Photovoltaïques.png",
-            style: { "max-height": "30px" }
-          }),
-          createTextVNode(" Panneaux photovoltaïques ")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-efd65329>`);
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("landing", "pompe-à-chaleur"),
-    class: "!flex items-center gap-2"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img src="/images/illustration/pompe-a-chaleur.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}> Pompe à chaleur `);
-      } else {
-        return [
-          createVNode("img", {
-            src: "/images/illustration/pompe-a-chaleur.png",
-            style: { "max-height": "30px" }
-          }),
-          createTextVNode(" Pompe à chaleur ")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-efd65329>`);
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("landing", "système-solaire-combiné"),
-    class: "!flex items-center gap-2"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img src="/images/illustration/collaboration.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}> Système solaire combiné `);
-      } else {
-        return [
-          createVNode("img", {
-            src: "/images/illustration/collaboration.png",
-            style: { "max-height": "30px" }
-          }),
-          createTextVNode(" Système solaire combiné ")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li></div><div class="flex flex-col gap-2" data-v-efd65329><h3 data-v-efd65329>Les Services</h3><li data-v-efd65329><a href="#" class="!flex items-center gap-2" data-v-efd65329><img src="/images/illustration/bilan_icon.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329> Bilan énergétique gratuit </a></li><li data-v-efd65329><a href="#" class="!flex items-center gap-2" data-v-efd65329><img src="/images/illustration/audi-energitique.png" style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329> Audit énergétique </a></li></div></ul></li><li class="show-interior" data-v-efd65329><a href="javascript:void(0)" class="link" data-v-efd65329>Conseils Travaux</a><ul class="absolute bg-white flex py-8 rounded border-t-4 shadow border-green-300 interior left-1/4" data-v-efd65329><i id="solair-lg-plus-i" class="fa-solid fa-caret-up text-green-300 text-3xl absolute" style="${ssrRenderStyle({ "top": "-23px", "left": "130px" })}" data-v-efd65329></i><div class="flex flex-col gap-2 border-r" data-v-efd65329><h3 data-v-efd65329>Énergie Solaire</h3><!--[-->`);
-  ssrRenderList($options.esWorks, (work) => {
-    _push(`<li data-v-efd65329>`);
-    _push(ssrRenderComponent(_component_Link, {
-      href: _ctx.route("landing", work.slug),
-      class: "!flex !items-center gap-2"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)} style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}><span data-v-efd65329${_scopeId}>${ssrInterpolate(work.name)}</span>`);
-        } else {
-          return [
-            createVNode("img", {
-              src: "/images/illustration/" + work.svg,
-              style: { "max-height": "30px" }
-            }, null, 8, ["src"]),
-            createVNode("span", null, toDisplayString(work.name), 1)
-          ];
-        }
-      }),
-      _: 2
-    }, _parent));
-    _push(`</li>`);
-  });
-  _push(`<!--]--></div><div class="flex flex-col gap-2 border-r" data-v-efd65329><h3 data-v-efd65329>Chauffage</h3><!--[-->`);
-  ssrRenderList($options.chWorks, (work) => {
-    _push(`<li data-v-efd65329>`);
-    _push(ssrRenderComponent(_component_Link, {
-      href: _ctx.route("landing", work.slug),
-      class: "!flex !items-center gap-2"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)} style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}><span class="!leading-8" data-v-efd65329${_scopeId}>${ssrInterpolate(work.name)}</span>`);
-        } else {
-          return [
-            createVNode("img", {
-              src: "/images/illustration/" + work.svg,
-              style: { "max-height": "30px" }
-            }, null, 8, ["src"]),
-            createVNode("span", { class: "!leading-8" }, toDisplayString(work.name), 1)
-          ];
-        }
-      }),
-      _: 2
-    }, _parent));
-    _push(`</li>`);
-  });
-  _push(`<!--]--></div><div class="flex flex-col gap-2" data-v-efd65329><h3 data-v-efd65329>Isolation</h3><!--[-->`);
-  ssrRenderList($options.iWorks, (work) => {
-    _push(`<li data-v-efd65329>`);
-    _push(ssrRenderComponent(_component_Link, {
-      href: _ctx.route("landing", work.slug),
-      class: "!flex !items-center gap-2"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`<img${ssrRenderAttr("src", "/images/illustration/" + work.svg)} style="${ssrRenderStyle({ "max-height": "30px" })}" data-v-efd65329${_scopeId}><span data-v-efd65329${_scopeId}>${ssrInterpolate(work.name)}</span>`);
-        } else {
-          return [
-            createVNode("img", {
-              src: "/images/illustration/" + work.svg,
-              style: { "max-height": "30px" }
-            }, null, 8, ["src"]),
-            createVNode("span", null, toDisplayString(work.name), 1)
-          ];
-        }
-      }),
-      _: 2
-    }, _parent));
-    _push(`</li>`);
-  });
-  _push(`<!--]--></div></ul></li><li class="show-interior" data-v-efd65329><a href="javascript:void(0)" class="link" data-v-efd65329>Découvrez-nous</a><ul class="absolute bg-white flex flex-col p-8 rounded border-t-4 shadow border-green-300 interior" style="${ssrRenderStyle({ "left": "450px" })}" data-v-efd65329><i id="decouvre-lg-plus-i" class="fa-solid fa-caret-up text-green-300 text-3xl absolute" style="${ssrRenderStyle({ "top": "-23px", "left": "90px" })}" data-v-efd65329></i><li data-v-efd65329><a href="javascript:void(0)" class="text-black" data-v-efd65329>Nos offres de travaux</a></li><li data-v-efd65329><a href="javascript:void(0)" class="text-black" data-v-efd65329>Qui sommes-nous ?</a></li><li data-v-efd65329><a href="javascript:void(0)" class="text-black" data-v-efd65329>Nous Contacter</a></li></ul></li></ul><div class="flex items-center gap-3" data-v-efd65329>`);
-  if (_ctx.$page.props.auth.user == null) {
-    _push(ssrRenderComponent(_component_Link, {
-      href: _ctx.route("login"),
-      class: "italic link"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`<i class="fa-solid fa-circle-user mr-2 text-lg leading-4 align-middle text-teal-500" data-v-efd65329${_scopeId}></i> Se Connecter `);
-        } else {
-          return [
-            createVNode("i", { class: "fa-solid fa-circle-user mr-2 text-lg leading-4 align-middle text-teal-500" }),
-            createTextVNode(" Se Connecter ")
-          ];
-        }
-      }),
-      _: 1
-    }, _parent));
-  } else {
-    _push(ssrRenderComponent(_component_Link, {
-      href: _ctx.route("dashboard"),
-      class: "italic link"
-    }, {
-      default: withCtx((_, _push2, _parent2, _scopeId) => {
-        if (_push2) {
-          _push2(`${ssrInterpolate(_ctx.$page.props.auth.user.name)}`);
-        } else {
-          return [
-            createTextVNode(toDisplayString(_ctx.$page.props.auth.user.name), 1)
-          ];
-        }
-      }),
-      _: 1
-    }, _parent));
-  }
-  _push(ssrRenderComponent(_component_btn, {
-    class: "!shadow-none",
-    text: "Demander un devis"
+  _push(`<div class="lg:hidden cursor-pointer text-center" style="${ssrRenderStyle({ "width": "30px" })}" data-v-66a9e29b><i class="fa-solid fa-bars text-black text-2xl" style="${ssrRenderStyle(!$data.showingNavigation ? null : { display: "none" })}" data-v-66a9e29b></i><i class="fa-solid fa-xmark text-black text-2xl" style="${ssrRenderStyle($data.showingNavigation ? null : { display: "none" })}" data-v-66a9e29b></i></div><div id="mobile-nav" class="absolute lg:static lg:ml-6 flex-1 z-10 h-full w-full" style="${ssrRenderStyle([{ "top": "95px", "transition": "all 800ms ease-in-out" }, $data.showingNavigation ? "right:0" : "right:-100%"])}" data-v-66a9e29b>`);
+  _push(ssrRenderComponent(_component_SmallScreenMenu, {
+    onShowingNavigation: $options.getShowingNav,
+    showingNavigation: this.showingNavigation,
+    esWorks: this.esWorks,
+    chWorks: this.chWorks,
+    iWorks: this.iWorks
   }, null, _parent));
-  _push(`</div></div></div></div><div id="fakerNavigation" data-v-efd65329></div><!--]-->`);
+  _push(ssrRenderComponent(_component_BigScreenMenu, {
+    esWorks: this.esWorks,
+    chWorks: this.chWorks,
+    iWorks: this.iWorks
+  }, null, _parent));
+  _push(`</div></div><div id="fakerNavigation" data-v-66a9e29b></div><!--]-->`);
 }
-const _sfc_setup$Z = _sfc_main$Z.setup;
-_sfc_main$Z.setup = (props, ctx) => {
+const _sfc_setup$10 = _sfc_main$10.setup;
+_sfc_main$10.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/customComponents/PrimaryNavigation.vue");
-  return _sfc_setup$Z ? _sfc_setup$Z(props, ctx) : void 0;
+  return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
 };
-const PrimaryNavigation = /* @__PURE__ */ _export_sfc(_sfc_main$Z, [["ssrRender", _sfc_ssrRender$E], ["__scopeId", "data-v-efd65329"]]);
-const GuestLayout_vue_vue_type_style_index_0_scoped_7f28ea0e_lang = "";
-const _sfc_main$Y = {
+const PrimaryNavigation = /* @__PURE__ */ _export_sfc(_sfc_main$10, [["ssrRender", _sfc_ssrRender$H], ["__scopeId", "data-v-66a9e29b"]]);
+const GuestLayout_vue_vue_type_style_index_0_scoped_d86c3271_lang = "";
+const _sfc_main$$ = {
   components: {
+    Link,
     PrimaryNavigation
   }
 };
-function _sfc_ssrRender$D(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$G(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_PrimaryNavigation = resolveComponent("PrimaryNavigation");
-  _push(`<!--[--><div class="text-slate-900" data-v-7f28ea0e>`);
+  const _component_Link = resolveComponent("Link");
+  _push(`<!--[--><div class="text-slate-900" data-v-d86c3271>`);
   _push(ssrRenderComponent(_component_PrimaryNavigation, null, null, _parent));
-  _push(`<div data-v-7f28ea0e>`);
+  _push(`<div data-v-d86c3271>`);
   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
   _push(`</div></div>`);
   if (!_ctx.route().current("parcour")) {
-    _push(`<footer class="w-full bg-slate-500 text-slate-50 pb-8 border-t-4 border-white mt-8" data-v-7f28ea0e><div class="flex flex-col md:flex-row items-center md:mb-4 mb-8" data-v-7f28ea0e><img src="/images/logo-light.png" class="h-48" alt="" data-v-7f28ea0e><h6 class="text-2xl md:text-3xl text-center flex-1" data-v-7f28ea0e>n°1 de la rénovation énergétique en ligne</h6></div><div class="flex flex-col md:flex-row items-center md:items-start md:justify-between mx-12 mb-12 gap-4" data-v-7f28ea0e><div class="w-full md:w-3/12" data-v-7f28ea0e><div class="flex gap-2 mb-4" data-v-7f28ea0e><span class="italic" data-v-7f28ea0e>Suivez nous</span><span class="fb" data-v-7f28ea0e></span><span class="twitter" data-v-7f28ea0e></span><span class="in" data-v-7f28ea0e></span></div><div class="flex flex-col gap-4" data-v-7f28ea0e><p class="text-xl" data-v-7f28ea0e>Un projet ?</p><a${ssrRenderAttr("href", _ctx.route("parcour"))} class="border rounded-full text-center px-8 py-4" data-v-7f28ea0e>DEMANDER UN DEVIS</a></div></div><div class="md:px-4 w-full md:w-3/12" data-v-7f28ea0e><h6 class="font-bold text-lg" data-v-7f28ea0e>ÉNERGIE SOLAIRE</h6><ul class="flex flex-col gap-2" data-v-7f28ea0e><li data-v-7f28ea0e><a${ssrRenderAttr("href", _ctx.route("landing", "panneaux-solaires-photovoltaiques"))} data-v-7f28ea0e>Panneaux Solaires Photovoltaïques</a></li><li data-v-7f28ea0e><a${ssrRenderAttr("href", _ctx.route("landing", "panneau-solaire-thermique"))} data-v-7f28ea0e>Panneaux solaires thermiques</a></li><li data-v-7f28ea0e><a${ssrRenderAttr("href", _ctx.route("landing", "panneau-solaire-hybrides"))} data-v-7f28ea0e>Panneaux solaires hybrides</a></li><li data-v-7f28ea0e><a${ssrRenderAttr("href", _ctx.route("landing", "chauffe-eau-thermodynamique"))} data-v-7f28ea0e>Ballon thermodynamique</a></li></ul></div><div class="md:px-4 w-full md:w-3/12" data-v-7f28ea0e><h6 class="font-bold text-lg text-left" data-v-7f28ea0e>CHAUFFAGE</h6><ul class="flex flex-col gap-2" data-v-7f28ea0e><li data-v-7f28ea0e><a${ssrRenderAttr("href", _ctx.route("landing", "pompe-à-chaleur"))} data-v-7f28ea0e>Pompe à chaleur</a></li><li data-v-7f28ea0e><a${ssrRenderAttr("href", _ctx.route("landing", "poêle-à-granulés"))} data-v-7f28ea0e>Poêles à granulés</a></li><li data-v-7f28ea0e><a${ssrRenderAttr("href", _ctx.route("landing", "système-solaire-combiné"))} data-v-7f28ea0e>Système solaire combiné</a></li></ul></div><div class="md:px-4 w-full md:w-auto" data-v-7f28ea0e><h6 class="font-bold text-lg text-left" data-v-7f28ea0e>ISOLATION</h6><ul class="flex flex-col gap-2" data-v-7f28ea0e><li data-v-7f28ea0e><a${ssrRenderAttr("href", _ctx.route("landing", "isolation-intérieur"))} data-v-7f28ea0e>Murs intérieur</a></li><li data-v-7f28ea0e><a${ssrRenderAttr("href", _ctx.route("landing", "isolation-extérieur"))} data-v-7f28ea0e>Murs extérieur</a></li></ul></div></div><div class="flex md:justify-between mx-12 flex-wrap gap-4" data-v-7f28ea0e><a href="javascript:void(0)" data-v-7f28ea0e>Qui somme nous</a><a href="javascript:void(0)" data-v-7f28ea0e>Nous Contacter</a><span data-v-7f28ea0e>© ${ssrInterpolate((/* @__PURE__ */ new Date()).getFullYear())} Lenergia. Tous les droits réservés</span></div></footer>`);
+    _push(`<footer class="w-full bg-slate-500 text-slate-50 pb-8 border-t-4 border-white mt-8" data-v-d86c3271><div class="flex flex-col md:flex-row items-center md:mb-4 mb-8" data-v-d86c3271><img src="/images/logo-light.png" class="h-48" alt="" data-v-d86c3271><h6 class="text-2xl md:text-3xl text-center flex-1" data-v-d86c3271>n°1 de la rénovation énergétique en ligne</h6></div><div class="flex flex-col md:flex-row items-center md:items-start md:justify-between mx-12 mb-12 gap-4" data-v-d86c3271><div class="w-full md:w-3/12" data-v-d86c3271><div class="flex gap-2 mb-4" data-v-d86c3271><span class="italic" data-v-d86c3271>Suivez nous</span><span class="fb" data-v-d86c3271></span><span class="in" data-v-d86c3271></span></div><div class="flex flex-col gap-4" data-v-d86c3271><p class="text-xl" data-v-d86c3271>Un projet ?</p>`);
+    _push(ssrRenderComponent(_component_Link, {
+      href: _ctx.route("parcour"),
+      class: "border rounded-full text-center px-8 py-4"
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`DEMANDER UN DEVIS`);
+        } else {
+          return [
+            createTextVNode("DEMANDER UN DEVIS")
+          ];
+        }
+      }),
+      _: 1
+    }, _parent));
+    _push(`</div></div><div class="md:px-4 w-full md:w-3/12" data-v-d86c3271><h6 class="font-bold text-lg" data-v-d86c3271>ÉNERGIE SOLAIRE</h6><ul class="flex flex-col gap-2" data-v-d86c3271><li data-v-d86c3271><a${ssrRenderAttr("href", _ctx.route("landing", "panneaux-solaires-photovoltaiques"))} data-v-d86c3271>Panneaux Solaires Photovoltaïques</a></li><li data-v-d86c3271><a${ssrRenderAttr("href", _ctx.route("landing", "panneau-solaire-thermique"))} data-v-d86c3271>Panneaux solaires thermiques</a></li><li data-v-d86c3271><a${ssrRenderAttr("href", _ctx.route("landing", "panneau-solaire-hybrides"))} data-v-d86c3271>Panneaux solaires hybrides</a></li><li data-v-d86c3271><a${ssrRenderAttr("href", _ctx.route("landing", "chauffe-eau-thermodynamique"))} data-v-d86c3271>Ballon thermodynamique</a></li></ul></div><div class="md:px-4 w-full md:w-3/12" data-v-d86c3271><h6 class="font-bold text-lg text-left" data-v-d86c3271>CHAUFFAGE</h6><ul class="flex flex-col gap-2" data-v-d86c3271><li data-v-d86c3271><a${ssrRenderAttr("href", _ctx.route("landing", "pompe-à-chaleur"))} data-v-d86c3271>Pompe à chaleur</a></li><li data-v-d86c3271><a${ssrRenderAttr("href", _ctx.route("landing", "poêle-à-granulés"))} data-v-d86c3271>Poêles à granulés</a></li><li data-v-d86c3271><a${ssrRenderAttr("href", _ctx.route("landing", "système-solaire-combiné"))} data-v-d86c3271>Système solaire combiné</a></li></ul></div><div class="md:px-4 w-full md:w-auto" data-v-d86c3271><h6 class="font-bold text-lg text-left" data-v-d86c3271>ISOLATION</h6><ul class="flex flex-col gap-2" data-v-d86c3271><li data-v-d86c3271><a${ssrRenderAttr("href", _ctx.route("landing", "isolation-intérieur"))} data-v-d86c3271>Murs intérieur</a></li><li data-v-d86c3271><a${ssrRenderAttr("href", _ctx.route("landing", "isolation-extérieur"))} data-v-d86c3271>Murs extérieur</a></li></ul></div></div><div class="flex md:justify-between mx-12 flex-wrap gap-4" data-v-d86c3271>`);
+    _push(ssrRenderComponent(_component_Link, {
+      href: _ctx.route("about")
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`Qui somme nous`);
+        } else {
+          return [
+            createTextVNode("Qui somme nous")
+          ];
+        }
+      }),
+      _: 1
+    }, _parent));
+    _push(ssrRenderComponent(_component_Link, {
+      href: _ctx.route("contact")
+    }, {
+      default: withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`Nous Contacter`);
+        } else {
+          return [
+            createTextVNode("Nous Contacter")
+          ];
+        }
+      }),
+      _: 1
+    }, _parent));
+    _push(`<span data-v-d86c3271>© ${ssrInterpolate((/* @__PURE__ */ new Date()).getFullYear())} Lenergia. Tous les droits réservés</span></div></footer>`);
   } else {
     _push(`<!---->`);
   }
   _push(`<!--]-->`);
 }
-const _sfc_setup$Y = _sfc_main$Y.setup;
-_sfc_main$Y.setup = (props, ctx) => {
+const _sfc_setup$$ = _sfc_main$$.setup;
+_sfc_main$$.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/GuestLayout.vue");
-  return _sfc_setup$Y ? _sfc_setup$Y(props, ctx) : void 0;
+  return _sfc_setup$$ ? _sfc_setup$$(props, ctx) : void 0;
 };
-const GuestLayout = /* @__PURE__ */ _export_sfc(_sfc_main$Y, [["ssrRender", _sfc_ssrRender$D], ["__scopeId", "data-v-7f28ea0e"]]);
-const _sfc_main$X = {
+const GuestLayout = /* @__PURE__ */ _export_sfc(_sfc_main$$, [["ssrRender", _sfc_ssrRender$G], ["__scopeId", "data-v-d86c3271"]]);
+const AboutUs_vue_vue_type_style_index_0_scoped_2bd41acb_lang = "";
+const _sfc_main$_ = {
+  props: {},
+  layout: GuestLayout,
+  components: {
+    Head
+  }
+};
+function _sfc_ssrRender$F(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  const _component_Head = resolveComponent("Head");
+  _push(`<!--[-->`);
+  _push(ssrRenderComponent(_component_Head, { title: "about us" }, null, _parent));
+  _push(`<div class="flex flex-col gap-6 text-sm md:text-base lg:w-9/12 lg:rounded-lg lg:shadow-xl p-8 md:py-12 md:px-16 mx-auto mt-8 bg-white page" data-v-2bd41acb><h1 class="text-xl md:text-2xl font-bold capitalize" data-v-2bd41acb>Qui sommes-nous ?</h1><p class="text-justify leading-8" data-v-2bd41acb>Bienvenue chez <strong data-v-2bd41acb>Lenergia</strong>, votre partenaire de confiance pour vos projets d&#39;énergie renouvelable et de rénovation énergétique. Nous sommes une plateforme innovante dédiée à la génération de solutions durables et économiques pour les particuliers et les entreprises souhaitant améliorer leur efficacité énergétique.</p><p class="text-justify leading-8" data-v-2bd41acb>Chez <strong data-v-2bd41acb>Lenergia</strong>, nous croyons que la transition énergétique est essentielle pour un avenir plus vert. C&#39;est pourquoi nous facilitons l&#39;accès à des projets d&#39;économies d&#39;énergie tels que l&#39;installation de panneaux solaires, l&#39;isolation thermique, les pompes à chaleur, et bien plus encore.</p><p class="text-justify leading-8" data-v-2bd41acb>Notre mission est simple : <strong data-v-2bd41acb>vous accompagner à chaque étape de votre projet, du diagnostic à l&#39;installation</strong>, en passant par la recherche des meilleures subventions disponibles. Grâce à notre réseau de sous-traitants certifiés et à nos équipes spécialisées, nous nous assurons que vos travaux sont réalisés dans les meilleures conditions et conformément aux normes les plus exigeantes.</p><p class="text-justify leading-8" data-v-2bd41acb>En choisissant <strong data-v-2bd41acb>Lenergia</strong>, vous bénéficiez :</p><ul class="list-disc ml-9 text-justify leading-8" data-v-2bd41acb><li data-v-2bd41acb><strong data-v-2bd41acb>D&#39;une expertise technique :</strong> Nos experts vous conseillent et assurent le suivi de votre projet, de l&#39;audit initial à la mise en œuvre.</li><li data-v-2bd41acb><strong data-v-2bd41acb>D&#39;un réseau de professionnels qualifiés :</strong> Nous travaillons avec des partenaires reconnus pour leur savoir-faire, qui se chargeront des visites techniques, des audits, et des installations.</li><li data-v-2bd41acb><strong data-v-2bd41acb>D&#39;un accompagnement personnalisé :</strong> Nous analysons vos besoins pour vous proposer les solutions les plus adaptées à votre situation.</li></ul><p class="text-justify leading-8" data-v-2bd41acb>Notre vision est de devenir une référence en matière de conseil énergétique et de vous offrir des solutions performantes pour réduire votre consommation, alléger vos factures, et contribuer à la préservation de l&#39;environnement.</p><p class="text-justify leading-8" data-v-2bd41acb><strong data-v-2bd41acb>Lenergia</strong> est plus qu&#39;une simple plateforme : c&#39;est un acteur engagé pour une transition énergétique accessible à tous. Ensemble, construisons un avenir énergétique durable !</p></div><!--]-->`);
+}
+const _sfc_setup$_ = _sfc_main$_.setup;
+_sfc_main$_.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/AboutUs.vue");
+  return _sfc_setup$_ ? _sfc_setup$_(props, ctx) : void 0;
+};
+const AboutUs = /* @__PURE__ */ _export_sfc(_sfc_main$_, [["ssrRender", _sfc_ssrRender$F], ["__scopeId", "data-v-2bd41acb"]]);
+const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: AboutUs
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$Z = {
+  data() {
+    return {
+      appel_label: false
+    };
+  }
+};
+function _sfc_ssrRender$E(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "absolute right-8 top-8 sm:right-12 sm:top-12 md:top-16 md:right-16 flex justify-center items-center gap-3" }, _attrs))}><div class="${ssrRenderClass([{ "!right-16 !opacity-100": $data.appel_label === true }, "absolute opacity-0 -right-60 w-60 bg-amber-200 p-2 overflow-hidden transition-all rounded-l-xl"])}"><span class="grow"><span class="font-bold text-base text-amber-500">Appelez-nous!</span><br><span class="text-white font-bold text-sm">du lundi au vendredi - 8h à 19h</span></span></div><div class="z-10"><a class="${ssrRenderClass([{ "rounded-l-none": $data.appel_label === true }, "flex justify-center items-center h-16 w-16 bg-amber-400 text-white font-bold rounded-full"])}" href="tel:0985408779"> Appeler</a></div></div>`);
+}
+const _sfc_setup$Z = _sfc_main$Z.setup;
+_sfc_main$Z.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/AppelezNous.vue");
+  return _sfc_setup$Z ? _sfc_setup$Z(props, ctx) : void 0;
+};
+const Appelez_nous = /* @__PURE__ */ _export_sfc(_sfc_main$Z, [["ssrRender", _sfc_ssrRender$E]]);
+const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: Appelez_nous
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$Y = {
   __name: "InputError",
   __ssrInlineRender: true,
   props: {
@@ -610,13 +898,13 @@ const _sfc_main$X = {
     };
   }
 };
-const _sfc_setup$X = _sfc_main$X.setup;
-_sfc_main$X.setup = (props, ctx) => {
+const _sfc_setup$Y = _sfc_main$Y.setup;
+_sfc_main$Y.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/InputError.vue");
-  return _sfc_setup$X ? _sfc_setup$X(props, ctx) : void 0;
+  return _sfc_setup$Y ? _sfc_setup$Y(props, ctx) : void 0;
 };
-const _sfc_main$W = {
+const _sfc_main$X = {
   __name: "InputLabel",
   __ssrInlineRender: true,
   props: {
@@ -638,26 +926,26 @@ const _sfc_main$W = {
     };
   }
 };
-const _sfc_setup$W = _sfc_main$W.setup;
-_sfc_main$W.setup = (props, ctx) => {
+const _sfc_setup$X = _sfc_main$X.setup;
+_sfc_main$X.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/InputLabel.vue");
-  return _sfc_setup$W ? _sfc_setup$W(props, ctx) : void 0;
+  return _sfc_setup$X ? _sfc_setup$X(props, ctx) : void 0;
 };
-const _sfc_main$V = {};
-function _sfc_ssrRender$C(_ctx, _push, _parent, _attrs) {
+const _sfc_main$W = {};
+function _sfc_ssrRender$D(_ctx, _push, _parent, _attrs) {
   _push(`<button${ssrRenderAttrs(mergeProps({ class: "inline-flex items-center px-4 py-3 bg-amber-300 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150" }, _attrs))}>`);
   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
   _push(`</button>`);
 }
-const _sfc_setup$V = _sfc_main$V.setup;
-_sfc_main$V.setup = (props, ctx) => {
+const _sfc_setup$W = _sfc_main$W.setup;
+_sfc_main$W.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/PrimaryButton.vue");
-  return _sfc_setup$V ? _sfc_setup$V(props, ctx) : void 0;
+  return _sfc_setup$W ? _sfc_setup$W(props, ctx) : void 0;
 };
-const PrimaryButton = /* @__PURE__ */ _export_sfc(_sfc_main$V, [["ssrRender", _sfc_ssrRender$C]]);
-const _sfc_main$U = {
+const PrimaryButton = /* @__PURE__ */ _export_sfc(_sfc_main$W, [["ssrRender", _sfc_ssrRender$D]]);
+const _sfc_main$V = {
   __name: "TextInput",
   __ssrInlineRender: true,
   props: {
@@ -685,13 +973,13 @@ const _sfc_main$U = {
     };
   }
 };
-const _sfc_setup$U = _sfc_main$U.setup;
-_sfc_main$U.setup = (props, ctx) => {
+const _sfc_setup$V = _sfc_main$V.setup;
+_sfc_main$V.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/TextInput.vue");
-  return _sfc_setup$U ? _sfc_setup$U(props, ctx) : void 0;
+  return _sfc_setup$V ? _sfc_setup$V(props, ctx) : void 0;
 };
-const _sfc_main$T = {
+const _sfc_main$U = {
   __name: "ConfirmPassword",
   __ssrInlineRender: true,
   setup(__props) {
@@ -709,11 +997,11 @@ const _sfc_main$T = {
           if (_push2) {
             _push2(ssrRenderComponent(unref(Head), { title: "Confirm Password" }, null, _parent2, _scopeId));
             _push2(`<div class="w-full md:w-8/12 p-6 m-auto mt-6 bg-white shadow-lg rounded"${_scopeId}><div class="mb-4 text-sm text-gray-600"${_scopeId}> Il s&#39;agit d&#39;une zone sécurisée de l&#39;application. Veuillez confirmer votre mot de passe avant de continuer. </div><form${_scopeId}><div${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "password",
               value: "Mot de passe"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "password",
               type: "password",
               class: "mt-1 block w-full",
@@ -723,7 +1011,7 @@ const _sfc_main$T = {
               autocomplete: "current-password",
               autofocus: ""
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.password
             }, null, _parent2, _scopeId));
@@ -753,11 +1041,11 @@ const _sfc_main$T = {
                   onSubmit: withModifiers(submit, ["prevent"])
                 }, [
                   createVNode("div", null, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "password",
                       value: "Mot de passe"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "password",
                       type: "password",
                       class: "mt-1 block w-full",
@@ -767,7 +1055,7 @@ const _sfc_main$T = {
                       autocomplete: "current-password",
                       autofocus: ""
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.password
                     }, null, 8, ["message"])
@@ -793,17 +1081,17 @@ const _sfc_main$T = {
     };
   }
 };
-const _sfc_setup$T = _sfc_main$T.setup;
-_sfc_main$T.setup = (props, ctx) => {
+const _sfc_setup$U = _sfc_main$U.setup;
+_sfc_main$U.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/ConfirmPassword.vue");
-  return _sfc_setup$T ? _sfc_setup$T(props, ctx) : void 0;
+  return _sfc_setup$U ? _sfc_setup$U(props, ctx) : void 0;
 };
-const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$T
+  default: _sfc_main$U
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$S = {
+const _sfc_main$T = {
   __name: "ForgotPassword",
   __ssrInlineRender: true,
   props: {
@@ -830,11 +1118,11 @@ const _sfc_main$S = {
               _push2(`<!---->`);
             }
             _push2(`<form${_scopeId}><div${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "email",
               value: "Email"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "email",
               type: "email",
               class: "mt-1 block w-full",
@@ -844,7 +1132,7 @@ const _sfc_main$S = {
               autofocus: "",
               autocomplete: "username"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.email
             }, null, _parent2, _scopeId));
@@ -878,11 +1166,11 @@ const _sfc_main$S = {
                   onSubmit: withModifiers(submit, ["prevent"])
                 }, [
                   createVNode("div", null, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "email",
                       value: "Email"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "email",
                       type: "email",
                       class: "mt-1 block w-full",
@@ -892,7 +1180,7 @@ const _sfc_main$S = {
                       autofocus: "",
                       autocomplete: "username"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.email
                     }, null, 8, ["message"])
@@ -918,17 +1206,17 @@ const _sfc_main$S = {
     };
   }
 };
-const _sfc_setup$S = _sfc_main$S.setup;
-_sfc_main$S.setup = (props, ctx) => {
+const _sfc_setup$T = _sfc_main$T.setup;
+_sfc_main$T.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/ForgotPassword.vue");
-  return _sfc_setup$S ? _sfc_setup$S(props, ctx) : void 0;
+  return _sfc_setup$T ? _sfc_setup$T(props, ctx) : void 0;
 };
-const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$S
+  default: _sfc_main$T
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$R = {
+const _sfc_main$S = {
   __name: "Checkbox",
   __ssrInlineRender: true,
   props: {
@@ -962,13 +1250,13 @@ const _sfc_main$R = {
     };
   }
 };
-const _sfc_setup$R = _sfc_main$R.setup;
-_sfc_main$R.setup = (props, ctx) => {
+const _sfc_setup$S = _sfc_main$S.setup;
+_sfc_main$S.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Checkbox.vue");
-  return _sfc_setup$R ? _sfc_setup$R(props, ctx) : void 0;
+  return _sfc_setup$S ? _sfc_setup$S(props, ctx) : void 0;
 };
-const _sfc_main$Q = {
+const _sfc_main$R = {
   __name: "Login",
   __ssrInlineRender: true,
   props: {
@@ -1002,11 +1290,11 @@ const _sfc_main$Q = {
               _push2(`<!---->`);
             }
             _push2(`<form class=""${_scopeId}><div${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "email",
               value: "Email"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "email",
               type: "email",
               class: "mt-1 block w-full",
@@ -1016,16 +1304,16 @@ const _sfc_main$Q = {
               autofocus: "",
               autocomplete: "username"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.email
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="mt-4"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "password",
               value: "Mot de passe"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "password",
               type: "password",
               class: "mt-1 block w-full",
@@ -1034,12 +1322,12 @@ const _sfc_main$Q = {
               required: "",
               autocomplete: "current-password"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.password
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="block mt-4"${_scopeId}><label class="flex items-center"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$R, {
+            _push2(ssrRenderComponent(_sfc_main$S, {
               name: "remember",
               checked: unref(form).remember,
               "onUpdate:checked": ($event) => unref(form).remember = $event
@@ -1074,11 +1362,11 @@ const _sfc_main$Q = {
                   class: ""
                 }, [
                   createVNode("div", null, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "email",
                       value: "Email"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "email",
                       type: "email",
                       class: "mt-1 block w-full",
@@ -1088,17 +1376,17 @@ const _sfc_main$Q = {
                       autofocus: "",
                       autocomplete: "username"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.email
                     }, null, 8, ["message"])
                   ]),
                   createVNode("div", { class: "mt-4" }, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "password",
                       value: "Mot de passe"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "password",
                       type: "password",
                       class: "mt-1 block w-full",
@@ -1107,14 +1395,14 @@ const _sfc_main$Q = {
                       required: "",
                       autocomplete: "current-password"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.password
                     }, null, 8, ["message"])
                   ]),
                   createVNode("div", { class: "block mt-4" }, [
                     createVNode("label", { class: "flex items-center" }, [
-                      createVNode(_sfc_main$R, {
+                      createVNode(_sfc_main$S, {
                         name: "remember",
                         checked: unref(form).remember,
                         "onUpdate:checked": ($event) => unref(form).remember = $event
@@ -1143,17 +1431,17 @@ const _sfc_main$Q = {
     };
   }
 };
-const _sfc_setup$Q = _sfc_main$Q.setup;
-_sfc_main$Q.setup = (props, ctx) => {
+const _sfc_setup$R = _sfc_main$R.setup;
+_sfc_main$R.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/Login.vue");
-  return _sfc_setup$Q ? _sfc_setup$Q(props, ctx) : void 0;
+  return _sfc_setup$R ? _sfc_setup$R(props, ctx) : void 0;
 };
-const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$Q
+  default: _sfc_main$R
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$P = {
+const _sfc_main$Q = {
   __name: "Register",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1174,11 +1462,11 @@ const _sfc_main$P = {
           if (_push2) {
             _push2(ssrRenderComponent(unref(Head), { title: "Register" }, null, _parent2, _scopeId));
             _push2(`<div class="w-full md:w-6/12 p-6 m-auto mt-6 bg-white shadow-lg rounded"${_scopeId}><form${_scopeId}><div${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "name",
               value: "Nom complet"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "name",
               type: "text",
               class: "mt-1 block w-full",
@@ -1188,16 +1476,16 @@ const _sfc_main$P = {
               autofocus: "",
               autocomplete: "name"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.name
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="mt-4"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "email",
               value: "Email"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "email",
               type: "email",
               class: "mt-1 block w-full",
@@ -1206,16 +1494,16 @@ const _sfc_main$P = {
               required: "",
               autocomplete: "username"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.email
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="mt-4"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "password",
               value: "Mot de passe"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "password",
               type: "password",
               class: "mt-1 block w-full",
@@ -1224,16 +1512,16 @@ const _sfc_main$P = {
               required: "",
               autocomplete: "new-password"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.password
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="mt-4"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "password_confirmation",
               value: "Confirmer le mot de passe"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "password_confirmation",
               type: "password",
               class: "mt-1 block w-full",
@@ -1242,7 +1530,7 @@ const _sfc_main$P = {
               required: "",
               autocomplete: "new-password"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.password_confirmation
             }, null, _parent2, _scopeId));
@@ -1286,11 +1574,11 @@ const _sfc_main$P = {
                   onSubmit: withModifiers(submit, ["prevent"])
                 }, [
                   createVNode("div", null, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "name",
                       value: "Nom complet"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "name",
                       type: "text",
                       class: "mt-1 block w-full",
@@ -1300,17 +1588,17 @@ const _sfc_main$P = {
                       autofocus: "",
                       autocomplete: "name"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.name
                     }, null, 8, ["message"])
                   ]),
                   createVNode("div", { class: "mt-4" }, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "email",
                       value: "Email"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "email",
                       type: "email",
                       class: "mt-1 block w-full",
@@ -1319,17 +1607,17 @@ const _sfc_main$P = {
                       required: "",
                       autocomplete: "username"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.email
                     }, null, 8, ["message"])
                   ]),
                   createVNode("div", { class: "mt-4" }, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "password",
                       value: "Mot de passe"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "password",
                       type: "password",
                       class: "mt-1 block w-full",
@@ -1338,17 +1626,17 @@ const _sfc_main$P = {
                       required: "",
                       autocomplete: "new-password"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.password
                     }, null, 8, ["message"])
                   ]),
                   createVNode("div", { class: "mt-4" }, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "password_confirmation",
                       value: "Confirmer le mot de passe"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "password_confirmation",
                       type: "password",
                       class: "mt-1 block w-full",
@@ -1357,7 +1645,7 @@ const _sfc_main$P = {
                       required: "",
                       autocomplete: "new-password"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.password_confirmation
                     }, null, 8, ["message"])
@@ -1392,17 +1680,17 @@ const _sfc_main$P = {
     };
   }
 };
-const _sfc_setup$P = _sfc_main$P.setup;
-_sfc_main$P.setup = (props, ctx) => {
+const _sfc_setup$Q = _sfc_main$Q.setup;
+_sfc_main$Q.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/Register.vue");
-  return _sfc_setup$P ? _sfc_setup$P(props, ctx) : void 0;
+  return _sfc_setup$Q ? _sfc_setup$Q(props, ctx) : void 0;
 };
-const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$P
+  default: _sfc_main$Q
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$O = {
+const _sfc_main$P = {
   __name: "ResetPassword",
   __ssrInlineRender: true,
   props: {
@@ -1434,11 +1722,11 @@ const _sfc_main$O = {
           if (_push2) {
             _push2(ssrRenderComponent(unref(Head), { title: "Reset Password" }, null, _parent2, _scopeId));
             _push2(`<div class="w-full md:w-8/12 p-6 m-auto mt-6 bg-white shadow-lg rounded"${_scopeId}><form${_scopeId}><div${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "email",
               value: "Email"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "email",
               type: "email",
               class: "mt-1 block w-full",
@@ -1448,16 +1736,16 @@ const _sfc_main$O = {
               autofocus: "",
               autocomplete: "username"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.email
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="mt-4"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "password",
               value: "Mot de passe"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "password",
               type: "password",
               class: "mt-1 block w-full",
@@ -1466,16 +1754,16 @@ const _sfc_main$O = {
               required: "",
               autocomplete: "new-password"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.password
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="mt-4"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "password_confirmation",
               value: "Confirmer le mot de passe"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "password_confirmation",
               type: "password",
               class: "mt-1 block w-full",
@@ -1484,7 +1772,7 @@ const _sfc_main$O = {
               required: "",
               autocomplete: "new-password"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               class: "mt-2",
               message: unref(form).errors.password_confirmation
             }, null, _parent2, _scopeId));
@@ -1513,11 +1801,11 @@ const _sfc_main$O = {
                   onSubmit: withModifiers(submit, ["prevent"])
                 }, [
                   createVNode("div", null, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "email",
                       value: "Email"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "email",
                       type: "email",
                       class: "mt-1 block w-full",
@@ -1527,17 +1815,17 @@ const _sfc_main$O = {
                       autofocus: "",
                       autocomplete: "username"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.email
                     }, null, 8, ["message"])
                   ]),
                   createVNode("div", { class: "mt-4" }, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "password",
                       value: "Mot de passe"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "password",
                       type: "password",
                       class: "mt-1 block w-full",
@@ -1546,17 +1834,17 @@ const _sfc_main$O = {
                       required: "",
                       autocomplete: "new-password"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.password
                     }, null, 8, ["message"])
                   ]),
                   createVNode("div", { class: "mt-4" }, [
-                    createVNode(_sfc_main$W, {
+                    createVNode(_sfc_main$X, {
                       for: "password_confirmation",
                       value: "Confirmer le mot de passe"
                     }),
-                    createVNode(_sfc_main$U, {
+                    createVNode(_sfc_main$V, {
                       id: "password_confirmation",
                       type: "password",
                       class: "mt-1 block w-full",
@@ -1565,7 +1853,7 @@ const _sfc_main$O = {
                       required: "",
                       autocomplete: "new-password"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$X, {
+                    createVNode(_sfc_main$Y, {
                       class: "mt-2",
                       message: unref(form).errors.password_confirmation
                     }, null, 8, ["message"])
@@ -1591,17 +1879,17 @@ const _sfc_main$O = {
     };
   }
 };
-const _sfc_setup$O = _sfc_main$O.setup;
-_sfc_main$O.setup = (props, ctx) => {
+const _sfc_setup$P = _sfc_main$P.setup;
+_sfc_main$P.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/ResetPassword.vue");
-  return _sfc_setup$O ? _sfc_setup$O(props, ctx) : void 0;
+  return _sfc_setup$P ? _sfc_setup$P(props, ctx) : void 0;
 };
-const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$O
+  default: _sfc_main$P
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$N = {
+const _sfc_main$O = {
   __name: "VerifyEmail",
   __ssrInlineRender: true,
   props: {
@@ -1705,15 +1993,52 @@ const _sfc_main$N = {
     };
   }
 };
+const _sfc_setup$O = _sfc_main$O.setup;
+_sfc_main$O.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/VerifyEmail.vue");
+  return _sfc_setup$O ? _sfc_setup$O(props, ctx) : void 0;
+};
+const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$O
+}, Symbol.toStringTag, { value: "Module" }));
+const ContactUs_vue_vue_type_style_index_0_scoped_f651f96c_lang = "";
+const _sfc_main$N = {
+  layout: GuestLayout,
+  components: { Head },
+  data() {
+    return {
+      emailCopied: false
+    };
+  },
+  methods: {
+    copy() {
+      document.getElementById("mail").select();
+      document.execCommand("copy");
+      this.emailCopied = true;
+      setTimeout(() => {
+        this.emailCopied = false;
+      }, 2e3);
+    }
+  }
+};
+function _sfc_ssrRender$C(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  const _component_Head = resolveComponent("Head");
+  _push(`<!--[-->`);
+  _push(ssrRenderComponent(_component_Head, { title: "Contact us" }, null, _parent));
+  _push(`<div class="flex flex-col justify-around lg:w-9/12 lg:rounded-lg lg:shadow-xl py-8 px-12 md:py-12 md:px-24 mx-auto mt-8 bg-white page" data-v-f651f96c><h1 class="capitalize text-xl font-bold" data-v-f651f96c>nous contacter :</h1><div class="flex gap-4 items-center relative" data-v-f651f96c><label for="mail" class="text-sm uppercase" data-v-f651f96c>email</label><textarea name="email" id="mail" class="rounded-sm w-full border-none ring-1 ring-slate-100 resize-none" rows="1" readonly data-v-f651f96c>contact@lenergia.fr</textarea><span style="${ssrRenderStyle(this.emailCopied ? null : { display: "none" })}" class="absolute right-2 bottom-2 text-green-500 font-semibold" data-v-f651f96c>Copied!</span></div><hr data-v-f651f96c><div class="flex flex-col gap-1 relative" data-v-f651f96c><a class="flex justify-center items-center h-24 w-24 bg-amber-400 text-white font-bold rounded-full" href="tel:0985408779" data-v-f651f96c> Appeler</a></div></div><!--]-->`);
+}
 const _sfc_setup$N = _sfc_main$N.setup;
 _sfc_main$N.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/VerifyEmail.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/ContactUs.vue");
   return _sfc_setup$N ? _sfc_setup$N(props, ctx) : void 0;
 };
-const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const ContactUs = /* @__PURE__ */ _export_sfc(_sfc_main$N, [["ssrRender", _sfc_ssrRender$C], ["__scopeId", "data-v-f651f96c"]]);
+const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$N
+  default: ContactUs
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$M = {};
 function _sfc_ssrRender$B(_ctx, _push, _parent, _attrs) {
@@ -1946,8 +2271,8 @@ const _sfc_main$H = {
         _: 1
       }, _parent));
       _push(ssrRenderComponent(_sfc_main$J, {
-        href: _ctx.route("orders"),
-        active: _ctx.route().current("orders")
+        href: _ctx.route("orders.all"),
+        active: _ctx.route().current("orders.")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -1962,8 +2287,8 @@ const _sfc_main$H = {
       }, _parent));
       if (_ctx.$page.props.auth.user.type == 1) {
         _push(ssrRenderComponent(_sfc_main$J, {
-          href: _ctx.route("mailer"),
-          active: _ctx.route().current("mailer")
+          href: _ctx.route("mailer.view"),
+          active: _ctx.route().current("mailer.")
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
@@ -2093,8 +2418,8 @@ const _sfc_main$H = {
       }, _parent));
       _push(`</div><div class="pt-2 pb-3 space-y-1">`);
       _push(ssrRenderComponent(_sfc_main$I, {
-        href: _ctx.route("orders"),
-        active: _ctx.route().current("orders")
+        href: _ctx.route("orders.all"),
+        active: _ctx.route().current("orders.")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -2102,6 +2427,22 @@ const _sfc_main$H = {
           } else {
             return [
               createTextVNode(" Commandes ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><div class="pt-2 pb-3 space-y-1">`);
+      _push(ssrRenderComponent(_sfc_main$I, {
+        href: _ctx.route("mailer.view"),
+        active: _ctx.route().current("mailer.")
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Mailer `);
+          } else {
+            return [
+              createTextVNode(" Mailer ")
             ];
           }
         }),
@@ -2175,13 +2516,144 @@ _sfc_main$G.setup = (props, ctx) => {
   return _sfc_setup$G ? _sfc_setup$G(props, ctx) : void 0;
 };
 const Dashboard = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["ssrRender", _sfc_ssrRender$A]]);
-const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Dashboard
 }, Symbol.toStringTag, { value: "Module" }));
-const secondeSection_vue_vue_type_style_index_0_scoped_053add81_lang = "";
+const FirstS_vue_vue_type_style_index_0_scoped_e13ce639_lang = "";
 const _sfc_main$F = {
-  components: { Head, Link, btnDevis },
+  components: { Appelez_nous, Link }
+};
+function _sfc_ssrRender$z(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  const _component_Appelez_nous = resolveComponent("Appelez_nous");
+  const _component_Link = resolveComponent("Link");
+  _push(`<div${ssrRenderAttrs(mergeProps({
+    id: "header",
+    class: "relative !bg-cover overflow-hidden",
+    style: { "background": "url('/images/home/head-page.jpg') no-repeat top center" }
+  }, _attrs))} data-v-e13ce639><div class="p-8 sm:p-12 md:p-16 text-slate-100" data-v-e13ce639><h1 class="flex flex-col gap-2 font-extrabold w-full" data-v-e13ce639><span class="text-xl sm:text-2xl md:text-3xl leading-8 sm:leading-10 md:leading-relaxed" data-v-e13ce639> Pensez vous à devenir <br data-v-e13ce639> autonome en énergie &amp; éviter <br data-v-e13ce639> de subir les augmentations des factures </span><span class="text-2xl sm:text-4xl md:text-5xl leading-10 sm:leading-relaxed md:leading-relaxed" data-v-e13ce639> L&#39;énergia vous accompagne<br data-v-e13ce639> de A à Z </span></h1>`);
+  _push(ssrRenderComponent(_component_Appelez_nous, null, null, _parent));
+  _push(`</div><div class="absolute bottom-0 flex flex-wrap justify-center gap-3 lg:gap-6 w-full p-3 lg:p-6 shadow-xl" style="${ssrRenderStyle({ "background-image": "linear-gradient(to bottom, rgba(255, 255, 255, 0.01), #cbd5e1)" })}" data-v-e13ce639>`);
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("parcour", "panneaux-solaires-photovoltaiques"),
+    class: "solaire-parent relative grid place-items-center text-center gap-2 lg:gap-4 w-28 lg:w-40 p-2 lg:p-4 lg:px-6 bg-white rounded-lg shadow-xl overflow-hidden"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/solaire_icon.png" alt="Passer au solaire" data-v-e13ce639${_scopeId}><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10" data-v-e13ce639${_scopeId}>Passer au solaire</span><span class="solaire-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" data-v-e13ce639${_scopeId}></span>`);
+      } else {
+        return [
+          createVNode("img", {
+            class: "w-12 h-12 lg:w-16 lg:h-16 z-10",
+            src: "/images/illustration/solaire_icon.png",
+            alt: "Passer au solaire"
+          }),
+          createVNode("span", { class: "font-bold capitalize text-sm lg:text-base text-slate-900 z-10" }, "Passer au solaire"),
+          createVNode("span", { class: "solaire-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" })
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("parcour", "pompe-à-chaleur"),
+    class: "chauffage-parent relative grid place-items-center text-center gap-2 lg:gap-4 w-28 lg:w-40 p-2 lg:p-4 lg:px-6 bg-white rounded-lg shadow-xl overflow-hidden"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/chauffage_icon.png" alt="Changer mon chauffage" data-v-e13ce639${_scopeId}><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10" data-v-e13ce639${_scopeId}>Changer mon chauffage</span><span class="chauffage-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" data-v-e13ce639${_scopeId}></span>`);
+      } else {
+        return [
+          createVNode("img", {
+            class: "w-12 h-12 lg:w-16 lg:h-16 z-10",
+            src: "/images/illustration/chauffage_icon.png",
+            alt: "Changer mon chauffage"
+          }),
+          createVNode("span", { class: "font-bold capitalize text-sm lg:text-base text-slate-900 z-10" }, "Changer mon chauffage"),
+          createVNode("span", { class: "chauffage-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" })
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("parcour"),
+    class: "isolation-parent relative grid place-items-center text-center gap-2 lg:gap-4 w-28 lg:w-40 p-2 lg:p-4 lg:px-6 bg-white rounded-lg shadow-xl overflow-hidden"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/isolation_icon.png" alt="Isoler ma maison" data-v-e13ce639${_scopeId}><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10" data-v-e13ce639${_scopeId}>Isoler ma maison</span><span class="isolation-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" data-v-e13ce639${_scopeId}></span>`);
+      } else {
+        return [
+          createVNode("img", {
+            class: "w-12 h-12 lg:w-16 lg:h-16 z-10",
+            src: "/images/illustration/isolation_icon.png",
+            alt: "Isoler ma maison"
+          }),
+          createVNode("span", { class: "font-bold capitalize text-sm lg:text-base text-slate-900 z-10" }, "Isoler ma maison"),
+          createVNode("span", { class: "isolation-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" })
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("parcour"),
+    class: "calcule-parent relative grid place-items-center text-center gap-2 lg:gap-4 w-28 lg:w-40 p-2 lg:p-4 lg:px-6 bg-white rounded-lg shadow-xl overflow-hidden"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="\\images\\illustration/calcule_icon.png" alt="Calculer prime &amp; aides" data-v-e13ce639${_scopeId}><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10" data-v-e13ce639${_scopeId}>Calculer prime &amp; aides</span><span class="calcule-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" data-v-e13ce639${_scopeId}></span>`);
+      } else {
+        return [
+          createVNode("img", {
+            class: "w-12 h-12 lg:w-16 lg:h-16 z-10",
+            src: "\\images\\illustration/calcule_icon.png",
+            alt: "Calculer prime & aides"
+          }),
+          createVNode("span", { class: "font-bold capitalize text-sm lg:text-base text-slate-900 z-10" }, "Calculer prime & aides"),
+          createVNode("span", { class: "calcule-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" })
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(ssrRenderComponent(_component_Link, {
+    href: _ctx.route("parcour"),
+    class: "bilan-parent relative grid place-items-center text-center gap-2 lg:gap-4 w-28 lg:w-40 p-2 lg:p-4 lg:px-6 bg-white rounded-lg shadow-xl overflow-hidden"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/bilan_icon.png" alt="Mon bilan énergétique" data-v-e13ce639${_scopeId}><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10" data-v-e13ce639${_scopeId}>Mon bilan énergétique*</span><span class="bilan-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" data-v-e13ce639${_scopeId}></span>`);
+      } else {
+        return [
+          createVNode("img", {
+            class: "w-12 h-12 lg:w-16 lg:h-16 z-10",
+            src: "/images/illustration/bilan_icon.png",
+            alt: "Mon bilan énergétique"
+          }),
+          createVNode("span", { class: "font-bold capitalize text-sm lg:text-base text-slate-900 z-10" }, "Mon bilan énergétique*"),
+          createVNode("span", { class: "bilan-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" })
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</div></div>`);
+}
+const _sfc_setup$F = _sfc_main$F.setup;
+_sfc_main$F.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/home/FirstS.vue");
+  return _sfc_setup$F ? _sfc_setup$F(props, ctx) : void 0;
+};
+const FirstS = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["ssrRender", _sfc_ssrRender$z], ["__scopeId", "data-v-e13ce639"]]);
+const __vite_glob_0_19 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: FirstS
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$E = {
+  components: { Link, btnDevis },
   data() {
     return {
       solair: true,
@@ -2203,11 +2675,11 @@ const _sfc_main$F = {
     }
   }
 };
-function _sfc_ssrRender$z(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$y(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_Link = resolveComponent("Link");
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col pt-16 gap-6 bg-white" }, _attrs))} data-v-053add81><h2 class="text-2xl md:text-4xl mx-4 font-extrabold text-center" data-v-053add81>Envie de faire des économies d&#39;énergie</h2><p class="text-xl text-center mb-16 mx-4" data-v-053add81>Des services conçus pour vous :</p><div class="relative flex flex-wrap justify-center gap-8 py-12 px-4 md:mx-6 bg-gradient-to-b to-slate-50 from-slate-100 md:rounded-xl" data-v-053add81><div class="absolute grid grid-cols-3 -top-16 md:-top-12 w-11/12 lg:w-10/12" data-v-053add81><a style="${ssrRenderStyle($data.solair ? "background-color:#a8ecff" : "")}" class="flex flex-col md:flex-row gap-0 md:gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500" data-v-053add81><img class="w-14 h-14" src="/images/illustration/solaire_icon.png" alt="Passer au solaire" data-v-053add81><span class="flex-1 text-center md:text-left" data-v-053add81>Branchez-vous sur le soleil</span></a><a style="${ssrRenderStyle($data.chauffage ? "background-color:#ffd0b6" : "")}" class="flex flex-col md:flex-row gap-0 md:gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500" data-v-053add81><img class="w-14 h-14" src="/images/illustration/chauffage_icon.png" alt="Changer mon chauffage" data-v-053add81><span class="flex-1 text-center md:text-left" data-v-053add81>Chauffez-vous proprement</span></a><a style="${ssrRenderStyle($data.isolation ? "background-color: #b9f8d3" : "")}" class="flex flex-col md:flex-row gap-0 md:gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500" data-v-053add81><img class="w-14 h-14" src="/images/illustration/isolation_icon.png" alt="Isoler ma maison" data-v-053add81><span class="flex-1 text-center md:text-left" data-v-053add81>Limiter les déperditions thermiques</span></a></div>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col pt-16 gap-6 bg-white" }, _attrs))}><h2 class="text-2xl md:text-4xl mx-4 font-extrabold text-center"> Envie de faire des économies d&#39;énergie </h2><p class="text-xl text-center mb-16 mx-4"> Des services conçus pour vous : </p><div class="relative flex flex-wrap justify-center gap-8 py-12 px-4 md:mx-6 bg-gradient-to-b to-slate-50 from-slate-100 md:rounded-xl"><div class="absolute grid grid-cols-3 -top-16 md:-top-12 w-11/12 lg:w-10/12"><a style="${ssrRenderStyle($data.solair ? "background-color:#a8ecff" : "")}" class="flex flex-col md:flex-row gap-0 md:gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500"><img class="w-14 h-14" src="/images/illustration/solaire_icon.png" alt="Passer au solaire"><span class="flex-1 text-center md:text-left">Branchez-vous sur le soleil</span></a><a style="${ssrRenderStyle($data.chauffage ? "background-color:#ffd0b6" : "")}" class="flex flex-col md:flex-row gap-0 md:gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500"><img class="w-14 h-14" src="/images/illustration/chauffage_icon.png" alt="Changer mon chauffage"><span class="flex-1 text-center md:text-left">Chauffez-vous proprement</span></a><a style="${ssrRenderStyle($data.isolation ? "background-color: #b9f8d3" : "")}" class="flex flex-col md:flex-row gap-0 md:gap-2 md:justify-center justify-start items-center py-2 md:p-4 md:py-4 md:px-6 rounded bg-white text-sm md:text-base font-bold cursor-pointer border transition-all duration-500"><img class="w-14 h-14" src="/images/illustration/isolation_icon.png" alt="Isoler ma maison"><span class="flex-1 text-center md:text-left">Limiter les déperditions thermiques</span></a></div>`);
   if ($data.solair) {
-    _push(`<div class="w-full m-auto flex flex-wrap justify-center py-6 gap-8" data-v-053add81><div class="flex flex-col md:flex-row w-96 md:w-7/12 bg-white rounded-md overflow-hidden" data-v-053add81><div class="h-32 w-full md:h-full md:w-4/12 !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/solaire-section2.png') center" })}" data-v-053add81></div><div class="flex flex-col w-full md:w-8/12" data-v-053add81><h6 class="font-bold p-3" style="${ssrRenderStyle({ "background-color": "#a8ecff" })}" data-v-053add81>Jusqu&#39;à 1 600€ d&#39;économies par an</h6><div class="p-3 px-6 flex flex-col gap-2 items-start h-full text-sm" data-v-053add81><h3 class="text-xl font-bold leading-10" data-v-053add81>Panneaux solaires</h3><p class="" data-v-053add81>Créez de votre toiture une source de production d&#39;électricité, et vous:</p><ul class="list-disc ml-4" data-v-053add81><li class="mb-2" data-v-053add81>Dites adieu aux sources d&#39;énergie traditionnelles en produisant votre propre électricité écologique</li><li data-v-053add81>Bénéficiez d&#39;une réduction de 60 % sur vos dépenses énergétiques</li></ul><p class="" data-v-053add81><b class="text-base" data-v-053add81>Profitez de l&#39;utilisation de panneaux hybrides ?</b><br data-v-053add81><span class="text-sm" data-v-053add81>Alliant chauffage thermique et électricité photovoltaïque, ces panneaux novateurs s&#39;alimentent de la lumière et de la chaleur solaire pour créer une alliance parfaite.</span></p><p class="text-center mt-3" data-v-053add81>Réaliser jusqu&#39;à 60 % d&#39;économies sur vos coûts énergétiques. </p>`);
+    _push(`<div class="w-full m-auto flex flex-wrap justify-center py-6 gap-8"><div class="flex flex-col md:flex-row w-96 md:w-7/12 bg-white rounded-md overflow-hidden"><div class="h-32 w-full md:h-full md:w-4/12 !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/solaire-section2.png')\r\n                                center" })}"></div><div class="flex flex-col w-full md:w-8/12"><h6 class="font-bold p-3" style="${ssrRenderStyle({ "background-color": "#a8ecff" })}"> Jusqu&#39;à 1 600€ d&#39;économies par an </h6><div class="p-3 px-6 flex flex-col gap-2 items-start h-full text-sm"><h3 class="text-xl font-bold leading-10"> Panneaux solaires </h3><p class=""> Créez de votre toiture une source de production d&#39;électricité, et vous: </p><ul class="list-disc ml-4"><li class="mb-2"> Dites adieu aux sources d&#39;énergie traditionnelles en produisant votre propre électricité écologique </li><li> Bénéficiez d&#39;une réduction de 60 % sur vos dépenses énergétiques </li></ul><p class=""><b class="text-base">Profitez de l&#39;utilisation de panneaux hybrides ?</b><br><span class="text-sm">Alliant chauffage thermique et électricité photovoltaïque, ces panneaux novateurs s&#39;alimentent de la lumière et de la chaleur solaire pour créer une alliance parfaite.</span></p><p class="text-center mt-3"> Réaliser jusqu&#39;à 60 % d&#39;économies sur vos coûts énergétiques. </p>`);
     _push(ssrRenderComponent(_component_Link, {
       href: _ctx.route("intermediate", "passer-solaire"),
       class: "text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all"
@@ -2228,7 +2700,7 @@ function _sfc_ssrRender$z(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     _push(`<!---->`);
   }
   if ($data.chauffage) {
-    _push(`<div class="w-full m-auto flex flex-wrap justify-center py-6 gap-8" data-v-053add81><div class="flex flex-col md:flex-row w-96 md:w-5/12 bg-white rounded-md overflow-hidden" data-v-053add81><div class="h-32 w-full md:h-full md:w-5/12 !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/chauffage1.jpg') center" })}" data-v-053add81></div><div class="flex flex-col w-full md:w-7/12 h-full" data-v-053add81><h6 class="font-bold p-3" style="${ssrRenderStyle({ "background-color": "#ffd0b6" })}" data-v-053add81>Jusqu&#39;à 1 000€ d&#39;économies par an</h6><div class="px-6 py-4 flex flex-col gap-4 items-start" data-v-053add81><h3 class="text-xl font-bold leading-10" data-v-053add81>Pompe à chaleur</h3><ul class="list-disc ml-4" data-v-053add81><li class="mb-2" data-v-053add81>Efficacité énergétique</li><li class="mb-2" data-v-053add81>Économies financières</li><li data-v-053add81>Distribution homogène de la chaleur</li></ul>`);
+    _push(`<div class="w-full m-auto flex flex-wrap justify-center py-6 gap-8"><div class="flex flex-col md:flex-row w-96 md:w-5/12 bg-white rounded-md overflow-hidden"><div class="h-32 w-full md:h-full md:w-5/12 !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/chauffage1.jpg')\r\n                                center" })}"></div><div class="flex flex-col w-full md:w-7/12 h-full"><h6 class="font-bold p-3" style="${ssrRenderStyle({ "background-color": "#ffd0b6" })}"> Jusqu&#39;à 1 000€ d&#39;économies par an </h6><div class="px-6 py-4 flex flex-col gap-4 items-start"><h3 class="text-xl font-bold leading-10"> Pompe à chaleur </h3><ul class="list-disc ml-4"><li class="mb-2">Efficacité énergétique</li><li class="mb-2">Économies financières</li><li>Distribution homogène de la chaleur</li></ul>`);
     _push(ssrRenderComponent(_component_Link, {
       href: _ctx.route("intermediate", "chauffage-maison"),
       class: "text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all"
@@ -2244,7 +2716,7 @@ function _sfc_ssrRender$z(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       }),
       _: 1
     }, _parent));
-    _push(`</div></div></div><div class="flex flex-col md:flex-row w-96 md:w-5/12 bg-white rounded-md overflow-hidden" data-v-053add81><div class="h-32 w-full md:h-full md:w-5/12 !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/chauffage-2.jpg') center" })}" data-v-053add81></div><div class="flex flex-col w-full md:w-7/12" data-v-053add81><h6 class="font-bold p-3 bg-gray-200" data-v-053add81>Jusqu&#39;à 30% d&#39;économies d&#39;énergie</h6><div class="px-6 py-4 flex flex-col gap-4 items-start" data-v-053add81><h3 class="text-xl font-bold leading-10" data-v-053add81>Chaudière à Gaz</h3><ul class="list-disc ml-4" data-v-053add81><li class="mb-2" data-v-053add81>Chauffage instantané</li><li class="mb-2" data-v-053add81>Solution économique</li><li data-v-053add81>Faibles émissions</li></ul>`);
+    _push(`</div></div></div><div class="flex flex-col md:flex-row w-96 md:w-5/12 bg-white rounded-md overflow-hidden"><div class="h-32 w-full md:h-full md:w-5/12 !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/chauffage-2.jpg')\r\n                                center" })}"></div><div class="flex flex-col w-full md:w-7/12"><h6 class="font-bold p-3 bg-gray-200"> Jusqu&#39;à 30% d&#39;économies d&#39;énergie </h6><div class="px-6 py-4 flex flex-col gap-4 items-start"><h3 class="text-xl font-bold leading-10"> Chaudière à Gaz </h3><ul class="list-disc ml-4"><li class="mb-2">Chauffage instantané</li><li class="mb-2">Solution économique</li><li>Faibles émissions</li></ul>`);
     _push(ssrRenderComponent(_component_Link, {
       href: _ctx.route("intermediate", "chauffage-maison"),
       class: "text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all"
@@ -2260,7 +2732,7 @@ function _sfc_ssrRender$z(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       }),
       _: 1
     }, _parent));
-    _push(`</div></div></div><div class="flex flex-col md:flex-row w-96 md:w-5/12 bg-white rounded-md overflow-hidden" data-v-053add81><div class="h-32 w-full md:h-full md:w-5/12 !bg-cover md:bg-auto" style="${ssrRenderStyle({ "background": "url('/images/home/chauffage-3.jpg') no-repeat center" })}" data-v-053add81></div><div class="flex flex-col w-full md:w-7/12" data-v-053add81><h6 class="font-bold p-3 bg-gray-200" data-v-053add81>Jusqu&#39;à 3 800€ d&#39;aides</h6><div class="px-6 py-4 flex flex-col gap-4 items-start" data-v-053add81><h3 class="text-xl font-bold leading-10" data-v-053add81>Chauffage d&#39;appoint</h3><p class="leading-6 text-md" data-v-053add81>Chaleur efficace et combustible écologique, faites des économies d&#39;énergie en optant pour un poêle à granulés.</p>`);
+    _push(`</div></div></div><div class="flex flex-col md:flex-row w-96 md:w-5/12 bg-white rounded-md overflow-hidden"><div class="h-32 w-full md:h-full md:w-5/12 !bg-cover md:bg-auto" style="${ssrRenderStyle({ "background": "url('/images/home/chauffage-3.jpg')\r\n                                no-repeat center" })}"></div><div class="flex flex-col w-full md:w-7/12"><h6 class="font-bold p-3 bg-gray-200"> Jusqu&#39;à 3 800€ d&#39;aides </h6><div class="px-6 py-4 flex flex-col gap-4 items-start"><h3 class="text-xl font-bold leading-10"> Chauffage d&#39;appoint </h3><p class="leading-6 text-md"> Chaleur efficace et combustible écologique, faites des économies d&#39;énergie en optant pour un poêle à granulés. </p>`);
     _push(ssrRenderComponent(_component_Link, {
       href: _ctx.route("intermediate", "chauffage-maison"),
       class: "text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all"
@@ -2276,7 +2748,7 @@ function _sfc_ssrRender$z(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       }),
       _: 1
     }, _parent));
-    _push(`</div></div></div><div class="flex flex-col md:flex-row w-96 md:w-5/12 bg-white rounded-md overflow-hidden" data-v-053add81><div class="h-32 w-full md:h-full md:w-5/12 !bg-right-top !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/chauffage-4.jpeg') center" })}" data-v-053add81></div><div class="flex flex-col w-full md:w-7/12" data-v-053add81><h6 class="font-bold p-3 bg-gray-200" data-v-053add81>Des factures divisées par trois</h6><div class="px-6 py-4 flex flex-col gap-4 items-start" data-v-053add81><h3 class="text-xl font-bold leading-8" data-v-053add81>Chauffe-eau thermodynamique</h3><ul class="list-disc ml-4" data-v-053add81><li class="mb-2" data-v-053add81>Chauffage Rapide</li><li class="mb-2" data-v-053add81>Capacité d&#39;adaptation lors de l&#39;installation</li><li data-v-053add81>Performance tout au long de l&#39;année</li></ul>`);
+    _push(`</div></div></div><div class="flex flex-col md:flex-row w-96 md:w-5/12 bg-white rounded-md overflow-hidden"><div class="h-32 w-full md:h-full md:w-5/12 !bg-right-top !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/chauffage-4.jpeg')\r\n                                center" })}"></div><div class="flex flex-col w-full md:w-7/12"><h6 class="font-bold p-3 bg-gray-200"> Des factures divisées par trois </h6><div class="px-6 py-4 flex flex-col gap-4 items-start"><h3 class="text-xl font-bold leading-8"> Chauffe-eau thermodynamique </h3><ul class="list-disc ml-4"><li class="mb-2">Chauffage Rapide</li><li class="mb-2"> Capacité d&#39;adaptation lors de l&#39;installation </li><li>Performance tout au long de l&#39;année</li></ul>`);
     _push(ssrRenderComponent(_component_Link, {
       href: _ctx.route("intermediate", "chauffage-maison"),
       class: "text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all"
@@ -2297,7 +2769,7 @@ function _sfc_ssrRender$z(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     _push(`<!---->`);
   }
   if ($data.isolation) {
-    _push(`<div class="w-full m-auto flex flex-wrap justify-center py-6 gap-8" data-v-053add81><div class="flex flex-col md:flex-row w-96 md:w-7/12 bg-white rounded-md overflow-hidden" data-v-053add81><div class="h-32 w-full md:h-full md:w-4/12 !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/section-2-isolation.jpg') center" })}" data-v-053add81></div><div class="flex flex-col w-full md:w-8/12" data-v-053add81><h6 class="font-bold p-3" style="${ssrRenderStyle({ "background-color": "#b9f8d3" })}" data-v-053add81>Jusqu&#39;à 25% d&#39;économies d&#39;énergie</h6><div class="p-6 md:py-8 flex flex-col gap-2 items-start h-full" style="${ssrRenderStyle({ "min-height": "330px" })}" data-v-053add81><h3 class="text-xl font-bold leading-10" data-v-053add81>Isolation des murs</h3><p class="leading-6" data-v-053add81> L&#39;isolation des murs assure un confort accru, prévient les pertes d&#39;énergie et permet des économies significatives </p>`);
+    _push(`<div class="w-full m-auto flex flex-wrap justify-center py-6 gap-8"><div class="flex flex-col md:flex-row w-96 md:w-7/12 bg-white rounded-md overflow-hidden"><div class="h-32 w-full md:h-full md:w-4/12 !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/section-2-isolation.jpg')\r\n                                center" })}"></div><div class="flex flex-col w-full md:w-8/12"><h6 class="font-bold p-3" style="${ssrRenderStyle({ "background-color": "#b9f8d3" })}"> Jusqu&#39;à 25% d&#39;économies d&#39;énergie </h6><div class="p-6 md:py-8 flex flex-col gap-2 items-start h-full" style="${ssrRenderStyle({ "min-height": "330px" })}"><h3 class="text-xl font-bold leading-10"> Isolation des murs </h3><p class="leading-6"> L&#39;isolation des murs assure un confort accru, prévient les pertes d&#39;énergie et permet des économies significatives </p>`);
     _push(ssrRenderComponent(_component_Link, {
       href: _ctx.route("intermediate", "isolation-maison"),
       class: "text-center m-auto text-teal-500 hover:text-white text-xs uppercase bg-gradient-to-r hover:from-teal-500 hover:to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-8 py-4 rounded-full font-bold border border-teal-500 transition-all"
@@ -2319,183 +2791,102 @@ function _sfc_ssrRender$z(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div>`);
 }
-const _sfc_setup$F = _sfc_main$F.setup;
-_sfc_main$F.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/home/secondeSection.vue");
-  return _sfc_setup$F ? _sfc_setup$F(props, ctx) : void 0;
-};
-const seconde_section = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["ssrRender", _sfc_ssrRender$z], ["__scopeId", "data-v-053add81"]]);
-const __vite_glob_0_20 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: seconde_section
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$E = {};
-function _sfc_ssrRender$y(_ctx, _push, _parent, _attrs) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col items-center gap-4 py-16 bg-white" }, _attrs))}><h2 class="text-2xl md:text-4xl font-extrabold text-center mx-4">Une équipe dévouée pour vous assurer<br class="hidden md:block"> un chantier en toute tranquillité.</h2><span class="h-2 w-12 bg-green-200 rounded-full"></span><p class="text-xl text-center mx-4">Nos conseillers experts vous guident de A à Z pour la réussite de votre projet.</p><div class="flex flex-col md:flex-row px-4 py-8 gap-8 sm:px-20"><div class="w-full h-36 h-96 md:w-7/12 rounded-md" style="${ssrRenderStyle({ "background": "url('/images/home/section3.jpg') no-repeat center center" })}"></div><div class="grid grid-cols-2 w-full md:w-5/12 gap-4 text-sm md:text-md lg:text-base"><div class="flex flex-col !justify-start gap-2"><img src="/images/illustration/1_section3.png" alt="Des conseillers à votre écoute" class="w-16 h-16"><h6 class="font-bold">Nos conseillers sont à votre disposition</h6><p class="text-gray-700">du lundi au vendredi, de 8h à 19h, pour répondre à vos besoins.</p></div><div class="flex flex-col !justify-start gap-2"><img src="/images/illustration/2_section3.png" alt="Des conseillers à votre écoute" class="w-16 h-16"><h6 class="font-bold">Des experts qualifiés en rénovation</h6><p class="text-gray-700">Maintenant leur expertise à jour avec les avancées du secteur.</p></div><div class="flex flex-col justify-start gap-2"><img src="/images/illustration/3_section3.png" alt="Des conseillers à votre écoute" class="w-16 h-16"><h6 class="font-bold">Un accompagnement personnalisé</h6><p class="text-gray-700">Nos conseils sont spécialement conçus pour s&#39;adapter aux caractéristiques de votre logement.</p></div><div class="flex flex-col !justify-start gap-2"><img src="/images/illustration/4_section3.png" alt="Des conseillers à votre écoute" class="w-16 h-16"><h6 class="font-bold">Simplifiez vos démarches</h6><p class="text-gray-700">Une assistance personnalisée pour bénéficier de la Prime et MaPrimeRenov&#39;</p></div></div></div></div>`);
-}
 const _sfc_setup$E = _sfc_main$E.setup;
 _sfc_main$E.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/home/ThirdSection.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/home/SecondeS.vue");
   return _sfc_setup$E ? _sfc_setup$E(props, ctx) : void 0;
 };
-const third_section = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["ssrRender", _sfc_ssrRender$y]]);
-const __vite_glob_0_19 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const SecondeS = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["ssrRender", _sfc_ssrRender$y]]);
+const __vite_glob_0_22 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: third_section
+  default: SecondeS
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$D = {
-  data() {
-    return {
-      counter: 0
-    };
-  }
-};
-function _sfc_ssrRender$x(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative w-full md:w-10/12 px-4 py-16 mx-auto" }, _attrs))}><h2 class="text-4xl font-extrabold text-center mb-8">Avis de nos clients</h2><div class="mb-8 flex flex-col gap-2 mx-auto" style="${ssrRenderStyle({ "max-width": "550px" })}"><img src="/images/home/5Start_slate.png" alt="4 start" style="${ssrRenderStyle({ "width": "150px", "margin": "auto" })}"><p class="font-bold text-lg break-words text-center md:text-xl"><span style="${ssrRenderStyle({ "color": "#ff9000" })}">«</span> L&#39;energia a fait un travail extraordinaire ! La qualité du service était impeccable, l&#39;équipe était très sympathique et le résultat final a dépassé mes attentes.Je les recommande chaleureusement. <span style="${ssrRenderStyle({ "color": "#ff9000" })}">»</span></p><span>Nicolas D.</span><span>le 03/06/2023</span></div>`);
-  if ($data.counter == 0) {
-    _push(`<div class="flex md:flex-row flex-col items-center md:justify-center md:items-stretch w-full gap-4"><div class="flex flex-col justify-between gap-2 w-full md:w-4/12 p-4 rounded bg-white dark:bg-slate-800" style="${ssrRenderStyle({ "max-width": "300px" })}"><div class="flex flex-col gap-2"><div class="cursor-pointer flex justify-start"><img src="/images/home/5Start.png" alt="4 start" style="${ssrRenderStyle({ "width": "120px" })}"></div><p class="text-base md:text-lg font-medium leading-normal text-gray-800 dark:text-white"><span style="${ssrRenderStyle({ "color": "#ff9000" })}">«</span>  Très bien  <span style="${ssrRenderStyle({ "color": "#ff9000" })}">»</span></p></div><div class="flex justify-start items-center flex-row space-x-2.5"><div><img class="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/21.jpg" alt="Connor Bell"></div><div class="flex flex-col justify-start items-start space-y-2"><p class="text-base font-medium leading-none text-gray-800 dark:text-white">Vincent J</p><p class="text-sm leading-none text-gray-600 dark:text-white">21/7/2023</p></div></div></div><div class="flex flex-col justify-between gap-2 w-full md:w-4/12 p-4 rounded bg-white dark:bg-slate-800" style="${ssrRenderStyle({ "max-width": "300px" })}"><div class="flex flex-col gap-2"><div class="cursor-pointer flex justify-start"><img src="/images/home/5Start.png" alt="4 start" style="${ssrRenderStyle({ "width": "120px" })}"></div><p class="text-base md:text-lg font-medium leading-normal text-gray-800 dark:text-white"><span style="${ssrRenderStyle({ "color": "#ff9000" })}">«</span>  Service compétent et réactif.  <span style="${ssrRenderStyle({ "color": "#ff9000" })}">»</span></p></div><div class="flex justify-start items-center flex-row space-x-2.5"><div><img src="https://i.ibb.co/QcqyrVG/Mask-Group.png" alt="girl-avatar"></div><div class="flex flex-col justify-start items-start space-y-2"><p class="text-base font-medium leading-none text-gray-800 dark:text-white">Anna K</p><p class="text-sm leading-none text-gray-600 dark:text-white">8/7/2023</p></div></div></div><div class="flex flex-col justify-between gap-2 w-full md:w-4/12 p-4 rounded bg-white dark:bg-slate-800" style="${ssrRenderStyle({ "max-width": "300px" })}"><div class="flex flex-col gap-2"><div class="cursor-pointer flex justify-start"><img src="/images/home/4StartAndHalf.png" alt="4 start" style="${ssrRenderStyle({ "width": "120px" })}"></div><p class="text-base md:text-lg font-medium leading-normal text-gray-800 dark:text-white"><span style="${ssrRenderStyle({ "color": "#ff9000" })}">«</span>  C&#39;est clair, respect des RDV. Bien accompagné.  <span style="${ssrRenderStyle({ "color": "#ff9000" })}">»</span></p></div><div class="flex justify-start items-center flex-row space-x-2.5"><div><img class="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/29.jpg" alt="Lee Fields"></div><div class="flex flex-col justify-start items-start space-y-2"><p class="text-base font-medium leading-none text-gray-800 dark:text-white">Pascal D</p><p class="text-sm leading-none text-gray-600 dark:text-white">14/6/2023</p></div></div></div></div>`);
-  } else {
-    _push(`<!---->`);
-  }
-  _push(`</div>`);
+const _sfc_main$D = {};
+function _sfc_ssrRender$x(_ctx, _push, _parent, _attrs) {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col items-center gap-4 py-16 bg-white" }, _attrs))}><h2 class="text-2xl md:text-4xl font-extrabold text-center mx-4"> Une équipe dévouée pour vous assurer<br class="hidden md:block"> un chantier en toute tranquillité. </h2><span class="h-2 w-12 bg-green-200 rounded-full"></span><p class="text-xl text-center mx-4"> Nos conseillers experts vous guident de A à Z pour la réussite de votre projet. </p><div class="flex flex-col md:flex-row px-4 py-8 gap-8 sm:px-20"><div class="w-full h-36 h-96 md:w-7/12 rounded-md" style="${ssrRenderStyle({ "background": "url('/images/home/section3.jpg') no-repeat\r\n                        center center" })}"></div><div class="grid grid-cols-2 w-full md:w-5/12 gap-4 text-sm md:text-md lg:text-base"><div class="flex flex-col !justify-start gap-2"><img src="/images/illustration/1_section3.png" alt="Des conseillers à votre écoute" class="w-16 h-16"><h6 class="font-bold"> Nos conseillers sont à votre disposition </h6><p class="text-gray-700"> du lundi au vendredi, de 8h à 19h, pour répondre à vos besoins. </p></div><div class="flex flex-col !justify-start gap-2"><img src="/images/illustration/2_section3.png" alt="Des conseillers à votre écoute" class="w-16 h-16"><h6 class="font-bold"> Des experts qualifiés en rénovation </h6><p class="text-gray-700"> Maintenant leur expertise à jour avec les avancées du secteur. </p></div><div class="flex flex-col justify-start gap-2"><img src="/images/illustration/3_section3.png" alt="Des conseillers à votre écoute" class="w-16 h-16"><h6 class="font-bold">Un accompagnement personnalisé</h6><p class="text-gray-700"> Nos conseils sont spécialement conçus pour s&#39;adapter aux caractéristiques de votre logement. </p></div><div class="flex flex-col !justify-start gap-2"><img src="/images/illustration/4_section3.png" alt="Des conseillers à votre écoute" class="w-16 h-16"><h6 class="font-bold">Simplifiez vos démarches</h6><p class="text-gray-700"> Une assistance personnalisée pour bénéficier de la Prime et MaPrimeRenov&#39; </p></div></div></div></div>`);
 }
 const _sfc_setup$D = _sfc_main$D.setup;
 _sfc_main$D.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/home/FourthSection.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/home/ThirdS.vue");
   return _sfc_setup$D ? _sfc_setup$D(props, ctx) : void 0;
 };
-const fourth_section = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["ssrRender", _sfc_ssrRender$x]]);
-const __vite_glob_0_17 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const ThirdS = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["ssrRender", _sfc_ssrRender$x]]);
+const __vite_glob_0_23 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: fourth_section
+  default: ThirdS
 }, Symbol.toStringTag, { value: "Module" }));
-const MailSection_vue_vue_type_style_index_0_scoped_417fab6f_lang = "";
 const _sfc_main$C = {};
 function _sfc_ssrRender$w(_ctx, _push, _parent, _attrs) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "py-16 px-2 bg-white" }, _attrs))} data-v-417fab6f><div style="${ssrRenderStyle({ "min-height": "450px" })}" class="flex flex-col lg:flex-row gap-4 md:gap-0 max-w-xl lg:max-w-none w-full md:w-10/12 shadow-md rounded-xl overflow-hidden mx-auto border" data-v-417fab6f><div class="w-full !bg-cover lg:w-6/12" style="${ssrRenderStyle({ "min-height": "400px", "background": "url('/images/home/mail-section.jpeg') no-repeat top" })}" data-v-417fab6f></div><div class="mx-auto w-full lg:w-6/12" data-v-417fab6f><div class="flex flex-col md:justify-center gap-12 py-6 lg:py-0 px-8 h-full" data-v-417fab6f><h6 class="text-lg md:text-2xl font-bold break-word" data-v-417fab6f>Profitez de conseils avisés pour réaliser des économies d&#39;énergie</h6><p data-v-417fab6f>Interviews d&#39;experts · Astuces · Actualités</p><form class="flex lg:flex-row flex-col gap-4" data-v-417fab6f><input type="email" placeholder="Votre adresse mail*" required class="p-4 rounded-md" data-v-417fab6f><input type="submit" value="Je M&#39;abonne" class="uppercase px-6 py-4 rounded-full text-white bg-slate-700 font-bold shadow" data-v-417fab6f></form><span class="text-xs" data-v-417fab6f>Soyez tranquille, vous pouvez vous désabonner de notre newsletter à tout instant !</span></div></div></div></div>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative w-full md:w-10/12 px-4 py-16 mx-auto" }, _attrs))}><h2 class="text-4xl font-extrabold text-center mb-8"> Avis de nos clients </h2><div class="mb-8 flex flex-col gap-2 mx-auto" style="${ssrRenderStyle({ "max-width": "550px" })}"><img src="/images/home/5Start_slate.png" alt="4 start" style="${ssrRenderStyle({ "width": "150px", "margin": "auto" })}"><p class="font-bold text-lg break-words text-center md:text-xl"><span style="${ssrRenderStyle({ "color": "#ff9000" })}">«</span> L&#39;energia a fait un travail extraordinaire ! La qualité du service était impeccable, l&#39;équipe était très sympathique et le résultat final a dépassé mes attentes.Je les recommande chaleureusement. <span style="${ssrRenderStyle({ "color": "#ff9000" })}">»</span></p><span>Nicolas D.</span><span>le 03/06/2024</span></div><div class="flex md:flex-row flex-col items-center md:justify-center md:items-stretch w-full gap-4"><div class="flex flex-col justify-between gap-2 w-full md:w-4/12 p-4 rounded bg-white dark:bg-slate-800" style="${ssrRenderStyle({ "max-width": "300px" })}"><div class="flex flex-col gap-2"><div class="cursor-pointer flex justify-start"><img src="/images/home/5Start.png" alt="4 start" style="${ssrRenderStyle({ "width": "120px" })}"></div><p class="text-base md:text-lg font-medium leading-normal text-gray-800 dark:text-white"><span style="${ssrRenderStyle({ "color": "#ff9000" })}">«</span>  Très bien  <span style="${ssrRenderStyle({ "color": "#ff9000" })}">»</span></p></div><div class="flex justify-start items-center flex-row space-x-2.5"><div><img class="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/21.jpg" alt="Connor Bell"></div><div class="flex flex-col justify-start items-start space-y-2"><p class="text-base font-medium leading-none text-gray-800 dark:text-white"> Vincent J </p><p class="text-sm leading-none text-gray-600 dark:text-white"> 21/7/2024 </p></div></div></div><div class="flex flex-col justify-between gap-2 w-full md:w-4/12 p-4 rounded bg-white dark:bg-slate-800" style="${ssrRenderStyle({ "max-width": "300px" })}"><div class="flex flex-col gap-2"><div class="cursor-pointer flex justify-start"><img src="/images/home/5Start.png" alt="4 start" style="${ssrRenderStyle({ "width": "120px" })}"></div><p class="text-base md:text-lg font-medium leading-normal text-gray-800 dark:text-white"><span style="${ssrRenderStyle({ "color": "#ff9000" })}">«</span>  Service compétent et réactif.  <span style="${ssrRenderStyle({ "color": "#ff9000" })}">»</span></p></div><div class="flex justify-start items-center flex-row space-x-2.5"><div><img src="https://i.ibb.co/QcqyrVG/Mask-Group.png" alt="girl-avatar"></div><div class="flex flex-col justify-start items-start space-y-2"><p class="text-base font-medium leading-none text-gray-800 dark:text-white"> Anna K </p><p class="text-sm leading-none text-gray-600 dark:text-white"> 8/7/2024 </p></div></div></div><div class="flex flex-col justify-between gap-2 w-full md:w-4/12 p-4 rounded bg-white dark:bg-slate-800" style="${ssrRenderStyle({ "max-width": "300px" })}"><div class="flex flex-col gap-2"><div class="cursor-pointer flex justify-start"><img src="/images/home/4StartAndHalf.png" alt="4 start" style="${ssrRenderStyle({ "width": "120px" })}"></div><p class="text-base md:text-lg font-medium leading-normal text-gray-800 dark:text-white"><span style="${ssrRenderStyle({ "color": "#ff9000" })}">«</span>  C&#39;est clair, respect des RDV. Bien accompagné.  <span style="${ssrRenderStyle({ "color": "#ff9000" })}">»</span></p></div><div class="flex justify-start items-center flex-row space-x-2.5"><div><img class="w-12 h-12 rounded-full" src="https://randomuser.me/api/portraits/men/29.jpg" alt="Lee Fields"></div><div class="flex flex-col justify-start items-start space-y-2"><p class="text-base font-medium leading-none text-gray-800 dark:text-white"> Pascal D </p><p class="text-sm leading-none text-gray-600 dark:text-white"> 14/6/2024 </p></div></div></div></div></div>`);
 }
 const _sfc_setup$C = _sfc_main$C.setup;
 _sfc_main$C.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/home/MailSection.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/home/FourthS.vue");
   return _sfc_setup$C ? _sfc_setup$C(props, ctx) : void 0;
 };
-const mail_section = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["ssrRender", _sfc_ssrRender$w], ["__scopeId", "data-v-417fab6f"]]);
-const __vite_glob_0_18 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const FourthS = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["ssrRender", _sfc_ssrRender$w]]);
+const __vite_glob_0_20 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: mail_section
+  default: FourthS
 }, Symbol.toStringTag, { value: "Module" }));
-const Home_vue_vue_type_style_index_0_lang = "";
-const _sfc_main$B = {
-  layout: GuestLayout,
-  components: {
-    Appelez_nous,
-    Head,
-    seconde_section,
-    third_section,
-    fourth_section,
-    mail_section,
-    Link
-  }
-};
-function _sfc_ssrRender$v(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  const _component_Head = resolveComponent("Head");
-  const _component_Appelez_nous = resolveComponent("Appelez_nous");
-  const _component_Link = resolveComponent("Link");
-  const _component_seconde_section = resolveComponent("seconde_section");
-  const _component_third_section = resolveComponent("third_section");
-  const _component_fourth_section = resolveComponent("fourth_section");
-  const _component_mail_section = resolveComponent("mail_section");
-  _push(`<!--[-->`);
-  _push(ssrRenderComponent(_component_Head, { title: "Bienvenue" }, null, _parent));
-  _push(`<div id="header" class="relative !bg-cover" style="${ssrRenderStyle({ "background": "url('/images/home/head-page.jpg') no-repeat fixed center" })}"><div class="p-6 md:p-16 text-slate-100"><h1 class="flex flex-col gap-2 font-extrabold md:w-9/12 w-full py-4"><span class="text-lg md:text-3xl leading-8 md:leading-10"> Pensez vous à devenir <br class="md:hidden">autonome en énergie <br class="hidden md:block">&amp; éviter <br class="md:hidden">de subir les augmentations des factures </span><span class="text-2xl md:text-5xl leading-10 md:leading-relaxed"> L&#39;énergia vous accompagne<br> de A à Z </span></h1>`);
-  _push(ssrRenderComponent(_component_Appelez_nous, null, null, _parent));
-  _push(`</div><div class="absolute bottom-0 flex flex-wrap p-2 lg:p-4 gap-2 lg:gap-4 justify-center lg:justify-center bg-gradient-to-r from-slate-50 to-slate-100 w-full lg:w-11/12 lg:rounded-tr-3xl">`);
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("parcour", "panneaux-solaires-photovoltaiques"),
-    class: "relative solaire-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/solaire_icon.png" alt="Passer au solaire"${_scopeId}><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10"${_scopeId}>Passer au solaire</span><span class="solaire-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"${_scopeId}></span>`);
-      } else {
-        return [
-          createVNode("img", {
-            class: "w-12 h-12 lg:w-16 lg:h-16 z-10",
-            src: "/images/illustration/solaire_icon.png",
-            alt: "Passer au solaire"
-          }),
-          createVNode("span", { class: "font-bold capitalize text-sm lg:text-base text-slate-900 z-10" }, "Passer au solaire"),
-          createVNode("span", { class: "solaire-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" })
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("parcour", "pompe-à-chaleur"),
-    class: "relative chauffage-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/chauffage_icon.png" alt="Changer mon chauffage"${_scopeId}><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10"${_scopeId}>Changer mon chauffage</span><span class="chauffage-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"${_scopeId}></span>`);
-      } else {
-        return [
-          createVNode("img", {
-            class: "w-12 h-12 lg:w-16 lg:h-16 z-10",
-            src: "/images/illustration/chauffage_icon.png",
-            alt: "Changer mon chauffage"
-          }),
-          createVNode("span", { class: "font-bold capitalize text-sm lg:text-base text-slate-900 z-10" }, "Changer mon chauffage"),
-          createVNode("span", { class: "chauffage-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" })
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("parcour"),
-    class: "relative isolation-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/isolation_icon.png" alt="Isoler ma maison"${_scopeId}><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10"${_scopeId}>Isoler ma maison</span><span class="isolation-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"${_scopeId}></span>`);
-      } else {
-        return [
-          createVNode("img", {
-            class: "w-12 h-12 lg:w-16 lg:h-16 z-10",
-            src: "/images/illustration/isolation_icon.png",
-            alt: "Isoler ma maison"
-          }),
-          createVNode("span", { class: "font-bold capitalize text-sm lg:text-base text-slate-900 z-10" }, "Isoler ma maison"),
-          createVNode("span", { class: "isolation-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0" })
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`<a href="javascript:void(0)" class="relative calcule-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden"><img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="\\images\\illustration/calcule_icon.png" alt="Calculer prime &amp; aides"><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10">Calculer prime &amp; aides</span><span class="calcule-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"></span></a><a href="javascript:void(0)" class="relative bilan-parent p-2 lg:p-4 bg-white w-28 h-32 lg:w-36 lg:h-36 grid place-items-center text-center rounded-lg shadow-xl overflow-hidden"><img class="w-12 h-12 lg:w-16 lg:h-16 z-10" src="/images/illustration/bilan_icon.png" alt="Mon bilan énergétique"><span class="font-bold capitalize text-sm lg:text-base text-slate-900 z-10">Mon bilan énergétique*</span><span class="bilan-hover absolute w-2 h-2 rounded-full left-2 top-2 z-0"></span></a></div></div>`);
-  _push(ssrRenderComponent(_component_seconde_section, null, null, _parent));
-  _push(ssrRenderComponent(_component_third_section, null, null, _parent));
-  _push(ssrRenderComponent(_component_fourth_section, null, null, _parent));
-  _push(ssrRenderComponent(_component_mail_section, null, null, _parent));
-  _push(`<!--]-->`);
+const _sfc_main$B = {};
+function _sfc_ssrRender$v(_ctx, _push, _parent, _attrs) {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "py-16 px-2 bg-white" }, _attrs))}><div style="${ssrRenderStyle({ "min-height": "450px" })}" class="flex flex-col lg:flex-row gap-4 md:gap-0 max-w-xl lg:max-w-none w-full md:w-10/12 shadow-md rounded-xl overflow-hidden mx-auto border"><div class="w-full !bg-cover lg:w-6/12" style="${ssrRenderStyle({ "min-height": "400px", "background": "url('/images/home/mail-section.jpeg') no-repeat top" })}"></div><div class="mx-auto w-full lg:w-6/12"><div class="flex flex-col md:justify-center gap-12 py-6 lg:py-0 px-8 h-full"><h6 class="text-lg md:text-2xl font-bold break-word">Profitez de conseils avisés pour réaliser des économies d&#39;énergie</h6><p>Interviews d&#39;experts · Astuces · Actualités</p><form class="flex lg:flex-row flex-col gap-4"><input type="email" placeholder="Votre adresse mail*" required class="p-4 rounded-md"><input type="submit" value="Je M&#39;abonne" class="uppercase px-6 py-4 rounded-full text-white bg-slate-700 font-bold shadow"></form><span class="text-xs">Soyez tranquille, vous pouvez vous désabonner de notre newsletter à tout instant !</span></div></div></div></div>`);
 }
 const _sfc_setup$B = _sfc_main$B.setup;
 _sfc_main$B.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Home.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/home/MailSection.vue");
   return _sfc_setup$B ? _sfc_setup$B(props, ctx) : void 0;
 };
-const Home = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["ssrRender", _sfc_ssrRender$v]]);
-const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const mail_section = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["ssrRender", _sfc_ssrRender$v]]);
+const __vite_glob_0_21 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: mail_section
+}, Symbol.toStringTag, { value: "Module" }));
+const Home_vue_vue_type_style_index_0_scoped_aec94240_lang = "";
+const _sfc_main$A = {
+  layout: GuestLayout,
+  components: {
+    Head,
+    FirstS,
+    SecondeS,
+    ThirdS,
+    FourthS,
+    mail_section
+  }
+};
+function _sfc_ssrRender$u(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  const _component_Head = resolveComponent("Head");
+  const _component_FirstS = resolveComponent("FirstS");
+  const _component_SecondeS = resolveComponent("SecondeS");
+  const _component_ThirdS = resolveComponent("ThirdS");
+  const _component_FourthS = resolveComponent("FourthS");
+  const _component_mail_section = resolveComponent("mail_section");
+  _push(`<!--[-->`);
+  _push(ssrRenderComponent(_component_Head, { title: "Bienvenue" }, null, _parent));
+  _push(ssrRenderComponent(_component_FirstS, null, null, _parent));
+  _push(ssrRenderComponent(_component_SecondeS, null, null, _parent));
+  _push(ssrRenderComponent(_component_ThirdS, null, null, _parent));
+  _push(ssrRenderComponent(_component_FourthS, null, null, _parent));
+  _push(ssrRenderComponent(_component_mail_section, null, null, _parent));
+  _push(`<!--]-->`);
+}
+const _sfc_setup$A = _sfc_main$A.setup;
+_sfc_main$A.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Home.vue");
+  return _sfc_setup$A ? _sfc_setup$A(props, ctx) : void 0;
+};
+const Home = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["ssrRender", _sfc_ssrRender$u], ["__scopeId", "data-v-aec94240"]]);
+const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Home
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$A = {
+const _sfc_main$z = {
   props: {
     "page": Object
   },
@@ -2536,7 +2927,7 @@ const _sfc_main$A = {
     }
   }
 };
-function _sfc_ssrRender$u(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$t(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_Head = resolveComponent("Head");
   const _component_Link = resolveComponent("Link");
   const _component_btnDevis = resolveComponent("btnDevis");
@@ -2668,19 +3059,19 @@ function _sfc_ssrRender$u(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div></div><!--]-->`);
 }
-const _sfc_setup$A = _sfc_main$A.setup;
-_sfc_main$A.setup = (props, ctx) => {
+const _sfc_setup$z = _sfc_main$z.setup;
+_sfc_main$z.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/IntermediatePage.vue");
-  return _sfc_setup$A ? _sfc_setup$A(props, ctx) : void 0;
+  return _sfc_setup$z ? _sfc_setup$z(props, ctx) : void 0;
 };
-const IntermediatePage = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["ssrRender", _sfc_ssrRender$u]]);
-const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const IntermediatePage = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["ssrRender", _sfc_ssrRender$t]]);
+const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: IntermediatePage
 }, Symbol.toStringTag, { value: "Module" }));
 const LandingPage_vue_vue_type_style_index_0_lang = "";
-const _sfc_main$z = {
+const _sfc_main$y = {
   props: ["work", "articles", "faqs"],
   layout: GuestLayout,
   components: {
@@ -2729,7 +3120,7 @@ const _sfc_main$z = {
     }
   }
 };
-function _sfc_ssrRender$t(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_Head = resolveComponent("Head");
   const _component_btnDevis = resolveComponent("btnDevis");
   _push(`<!--[-->`);
@@ -2740,63 +3131,17 @@ function _sfc_ssrRender$t(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   ssrRenderList($props.articles, (article) => {
     _push(`<li class="flex gap-2"><i class="fa-solid leading-6 fa-circle" style="${ssrRenderStyle({ "color": "#72efa6", "font-size": "0.5em" })}"></i><a class="shadow-text cursor-pointer">${ssrInterpolate(article.title)}</a></li>`);
   });
-  _push(`<!--]--><li class="flex gap-2"><i class="fa-solid leading-6 fa-circle" style="${ssrRenderStyle({ "color": "#72efa6", "font-size": "0.5em" })}"></i><a class="shadow-text cursor-pointer">FAQ</a></li></ul></div></div><div class="text-slate-800 w-full md:w-8/12 px-4 md:px-12 py-6 flex flex-col gap-8 bg-white rounded"><div class="md:hidden flex flex-col gap-2"><a href="javascript:void(0)" class="block font-semibold text-lg md:text-lg cursor-pointer py-2 px-8 rounded text-white bg-emerald-300"> Sommaire  <i class="fa-solid fa-caret-down"></i></a><ul class="flex flex-col gap-4 break-words p-0 rounded bg-white text-sm h-0 overflow-hidden bg-slate-100"><!--[-->`);
+  _push(`<!--]--><li class="flex gap-2"><i class="fa-solid leading-6 fa-circle" style="${ssrRenderStyle({ "color": "#72efa6", "font-size": "0.5em" })}"></i><a class="shadow-text cursor-pointer">FAQ</a></li></ul></div></div><div class="text-slate-800 w-full md:w-8/12 px-4 md:px-12 py-12 flex flex-col gap-8 bg-white rounded"><div class="md:hidden flex flex-col gap-2"><a href="javascript:void(0)" class="block font-semibold text-lg md:text-lg cursor-pointer py-2 px-8 rounded text-white bg-emerald-300"> Sommaire  <i class="fa-solid fa-caret-down"></i></a><ul class="flex flex-col gap-4 break-words p-0 rounded bg-white text-sm h-0 overflow-hidden bg-slate-100"><!--[-->`);
   ssrRenderList($props.articles, (article) => {
     _push(`<li class="flex gap-2"><i class="fa-solid leading-6 fa-circle" style="${ssrRenderStyle({ "color": "#72efa6", "font-size": "0.5em" })}"></i><a class="hover:font-semibold cursor-pointer">${ssrInterpolate(article.title)}</a></li>`);
   });
-  _push(`<!--]--></ul></div><div class="flex flex-col gap-6"><h1 class="text-2xl lg:text-3xl font-bold">${$props.work.title}</h1>`);
+  _push(`<!--]--></ul></div><div class="flex flex-col gap-8"><h1 class="text-2xl lg:text-3xl text-center font-bold">${$props.work.title}</h1>`);
   if ($props.work.img) {
     _push(`<img${ssrRenderAttr("src", "/images/works/img/" + $props.work.img)} class="w-full">`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<p class="break-words leading-8" style="${ssrRenderStyle({ "word-spacing": "1px", "letter-spacing": "0.5px" })}">${$props.work.description}</p><p style="${ssrRenderStyle({ "word-spacing": "0.7px", "letter-spacing": "0.2px", "text-align": "center" })}">`);
-  if ($props.work.id == 1) {
-    _push(`<strong class="text-center">Optez pour l&#39;offre Panneaux Solaires Photovoltaïques et commencez à produire votre propre électricité !</strong>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if ($props.work.id == 2) {
-    _push(`<strong class="text-center">Profitez d&#39;une simulation gratuite pour estimer votre devis solaire et découvrir le montant potentiel de vos économies.</strong>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if ($props.work.id == 3) {
-    _push(`<strong class="text-center">Profitez de l&#39;utilisation de panneaux hybrides pour réaliser jusqu&#39;à 80 % d&#39;économies sur vos coûts énergétiques. 👇</strong>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if ($props.work.id == 4) {
-    _push(`<strong class="text-center">Optez pour un choix gagnant avec le cumulus thermodynamique pour des économies d&#39;énergie et une empreinte carbone réduite.</strong>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if ($props.work.id == 5) {
-    _push(`<strong class="text-center">Envie d&#39;installer une pompe à chaleur ? Obtenez votre devis gratuit dès maintenant !</strong>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if ($props.work.id == 6) {
-    _push(`<strong class="text-center">Passez au poêle à granulés ! Obtenez votre devis gratuit aujourd&#39;hui</strong>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if ($props.work.id == 7) {
-    _push(`<strong class="text-center">Dans cet article, nous allons explorer l&#39;essentiel du Système Solaire Combiné, son fonctionnement, ainsi que les coûts associés et les subventions disponibles.</strong>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if ($props.work.id == 8) {
-    _push(`<strong class="text-center">Faites le calcule de vos aides pour l&#39;isolation intérieure de vos murs !</strong>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if ($props.work.id == 9) {
-    _push(`<strong class="text-center">Calculez vos aides pour l&#39;isolation des murs par l&#39;extérieur !</strong>`);
-  } else {
-    _push(`<!---->`);
-  }
-  _push(`</p></div><div class="flex flex-col">`);
+  _push(`<p class="break-words text-justify leading-8" style="${ssrRenderStyle({ "word-spacing": "1px", "letter-spacing": "0.5px" })}">${$props.work.description}</p><p style="${ssrRenderStyle({ "word-spacing": "0.7px", "letter-spacing": "0.2px", "text-align": "center" })}"><strong class="text-center">${ssrInterpolate($props.work.line_text)}</strong></p></div><div class="flex flex-col">`);
   if ($props.work.type == "es") {
     _push(ssrRenderComponent(_component_btnDevis, {
       text: "JE CALCULE MES AIDES",
@@ -2845,13 +3190,30 @@ function _sfc_ssrRender$t(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   } else {
     _push(`<!---->`);
   }
+  if ($props.work.id == 10) {
+    _push(ssrRenderComponent(_component_btnDevis, {
+      text: "Commandez dès maintenant",
+      slug: $props.work.slug
+    }, null, _parent));
+  } else {
+    _push(`<!---->`);
+  }
   _push(`<i class="m-auto text-sm">Simulation gratuite en 2 minutes</i></div><!--[-->`);
   ssrRenderList($props.articles, (article) => {
     _push(`<div class="article flex flex-col gap-8"><h2 class="text-xl md:text-2xl font-bold">${ssrInterpolate(article.title)}</h2><div class="little-article flex flex-col gap-6">${article.article}</div>`);
     if (article.btnText) {
-      _push(ssrRenderComponent(_component_btnDevis, {
-        text: article.btnText
-      }, null, _parent));
+      _push(`<div class="flex items-center">`);
+      if ([1, 5, 10].includes($props.work.id)) {
+        _push(ssrRenderComponent(_component_btnDevis, {
+          text: article.btnText,
+          slug: $props.work.slug
+        }, null, _parent));
+      } else {
+        _push(ssrRenderComponent(_component_btnDevis, {
+          text: article.btnText
+        }, null, _parent));
+      }
+      _push(`</div>`);
     } else {
       _push(`<!---->`);
     }
@@ -2863,19 +3225,19 @@ function _sfc_ssrRender$t(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   });
   _push(`<!--]--></div></div></div></div><!--]-->`);
 }
-const _sfc_setup$z = _sfc_main$z.setup;
-_sfc_main$z.setup = (props, ctx) => {
+const _sfc_setup$y = _sfc_main$y.setup;
+_sfc_main$y.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/LandingPage.vue");
-  return _sfc_setup$z ? _sfc_setup$z(props, ctx) : void 0;
+  return _sfc_setup$y ? _sfc_setup$y(props, ctx) : void 0;
 };
-const LandingPage = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["ssrRender", _sfc_ssrRender$t]]);
-const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const LandingPage = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["ssrRender", _sfc_ssrRender$s]]);
+const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: LandingPage
 }, Symbol.toStringTag, { value: "Module" }));
-const viewOrder_vue_vue_type_style_index_0_scoped_ec1b08b5_lang = "";
-const _sfc_main$y = {
+const viewOrder_vue_vue_type_style_index_0_scoped_4625d493_lang = "";
+const _sfc_main$x = {
   props: ["view"],
   emits: ["current"],
   data() {
@@ -2905,8 +3267,6 @@ const _sfc_main$y = {
       }),
       projectForm: useForm({
         currentElectricityBill: this.view.currentElectricityBill,
-        kilowattsPerYear: this.view.kilowattsPerYear,
-        taxIncome: this.view.taxIncome,
         roofType: this.view.roofType,
         roofOrientation: this.view.roofOrientation,
         interieurSurface: this.view.interieurSurface,
@@ -2930,8 +3290,6 @@ const _sfc_main$y = {
         eauChaudeSanitaire: "",
         EspaceExterieur: "",
         currentElectricityBill: "",
-        kilowattsPerYear: "",
-        taxIncome: "",
         roofType: "",
         roofOrientation: ""
       })
@@ -2973,7 +3331,7 @@ const _sfc_main$y = {
     },
     delete(workId, i) {
       let orderId = this.view.id;
-      router.get("/delete-work", { workID: workId, orderID: orderId }, {
+      router.get("/orders/delete-work", { workID: workId, orderID: orderId }, {
         preserveState: true,
         preserveScroll: true,
         onBefore: () => confirm("Est ce que vous etes sur de vouloir supprimer le travaux?"),
@@ -3028,7 +3386,7 @@ const _sfc_main$y = {
       } else
         errors.logementEnergieType = null;
       if (errors.firstName == null && errors.lastName == null && errors.phone == null && errors.email == null && errors.logementSurface == null && errors.logementEnergieType == null)
-        this.clientInfos.post("/update-client/" + this.view.id, {
+        this.clientInfos.post("/orders/update-client/" + this.view.id, {
           preserveScroll: true,
           preserveState: true
         });
@@ -3040,16 +3398,6 @@ const _sfc_main$y = {
         return;
       } else
         errors.currentElectricityBill = null;
-      if (this.photovoltaique && !pattern_number.test(form.kilowattsPerYear)) {
-        errors.kilowattsPerYear = "Le champ requis. contenant des chiffres au max!";
-        return;
-      } else
-        errors.kilowattsPerYear = null;
-      if (this.photovoltaique && !pattern_number.test(form.taxIncome)) {
-        errors.taxIncome = "Le champ requis. contenant des chiffres au max!";
-        return;
-      } else
-        errors.taxIncome = null;
       if (this.photovoltaique && form.roofType == "") {
         errors.roofType = "Le champ requis!";
         return;
@@ -3086,7 +3434,7 @@ const _sfc_main$y = {
       } else
         errors.menageComposition = null;
       if (errors.interieurSurface == null && errors.exterieurSurface == null && errors.surfaceChauffee == null && errors.travauxAdresse == null && errors.menageComposition == null)
-        this.projectForm.post("/update-order/" + this.view.id, {
+        this.projectForm.post("/orders/update-order/" + this.view.id, {
           preserveScroll: true,
           preserveState: true
         });
@@ -3103,16 +3451,6 @@ const _sfc_main$y = {
         return;
       } else
         errors.currentElectricityBill = null;
-      if (this.activeWork == 1 && !pattern_number.test(form.kilowattsPerYear)) {
-        errors.kilowattsPerYear = "Le champ requis. contenant des chiffres au max!";
-        return;
-      } else
-        errors.kilowattsPerYear = null;
-      if (this.activeWork == 1 && !pattern_number.test(form.taxIncome)) {
-        errors.taxIncome = "Le champ requis. contenant des chiffres au max!";
-        return;
-      } else
-        errors.taxIncome = null;
       if (this.activeWork == 1 && form.roofType == "") {
         errors.roofType = "Le champ requis!";
         return;
@@ -3154,8 +3492,8 @@ const _sfc_main$y = {
       } else
         errors.EspaceExterieur = null;
       let worked = "";
-      if (errors.work == null && errors.currentElectricityBill == null && errors.kilowattsPerYear == null && errors.taxIncome == null && errors.roofType == null && errors.roofOrientation == null && errors.interieurSurface == null && errors.exterieurSurface == null && errors.exterieurRevetement == null && errors.surfaceChauffee == null && errors.eauChaudeSanitaire == null && errors.EspaceExterieur == null)
-        this.createWorkForm.post("/create-work/" + this.view.id, {
+      if (errors.work == null && errors.currentElectricityBill == null && errors.roofType == null && errors.roofOrientation == null && errors.interieurSurface == null && errors.exterieurSurface == null && errors.exterieurRevetement == null && errors.surfaceChauffee == null && errors.eauChaudeSanitaire == null && errors.EspaceExterieur == null)
+        this.createWorkForm.post("/orders/create-work/" + this.view.id, {
           preserveScroll: true,
           onSuccess: () => {
             this.viewCreateWork = false;
@@ -3167,8 +3505,6 @@ const _sfc_main$y = {
               this.view.works.push({ id: form.work, name: worked });
               if (form.work == 1) {
                 this.projectForm.currentElectricityBill = this.createWorkForm.currentElectricityBill;
-                this.projectForm.kilowattsPerYear = this.createWorkForm.kilowattsPerYear;
-                this.projectForm.taxIncome = this.createWorkForm.taxIncome;
                 this.projectForm.roofType = this.createWorkForm.roofType;
                 this.projectForm.roofOrientation = this.createWorkForm.roofOrientation;
                 this.photovoltaique = true;
@@ -3199,106 +3535,106 @@ const _sfc_main$y = {
         });
     },
     UpdateReviewState() {
-      this.reviewState.post("/review-state/" + this.view.id, {
+      this.reviewState.post("/orders/review-state/" + this.view.id, {
         preserveScroll: true
       });
     }
   }
 };
-function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><span class="table cursor-pointer mb-8 bg-slate-50 hover:bg-slate-100 font-semibold py-3 px-4 rounded" data-v-ec1b08b5>Retour</span><form class="flex flex-col gap-4 md:gap-8 p-6 mb-8 relative" data-v-ec1b08b5><div class="flex flex-col md:flex-row p-4 md:p-0 md:justify-start md:items-end rounded bg-slate-50 md:bg-white gap-4" data-v-ec1b08b5><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-ec1b08b5><label for="gender" data-v-ec1b08b5>État d&#39;examen</label><select id="gender" data-v-ec1b08b5><option value="en revue"${ssrIncludeBooleanAttr($props.view.reviewState == "en revue") ? " selected" : ""} data-v-ec1b08b5>en revue</option><option value="confirmer"${ssrIncludeBooleanAttr($props.view.reviewState == "confirmer") ? " selected" : ""} data-v-ec1b08b5>confirmer</option></select></div><input type="button" value="Enregister" class="uppercase py-3 px-12 font-bold cursor-pointer bg-slate-100 hover:bg-slate-200" data-v-ec1b08b5>`);
+function _sfc_ssrRender$r(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<!--[--><span class="table cursor-pointer mb-8 bg-slate-50 hover:bg-slate-100 font-semibold py-3 px-4 rounded" data-v-4625d493>Retour</span><form class="flex flex-col gap-4 md:gap-8 p-6 mb-8 relative" data-v-4625d493><div class="flex flex-col md:flex-row p-4 md:p-0 md:justify-start md:items-end rounded bg-slate-50 md:bg-white gap-4" data-v-4625d493><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-4625d493><label for="gender" data-v-4625d493>État d&#39;examen</label><select id="gender" data-v-4625d493><option value="en revue"${ssrIncludeBooleanAttr($props.view.reviewState == "en revue") ? " selected" : ""} data-v-4625d493>en revue</option><option value="confirmer"${ssrIncludeBooleanAttr($props.view.reviewState == "confirmer") ? " selected" : ""} data-v-4625d493>confirmer</option></select></div><input type="button" value="Enregister" class="uppercase py-3 px-12 font-bold cursor-pointer bg-slate-100 hover:bg-slate-200" data-v-4625d493>`);
   if (this.reviewState.recentlySuccessful) {
-    _push(`<div class="text-center font-semibold py-3 text-green-400" data-v-ec1b08b5> Enregistrée avec succès</div>`);
+    _push(`<div class="text-center font-semibold py-3 text-green-400" data-v-4625d493> Enregistrée avec succès</div>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`</div></form><form class="flex flex-col gap-4 md:gap-8 p-6 mb-8 border rounded relative" data-v-ec1b08b5><legend class="text-xl capitalize font-bold bg-white px-2 absolute" style="${ssrRenderStyle({ "top": "-20px" })}" data-v-ec1b08b5>information client</legend><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-ec1b08b5><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-ec1b08b5><label for="gender" data-v-ec1b08b5>Genre</label><select id="gender" data-v-ec1b08b5><option value="Madame"${ssrIncludeBooleanAttr($props.view.client.gender == "Madame") ? " selected" : ""} data-v-ec1b08b5>Madame</option><option value="Monsieur"${ssrIncludeBooleanAttr($props.view.client.gender == "Monsieur") ? " selected" : ""} data-v-ec1b08b5>Monsieur</option></select></div><div class="relative flex flex-col gap-2 w-full md:w-4/12" data-v-ec1b08b5><label for="lastName" data-v-ec1b08b5>Nom</label><input type="text" id="lastName"${ssrRenderAttr("value", this.clientInfos.lastName)} class="${ssrRenderClass($data.clientInfos.errors.lastName ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+  _push(`</div></form><form class="flex flex-col gap-4 md:gap-8 p-6 mb-8 border rounded relative" data-v-4625d493><legend class="text-xl capitalize font-bold bg-white px-2 absolute" style="${ssrRenderStyle({ "top": "-20px" })}" data-v-4625d493>information client </legend><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-4625d493><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-4625d493><label for="gender" data-v-4625d493>Genre</label><select id="gender" data-v-4625d493><option value="Madame"${ssrIncludeBooleanAttr($props.view.client.gender == "Madame") ? " selected" : ""} data-v-4625d493>Madame</option><option value="Monsieur"${ssrIncludeBooleanAttr($props.view.client.gender == "Monsieur") ? " selected" : ""} data-v-4625d493>Monsieur</option></select></div><div class="relative flex flex-col gap-2 w-full md:w-4/12" data-v-4625d493><label for="lastName" data-v-4625d493>Nom</label><input type="text" id="lastName"${ssrRenderAttr("value", this.clientInfos.lastName)} class="${ssrRenderClass($data.clientInfos.errors.lastName ? "border-red-400" : "")}" data-v-4625d493>`);
   if ($data.clientInfos.errors.lastName) {
-    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.clientInfos.errors.lastName)}</span></div><div class="relative flex flex-col gap-2 w-full md:w-4/12" data-v-ec1b08b5><label for="firstName" data-v-ec1b08b5>Prénom</label><input type="text" id="firstName"${ssrRenderAttr("value", this.clientInfos.firstName)} class="${ssrRenderClass($data.clientInfos.errors.firstName ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+  _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.clientInfos.errors.lastName)}</span></div><div class="relative flex flex-col gap-2 w-full md:w-4/12" data-v-4625d493><label for="firstName" data-v-4625d493>Prénom</label><input type="text" id="firstName"${ssrRenderAttr("value", this.clientInfos.firstName)} class="${ssrRenderClass($data.clientInfos.errors.firstName ? "border-red-400" : "")}" data-v-4625d493>`);
   if ($data.clientInfos.errors.firstName) {
-    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.clientInfos.errors.firstName)}</span></div></div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-ec1b08b5><div class="relative flex flex-col gap-2 w-full md:w-6/12" data-v-ec1b08b5><label for="phone" data-v-ec1b08b5>Téléphone</label><input type="number" id="phone"${ssrRenderAttr("value", $data.clientInfos.phone)} class="${ssrRenderClass($data.clientInfos.errors.phone ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+  _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.clientInfos.errors.firstName)}</span></div></div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-4625d493><div class="relative flex flex-col gap-2 w-full md:w-6/12" data-v-4625d493><label for="phone" data-v-4625d493>Téléphone</label><input type="number" id="phone"${ssrRenderAttr("value", $data.clientInfos.phone)} class="${ssrRenderClass($data.clientInfos.errors.phone ? "border-red-400" : "")}" data-v-4625d493>`);
   if ($data.clientInfos.errors.phone) {
-    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.clientInfos.errors.phone)}</span></div><div class="relative flex flex-col gap-2 w-full md:w-6/12" data-v-ec1b08b5><label for="email" data-v-ec1b08b5>E mail</label><input type="email" id="email"${ssrRenderAttr("value", $data.clientInfos.email)} class="${ssrRenderClass($data.clientInfos.errors.email ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+  _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.clientInfos.errors.phone)}</span></div><div class="relative flex flex-col gap-2 w-full md:w-6/12" data-v-4625d493><label for="email" data-v-4625d493>E mail</label><input type="email" id="email"${ssrRenderAttr("value", $data.clientInfos.email)} class="${ssrRenderClass($data.clientInfos.errors.email ? "border-red-400" : "")}" data-v-4625d493>`);
   if ($data.clientInfos.errors.email) {
-    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.clientInfos.errors.email)}</span></div></div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-ec1b08b5><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-ec1b08b5><label for="logementType" data-v-ec1b08b5>Logement Type</label><select id="logementType" data-v-ec1b08b5><option value="maison"${ssrIncludeBooleanAttr($props.view.logementType == "maison") ? " selected" : ""} data-v-ec1b08b5>Maison</option><option value="appartement"${ssrIncludeBooleanAttr($props.view.logementType == "appartement") ? " selected" : ""} data-v-ec1b08b5>Appartement</option></select></div><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-ec1b08b5><label for="logementConstruction" data-v-ec1b08b5>Logement Construction</label><select id="logementConstruction" data-v-ec1b08b5><option value="-2"${ssrIncludeBooleanAttr($props.view.logementConstruction == "-2") ? " selected" : ""} data-v-ec1b08b5>Moins de 2 ans</option><option value="2-15"${ssrIncludeBooleanAttr($props.view.logementConstruction == "2-15") ? " selected" : ""} data-v-ec1b08b5>Entre 2 ans et 15 ans</option><option value="+15"${ssrIncludeBooleanAttr($props.view.logementConstruction == "+15") ? " selected" : ""} data-v-ec1b08b5>Plus de 15 ans</option></select></div><div class="relative flex flex-col gap-2 w-full md:w-4/12" data-v-ec1b08b5><label for="logementSurface" data-v-ec1b08b5>Logement Surface m²</label><input type="number" id="logementSurface"${ssrRenderAttr("value", $data.clientInfos.logementSurface)} class="${ssrRenderClass($data.clientInfos.errors.logementSurface ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+  _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.clientInfos.errors.email)}</span></div></div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-4625d493><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-4625d493><label for="logementType" data-v-4625d493>Logement Type</label><select id="logementType" data-v-4625d493><option value="maison"${ssrIncludeBooleanAttr($props.view.logementType == "maison") ? " selected" : ""} data-v-4625d493>Maison</option><option value="appartement"${ssrIncludeBooleanAttr($props.view.logementType == "appartement") ? " selected" : ""} data-v-4625d493>Appartement</option></select></div><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-4625d493><label for="logementConstruction" data-v-4625d493>Logement Construction</label><select id="logementConstruction" data-v-4625d493><option value="-2"${ssrIncludeBooleanAttr($props.view.logementConstruction == "-2") ? " selected" : ""} data-v-4625d493>Moins de 2 ans</option><option value="2-15"${ssrIncludeBooleanAttr($props.view.logementConstruction == "2-15") ? " selected" : ""} data-v-4625d493>Entre 2 ans et 15 ans</option><option value="+15"${ssrIncludeBooleanAttr($props.view.logementConstruction == "+15") ? " selected" : ""} data-v-4625d493>Plus de 15 ans</option></select></div><div class="relative flex flex-col gap-2 w-full md:w-4/12" data-v-4625d493><label for="logementSurface" data-v-4625d493>Logement Surface m²</label><input type="number" id="logementSurface"${ssrRenderAttr("value", $data.clientInfos.logementSurface)} class="${ssrRenderClass($data.clientInfos.errors.logementSurface ? "border-red-400" : "")}" data-v-4625d493>`);
   if ($data.clientInfos.errors.logementSurface) {
-    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.clientInfos.errors.logementSurface)}</span></div></div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-ec1b08b5><div class="flex flex-col gap-2 w-full md:w-6/12" data-v-ec1b08b5><label for="logementEnergie" data-v-ec1b08b5>Logement Energie</label><select id="logementEnergie" data-v-ec1b08b5><option value="Chauffage au fioul"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage au fioul") ? " selected" : ""} data-v-ec1b08b5>Chauffage au fioul</option><option value="Chauffage électrique"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage électrique") ? " selected" : ""} data-v-ec1b08b5> Chauffage électrique</option><option value="Chauffage au gaz"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage au gaz") ? " selected" : ""} data-v-ec1b08b5>Chauffage au gaz </option><option value="Chauffage au bois"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage au bois") ? " selected" : ""} data-v-ec1b08b5>Chauffage au bois</option><option value="Pompe à chaleur"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Pompe à chaleur") ? " selected" : ""} data-v-ec1b08b5>Pompe à chaleur </option><option value="Chauffage au charbon"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage au charbon") ? " selected" : ""} data-v-ec1b08b5> Chauffage au charbon</option></select></div><div class="relative flex flex-col gap-2 w-full md:w-6/12" data-v-ec1b08b5>`);
+  _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.clientInfos.errors.logementSurface)}</span></div></div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-4625d493><div class="flex flex-col gap-2 w-full md:w-6/12" data-v-4625d493><label for="logementEnergie" data-v-4625d493>Logement Energie</label><select id="logementEnergie" data-v-4625d493><option value="Chauffage au fioul"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage au fioul") ? " selected" : ""} data-v-4625d493> Chauffage au fioul</option><option value="Chauffage électrique"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage électrique") ? " selected" : ""} data-v-4625d493> Chauffage électrique</option><option value="Chauffage au gaz"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage au gaz") ? " selected" : ""} data-v-4625d493>Chauffage au gaz </option><option value="Chauffage au bois"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage au bois") ? " selected" : ""} data-v-4625d493>Chauffage au bois</option><option value="Pompe à chaleur"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Pompe à chaleur") ? " selected" : ""} data-v-4625d493>Pompe à chaleur </option><option value="Chauffage au charbon"${ssrIncludeBooleanAttr($props.view.logementEnergie == "Chauffage au charbon") ? " selected" : ""} data-v-4625d493> Chauffage au charbon</option></select></div><div class="relative flex flex-col gap-2 w-full md:w-6/12" data-v-4625d493>`);
   if ($data.clientInfos.logementEnergie == "Chauffage au fioul" || $data.clientInfos.logementEnergie == "Chauffage électrique" || $data.clientInfos.logementEnergie == "Chauffage au gaz") {
-    _push(`<label for="energieType" data-v-ec1b08b5> Energie type</label>`);
+    _push(`<label for="energieType" data-v-4625d493> Energie type</label>`);
   } else {
     _push(`<!---->`);
   }
   if ($data.clientInfos.logementEnergie == "Chauffage au fioul") {
-    _push(`<select id="energieType" class="${ssrRenderClass($data.clientInfos.errors.logementEnergieType ? "border-red-400" : "")}" data-v-ec1b08b5><option value="Chaudière à condensation"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière à condensation") ? " selected" : ""} data-v-ec1b08b5>Chaudière à condensation </option><option value="Chaudière classique"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière classique") ? " selected" : ""} data-v-ec1b08b5>Chaudière classique</option><option value="Poêle"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Poêle") ? " selected" : ""} data-v-ec1b08b5>Poêle</option></select>`);
+    _push(`<select id="energieType" class="${ssrRenderClass($data.clientInfos.errors.logementEnergieType ? "border-red-400" : "")}" data-v-4625d493><option value="Chaudière à condensation"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière à condensation") ? " selected" : ""} data-v-4625d493>Chaudière à condensation </option><option value="Chaudière classique"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière classique") ? " selected" : ""} data-v-4625d493>Chaudière classique </option><option value="Poêle"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Poêle") ? " selected" : ""} data-v-4625d493>Poêle</option></select>`);
   } else {
     _push(`<!---->`);
   }
   if ($data.clientInfos.logementEnergie == "Chauffage électrique") {
-    _push(`<select id="energieType" class="${ssrRenderClass($data.clientInfos.errors.logementEnergieType ? "border-red-400" : "")}" data-v-ec1b08b5><option value="Chaudière électrique"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière électrique") ? " selected" : ""} data-v-ec1b08b5>Chaudière électrique</option><option value="Plafonds ou planchers chauffants"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Plafonds ou planchers chauffants") ? " selected" : ""} data-v-ec1b08b5>Plafonds ou planchers chauffants</option><option value="Radiateurs électriques"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Radiateurs électriques") ? " selected" : ""} data-v-ec1b08b5>Radiateurs électriques </option></select>`);
+    _push(`<select id="energieType" class="${ssrRenderClass($data.clientInfos.errors.logementEnergieType ? "border-red-400" : "")}" data-v-4625d493><option value="Chaudière électrique"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière électrique") ? " selected" : ""} data-v-4625d493>Chaudière électrique </option><option value="Plafonds ou planchers chauffants"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Plafonds ou planchers chauffants") ? " selected" : ""} data-v-4625d493>Plafonds ou planchers chauffants</option><option value="Radiateurs électriques"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Radiateurs électriques") ? " selected" : ""} data-v-4625d493>Radiateurs électriques </option></select>`);
   } else {
     _push(`<!---->`);
   }
   if ($data.clientInfos.logementEnergie == "Chauffage au gaz") {
-    _push(`<select id="energieType" class="${ssrRenderClass($data.clientInfos.errors.logementEnergieType ? "border-red-400" : "")}" data-v-ec1b08b5><option value="Chaudière à condensation gaz"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière à condensation gaz") ? " selected" : ""} data-v-ec1b08b5>Chaudière à condensation gaz</option><option value="Chaudière classique gaz"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière classique gaz") ? " selected" : ""} data-v-ec1b08b5>Chaudière classique gaz </option><option value="Radiateurs électriques"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Radiateurs électriques") ? " selected" : ""} data-v-ec1b08b5>Radiateur au gaz</option><option value="Poêle au gaz"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Poêle au gaz") ? " selected" : ""} data-v-ec1b08b5>Poêle au gaz </option></select>`);
+    _push(`<select id="energieType" class="${ssrRenderClass($data.clientInfos.errors.logementEnergieType ? "border-red-400" : "")}" data-v-4625d493><option value="Chaudière à condensation gaz"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière à condensation gaz") ? " selected" : ""} data-v-4625d493>Chaudière à condensation gaz</option><option value="Chaudière classique gaz"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Chaudière classique gaz") ? " selected" : ""} data-v-4625d493>Chaudière classique gaz </option><option value="Radiateurs électriques"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Radiateurs électriques") ? " selected" : ""} data-v-4625d493>Radiateur au gaz </option><option value="Poêle au gaz"${ssrIncludeBooleanAttr($data.clientInfos.logementEnergieType == "Poêle au gaz") ? " selected" : ""} data-v-4625d493>Poêle au gaz </option></select>`);
   } else {
     _push(`<!---->`);
   }
   if ($data.clientInfos.errors.logementEnergieType) {
-    _push(`<span class="text-red-400 text-lg absolute right-8 top-9 z-50" data-v-ec1b08b5>*</span>`);
+    _push(`<span class="text-red-400 text-lg absolute right-8 top-9 z-50" data-v-4625d493>*</span>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.clientInfos.errors.logementEnergieType)}</span></div></div>`);
+  _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.clientInfos.errors.logementEnergieType)}</span></div></div>`);
   if (this.clientInfos.recentlySuccessful) {
-    _push(`<div class="text-center font-semibold text-green-400" data-v-ec1b08b5>Enregistrée avec succès</div>`);
+    _push(`<div class="text-center font-semibold text-green-400" data-v-4625d493>Enregistrée avec succès</div>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<input type="button" value="Enregister" class="uppercase m-auto py-4 px-12 font-bold cursor-pointer bg-slate-100 hover:bg-slate-200" data-v-ec1b08b5></form><form class="flex flex-col gap-4 md:gap-8 p-6 border rounded relative" data-v-ec1b08b5><legend class="text-xl capitalize font-bold bg-white px-2 absolute" style="${ssrRenderStyle({ "top": "-20px" })}" data-v-ec1b08b5>l&#39;étude de projet </legend><div class="flex flex-col gap-4" data-v-ec1b08b5><div class="flex gap-4 items-center" data-v-ec1b08b5><label data-v-ec1b08b5>Travaux demandés</label><a class="text-sm font-semibold bg-slate-50 hover:bg-slate-100 cursor-pointer p-2 rounded" data-v-ec1b08b5>Créé travaux</a></div><div class="flex gap-4 flex-wrap" data-v-ec1b08b5><!--[-->`);
+  _push(`<input type="button" value="Enregister" class="uppercase m-auto py-4 px-12 font-bold cursor-pointer bg-slate-100 hover:bg-slate-200" data-v-4625d493></form><form class="flex flex-col gap-4 md:gap-8 p-6 border rounded relative" data-v-4625d493><legend class="text-xl capitalize font-bold bg-white px-2 absolute" style="${ssrRenderStyle({ "top": "-20px" })}" data-v-4625d493>l&#39;étude de projet </legend><div class="flex flex-col gap-4" data-v-4625d493><div class="flex gap-4 items-center" data-v-4625d493><label data-v-4625d493>Travaux demandés</label><a class="text-sm font-semibold bg-slate-50 hover:bg-slate-100 cursor-pointer p-2 rounded" data-v-4625d493> Créé travaux</a></div><div class="flex gap-4 flex-wrap" data-v-4625d493><!--[-->`);
   ssrRenderList(this.view.works, (work, i) => {
-    _push(`<div class="relative p-4 bg-slate-50 rounded" data-v-ec1b08b5>${ssrInterpolate(work.name)} <span class="absolute text-xl cursor-pointer flex leading-4 group" style="${ssrRenderStyle({ "top": "-10px", "right": "-2px" })}" data-v-ec1b08b5><span class="text-xs text-white bg-red-400 rounded-sm opacity-0 group-hover:opacity-100" data-v-ec1b08b5>Supprimer</span><i class="fa-solid fa-delete-left text-red-400" data-v-ec1b08b5></i></span></div>`);
+    _push(`<div class="relative p-4 bg-slate-50 rounded" data-v-4625d493>${ssrInterpolate(work.name)} <span class="absolute text-xl cursor-pointer flex leading-4 group" style="${ssrRenderStyle({ "top": "-10px", "right": "-2px" })}" data-v-4625d493><span class="text-xs text-white bg-red-400 rounded-sm opacity-0 group-hover:opacity-100" data-v-4625d493>Supprimer</span><i class="fa-solid fa-delete-left text-red-400" data-v-4625d493></i></span></div>`);
   });
   _push(`<!--]--></div>`);
   if (this.successMessage != null) {
-    _push(`<span class="text-green-400 text-sm font-semibold" data-v-ec1b08b5>${ssrInterpolate(this.successMessage)}</span>`);
+    _push(`<span class="text-green-400 text-sm font-semibold" data-v-4625d493>${ssrInterpolate(this.successMessage)}</span>`);
   } else {
     _push(`<!---->`);
   }
   if (this.errorMessage != null) {
-    _push(`<span class="text-red-400 text-sm font-semibold" data-v-ec1b08b5>${ssrInterpolate(this.errorMessage)}</span>`);
+    _push(`<span class="text-red-400 text-sm font-semibold" data-v-4625d493>${ssrInterpolate(this.errorMessage)}</span>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`</div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-8 flex-wrap" data-v-ec1b08b5>`);
+  _push(`</div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-8 flex-wrap" data-v-4625d493>`);
   if (this.photovoltaique) {
-    _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="ElectricityBill" data-v-ec1b08b5>Le montant actuelle de la facture d&#39;électricité</label><input type="number" id="ElectricityBill"${ssrRenderAttr("value", $data.projectForm.currentElectricityBill)} class="${ssrRenderClass($data.projectForm.errors.currentElectricityBill ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+    _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="ElectricityBill" data-v-4625d493>Le montant actuelle de la facture d&#39;électricité</label><input type="number" id="ElectricityBill"${ssrRenderAttr("value", $data.projectForm.currentElectricityBill)} class="${ssrRenderClass($data.projectForm.errors.currentElectricityBill ? "border-red-400" : "")}" data-v-4625d493>`);
     if ($data.projectForm.errors.currentElectricityBill) {
-      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
     } else {
       _push(`<!---->`);
     }
     if ($data.projectForm.errors.currentElectricityBill) {
-      _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.currentElectricityBill)}</span>`);
+      _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.projectForm.errors.currentElectricityBill)}</span>`);
     } else {
       _push(`<!---->`);
     }
@@ -3307,41 +3643,9 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     _push(`<!---->`);
   }
   if (this.photovoltaique) {
-    _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="kilowattsPerYear" data-v-ec1b08b5>Combien de kilowatts consommer par an ?</label><input type="number" id="kilowattsPerYear"${ssrRenderAttr("value", $data.projectForm.kilowattsPerYear)} class="${ssrRenderClass($data.projectForm.errors.kilowattsPerYear ? "border-red-400" : "")}" data-v-ec1b08b5>`);
-    if ($data.projectForm.errors.kilowattsPerYear) {
-      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
-    } else {
-      _push(`<!---->`);
-    }
-    if ($data.projectForm.errors.kilowattsPerYear) {
-      _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.kilowattsPerYear)}</span>`);
-    } else {
-      _push(`<!---->`);
-    }
-    _push(`</div>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if (this.photovoltaique) {
-    _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="taxIncome" data-v-ec1b08b5>Quel est le revenu total de votre foyer fiscal ?</label><input type="number" id="taxIncome"${ssrRenderAttr("value", $data.projectForm.taxIncome)} class="${ssrRenderClass($data.projectForm.errors.taxIncome ? "border-red-400" : "")}" data-v-ec1b08b5>`);
-    if ($data.projectForm.errors.taxIncome) {
-      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
-    } else {
-      _push(`<!---->`);
-    }
-    if ($data.projectForm.errors.taxIncome) {
-      _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.taxIncome)}</span>`);
-    } else {
-      _push(`<!---->`);
-    }
-    _push(`</div>`);
-  } else {
-    _push(`<!---->`);
-  }
-  if (this.photovoltaique) {
-    _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="roofType" data-v-ec1b08b5>Vous avez quel type de toiture ?</label><select id="roofType" class="${ssrRenderClass($data.projectForm.errors.roofType ? "border-red-400" : "")}" data-v-ec1b08b5><option disabled selected data-v-ec1b08b5>Selectionner un type de toiture</option><option value="La toiture plate" data-v-ec1b08b5>La toiture plate</option><option value="La toiture en pente" data-v-ec1b08b5>La toiture en pente</option></select>`);
+    _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="roofType" data-v-4625d493>Vous avez quel type de toiture ?</label><select id="roofType" class="${ssrRenderClass($data.projectForm.errors.roofType ? "border-red-400" : "")}" data-v-4625d493><option disabled selected data-v-4625d493>Selectionner un type de toiture</option><option value="La toiture plate" data-v-4625d493>La toiture plate</option><option value="La toiture en pente" data-v-4625d493>La toiture en pente</option></select>`);
     if ($data.projectForm.errors.roofType) {
-      _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.roofType)}</span>`);
+      _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.projectForm.errors.roofType)}</span>`);
     } else {
       _push(`<!---->`);
     }
@@ -3350,9 +3654,9 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     _push(`<!---->`);
   }
   if (this.photovoltaique) {
-    _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="roofOrientation" data-v-ec1b08b5>Quel est l&#39;orientation de votre toiture ?</label><select id="roofOrientation" class="${ssrRenderClass($data.projectForm.errors.roofOrientation ? "border-red-400" : "")}" data-v-ec1b08b5><option disabled selected data-v-ec1b08b5>Selectionner une orientation</option><option value="Sud" data-v-ec1b08b5>Sud</option><option value="Est - Ouest" data-v-ec1b08b5>Est - Ouest</option><option value="Sud - Est" data-v-ec1b08b5>Sud - Est</option><option value="Sud - Ouest" data-v-ec1b08b5>Sud - Ouest</option></select>`);
+    _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="roofOrientation" data-v-4625d493>Quel est l&#39;orientation de votre toiture ?</label><select id="roofOrientation" class="${ssrRenderClass($data.projectForm.errors.roofOrientation ? "border-red-400" : "")}" data-v-4625d493><option disabled selected data-v-4625d493>Selectionner une orientation</option><option value="Sud" data-v-4625d493>Sud</option><option value="Est - Ouest" data-v-4625d493>Est - Ouest</option><option value="Sud - Est" data-v-4625d493>Sud - Est</option><option value="Sud - Ouest" data-v-4625d493>Sud - Ouest</option></select>`);
     if ($data.projectForm.errors.roofOrientation) {
-      _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.roofOrientation)}</span>`);
+      _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.projectForm.errors.roofOrientation)}</span>`);
     } else {
       _push(`<!---->`);
     }
@@ -3361,93 +3665,93 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     _push(`<!---->`);
   }
   if (this.interieur) {
-    _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="interieurSurface" data-v-ec1b08b5>Murs Intérieur Surface m²</label><input type="number" id="interieurSurface"${ssrRenderAttr("value", $data.projectForm.interieurSurface)} class="${ssrRenderClass($data.projectForm.errors.interieurSurface ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+    _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="interieurSurface" data-v-4625d493>Murs Intérieur Surface m²</label><input type="number" id="interieurSurface"${ssrRenderAttr("value", $data.projectForm.interieurSurface)} class="${ssrRenderClass($data.projectForm.errors.interieurSurface ? "border-red-400" : "")}" data-v-4625d493>`);
     if ($data.projectForm.errors.interieurSurface) {
-      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
     } else {
       _push(`<!---->`);
     }
-    _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.interieurSurface)}</span></div>`);
+    _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.projectForm.errors.interieurSurface)}</span></div>`);
   } else {
     _push(`<!---->`);
   }
   if (this.exterieur) {
-    _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="exterieurSurface" data-v-ec1b08b5>Murs Extérieur Surface m²</label><input type="number" id="exterieurSurface"${ssrRenderAttr("value", $data.projectForm.exterieurSurface)} class="${ssrRenderClass($data.projectForm.errors.exterieurSurface ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+    _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="exterieurSurface" data-v-4625d493>Murs Extérieur Surface m²</label><input type="number" id="exterieurSurface"${ssrRenderAttr("value", $data.projectForm.exterieurSurface)} class="${ssrRenderClass($data.projectForm.errors.exterieurSurface ? "border-red-400" : "")}" data-v-4625d493>`);
     if ($data.projectForm.errors.exterieurSurface) {
-      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
     } else {
       _push(`<!---->`);
     }
-    _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.exterieurSurface)}</span></div>`);
+    _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.projectForm.errors.exterieurSurface)}</span></div>`);
   } else {
     _push(`<!---->`);
   }
   if (this.exterieur) {
-    _push(`<div class="flex flex-col gap-2" data-v-ec1b08b5><label for="exterieurRevetement" data-v-ec1b08b5>Murs Extérieur Revetement</label><select id="exterieurRevetement" data-v-ec1b08b5><option value="extérieur sous enduit"${ssrIncludeBooleanAttr($data.projectForm.exterieurRevetement == "extérieur sous enduit") ? " selected" : ""} data-v-ec1b08b5>Extérieur sous enduit </option><option value="extérieur sous bardage"${ssrIncludeBooleanAttr($data.projectForm.exterieurRevetement == "extérieur sous bardage") ? " selected" : ""} data-v-ec1b08b5>Extérieur sous bardage </option></select></div>`);
+    _push(`<div class="flex flex-col gap-2" data-v-4625d493><label for="exterieurRevetement" data-v-4625d493>Murs Extérieur Revetement</label><select id="exterieurRevetement" data-v-4625d493><option value="extérieur sous enduit"${ssrIncludeBooleanAttr($data.projectForm.exterieurRevetement == "extérieur sous enduit") ? " selected" : ""} data-v-4625d493>Extérieur sous enduit </option><option value="extérieur sous bardage"${ssrIncludeBooleanAttr($data.projectForm.exterieurRevetement == "extérieur sous bardage") ? " selected" : ""} data-v-4625d493>Extérieur sous bardage </option></select></div>`);
   } else {
     _push(`<!---->`);
   }
   if (this.pompe) {
-    _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="surfaceChauffee" data-v-ec1b08b5>Surface chauffee par la pompe à chaleur m²</label><input type="number" id="surfaceChauffee"${ssrRenderAttr("value", $data.projectForm.surfaceChauffee)} class="${ssrRenderClass($data.projectForm.errors.surfaceChauffee ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+    _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="surfaceChauffee" data-v-4625d493>Surface chauffee par la pompe à chaleur m²</label><input type="number" id="surfaceChauffee"${ssrRenderAttr("value", $data.projectForm.surfaceChauffee)} class="${ssrRenderClass($data.projectForm.errors.surfaceChauffee ? "border-red-400" : "")}" data-v-4625d493>`);
     if ($data.projectForm.errors.surfaceChauffee) {
-      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+      _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
     } else {
       _push(`<!---->`);
     }
-    _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.surfaceChauffee)}</span></div>`);
+    _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.projectForm.errors.surfaceChauffee)}</span></div>`);
   } else {
     _push(`<!---->`);
   }
   if (this.pompe) {
-    _push(`<div class="flex flex-col gap-2" data-v-ec1b08b5><label for="eauChaudeSanitaire" data-v-ec1b08b5>Eau Chaude Sanitaire</label><select id="eauChaudeSanitaire" data-v-ec1b08b5><option value="Chauffage seul"${ssrIncludeBooleanAttr($data.projectForm.eauChaudeSanitaire == "Chauffage seul") ? " selected" : ""} data-v-ec1b08b5>Chauffage seul</option><option value="Chauffage eau chaude sanitaire"${ssrIncludeBooleanAttr($data.projectForm.eauChaudeSanitaire == "Chauffage eau chaude sanitaire") ? " selected" : ""} data-v-ec1b08b5>Chauffage eau chaude sanitaire</option></select></div>`);
+    _push(`<div class="flex flex-col gap-2" data-v-4625d493><label for="eauChaudeSanitaire" data-v-4625d493>Eau Chaude Sanitaire</label><select id="eauChaudeSanitaire" data-v-4625d493><option value="Chauffage seul"${ssrIncludeBooleanAttr($data.projectForm.eauChaudeSanitaire == "Chauffage seul") ? " selected" : ""} data-v-4625d493> Chauffage seul</option><option value="Chauffage eau chaude sanitaire"${ssrIncludeBooleanAttr($data.projectForm.eauChaudeSanitaire == "Chauffage eau chaude sanitaire") ? " selected" : ""} data-v-4625d493>Chauffage eau chaude sanitaire</option></select></div>`);
   } else {
     _push(`<!---->`);
   }
   if (this.pompe) {
-    _push(`<div class="flex flex-col gap-2" data-v-ec1b08b5><label for="EspaceExterieur" data-v-ec1b08b5>Espace Extérieur pour la pompe à chaleur ?</label><select id="EspaceExterieur" data-v-ec1b08b5><option value="1"${ssrIncludeBooleanAttr($data.projectForm.EspaceExterieur == 1) ? " selected" : ""} data-v-ec1b08b5>Oui</option><option value="0"${ssrIncludeBooleanAttr($data.projectForm.EspaceExterieur == 0) ? " selected" : ""} data-v-ec1b08b5>Non</option></select></div>`);
+    _push(`<div class="flex flex-col gap-2" data-v-4625d493><label for="EspaceExterieur" data-v-4625d493>Espace Extérieur pour la pompe à chaleur ?</label><select id="EspaceExterieur" data-v-4625d493><option value="1"${ssrIncludeBooleanAttr($data.projectForm.EspaceExterieur == 1) ? " selected" : ""} data-v-4625d493>Oui</option><option value="0"${ssrIncludeBooleanAttr($data.projectForm.EspaceExterieur == 0) ? " selected" : ""} data-v-4625d493>Non</option></select></div>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`</div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-ec1b08b5><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-ec1b08b5><label for="statusProjet" data-v-ec1b08b5>Status Projet</label><select id="statusProjet" data-v-ec1b08b5><option value="Je réfléchis à mes travaux"${ssrIncludeBooleanAttr($data.projectForm.statusProjet == "Je réfléchis à mes travaux") ? " selected" : ""} data-v-ec1b08b5>Je réfléchis à mes travaux </option><option value="Je recherche un artisan RGE"${ssrIncludeBooleanAttr($data.projectForm.statusProjet == "Je recherche un artisan RGE") ? " selected" : ""} data-v-ec1b08b5>Je recherche un artisan RGE </option><option value="Je vais signer mon devis"${ssrIncludeBooleanAttr($data.projectForm.statusProjet == "Je vais signer mon devis") ? " selected" : ""} data-v-ec1b08b5>Je vais signer mon devis</option></select></div><div class="flex flex-col gap-2 w-full md:w-4/12 relative" data-v-ec1b08b5><label for="travauxAdresse" data-v-ec1b08b5>Travaux Adresse</label><input type="text" id="travauxAdresse"${ssrRenderAttr("value", $data.projectForm.travauxAdresse)} class="${ssrRenderClass($data.projectForm.errors.travauxAdresse ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+  _push(`</div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-4625d493><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-4625d493><label for="statusProjet" data-v-4625d493>Status Projet</label><select id="statusProjet" data-v-4625d493><option value="Je réfléchis à mes travaux"${ssrIncludeBooleanAttr($data.projectForm.statusProjet == "Je réfléchis à mes travaux") ? " selected" : ""} data-v-4625d493>Je réfléchis à mes travaux </option><option value="Je recherche un artisan RGE"${ssrIncludeBooleanAttr($data.projectForm.statusProjet == "Je recherche un artisan RGE") ? " selected" : ""} data-v-4625d493>Je recherche un artisan RGE </option><option value="Je vais signer mon devis"${ssrIncludeBooleanAttr($data.projectForm.statusProjet == "Je vais signer mon devis") ? " selected" : ""} data-v-4625d493>Je vais signer mon devis </option></select></div><div class="flex flex-col gap-2 w-full md:w-4/12 relative" data-v-4625d493><label for="travauxAdresse" data-v-4625d493>Travaux Adresse</label><input type="text" id="travauxAdresse"${ssrRenderAttr("value", $data.projectForm.travauxAdresse)} class="${ssrRenderClass($data.projectForm.errors.travauxAdresse ? "border-red-400" : "")}" data-v-4625d493>`);
   if ($data.projectForm.errors.travauxAdresse) {
-    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.travauxAdresse)}</span></div><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-ec1b08b5><label for="utilisateurStatus" data-v-ec1b08b5>Utilisateur Status</label><select id="utilisateurStatus" data-v-ec1b08b5><option value="Propriétaire occupant"${ssrIncludeBooleanAttr($data.projectForm.utilisateurStatus == "Propriétaire occupant") ? " selected" : ""} data-v-ec1b08b5>Propriétaire occupant</option><option value="Propriétaire d&#39;une résidence secondaire"${ssrIncludeBooleanAttr($data.projectForm.utilisateurStatus == "Propriétaire d'une résidence secondaire") ? " selected" : ""} data-v-ec1b08b5>Propriétaire d&#39;une résidence secondaire</option><option value="Propriétaire bailleur"${ssrIncludeBooleanAttr($data.projectForm.utilisateurStatus == "Propriétaire bailleur") ? " selected" : ""} data-v-ec1b08b5>Propriétaire bailleur</option><option value="Locataire"${ssrIncludeBooleanAttr($data.projectForm.utilisateurStatus == "Locataire") ? " selected" : ""} data-v-ec1b08b5>Locataire</option></select></div></div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-ec1b08b5><div class="flex flex-col gap-2 w-full md:w-6/12 relative" data-v-ec1b08b5><label for="menageComposition" data-v-ec1b08b5>Menage Composition</label><input type="number" id="menageComposition"${ssrRenderAttr("value", $data.projectForm.menageComposition)} class="${ssrRenderClass($data.projectForm.errors.menageComposition ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+  _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.projectForm.errors.travauxAdresse)}</span></div><div class="flex flex-col gap-2 w-full md:w-4/12" data-v-4625d493><label for="utilisateurStatus" data-v-4625d493>Utilisateur Status</label><select id="utilisateurStatus" data-v-4625d493><option value="Propriétaire occupant"${ssrIncludeBooleanAttr($data.projectForm.utilisateurStatus == "Propriétaire occupant") ? " selected" : ""} data-v-4625d493>Propriétaire occupant </option><option value="Propriétaire d&#39;une résidence secondaire"${ssrIncludeBooleanAttr($data.projectForm.utilisateurStatus == "Propriétaire d'une résidence secondaire") ? " selected" : ""} data-v-4625d493> Propriétaire d&#39;une résidence secondaire</option><option value="Propriétaire bailleur"${ssrIncludeBooleanAttr($data.projectForm.utilisateurStatus == "Propriétaire bailleur") ? " selected" : ""} data-v-4625d493>Propriétaire bailleur </option><option value="Locataire"${ssrIncludeBooleanAttr($data.projectForm.utilisateurStatus == "Locataire") ? " selected" : ""} data-v-4625d493>Locataire </option></select></div></div><div class="flex flex-col md:flex-row p-4 md:p-0 rounded bg-slate-50 md:bg-white gap-4" data-v-4625d493><div class="flex flex-col gap-2 w-full md:w-6/12 relative" data-v-4625d493><label for="menageComposition" data-v-4625d493>Menage Composition</label><input type="number" id="menageComposition"${ssrRenderAttr("value", $data.projectForm.menageComposition)} class="${ssrRenderClass($data.projectForm.errors.menageComposition ? "border-red-400" : "")}" data-v-4625d493>`);
   if ($data.projectForm.errors.menageComposition) {
-    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+    _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.projectForm.errors.menageComposition)}</span></div><div class="flex flex-col gap-2 w-full md:w-6/12" data-v-ec1b08b5><label for="menageRevenus" data-v-ec1b08b5>Menage Revenus</label><select id="menageRevenus" data-v-ec1b08b5><option value="Inférieur à 16 229 €"${ssrIncludeBooleanAttr($data.projectForm.menageRevenus == "Inférieur à 16 229 €") ? " selected" : ""} data-v-ec1b08b5> Inférieur à 16 229 €</option><option value="Entre 16 229 € et 20 805 €"${ssrIncludeBooleanAttr($data.projectForm.menageRevenus == "Entre 16 229 € et 20 805 €") ? " selected" : ""} data-v-ec1b08b5>Entre 16 229 € et 20 805 € </option><option value="Entre 20 805 € et 29 148 €"${ssrIncludeBooleanAttr($data.projectForm.menageRevenus == "Entre 20 805 € et 29 148 €") ? " selected" : ""} data-v-ec1b08b5>Entre 20 805 € et 29 148 € </option><option value="Supérieur à 29 148 €"${ssrIncludeBooleanAttr($data.projectForm.menageRevenus == "Supérieur à 29 148 €") ? " selected" : ""} data-v-ec1b08b5> Supérieur à 29 148 €</option></select></div></div>`);
+  _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.projectForm.errors.menageComposition)}</span></div><div class="flex flex-col gap-2 w-full md:w-6/12" data-v-4625d493><label for="menageRevenus" data-v-4625d493>Menage Revenus</label><select id="menageRevenus" data-v-4625d493><option value="Inférieur à 16 229 €"${ssrIncludeBooleanAttr($data.projectForm.menageRevenus == "Inférieur à 16 229 €") ? " selected" : ""} data-v-4625d493> Inférieur à 16 229 €</option><option value="Entre 16 229 € et 20 805 €"${ssrIncludeBooleanAttr($data.projectForm.menageRevenus == "Entre 16 229 € et 20 805 €") ? " selected" : ""} data-v-4625d493>Entre 16 229 € et 20 805 € </option><option value="Entre 20 805 € et 29 148 €"${ssrIncludeBooleanAttr($data.projectForm.menageRevenus == "Entre 20 805 € et 29 148 €") ? " selected" : ""} data-v-4625d493>Entre 20 805 € et 29 148 € </option><option value="Supérieur à 29 148 €"${ssrIncludeBooleanAttr($data.projectForm.menageRevenus == "Supérieur à 29 148 €") ? " selected" : ""} data-v-4625d493> Supérieur à 29 148 €</option></select></div></div>`);
   if (this.projectForm.recentlySuccessful) {
-    _push(`<div class="text-center font-semibold text-green-400" data-v-ec1b08b5>Enregistrée avec succès</div>`);
+    _push(`<div class="text-center font-semibold text-green-400" data-v-4625d493>Enregistrée avec succès</div>`);
   } else {
     _push(`<!---->`);
   }
-  _push(`<input type="button" value="Enregister" class="uppercase m-auto py-4 px-12 font-bold cursor-pointer bg-slate-100 hover:bg-slate-200" data-v-ec1b08b5></form>`);
+  _push(`<input type="button" value="Enregister" class="uppercase m-auto py-4 px-12 font-bold cursor-pointer bg-slate-100 hover:bg-slate-200" data-v-4625d493></form>`);
   if ($data.viewCreateWork == true) {
-    _push(`<div class="fixed top-0 left-0 right-0 bottom-0 bg-slate-100 py-2 px-12 md:px-36 md:py-6 overflow-y-scroll" style="${ssrRenderStyle({ "-ms-overflow-style": "none", "scrollbar-width": "none" })}" data-v-ec1b08b5><span class="table cursor-pointer mb-8 bg-white hover:bg-slate-50 font-semibold py-3 px-4 rounded" data-v-ec1b08b5> Annuler</span><form class="flex flex-col gap-6 md:w-8/12 md:mx-auto" data-v-ec1b08b5><div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="travaux" class="capitalize" data-v-ec1b08b5>Selectionner un travail</label><select id="travaux" class="${ssrRenderClass($data.createWorkForm.errors.work ? "border-red-400" : "")}" data-v-ec1b08b5><option value="" selected disabled hidden data-v-ec1b08b5>Choisir ici</option><!--[-->`);
+    _push(`<div class="fixed top-0 left-0 right-0 bottom-0 bg-slate-100 py-2 px-12 md:px-36 md:py-6 overflow-y-scroll" style="${ssrRenderStyle({ "-ms-overflow-style": "none", "scrollbar-width": "none" })}" data-v-4625d493><span class="table cursor-pointer mb-8 bg-white hover:bg-slate-50 font-semibold py-3 px-4 rounded" data-v-4625d493> Annuler</span><form class="flex flex-col gap-6 md:w-8/12 md:mx-auto" data-v-4625d493><div class="flex flex-col gap-2 relative" data-v-4625d493><label for="travaux" class="capitalize" data-v-4625d493>Selectionner un travail</label><select id="travaux" class="${ssrRenderClass($data.createWorkForm.errors.work ? "border-red-400" : "")}" data-v-4625d493><option value="" selected disabled hidden data-v-4625d493>Choisir ici</option><!--[-->`);
     ssrRenderList(this.$page.props.works, (work) => {
-      _push(`<option${ssrRenderAttr("value", work.id)} data-v-ec1b08b5>${ssrInterpolate(work.name)}</option>`);
+      _push(`<option${ssrRenderAttr("value", work.id)} data-v-4625d493>${ssrInterpolate(work.name)}</option>`);
     });
     _push(`<!--]--></select>`);
     if ($data.createWorkForm.errors.work) {
-      _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.work)}</span>`);
+      _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.work)}</span>`);
     } else {
       _push(`<!---->`);
     }
     _push(`</div>`);
     if (this.activeWork == 1) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="ElectricityBill" data-v-ec1b08b5>Le montant actuelle de la facture d&#39;électricité</label><input type="number" id="ElectricityBill"${ssrRenderAttr("value", $data.createWorkForm.currentElectricityBill)} class="${ssrRenderClass($data.createWorkForm.errors.currentElectricityBill ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+      _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="ElectricityBill" data-v-4625d493>Le montant actuelle de la facture d&#39;électricité</label><input type="number" id="ElectricityBill"${ssrRenderAttr("value", $data.createWorkForm.currentElectricityBill)} class="${ssrRenderClass($data.createWorkForm.errors.currentElectricityBill ? "border-red-400" : "")}" data-v-4625d493>`);
       if ($data.createWorkForm.errors.currentElectricityBill) {
-        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
       } else {
         _push(`<!---->`);
       }
       if ($data.createWorkForm.errors.currentElectricityBill) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.currentElectricityBill)}</span>`);
+        _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.currentElectricityBill)}</span>`);
       } else {
         _push(`<!---->`);
       }
@@ -3456,41 +3760,9 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       _push(`<!---->`);
     }
     if (this.activeWork == 1) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="kilowattsPerYear" data-v-ec1b08b5>Combien de kilowatts consommer par an ?</label><input type="number" id="kilowattsPerYear"${ssrRenderAttr("value", $data.createWorkForm.kilowattsPerYear)} class="${ssrRenderClass($data.createWorkForm.errors.kilowattsPerYear ? "border-red-400" : "")}" data-v-ec1b08b5>`);
-      if ($data.createWorkForm.errors.kilowattsPerYear) {
-        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
-      } else {
-        _push(`<!---->`);
-      }
-      if ($data.createWorkForm.errors.kilowattsPerYear) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.kilowattsPerYear)}</span>`);
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div>`);
-    } else {
-      _push(`<!---->`);
-    }
-    if (this.activeWork == 1) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="taxIncome" data-v-ec1b08b5>Quel est le revenu total de votre foyer fiscal ?</label><input type="number" id="taxIncome"${ssrRenderAttr("value", $data.createWorkForm.taxIncome)} class="${ssrRenderClass($data.createWorkForm.errors.taxIncome ? "border-red-400" : "")}" data-v-ec1b08b5>`);
-      if ($data.createWorkForm.errors.taxIncome) {
-        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
-      } else {
-        _push(`<!---->`);
-      }
-      if ($data.createWorkForm.errors.taxIncome) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.taxIncome)}</span>`);
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div>`);
-    } else {
-      _push(`<!---->`);
-    }
-    if (this.activeWork == 1) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="roofType" data-v-ec1b08b5>Vous avez quel type de toiture ?</label><select id="roofType" class="${ssrRenderClass($data.createWorkForm.errors.roofType ? "border-red-400" : "")}" data-v-ec1b08b5><option disabled selected data-v-ec1b08b5>Selectionner un type de toiture</option><option value="La toiture plate" data-v-ec1b08b5>La toiture plate</option><option value="La toiture en pente" data-v-ec1b08b5>La toiture en pente</option></select>`);
+      _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="roofType" data-v-4625d493>Vous avez quel type de toiture ?</label><select id="roofType" class="${ssrRenderClass($data.createWorkForm.errors.roofType ? "border-red-400" : "")}" data-v-4625d493><option disabled selected data-v-4625d493>Selectionner un type de toiture</option><option value="La toiture plate" data-v-4625d493>La toiture plate</option><option value="La toiture en pente" data-v-4625d493>La toiture en pente</option></select>`);
       if ($data.createWorkForm.errors.roofType) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.roofType)}</span>`);
+        _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.roofType)}</span>`);
       } else {
         _push(`<!---->`);
       }
@@ -3499,9 +3771,9 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       _push(`<!---->`);
     }
     if (this.activeWork == 1) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="roofOrientation" data-v-ec1b08b5>Quel est l&#39;orientation de votre toiture ?</label><select id="roofOrientation" class="${ssrRenderClass($data.createWorkForm.errors.roofOrientation ? "border-red-400" : "")}" data-v-ec1b08b5><option disabled selected data-v-ec1b08b5>Selectionner une orientation</option><option value="Sud" data-v-ec1b08b5>Sud</option><option value="Est - Ouest" data-v-ec1b08b5>Est - Ouest</option><option value="Sud - Est" data-v-ec1b08b5>Sud - Est</option><option value="Sud - Ouest" data-v-ec1b08b5>Sud - Ouest</option></select>`);
+      _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="roofOrientation" data-v-4625d493>Quel est l&#39;orientation de votre toiture ?</label><select id="roofOrientation" class="${ssrRenderClass($data.createWorkForm.errors.roofOrientation ? "border-red-400" : "")}" data-v-4625d493><option disabled selected data-v-4625d493>Selectionner une orientation</option><option value="Sud" data-v-4625d493>Sud</option><option value="Est - Ouest" data-v-4625d493>Est - Ouest</option><option value="Sud - Est" data-v-4625d493>Sud - Est</option><option value="Sud - Ouest" data-v-4625d493>Sud - Ouest</option></select>`);
       if ($data.createWorkForm.errors.roofOrientation) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.roofOrientation)}</span>`);
+        _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.roofOrientation)}</span>`);
       } else {
         _push(`<!---->`);
       }
@@ -3510,14 +3782,14 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       _push(`<!---->`);
     }
     if (this.activeWork == 8) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="interieurSurface" data-v-ec1b08b5>Murs Intérieur Surface m²</label><input type="number" id="interieurSurface"${ssrRenderAttr("value", $data.createWorkForm.interieurSurface)} class="${ssrRenderClass($data.createWorkForm.errors.interieurSurface ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+      _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="interieurSurface" data-v-4625d493>Murs Intérieur Surface m²</label><input type="number" id="interieurSurface"${ssrRenderAttr("value", $data.createWorkForm.interieurSurface)} class="${ssrRenderClass($data.createWorkForm.errors.interieurSurface ? "border-red-400" : "")}" data-v-4625d493>`);
       if ($data.createWorkForm.errors.interieurSurface) {
-        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
       } else {
         _push(`<!---->`);
       }
       if ($data.createWorkForm.errors.interieurSurface) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.interieurSurface)}</span>`);
+        _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.interieurSurface)}</span>`);
       } else {
         _push(`<!---->`);
       }
@@ -3526,14 +3798,14 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       _push(`<!---->`);
     }
     if ($data.activeWork == 9) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="exterieurSurface" data-v-ec1b08b5>Murs Extérieur Surface m²</label><input type="number" id="exterieurSurface"${ssrRenderAttr("value", $data.createWorkForm.exterieurSurface)} class="${ssrRenderClass($data.createWorkForm.errors.exterieurSurface ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+      _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="exterieurSurface" data-v-4625d493>Murs Extérieur Surface m²</label><input type="number" id="exterieurSurface"${ssrRenderAttr("value", $data.createWorkForm.exterieurSurface)} class="${ssrRenderClass($data.createWorkForm.errors.exterieurSurface ? "border-red-400" : "")}" data-v-4625d493>`);
       if ($data.createWorkForm.errors.exterieurSurface) {
-        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
       } else {
         _push(`<!---->`);
       }
       if ($data.createWorkForm.errors.exterieurSurface) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.exterieurSurface)}</span>`);
+        _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.exterieurSurface)}</span>`);
       } else {
         _push(`<!---->`);
       }
@@ -3542,9 +3814,9 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       _push(`<!---->`);
     }
     if ($data.activeWork == 9) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="exterieurRevetement" data-v-ec1b08b5>Murs Extérieur Revetement</label><select id="exterieurRevetement" class="${ssrRenderClass($data.createWorkForm.errors.exterieurRevetement ? "border-red-400" : "")}" data-v-ec1b08b5><option value="extérieur sous enduit"${ssrIncludeBooleanAttr($data.createWorkForm.exterieurRevetement == "extérieur sous enduit") ? " selected" : ""} data-v-ec1b08b5>Extérieur sous enduit </option><option value="extérieur sous bardage"${ssrIncludeBooleanAttr($data.createWorkForm.exterieurRevetement == "extérieur sous bardage") ? " selected" : ""} data-v-ec1b08b5>Extérieur sous bardage </option></select>`);
+      _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="exterieurRevetement" data-v-4625d493>Murs Extérieur Revetement</label><select id="exterieurRevetement" class="${ssrRenderClass($data.createWorkForm.errors.exterieurRevetement ? "border-red-400" : "")}" data-v-4625d493><option value="extérieur sous enduit"${ssrIncludeBooleanAttr($data.createWorkForm.exterieurRevetement == "extérieur sous enduit") ? " selected" : ""} data-v-4625d493>Extérieur sous enduit </option><option value="extérieur sous bardage"${ssrIncludeBooleanAttr($data.createWorkForm.exterieurRevetement == "extérieur sous bardage") ? " selected" : ""} data-v-4625d493>Extérieur sous bardage </option></select>`);
       if ($data.createWorkForm.errors.exterieurRevetement) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.exterieurRevetement)}</span>`);
+        _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.exterieurRevetement)}</span>`);
       } else {
         _push(`<!---->`);
       }
@@ -3553,14 +3825,14 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       _push(`<!---->`);
     }
     if ($data.activeWork == 5) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="surfaceChauffee" data-v-ec1b08b5>Surface chauffee par la pompe à chaleur m²</label><input type="number" id="surfaceChauffee"${ssrRenderAttr("value", $data.createWorkForm.surfaceChauffee)} class="${ssrRenderClass($data.createWorkForm.errors.surfaceChauffee ? "border-red-400" : "")}" data-v-ec1b08b5>`);
+      _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="surfaceChauffee" data-v-4625d493>Surface chauffee par la pompe à chaleur m²</label><input type="number" id="surfaceChauffee"${ssrRenderAttr("value", $data.createWorkForm.surfaceChauffee)} class="${ssrRenderClass($data.createWorkForm.errors.surfaceChauffee ? "border-red-400" : "")}" data-v-4625d493>`);
       if ($data.createWorkForm.errors.surfaceChauffee) {
-        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-ec1b08b5>*</span>`);
+        _push(`<span class="text-red-400 text-lg absolute right-2 top-9" data-v-4625d493>*</span>`);
       } else {
         _push(`<!---->`);
       }
       if ($data.createWorkForm.errors.surfaceChauffee) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.surfaceChauffee)}</span>`);
+        _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.surfaceChauffee)}</span>`);
       } else {
         _push(`<!---->`);
       }
@@ -3569,9 +3841,9 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       _push(`<!---->`);
     }
     if ($data.activeWork == 5) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="eauChaudeSanitaire" data-v-ec1b08b5>Eau Chaude Sanitaire</label><select id="eauChaudeSanitaire" class="${ssrRenderClass($data.createWorkForm.errors.eauChaudeSanitaire ? "border-red-400" : "")}" data-v-ec1b08b5><option value="Chauffage seul"${ssrIncludeBooleanAttr($data.createWorkForm.eauChaudeSanitaire == "Chauffage seul") ? " selected" : ""} data-v-ec1b08b5> Chauffage seul</option><option value="Chauffage eau chaude sanitaire"${ssrIncludeBooleanAttr($data.createWorkForm.eauChaudeSanitaire == "Chauffage eau chaude sanitaire") ? " selected" : ""} data-v-ec1b08b5>Chauffage eau chaude sanitaire</option></select>`);
+      _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="eauChaudeSanitaire" data-v-4625d493>Eau Chaude Sanitaire</label><select id="eauChaudeSanitaire" class="${ssrRenderClass($data.createWorkForm.errors.eauChaudeSanitaire ? "border-red-400" : "")}" data-v-4625d493><option value="Chauffage seul"${ssrIncludeBooleanAttr($data.createWorkForm.eauChaudeSanitaire == "Chauffage seul") ? " selected" : ""} data-v-4625d493> Chauffage seul</option><option value="Chauffage eau chaude sanitaire"${ssrIncludeBooleanAttr($data.createWorkForm.eauChaudeSanitaire == "Chauffage eau chaude sanitaire") ? " selected" : ""} data-v-4625d493>Chauffage eau chaude sanitaire</option></select>`);
       if ($data.createWorkForm.errors.eauChaudeSanitaire) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.eauChaudeSanitaire)}</span>`);
+        _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.eauChaudeSanitaire)}</span>`);
       } else {
         _push(`<!---->`);
       }
@@ -3580,9 +3852,9 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       _push(`<!---->`);
     }
     if ($data.activeWork == 5) {
-      _push(`<div class="flex flex-col gap-2 relative" data-v-ec1b08b5><label for="EspaceExterieur" data-v-ec1b08b5>Espace Extérieur pour la pompe à chaleur ?</label><select id="EspaceExterieur" class="${ssrRenderClass($data.createWorkForm.errors.EspaceExterieur ? "border-red-400" : "")}" data-v-ec1b08b5><option value="1"${ssrIncludeBooleanAttr($data.createWorkForm.EspaceExterieur == 1) ? " selected" : ""} data-v-ec1b08b5>Oui</option><option value="0"${ssrIncludeBooleanAttr($data.createWorkForm.EspaceExterieur == 0) ? " selected" : ""} data-v-ec1b08b5>Non</option></select>`);
+      _push(`<div class="flex flex-col gap-2 relative" data-v-4625d493><label for="EspaceExterieur" data-v-4625d493>Espace Extérieur pour la pompe à chaleur ?</label><select id="EspaceExterieur" class="${ssrRenderClass($data.createWorkForm.errors.EspaceExterieur ? "border-red-400" : "")}" data-v-4625d493><option value="1"${ssrIncludeBooleanAttr($data.createWorkForm.EspaceExterieur == 1) ? " selected" : ""} data-v-4625d493>Oui</option><option value="0"${ssrIncludeBooleanAttr($data.createWorkForm.EspaceExterieur == 0) ? " selected" : ""} data-v-4625d493>Non</option></select>`);
       if ($data.createWorkForm.errors.EspaceExterieur) {
-        _push(`<span class="text-red-400 text-sm" data-v-ec1b08b5>${ssrInterpolate($data.createWorkForm.errors.EspaceExterieur)}</span>`);
+        _push(`<span class="text-red-400 text-sm" data-v-4625d493>${ssrInterpolate($data.createWorkForm.errors.EspaceExterieur)}</span>`);
       } else {
         _push(`<!---->`);
       }
@@ -3590,25 +3862,25 @@ function _sfc_ssrRender$s(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     } else {
       _push(`<!---->`);
     }
-    _push(`<input type="button" value="Enregister" class="uppercase m-auto mt-8 py-4 px-12 font-bold cursor-pointer bg-slate-300 text-white hover:bg-slate-400" data-v-ec1b08b5></form></div>`);
+    _push(`<input type="button" value="Enregister" class="uppercase m-auto mt-8 py-4 px-12 font-bold cursor-pointer bg-slate-300 text-white hover:bg-slate-400" data-v-4625d493></form></div>`);
   } else {
     _push(`<!---->`);
   }
   _push(`<!--]-->`);
 }
-const _sfc_setup$y = _sfc_main$y.setup;
-_sfc_main$y.setup = (props, ctx) => {
+const _sfc_setup$x = _sfc_main$x.setup;
+_sfc_main$x.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/viewOrder.vue");
-  return _sfc_setup$y ? _sfc_setup$y(props, ctx) : void 0;
+  return _sfc_setup$x ? _sfc_setup$x(props, ctx) : void 0;
 };
-const OrderView = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["ssrRender", _sfc_ssrRender$s], ["__scopeId", "data-v-ec1b08b5"]]);
-const __vite_glob_0_47 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const OrderView = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["ssrRender", _sfc_ssrRender$r], ["__scopeId", "data-v-4625d493"]]);
+const __vite_glob_0_49 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: OrderView
 }, Symbol.toStringTag, { value: "Module" }));
 const Orders_vue_vue_type_style_index_0_scoped_d16a5c54_lang = "";
-const _sfc_main$x = {
+const _sfc_main$w = {
   layout: _sfc_main$H,
   props: ["data"],
   components: {
@@ -3632,7 +3904,7 @@ const _sfc_main$x = {
     }
   }
 };
-function _sfc_ssrRender$r(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$q(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_Head = resolveComponent("Head");
   const _component_OrderView = resolveComponent("OrderView");
   _push(`<!--[-->`);
@@ -3689,31 +3961,31 @@ function _sfc_ssrRender$r(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div></div></div><!--]-->`);
 }
-const _sfc_setup$x = _sfc_main$x.setup;
-_sfc_main$x.setup = (props, ctx) => {
+const _sfc_setup$w = _sfc_main$w.setup;
+_sfc_main$w.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Orders.vue");
-  return _sfc_setup$x ? _sfc_setup$x(props, ctx) : void 0;
+  return _sfc_setup$w ? _sfc_setup$w(props, ctx) : void 0;
 };
-const Orders = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["ssrRender", _sfc_ssrRender$r], ["__scopeId", "data-v-d16a5c54"]]);
-const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Orders = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["ssrRender", _sfc_ssrRender$q], ["__scopeId", "data-v-d16a5c54"]]);
+const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Orders
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$w = {};
-function _sfc_ssrRender$q(_ctx, _push, _parent, _attrs) {
+const _sfc_main$v = {};
+function _sfc_ssrRender$p(_ctx, _push, _parent, _attrs) {
   _push(`<button${ssrRenderAttrs(mergeProps({ class: "inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150" }, _attrs))}>`);
   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
   _push(`</button>`);
 }
-const _sfc_setup$w = _sfc_main$w.setup;
-_sfc_main$w.setup = (props, ctx) => {
+const _sfc_setup$v = _sfc_main$v.setup;
+_sfc_main$v.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/DangerButton.vue");
-  return _sfc_setup$w ? _sfc_setup$w(props, ctx) : void 0;
+  return _sfc_setup$v ? _sfc_setup$v(props, ctx) : void 0;
 };
-const DangerButton = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["ssrRender", _sfc_ssrRender$q]]);
-const _sfc_main$v = {
+const DangerButton = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["ssrRender", _sfc_ssrRender$p]]);
+const _sfc_main$u = {
   __name: "Modal",
   __ssrInlineRender: true,
   props: {
@@ -3780,13 +4052,13 @@ const _sfc_main$v = {
     };
   }
 };
-const _sfc_setup$v = _sfc_main$v.setup;
-_sfc_main$v.setup = (props, ctx) => {
+const _sfc_setup$u = _sfc_main$u.setup;
+_sfc_main$u.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Modal.vue");
-  return _sfc_setup$v ? _sfc_setup$v(props, ctx) : void 0;
+  return _sfc_setup$u ? _sfc_setup$u(props, ctx) : void 0;
 };
-const _sfc_main$u = {
+const _sfc_main$t = {
   __name: "SecondaryButton",
   __ssrInlineRender: true,
   props: {
@@ -3806,13 +4078,13 @@ const _sfc_main$u = {
     };
   }
 };
-const _sfc_setup$u = _sfc_main$u.setup;
-_sfc_main$u.setup = (props, ctx) => {
+const _sfc_setup$t = _sfc_main$t.setup;
+_sfc_main$t.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/SecondaryButton.vue");
-  return _sfc_setup$u ? _sfc_setup$u(props, ctx) : void 0;
+  return _sfc_setup$t ? _sfc_setup$t(props, ctx) : void 0;
 };
-const _sfc_main$t = {
+const _sfc_main$s = {
   __name: "DeleteUserForm",
   __ssrInlineRender: true,
   setup(__props) {
@@ -3851,19 +4123,19 @@ const _sfc_main$t = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$v, {
+      _push(ssrRenderComponent(_sfc_main$u, {
         show: confirmingUserDeletion.value,
         onClose: closeModal
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<div class="p-6"${_scopeId}><h2 class="text-lg font-medium text-gray-900"${_scopeId}> Are you sure you want to delete your account? </h2><p class="mt-1 text-sm text-gray-600"${_scopeId}> Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account. </p><div class="mt-6"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$W, {
+            _push2(ssrRenderComponent(_sfc_main$X, {
               for: "password",
               value: "Password",
               class: "sr-only"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$U, {
+            _push2(ssrRenderComponent(_sfc_main$V, {
               id: "password",
               ref_key: "passwordInput",
               ref: passwordInput,
@@ -3874,12 +4146,12 @@ const _sfc_main$t = {
               placeholder: "Password",
               onKeyup: deleteUser
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$X, {
+            _push2(ssrRenderComponent(_sfc_main$Y, {
               message: unref(form).errors.password,
               class: "mt-2"
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="mt-6 flex justify-end"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$u, { onClick: closeModal }, {
+            _push2(ssrRenderComponent(_sfc_main$t, { onClick: closeModal }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(` Cancel `);
@@ -3914,12 +4186,12 @@ const _sfc_main$t = {
                 createVNode("h2", { class: "text-lg font-medium text-gray-900" }, " Are you sure you want to delete your account? "),
                 createVNode("p", { class: "mt-1 text-sm text-gray-600" }, " Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account. "),
                 createVNode("div", { class: "mt-6" }, [
-                  createVNode(_sfc_main$W, {
+                  createVNode(_sfc_main$X, {
                     for: "password",
                     value: "Password",
                     class: "sr-only"
                   }),
-                  createVNode(_sfc_main$U, {
+                  createVNode(_sfc_main$V, {
                     id: "password",
                     ref_key: "passwordInput",
                     ref: passwordInput,
@@ -3930,13 +4202,13 @@ const _sfc_main$t = {
                     placeholder: "Password",
                     onKeyup: withKeys(deleteUser, ["enter"])
                   }, null, 8, ["modelValue", "onUpdate:modelValue", "onKeyup"]),
-                  createVNode(_sfc_main$X, {
+                  createVNode(_sfc_main$Y, {
                     message: unref(form).errors.password,
                     class: "mt-2"
                   }, null, 8, ["message"])
                 ]),
                 createVNode("div", { class: "mt-6 flex justify-end" }, [
-                  createVNode(_sfc_main$u, { onClick: closeModal }, {
+                  createVNode(_sfc_main$t, { onClick: closeModal }, {
                     default: withCtx(() => [
                       createTextVNode(" Cancel ")
                     ]),
@@ -3963,17 +4235,17 @@ const _sfc_main$t = {
     };
   }
 };
-const _sfc_setup$t = _sfc_main$t.setup;
-_sfc_main$t.setup = (props, ctx) => {
+const _sfc_setup$s = _sfc_main$s.setup;
+_sfc_main$s.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Profile/Partials/DeleteUserForm.vue");
-  return _sfc_setup$t ? _sfc_setup$t(props, ctx) : void 0;
+  return _sfc_setup$s ? _sfc_setup$s(props, ctx) : void 0;
 };
-const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$t
+  default: _sfc_main$s
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$s = {
+const _sfc_main$r = {
   __name: "UpdatePasswordForm",
   __ssrInlineRender: true,
   setup(__props) {
@@ -3986,11 +4258,11 @@ const _sfc_main$s = {
     });
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<section${ssrRenderAttrs(_attrs)}><header><h2 class="text-lg font-medium text-gray-900">Update Password</h2><p class="mt-1 text-sm text-gray-600"> Ensure your account is using a long, random password to stay secure. </p></header><form class="mt-6 space-y-6"><div>`);
-      _push(ssrRenderComponent(_sfc_main$W, {
+      _push(ssrRenderComponent(_sfc_main$X, {
         for: "current_password",
         value: "Current Password"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$U, {
+      _push(ssrRenderComponent(_sfc_main$V, {
         id: "current_password",
         ref_key: "currentPasswordInput",
         ref: currentPasswordInput,
@@ -4000,16 +4272,16 @@ const _sfc_main$s = {
         class: "mt-1 block w-full",
         autocomplete: "current-password"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$X, {
+      _push(ssrRenderComponent(_sfc_main$Y, {
         message: unref(form).errors.current_password,
         class: "mt-2"
       }, null, _parent));
       _push(`</div><div>`);
-      _push(ssrRenderComponent(_sfc_main$W, {
+      _push(ssrRenderComponent(_sfc_main$X, {
         for: "password",
         value: "New Password"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$U, {
+      _push(ssrRenderComponent(_sfc_main$V, {
         id: "password",
         ref_key: "passwordInput",
         ref: passwordInput,
@@ -4019,16 +4291,16 @@ const _sfc_main$s = {
         class: "mt-1 block w-full",
         autocomplete: "new-password"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$X, {
+      _push(ssrRenderComponent(_sfc_main$Y, {
         message: unref(form).errors.password,
         class: "mt-2"
       }, null, _parent));
       _push(`</div><div>`);
-      _push(ssrRenderComponent(_sfc_main$W, {
+      _push(ssrRenderComponent(_sfc_main$X, {
         for: "password_confirmation",
         value: "Confirm Password"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$U, {
+      _push(ssrRenderComponent(_sfc_main$V, {
         id: "password_confirmation",
         modelValue: unref(form).password_confirmation,
         "onUpdate:modelValue": ($event) => unref(form).password_confirmation = $event,
@@ -4036,7 +4308,7 @@ const _sfc_main$s = {
         class: "mt-1 block w-full",
         autocomplete: "new-password"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$X, {
+      _push(ssrRenderComponent(_sfc_main$Y, {
         message: unref(form).errors.password_confirmation,
         class: "mt-2"
       }, null, _parent));
@@ -4064,17 +4336,17 @@ const _sfc_main$s = {
     };
   }
 };
-const _sfc_setup$s = _sfc_main$s.setup;
-_sfc_main$s.setup = (props, ctx) => {
+const _sfc_setup$r = _sfc_main$r.setup;
+_sfc_main$r.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue");
-  return _sfc_setup$s ? _sfc_setup$s(props, ctx) : void 0;
+  return _sfc_setup$r ? _sfc_setup$r(props, ctx) : void 0;
 };
-const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_17 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$s
+  default: _sfc_main$r
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$r = {
+const _sfc_main$q = {
   __name: "UpdateProfileInformationForm",
   __ssrInlineRender: true,
   props: {
@@ -4093,11 +4365,11 @@ const _sfc_main$r = {
     });
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<section${ssrRenderAttrs(_attrs)}><header><h2 class="text-lg font-medium text-gray-900">Profile Information</h2><p class="mt-1 text-sm text-gray-600"> Update your account&#39;s profile information and email address. </p></header><form class="mt-6 space-y-6"><div>`);
-      _push(ssrRenderComponent(_sfc_main$W, {
+      _push(ssrRenderComponent(_sfc_main$X, {
         for: "name",
         value: "Name"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$U, {
+      _push(ssrRenderComponent(_sfc_main$V, {
         id: "name",
         type: "text",
         class: "mt-1 block w-full",
@@ -4107,16 +4379,16 @@ const _sfc_main$r = {
         autofocus: "",
         autocomplete: "name"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$X, {
+      _push(ssrRenderComponent(_sfc_main$Y, {
         class: "mt-2",
         message: unref(form).errors.name
       }, null, _parent));
       _push(`</div><div>`);
-      _push(ssrRenderComponent(_sfc_main$W, {
+      _push(ssrRenderComponent(_sfc_main$X, {
         for: "email",
         value: "Email"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$U, {
+      _push(ssrRenderComponent(_sfc_main$V, {
         id: "email",
         type: "email",
         class: "mt-1 block w-full",
@@ -4125,7 +4397,7 @@ const _sfc_main$r = {
         required: "",
         autocomplete: "username"
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$X, {
+      _push(ssrRenderComponent(_sfc_main$Y, {
         class: "mt-2",
         message: unref(form).errors.email
       }, null, _parent));
@@ -4177,17 +4449,17 @@ const _sfc_main$r = {
     };
   }
 };
-const _sfc_setup$r = _sfc_main$r.setup;
-_sfc_main$r.setup = (props, ctx) => {
+const _sfc_setup$q = _sfc_main$q.setup;
+_sfc_main$q.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue");
-  return _sfc_setup$r ? _sfc_setup$r(props, ctx) : void 0;
+  return _sfc_setup$q ? _sfc_setup$q(props, ctx) : void 0;
 };
-const __vite_glob_0_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_18 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$r
+  default: _sfc_main$q
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$q = {
+const _sfc_main$p = {
   __name: "Edit",
   __ssrInlineRender: true,
   props: {
@@ -4215,32 +4487,32 @@ const _sfc_main$q = {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<div class="py-12"${_scopeId}><div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6"${_scopeId}><div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$r, {
+            _push2(ssrRenderComponent(_sfc_main$q, {
               "must-verify-email": __props.mustVerifyEmail,
               status: __props.status,
               class: "max-w-xl"
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$s, { class: "max-w-xl" }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$r, { class: "max-w-xl" }, null, _parent2, _scopeId));
             _push2(`</div><div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$t, { class: "max-w-xl" }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$s, { class: "max-w-xl" }, null, _parent2, _scopeId));
             _push2(`</div></div></div>`);
           } else {
             return [
               createVNode("div", { class: "py-12" }, [
                 createVNode("div", { class: "max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6" }, [
                   createVNode("div", { class: "p-4 sm:p-8 bg-white shadow sm:rounded-lg" }, [
-                    createVNode(_sfc_main$r, {
+                    createVNode(_sfc_main$q, {
                       "must-verify-email": __props.mustVerifyEmail,
                       status: __props.status,
                       class: "max-w-xl"
                     }, null, 8, ["must-verify-email", "status"])
                   ]),
                   createVNode("div", { class: "p-4 sm:p-8 bg-white shadow sm:rounded-lg" }, [
-                    createVNode(_sfc_main$s, { class: "max-w-xl" })
+                    createVNode(_sfc_main$r, { class: "max-w-xl" })
                   ]),
                   createVNode("div", { class: "p-4 sm:p-8 bg-white shadow sm:rounded-lg" }, [
-                    createVNode(_sfc_main$t, { class: "max-w-xl" })
+                    createVNode(_sfc_main$s, { class: "max-w-xl" })
                   ])
                 ])
               ])
@@ -4253,17 +4525,17 @@ const _sfc_main$q = {
     };
   }
 };
-const _sfc_setup$q = _sfc_main$q.setup;
-_sfc_main$q.setup = (props, ctx) => {
+const _sfc_setup$p = _sfc_main$p.setup;
+_sfc_main$p.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Profile/Edit.vue");
-  return _sfc_setup$q ? _sfc_setup$q(props, ctx) : void 0;
+  return _sfc_setup$p ? _sfc_setup$p(props, ctx) : void 0;
 };
-const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$q
+  default: _sfc_main$p
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$p = {
+const _sfc_main$o = {
   props: ["mails"],
   layout: _sfc_main$H,
   components: { Head },
@@ -4283,7 +4555,7 @@ const _sfc_main$p = {
   methods: {
     delete(ID) {
       router.get(
-        "delete",
+        "/mailer/delete",
         { mailID: ID },
         {
           preserveState: true,
@@ -4310,7 +4582,7 @@ const _sfc_main$p = {
         return;
       } else
         this.errorEmail = null;
-      this.new.post("/create-new", {
+      this.new.post("/mailer/create", {
         preserveState: true,
         preserveScroll: true,
         onSuccess: () => {
@@ -4325,7 +4597,7 @@ const _sfc_main$p = {
     }
   }
 };
-function _sfc_ssrRender$p(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$o(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_Head = resolveComponent("Head");
   _push(`<!--[-->`);
   _push(ssrRenderComponent(_component_Head, { title: "Mailer" }, null, _parent));
@@ -4368,20 +4640,20 @@ function _sfc_ssrRender$p(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   } else {
     _push(`<!---->`);
   }
-  _push(`<a${ssrRenderAttr("href", _ctx.route("increasingSolution"))} class="block w-10/12 text-center py-3 bg-blue-400 hover:bg-blue-500 text-white font-bold uppercase text-sm rounded">Envoyer les emails</a></div></div></div></div><!--]-->`);
+  _push(`<a${ssrRenderAttr("href", _ctx.route("mailer.send"))} class="block w-10/12 text-center py-3 bg-blue-400 hover:bg-blue-500 text-white font-bold uppercase text-sm rounded">Envoyer les emails</a></div></div></div></div><!--]-->`);
 }
-const _sfc_setup$p = _sfc_main$p.setup;
-_sfc_main$p.setup = (props, ctx) => {
+const _sfc_setup$o = _sfc_main$o.setup;
+_sfc_main$o.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/mailer.vue");
-  return _sfc_setup$p ? _sfc_setup$p(props, ctx) : void 0;
+  return _sfc_setup$o ? _sfc_setup$o(props, ctx) : void 0;
 };
-const mailer = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["ssrRender", _sfc_ssrRender$p]]);
-const __vite_glob_0_21 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const mailer = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["ssrRender", _sfc_ssrRender$o]]);
+const __vite_glob_0_24 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: mailer
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$o = {
+const _sfc_main$n = {
   props: ["LogementEnergie", "LogementEnergieType"],
   emits: ["energie-type"],
   methods: {
@@ -4390,7 +4662,7 @@ const _sfc_main$o = {
     }
   }
 };
-function _sfc_ssrRender$o(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$n(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[-->`);
   if ($props.LogementEnergie == "Chauffage au fioul") {
     _push(`<div><h3 class="text-center text-xl md:text-2xl font-bold md:font-extrabold">Quel type d&#39;équipement au fioul est installé ?</h3><p class="mt-8 text-center">Les chaudières installées depuis moins de 10 ans sont généralement à condensation</p><div class="md:w-10/12 grid md:grid-cols-3 gap-4 m-auto mt-8"><div class="${ssrRenderClass([this.LogementEnergieType == "Chaudière à condensation" ? "shadow-lg border" : "", "relative flex flex-col items-center justify-center text-center p-4 bg-white rounded hover:shadow-lg cursor-pointer"])}"><img class="w-24 md:w-36" src="/images/illustration/chaudiere_condensation.png" alt="fioul"><span class="font-bold md:text-sm">Chaudière à condensation</span>`);
@@ -4469,22 +4741,22 @@ function _sfc_ssrRender$o(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`<!--]-->`);
 }
-const _sfc_setup$o = _sfc_main$o.setup;
-_sfc_main$o.setup = (props, ctx) => {
+const _sfc_setup$n = _sfc_main$n.setup;
+_sfc_main$n.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Logement/EnergieType.vue");
-  return _sfc_setup$o ? _sfc_setup$o(props, ctx) : void 0;
+  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
 };
-const EnergieType = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["ssrRender", _sfc_ssrRender$o]]);
-const __vite_glob_0_22 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const EnergieType = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["ssrRender", _sfc_ssrRender$n]]);
+const __vite_glob_0_25 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: EnergieType
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$n = {
+const _sfc_main$m = {
   emits: ["logement-construction"],
   props: ["LogementConstruction"]
 };
-function _sfc_ssrRender$n(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$m(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-center font-bold md:font-extrabold text-xl md:text-2xl break-word md:p-2 mb-6">De quand date la construction du logement concerné par les travaux? </h3><p class="text-center mb-6">Cela permet de nous assurer de votre éligibilité aux différentes aides.</p><div class="md:w-10/12 w-full m-auto grid md:grid-cols-3 gap-4"><div class="relative p-4 flex flex-col items-center justify-center gap-4 hover:shadow-xl cursor-pointer bg-white rounded"><img class="w-24 md:w-36" src="/images/illustration/31.png" alt="calendar"><span class="font-bold">Moins de 2 ans</span>`);
   if (this.LogementConstruction == "-2") {
     _push(`<span class="block w-6 h-6 rounded-full absolute top-2 right-2 flex justify-center items-center bg-green-300"><i class="fa-solid fa-check text-white"></i></span>`);
@@ -4505,59 +4777,59 @@ function _sfc_ssrRender$n(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div><!--]-->`);
 }
-const _sfc_setup$n = _sfc_main$n.setup;
-_sfc_main$n.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Logement/LogementConstruction.vue");
-  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
-};
-const LogementConstruction = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["ssrRender", _sfc_ssrRender$n]]);
-const __vite_glob_0_23 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: LogementConstruction
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$m = {
-  emits: ["logement-energie"],
-  props: ["LogementEnergie"]
-};
-function _sfc_ssrRender$m(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-bold md:font-extrabold"> Quelle est l&#39;énergie de chauffage actuelle de votre logement ? </h3><p class="mt-8 text-center">Si vous avez plusieurs énergies de chauffage, indiquez-nous la principale</p><div class="md:w-10/12 grid grid-cols-3 gap-4 mt-8 m-auto"><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage au fioul" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/fioul.png" alt="fioul" class="w-4/12 m-auto"><span>Chauffage au fioul</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage électrique" ? "!shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/electric.png" alt="electric" class="w-4/12 m-auto"><span>Chauffage électrique</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage au gaz" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/gaz.png" alt="gaz" class="w-4/12 m-auto"><span>Chauffage au gaz</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage au bois" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/woodfire.png" alt="woodfire" class="w-4/12 m-auto"><span>Chauffage au bois</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Pompe à chaleur" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/pompchaleur.png" alt="pompe a chaleur" class="w-4/12 m-auto"><span>Pompe à chaleur</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage au charbon" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/charbon.png" alt="Chauffage au charbon" class="w-4/12 m-auto"><span>Chauffage au charbon</span></div></div><!--]-->`);
-}
 const _sfc_setup$m = _sfc_main$m.setup;
 _sfc_main$m.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Logement/LogementEnergie.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Logement/LogementConstruction.vue");
   return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
 };
-const LogementEnergie = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["ssrRender", _sfc_ssrRender$m]]);
-const __vite_glob_0_24 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const LogementConstruction = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["ssrRender", _sfc_ssrRender$m]]);
+const __vite_glob_0_26 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: LogementEnergie
+  default: LogementConstruction
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$l = {
-  emits: ["update:modelValue"],
-  props: ["modelValue", "error_surface", "getNext"],
-  methods: {}
+  emits: ["logement-energie"],
+  props: ["LogementEnergie"]
 };
 function _sfc_ssrRender$l(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-bold md:font-extrabold mb-6">Quelle est la surface habitable de votre logement ?</h3><div class="flex flex-col gap-2 justify-center md:w-10/12 m-auto"><label class="text-left text-sm font-semibold" for="surface">Surface en m²</label><input type="number" id="surface"${ssrRenderAttr("value", $props.modelValue)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error_surface)}</span></div><!--]-->`);
+  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-bold md:font-extrabold"> Quelle est l&#39;énergie de chauffage actuelle de votre logement ? </h3><p class="mt-8 text-center">Si vous avez plusieurs énergies de chauffage, indiquez-nous la principale</p><div class="md:w-10/12 grid grid-cols-3 gap-4 mt-8 m-auto"><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage au fioul" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/fioul.png" alt="fioul" class="w-4/12 m-auto"><span>Chauffage au fioul</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage électrique" ? "!shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/electric.png" alt="electric" class="w-4/12 m-auto"><span>Chauffage électrique</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage au gaz" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/gaz.png" alt="gaz" class="w-4/12 m-auto"><span>Chauffage au gaz</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage au bois" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/woodfire.png" alt="woodfire" class="w-4/12 m-auto"><span>Chauffage au bois</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Pompe à chaleur" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/pompchaleur.png" alt="pompe a chaleur" class="w-4/12 m-auto"><span>Pompe à chaleur</span></div><div class="${ssrRenderClass([$props.LogementEnergie == "Chauffage au charbon" ? "shadow-xl bg-white" : "", "py-6 flex flex-col gap-2 text-sm font-semibold text-center bg-slate-50 rounded shadow-sm hover:shadow-xl hover:bg-white cursor-pointer"])}"><img src="/images/illustration/charbon.png" alt="Chauffage au charbon" class="w-4/12 m-auto"><span>Chauffage au charbon</span></div></div><!--]-->`);
 }
 const _sfc_setup$l = _sfc_main$l.setup;
 _sfc_main$l.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Logement/LogementSurface.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Logement/LogementEnergie.vue");
   return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
-const LogementSurface = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["ssrRender", _sfc_ssrRender$l]]);
-const __vite_glob_0_25 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const LogementEnergie = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["ssrRender", _sfc_ssrRender$l]]);
+const __vite_glob_0_27 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: LogementEnergie
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$k = {
+  emits: ["update:modelValue"],
+  props: ["modelValue", "error_surface", "getNext"],
+  methods: {}
+};
+function _sfc_ssrRender$k(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-bold md:font-extrabold mb-6">Quelle est la surface habitable de votre logement ?</h3><div class="flex flex-col gap-2 justify-center md:w-10/12 m-auto"><label class="text-left text-sm font-semibold" for="surface">Surface en m²</label><input type="number" id="surface"${ssrRenderAttr("value", $props.modelValue)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error_surface)}</span></div><!--]-->`);
+}
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Logement/LogementSurface.vue");
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+};
+const LogementSurface = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["ssrRender", _sfc_ssrRender$k]]);
+const __vite_glob_0_28 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: LogementSurface
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$k = {
+const _sfc_main$j = {
   props: ["LogementType"],
   emits: ["logement-type"]
 };
-function _sfc_ssrRender$k(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$j(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="flex gap-4 items-center justify-center font-bold md:font-extrabold text-xl md:text-2xl mb-6"><img style="${ssrRenderStyle({ "width": "120px" })}" src="/images/illustration/fairy.png" alt="fairy"><span class="italic">Calculez vos aides et obtenez votre devis travaux</span></h3><span class="w-12 h-2 bg-green-200 m-auto mb-6 block rounded"></span><p class="font-bold md:font-extrabold text-lg md:text-2xl text-center mb-6">Votre projet concerne : </p><div class="flex gap-4 md:gap-6 justify-center"><div class="${ssrRenderClass([this.LogementType == "maison" ? "shadow-xl" : "", "bg-white p-4 md:p-8 w-40 md:w-auto rounded relative flex flex-col items-center gap-4 hover:shadow-xl cursor-pointer"])}"><img class="w-24 md:w-36" src="/images/illustration/house.png" alt="une maison"><span class="font-semibold md:font-bold text-sm md:text-base">Une maison</span>`);
   if (this.LogementType == "maison") {
     _push(`<span class="block w-6 h-6 rounded-full absolute top-2 right-2 flex justify-center items-center bg-green-300"><i class="fa-solid fa-check text-white"></i></span>`);
@@ -4572,53 +4844,35 @@ function _sfc_ssrRender$k(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div><!--]-->`);
 }
-const _sfc_setup$k = _sfc_main$k.setup;
-_sfc_main$k.setup = (props, ctx) => {
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Logement/LogementType.vue");
-  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
-const LogementType = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["ssrRender", _sfc_ssrRender$k]]);
-const __vite_glob_0_26 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const LogementType = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["ssrRender", _sfc_ssrRender$j]]);
+const __vite_glob_0_29 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: LogementType
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$j = {
+const _sfc_main$i = {
   emits: ["update:modelValue"],
   props: ["modelValue", "error", "getNext"],
   methods: {}
 };
-function _sfc_ssrRender$j(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-bold md:font-extrabold mb-6">Quel est le montant de votre facture d&#39;électricité actuelle ?</h3><div class="flex flex-col gap-2 justify-center md:w-8/12 w-9/12 m-auto"><label class="text-left text-sm font-semibold" for="Montant">Montant en euros</label><input type="number" id="Montant"${ssrRenderAttr("value", $props.modelValue)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error)}</span></div><!--]-->`);
-}
-const _sfc_setup$j = _sfc_main$j.setup;
-_sfc_main$j.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/ElectricityBill.vue");
-  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
-};
-const electricityBill = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["ssrRender", _sfc_ssrRender$j]]);
-const __vite_glob_0_27 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: electricityBill
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$i = {
-  emits: ["update:modelValue"],
-  props: ["modelValue", "getNext"]
-};
 function _sfc_ssrRender$i(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-bold md:font-extrabold mb-6">Combien de kilowatts consommez-vous par an ?</h3><div class="flex flex-col gap-2 justify-center md:w-8/12 w-9/12 m-auto"><label class="text-left text-sm font-semibold" for="Kilowatts">(kilowatts)</label><input type="number" id="Kilowatts"${ssrRenderAttr("value", $props.modelValue)} class="rounded"></div><!--]-->`);
+  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-bold md:font-extrabold mb-6">Quel est le montant de votre facture d&#39;électricité actuelle ?</h3><div class="flex flex-col gap-2 justify-center md:w-8/12 w-9/12 m-auto"><label class="text-left text-sm font-semibold" for="Montant">Montant en euros</label><input type="number" id="Montant"${ssrRenderAttr("value", $props.modelValue)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error)}</span></div><!--]-->`);
 }
 const _sfc_setup$i = _sfc_main$i.setup;
 _sfc_main$i.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/KilowattsPerYear.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/ElectricityBill.vue");
   return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
-const KilowattsPerYear = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["ssrRender", _sfc_ssrRender$i]]);
-const __vite_glob_0_28 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const electricityBill = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["ssrRender", _sfc_ssrRender$i]]);
+const __vite_glob_0_30 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: KilowattsPerYear
+  default: electricityBill
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$h = {
   props: ["roofOrientation", "getNext"],
@@ -4643,7 +4897,7 @@ _sfc_main$h.setup = (props, ctx) => {
   return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
 const RoofOrientation = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["ssrRender", _sfc_ssrRender$h]]);
-const __vite_glob_0_29 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_31 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: RoofOrientation
 }, Symbol.toStringTag, { value: "Module" }));
@@ -4679,30 +4933,11 @@ _sfc_main$g.setup = (props, ctx) => {
   return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
 const RoofType = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["ssrRender", _sfc_ssrRender$g]]);
-const __vite_glob_0_30 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_32 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: RoofType
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$f = {
-  emits: ["update:modelValue"],
-  props: ["modelValue", "error", "getNext"],
-  methods: {}
-};
-function _sfc_ssrRender$f(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-bold md:font-extrabold mb-6">Quel est le revenu total de votre foyer fiscal ?</h3><div class="flex flex-col gap-2 justify-center w-9/12 md:w-8/12 m-auto"><label class="text-left text-sm font-semibold" for="TaxIncome">Revenu en (euro)</label><input type="number" id="TaxIncome"${ssrRenderAttr("value", $props.modelValue)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error)}</span></div><!--]-->`);
-}
-const _sfc_setup$f = _sfc_main$f.setup;
-_sfc_main$f.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/TaxIncome.vue");
-  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
-};
-const TaxIncome = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["ssrRender", _sfc_ssrRender$f]]);
-const __vite_glob_0_31 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: TaxIncome
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$e = {
   props: ["eauChaudeSanitaire"],
   emits: ["EauChaudeSanitaire"],
   methods: {
@@ -4711,7 +4946,7 @@ const _sfc_main$e = {
     }
   }
 };
-function _sfc_ssrRender$e(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$f(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-extrabold mb-12">Souhaitez-vous que votre pompe à chaleur fournisse également de l&#39;eau chaude sanitaire ? </h3><div class="grid md:grid-cols-2 gap-4"><div class="relative flex flex-col items-left justify-between gap-4 p-8 rounded bg-white hover:shadow-xl cursor-pointer"><div class="flex flex-col gap-4"><span class="font-bold text-lg">Chauffage seul</span><p class="text-xs">Installation classique de votre pompe à chaleur s&#39;intégrant parfaitement à votre système de chauffage existant. <b>C&#39;est généralement la solution la plus économique</b>.</p></div><img src="/images/works/article/heater-sanitary-water-heating-only.png" alt="chauffage eau sanitaire" class="rounded">`);
   if (this.eauChaudeSanitaire == "Chauffage seul") {
     _push(`<span class="block w-6 h-6 rounded-full absolute top-2 right-2 flex justify-center items-center bg-green-300"><i class="fa-solid fa-check text-white"></i></span>`);
@@ -4726,18 +4961,18 @@ function _sfc_ssrRender$e(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div><!--]-->`);
 }
-const _sfc_setup$e = _sfc_main$e.setup;
-_sfc_main$e.setup = (props, ctx) => {
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/chaudeSanitaire.vue");
-  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
-const chaudeSanitaire = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["ssrRender", _sfc_ssrRender$e]]);
-const __vite_glob_0_32 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const chaudeSanitaire = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["ssrRender", _sfc_ssrRender$f]]);
+const __vite_glob_0_33 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: chaudeSanitaire
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$d = {
+const _sfc_main$e = {
   props: ["ExterieurRevetement"],
   emits: ["exterior-revetement"],
   methods: {
@@ -4746,7 +4981,7 @@ const _sfc_main$d = {
     }
   }
 };
-function _sfc_ssrRender$d(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$e(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-extrabold mb-12">Quel type de revêtement extérieur préférez-vous pour vos murs ? </h3><div class="grid md:grid-cols-2 gap-4"><div class="relative flex flex-col items-left gap-4 p-8 rounded bg-white hover:shadow-xl cursor-pointer"><span class="font-bold text-lg">Isolation extérieur sous enduit</span><p class="text-xs">Cela consiste à poser des panneaux isolants avant de les recouvrir d&#39;un sous-enduit. On y intègre ensuite un treillis souple avant de finir par l&#39;application de l&#39;enduit de finition. <b>C&#39;est généralement la solution la plus économique</b>.</p><img src="/images/works/article/isolation-ext-sous-enduit.png" alt="enduit" class="rounded">`);
   if (this.ExterieurRevetement == "extérieur sous enduit") {
     _push(`<span class="block w-6 h-6 rounded-full absolute top-2 right-2 flex justify-center items-center bg-green-300"><i class="fa-solid fa-check text-white"></i></span>`);
@@ -4761,36 +4996,36 @@ function _sfc_ssrRender$d(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div><!--]-->`);
 }
-const _sfc_setup$d = _sfc_main$d.setup;
-_sfc_main$d.setup = (props, ctx) => {
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/isolationRevetement.vue");
-  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
-const isolationRevetement = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["ssrRender", _sfc_ssrRender$d]]);
-const __vite_glob_0_33 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const isolationRevetement = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["ssrRender", _sfc_ssrRender$e]]);
+const __vite_glob_0_34 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: isolationRevetement
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$c = {
+const _sfc_main$d = {
   props: ["interiorSurface", "error_surface", "murs", "getNext"],
   emits: ["update:modelValue"]
 };
-function _sfc_ssrRender$c(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$d(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-extrabold mb-6"> Quelle est la surface approximative de murs ${ssrInterpolate(this.murs)} à isoler ? </h3><p class="mb-6 text-center">Cela suffit pour estimer vos aides : votre artisan mesurera vos murs lors de sa visite.</p><div class="flex flex-col gap-2 justify-center md:w-10/12 m-auto"><label class="text-left text-sm font-semibold" for="surface">Surface en m²</label><input type="number" id="surface"${ssrRenderAttr("value", $props.interiorSurface)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error_surface)}</span></div><!--]-->`);
 }
-const _sfc_setup$c = _sfc_main$c.setup;
-_sfc_main$c.setup = (props, ctx) => {
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/isolationSurface.vue");
-  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const isolationSurface = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["ssrRender", _sfc_ssrRender$c]]);
-const __vite_glob_0_34 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const isolationSurface = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["ssrRender", _sfc_ssrRender$d]]);
+const __vite_glob_0_35 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: isolationSurface
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$b = {
+const _sfc_main$c = {
   props: ["worksIds", "currentWork"],
   emits: ["works-ids"],
   data() {
@@ -4839,7 +5074,7 @@ const _sfc_main$b = {
     }
   }
 };
-function _sfc_ssrRender$b(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$c(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   if ($props.currentWork == null) {
     _push(`<div${ssrRenderAttrs(_attrs)}><h3 class="text-center text-xl md:text-2xl font-extrabold mb-6">Quels travaux souhaitez-vous réaliser dans votre logement ? </h3><p class="mb-6 text-center">Vous pouvez sélectionner plusieurs réponses.</p>`);
     if (this.error) {
@@ -4898,18 +5133,18 @@ function _sfc_ssrRender$b(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     _push(`<div class="relative flex flex-col gap-4 justify-between items-center p-4 bg-white rounded-lg"><img${ssrRenderAttr("src", "/images/illustration/" + this.currentWork.svg)}${ssrRenderAttr("alt", this.currentWork.img_alt)} style="${ssrRenderStyle({ "width": "120px" })}"><span class="text-sm font-semibold text-center">${ssrInterpolate(this.currentWork.name)}</span><span class="block w-6 h-6 rounded-full absolute top-2 right-2 flex justify-center items-center bg-green-300"><i class="fa-solid fa-check text-white"></i></span></div></div></div>`);
   }
 }
-const _sfc_setup$b = _sfc_main$b.setup;
-_sfc_main$b.setup = (props, ctx) => {
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/selectTravaux.vue");
-  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const selectTravaux = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["ssrRender", _sfc_ssrRender$b]]);
-const __vite_glob_0_35 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const selectTravaux = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["ssrRender", _sfc_ssrRender$c]]);
+const __vite_glob_0_36 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: selectTravaux
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$a = {
+const _sfc_main$b = {
   props: ["EspaceExterior"],
   emits: ["espace-exterieur"],
   methods: {
@@ -4918,7 +5153,7 @@ const _sfc_main$a = {
     }
   }
 };
-function _sfc_ssrRender$a(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$b(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-extrabold">Un emplacement est-il disponible à l&#39;extérieur de votre logement ? </h3><p class="mt-8 text-sm text-center">L&#39;installation d&#39;une pompe à chaleur Air-eau nécessite la pose d&#39;un module extérieur (environ 2 m2).</p><div class="flex gap-4 md:gap-8 justify-center mt-8 w-9/12 m-auto"><div class="relative p-12 md:p-20 rounded bg-white hover:shadow-xl cursor-pointer"><span class="text-xl font-bold">Oui</span>`);
   if (this.EspaceExterior == true) {
     _push(`<span class="block w-6 h-6 rounded-full absolute top-2 right-2 flex justify-center items-center bg-green-300"><i class="fa-solid fa-check text-white"></i></span>`);
@@ -4933,22 +5168,22 @@ function _sfc_ssrRender$a(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div><!--]-->`);
 }
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/spaceExterior.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
-const spaceExterior = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["ssrRender", _sfc_ssrRender$a]]);
-const __vite_glob_0_36 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const spaceExterior = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["ssrRender", _sfc_ssrRender$b]]);
+const __vite_glob_0_37 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: spaceExterior
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$9 = {
+const _sfc_main$a = {
   emits: ["status-project"],
   props: ["statusProject"]
 };
-function _sfc_ssrRender$9(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$a(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-extrabold mb-12">Où en êtes-vous dans votre projet ?</h3><div class="grid md:grid-cols-3 gap-4"><div class="relative flex flex-col items-center gap-4 p-4 rounded bg-white hover:shadow-xl cursor-pointer"><img class="w-24 md:w-36" src="/images/illustration/lamp thinking.png" alt="réfléchis à mes travaux"><span class="font-bold">Je réfléchis à mes travaux</span>`);
   if (this.statusProject == "Je réfléchis à mes travaux") {
     _push(`<span class="block w-6 h-6 rounded-full absolute top-2 right-2 flex justify-center items-center bg-green-300"><i class="fa-solid fa-check text-white"></i></span>`);
@@ -4969,58 +5204,58 @@ function _sfc_ssrRender$9(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div><!--]-->`);
 }
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/statusProject.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
-const statusProject = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["ssrRender", _sfc_ssrRender$9]]);
-const __vite_glob_0_37 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const statusProject = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["ssrRender", _sfc_ssrRender$a]]);
+const __vite_glob_0_38 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: statusProject
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$8 = {
+const _sfc_main$9 = {
   props: ["surfaceChauffe", "error_surface", "getNext"],
   emits: ["update:modelValue"]
 };
-function _sfc_ssrRender$8(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$9(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="mb-6 text-center text-xl md:text-2xl font-extrabold">Quelle surface sera chauffée par la pompe à chaleur ? </h3><p class="mb-6 text-center">N&#39;indiquez que la surface des pièces que la pompe à chaleur chauffe.</p><div class="flex flex-col gap-2 justify-center md:w-10/12 m-auto"><label class="text-left text-sm font-bold" for="surface">Surface en m²</label><input type="number" id="surface"${ssrRenderAttr("value", $props.surfaceChauffe)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error_surface)}</span></div><!--]-->`);
+}
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/surfaceChauffee.vue");
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+};
+const surfaceChauffe = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["ssrRender", _sfc_ssrRender$9]]);
+const __vite_glob_0_39 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: surfaceChauffe
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$8 = {
+  emits: ["update:modelValue"],
+  props: ["TravauxAdresse", "error_address", "getNext"]
+};
+function _sfc_ssrRender$8(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-extrabold mb-6">Où se situe le logement concerné par les travaux ? </h3><p class="text-center mb-6">Le montant de vos aides peut varier en fonction de votre localisation.</p><div class="flex flex-col gap-2 justify-center md:w-10/12 m-auto"><label class="text-left text-sm font-semibold" for="Address">Adresse</label><input type="text" id="Address"${ssrRenderAttr("value", $props.TravauxAdresse)} class="rounded" placeholder="35 Rue victor Hugo, 37000 Tours"><span class="text-red-400">${ssrInterpolate($props.error_address)}</span></div><!--]-->`);
 }
 const _sfc_setup$8 = _sfc_main$8.setup;
 _sfc_main$8.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/surfaceChauffee.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/travauxAddress.vue");
   return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
-const surfaceChauffe = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["ssrRender", _sfc_ssrRender$8]]);
-const __vite_glob_0_38 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: surfaceChauffe
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$7 = {
-  emits: ["update:modelValue"],
-  props: ["TravauxAdresse", "error_address", "getNext"]
-};
-function _sfc_ssrRender$7(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><h3 class="text-center text-xl md:text-2xl font-extrabold mb-6">Où se situe le logement concerné par les travaux ? </h3><p class="text-center mb-6">Le montant de vos aides peut varier en fonction de votre localisation.</p><div class="flex flex-col gap-2 justify-center md:w-10/12 m-auto"><label class="text-left text-sm font-semibold" for="Address">Adresse</label><input type="text" id="Address"${ssrRenderAttr("value", $props.TravauxAdresse)} class="rounded" placeholder="35 Rue victor Hugo, 37000 Tours"><span class="text-red-400">${ssrInterpolate($props.error_address)}</span></div><!--]-->`);
-}
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/travauxAddress.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
-};
-const travauxAddress = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["ssrRender", _sfc_ssrRender$7]]);
-const __vite_glob_0_39 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const travauxAddress = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["ssrRender", _sfc_ssrRender$8]]);
+const __vite_glob_0_40 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: travauxAddress
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$6 = {
+const _sfc_main$7 = {
   props: ["UtilisateurStatus"],
   emits: ["utilisateur-status"]
 };
-function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$7(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-xl md:text-2xl text-center font-extrabold mb-6">Dans ce logement, vous êtes :</h3><div class="grid md:grid-cols-4 gap-4"><div class="relative flex flex-col items-center gap-4 p-4 rounded bg-white hover:shadow-xl cursor-pointer"><img class="w-24 md:w-36" src="/images/illustration/house principal.png" alt="Propriétaire occupant"><span class="font-bold text-center">Propriétaire occupant</span>`);
   if (this.UtilisateurStatus == "Propriétaire occupant") {
     _push(`<span class="block w-6 h-6 rounded-full absolute top-2 right-2 flex justify-center items-center bg-green-300"><i class="fa-solid fa-check text-white"></i></span>`);
@@ -5047,18 +5282,18 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div><!--]-->`);
 }
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/personalInfos/utilisateurStatut.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const utilisateurStatut = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$6]]);
-const __vite_glob_0_45 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const utilisateurStatut = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["ssrRender", _sfc_ssrRender$7]]);
+const __vite_glob_0_47 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: utilisateurStatut
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$5 = {
+const _sfc_main$6 = {
   props: ["menageComposition"],
   emits: ["update:modelValue"],
   methods: {
@@ -5074,25 +5309,25 @@ const _sfc_main$5 = {
     }
   }
 };
-function _sfc_ssrRender$5(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-xl md:text-2xl text-center font-extrabold mb-6">Combien de personnes composent votre foyer, vous compris ? </h3><p class="text-center mb-6">Le montant de vos aides peut varier en fonction de la taille de votre ménage.</p><div class="flex gap-4 items-center justify-center"><span class="p-6 text-2xl font-semibold rounded bg-white leading-3">-</span><input type="number"${ssrRenderAttr("value", $props.menageComposition)} class="text-center font-semibold"><span class="p-6 text-2xl font-semibold rounded bg-white leading-3">+</span></div><!--]-->`);
 }
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/personalInfos/menageCompos.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const menageComposition = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$5]]);
-const __vite_glob_0_41 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const menageComposition = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$6]]);
+const __vite_glob_0_43 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: menageComposition
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$4 = {
+const _sfc_main$5 = {
   emits: ["menage-revenus"],
   props: ["menageRevenus"]
 };
-function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$5(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-xl md:text-2xl font-extrabold mb-6 text-center">À combien s&#39;élève le revenu total de votre foyer fiscal ?</h3><p class="text-center mb-6">Le revenu fiscal de référence est utilisé pour calculer le montant de vos aides au plus juste.</p><div class="grid md:grid-cols-4 gap-4"><div class="relative flex flex-col items-center gap-4 p-4 rounded bg-white hover:shadow-xl cursor-pointer"><img class="w-24 md:w-36" src="/images/illustration/Inférieur à 16.png" alt="Inférieur à 16 229 €"><span class="font-bold text-center">Inférieur à 16 229 €</span>`);
   if (this.menageRevenus == "Inférieur à 16 229 €") {
     _push(`<span class="block w-6 h-6 rounded-full absolute top-2 right-2 flex justify-center items-center bg-green-300"><i class="fa-solid fa-check text-white"></i></span>`);
@@ -5119,37 +5354,37 @@ function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }
   _push(`</div></div><!--]-->`);
 }
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/personalInfos/menageRevenus.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const menageRevenus = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$4]]);
-const __vite_glob_0_42 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const menageRevenus = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$5]]);
+const __vite_glob_0_44 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: menageRevenus
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$3 = {
+const _sfc_main$4 = {
   emits: ["update:first-name", "update:last-name", "gender-value"],
   props: ["firstName", "lastName", "gender", "error"],
   methods: {}
 };
-function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-xl md:text-2xl font-extrabold text-center mb-12">Comment vous appelez-vous ?</h3><div class="grid grid-cols-2 gap-6 mb-4"><span class="${ssrRenderClass([$props.gender == "Monsieur" ? "shadow-lg border-2" : "", "p-2 rounded bg-white font-bold text-center"])}">Monsieur</span><span class="${ssrRenderClass([$props.gender == "Madame" ? "shadow-lg border-2" : "", "p-2 rounded bg-white font-bold text-center"])}">Madame</span><div class="flex flex-col gap-1"><label for="firstName" class="text-sm font-semibold">Prénom</label><input type="text" id="firstName"${ssrRenderAttr("value", $props.firstName)} class="leading-3 rounded"></div><div class="flex flex-col gap-1"><label for="lastName" class="text-sm font-semibold">Nom</label><input type="text" id="lastName"${ssrRenderAttr("value", $props.lastName)} class="leading-3 rounded"></div></div><div class="text-red-400 text-center">${ssrInterpolate($props.error)}</div><!--]-->`);
 }
-const _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/personalInfos/utilisateurIdentite.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const utilisateurIdentite = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$3]]);
-const __vite_glob_0_43 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const utilisateurIdentite = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$4]]);
+const __vite_glob_0_45 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: utilisateurIdentite
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$2 = {
+const _sfc_main$3 = {
   props: ["phoneNumber", "error", "getNext"],
   emits: ["phone-number"],
   methods: {
@@ -5165,37 +5400,55 @@ const _sfc_main$2 = {
     }
   }
 };
-function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<!--[--><h3 class="text-xl md:text-center text-2xl font-extrabold mb-6">Quel est votre numéro de téléphone ?</h3><p class="text-center mb-6"> Vous bénéficierez de notre service d&#39;assistance téléphonique et serez rappelé gratuitement afin de vous accompagner dans votre projet. </p><div class="flex flex-col gap-2 md:w-10/12 m-auto"><label for="phone" class="font-semibold text-sm">Téléphone</label><input type="number" id="phone"${ssrRenderAttr("value", $props.phoneNumber)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error)}</span></div><!--]-->`);
+}
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/personalInfos/utilisateurTelephone.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const utilisateurTelephone = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$3]]);
+const __vite_glob_0_48 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: utilisateurTelephone
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$2 = {
+  emits: ["e-mail"],
+  props: ["eMail", "error", "getNext"]
+};
+function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<!--[--><h3 class="text-xl md:text-2xl font-extrabold text-center mb-6">Entrer votre email</h3><p class="text-center mb-6">Vous bénéficierez de notre service mailing et serez accompagner dans votre projet.</p><div class="flex flex-col gap-2 md:w-10/12 m-auto"><label for="email" class="font-semibold text-sm">Email</label><input type="email" id="email"${ssrRenderAttr("value", $props.eMail)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error)}</span></div><!--]-->`);
 }
 const _sfc_setup$2 = _sfc_main$2.setup;
 _sfc_main$2.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/personalInfos/utilisateurTelephone.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/personalInfos/utilisateurMail.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const utilisateurTelephone = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2]]);
+const utilisateurEmail = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2]]);
 const __vite_glob_0_46 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: utilisateurTelephone
+  default: utilisateurEmail
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$1 = {
-  emits: ["e-mail"],
-  props: ["eMail", "error", "getNext"]
+  props: ["Code", "error_Postal", "getNext"],
+  emits: ["code-postal"]
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><h3 class="text-xl md:text-2xl font-extrabold text-center mb-6">Entrer votre email</h3><p class="text-center mb-6">Vous bénéficierez de notre service mailing et serez accompagner dans votre projet.</p><div class="flex flex-col gap-2 md:w-10/12 m-auto"><label for="email" class="font-semibold text-sm">Email</label><input type="email" id="email"${ssrRenderAttr("value", $props.eMail)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error)}</span></div><!--]-->`);
+  _push(`<!--[--><h3 class="text-xl md:text-center text-2xl font-extrabold mb-6">Quel est votre Code Postal ?</h3><div class="flex flex-col gap-2 md:w-10/12 m-auto"><label for="codePostal" class="font-semibold text-sm">Code Postal</label><input type="text" id="codePostal"${ssrRenderAttr("value", $props.Code)} class="rounded"><span class="text-red-400">${ssrInterpolate($props.error_Postal)}</span></div><!--]-->`);
 }
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/personalInfos/utilisateurMail.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/personalInfos/codePostal.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const utilisateurEmail = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1]]);
-const __vite_glob_0_44 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const CodePostal = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1]]);
+const __vite_glob_0_42 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: utilisateurEmail
+  default: CodePostal
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main = {
   props: ["currentWork"],
@@ -5222,10 +5475,9 @@ const _sfc_main = {
     menageRevenus,
     utilisateurIdentite,
     utilisateurTelephone,
+    CodePostal,
     utilisateurEmail,
     electricityBill,
-    KilowattsPerYear,
-    TaxIncome,
     RoofType,
     RoofOrientation
   },
@@ -5234,9 +5486,9 @@ const _sfc_main = {
       request: true,
       errors: false,
       errors_text: "",
-      current: "type",
+      current: "utilisateurIdentite",
       previous: "",
-      next: "construc",
+      next: "",
       FormData: useForm({
         LogementType: "maison",
         LogementConstruction: "2-15",
@@ -5245,8 +5497,6 @@ const _sfc_main = {
         LogementEnergieType: "",
         TravauxIds: [],
         currentElectricityBill: "",
-        kilowattsPerYear: "",
-        taxIncome: "",
         roofType: "",
         roofOrientation: "",
         InteriorSurface: "",
@@ -5265,6 +5515,7 @@ const _sfc_main = {
           LastName: "",
           Gender: "",
           PhoneNumber: "",
+          CodePostal: "",
           EMail: ""
         }
       })
@@ -5381,17 +5632,14 @@ const _sfc_main = {
     getPhoneNumber(value) {
       this.FormData.Client.PhoneNumber = value;
     },
+    getCodePostal(value) {
+      this.FormData.Client.CodePostal = value;
+    },
     getEmail(value) {
       this.FormData.Client.EMail = value;
     },
     getCurrentElectricityBill(value) {
       this.FormData.currentElectricityBill = value;
-    },
-    getKilowattsPerYear(value) {
-      this.FormData.kilowattsPerYear = value;
-    },
-    getTaxIncome(value) {
-      this.FormData.taxIncome = value;
     },
     getRoofType(value) {
       this.FormData.roofType = value;
@@ -5406,7 +5654,73 @@ const _sfc_main = {
       this.FormData.TravauxIds.push(this.currentWork.id);
   },
   updated() {
-    if (this.current == "construc") {
+    if (this.current == "utilisateurIdentite") {
+      if (this.FormData.Client.FirstName == "") {
+        this.errors_text = "Le prénom est requis";
+        this.errors = true;
+      } else if (this.FormData.Client.LastName == "") {
+        this.errors_text = "Le nom est requis";
+        this.errors = true;
+      } else if (this.FormData.Client.Gender == "") {
+        this.errors_text = "Sélectionner le genre";
+        this.errors = true;
+      } else {
+        this.errors_text = "";
+        this.errors = false;
+      }
+      this.next = "utilisateurTelephone";
+    } else if (this.current == "utilisateurTelephone") {
+      if (this.FormData.Client.PhoneNumber == "") {
+        this.errors_text = "Le numero de téléphone est requis!";
+        this.errors = true;
+      } else if (this.FormData.Client.PhoneNumber.length < 10)
+        this.errors = true;
+      else {
+        this.errors_text = "";
+        this.errors = false;
+      }
+      this.previous = "utilisateurIdentite";
+      this.next = "utilisateurEmail";
+    } else if (this.current == "utilisateurEmail") {
+      if (this.FormData.Client.EMail == "") {
+        this.errors_text = "Adresse mail est requis!";
+        this.errors = true;
+      } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.FormData.Client.EMail)) {
+        this.errors_text = "Adresse mail n'est pas valide!";
+        this.errors = true;
+      } else {
+        this.errors_text = "";
+        this.errors = false;
+      }
+      this.previous = "utilisateurTelephone";
+      this.next = "travauxAdresse";
+    } else if (this.current == "travauxAdresse") {
+      if (this.FormData.TravauxAdresse.length == 0) {
+        this.errors_text = "Ce champ est obligatoire";
+        this.errors = true;
+      } else {
+        this.errors_text = "";
+        this.errors = false;
+      }
+      this.previous = "utilisateurEmail";
+      this.next = "codePostal";
+    } else if (this.current == "codePostal") {
+      if (this.FormData.Client.CodePostal == "") {
+        this.errors_text = "Code Postal est requis!";
+        this.errors = true;
+      } else {
+        this.errors_text = "";
+        this.errors = false;
+      }
+      this.previous = "travauxAdresse";
+      if (this.FormData.TravauxIds.includes(10))
+        this.next = "travaux";
+      else
+        this.next = "type";
+    } else if (this.current == "type") {
+      this.next = "construc";
+      this.previous = "travauxAdresse";
+    } else if (this.current == "construc") {
       this.next = "surface";
       this.previous = "type";
     } else if (this.current == "surface") {
@@ -5445,47 +5759,6 @@ const _sfc_main = {
       this.next = "menageReven";
     } else if (this.current == "menageReven") {
       this.previous = "menageCompos";
-      this.next = "utilisateurIdentite";
-    } else if (this.current == "utilisateurIdentite") {
-      if (this.FormData.Client.FirstName == "") {
-        this.errors_text = "Le prénom est requis";
-        this.errors = true;
-      } else if (this.FormData.Client.LastName == "") {
-        this.errors_text = "Le nom est requis";
-        this.errors = true;
-      } else if (this.FormData.Client.Gender == "") {
-        this.errors_text = "Sélectionner le genre";
-        this.errors = true;
-      } else {
-        this.errors_text = "";
-        this.errors = false;
-      }
-      this.previous = "menageReven";
-      this.next = "utilisateurTelephone";
-    } else if (this.current == "utilisateurTelephone") {
-      if (this.FormData.Client.PhoneNumber == "") {
-        this.errors_text = "Le numero de téléphone est requis!";
-        this.errors = true;
-      } else if (this.FormData.Client.PhoneNumber.length < 10)
-        this.errors = true;
-      else {
-        this.errors_text = "";
-        this.errors = false;
-      }
-      this.previous = "utilisateurIdentite";
-      this.next = "utilisateurEmail";
-    } else if (this.current == "utilisateurEmail") {
-      if (this.FormData.Client.EMail == "") {
-        this.errors_text = "Adresse mail est requis!";
-        this.errors = true;
-      } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.FormData.Client.EMail)) {
-        this.errors_text = "Adresse mail n'est pas valide!";
-        this.errors = true;
-      } else {
-        this.errors_text = "";
-        this.errors = false;
-      }
-      this.previous = "utilisateurTelephone";
       this.next = "travaux";
     } else if (this.current == "travaux") {
       if (this.FormData.TravauxIds.length == 0)
@@ -5500,6 +5773,8 @@ const _sfc_main = {
         this.next = "exteriorSurface";
       else if (this.FormData.TravauxIds.includes(5))
         this.next = "surfaceChauffee";
+      else if (this.FormData.TravauxIds.includes(10))
+        this.next = "done";
       else
         this.next = "statusProjet";
       this.previous = "utilisateurEmail";
@@ -5512,19 +5787,6 @@ const _sfc_main = {
         this.errors = false;
       }
       this.previous = "travaux";
-      this.next = "kilowattsPerYear";
-    } else if (this.current == "kilowattsPerYear") {
-      this.previous = "electricityBill";
-      this.next = "taxIncome";
-    } else if (this.current == "taxIncome") {
-      if (this.FormData.taxIncome.length == 0) {
-        this.errors_text = "Ce champ est obligatoire";
-        this.errors = true;
-      } else {
-        this.errors_text = "";
-        this.errors = false;
-      }
-      this.previous = "kilowattsPerYear";
       this.next = "roofType";
     } else if (this.current == "roofType") {
       if (this.FormData.roofType.length == 0) {
@@ -5532,7 +5794,7 @@ const _sfc_main = {
       } else {
         this.errors = false;
       }
-      this.previous = "taxIncome";
+      this.previous = "travaux";
       this.next = "roofOrientation";
     } else if (this.current == "roofOrientation") {
       if (this.FormData.roofOrientation.length == 0) {
@@ -5608,18 +5870,8 @@ const _sfc_main = {
       this.next = "statusProjet";
       this.previous = "chaudeSanitaire";
     } else if (this.current == "statusProjet") {
-      this.next = "travauxAdresse";
-      this.previous = "travaux";
-    } else if (this.current == "travauxAdresse") {
-      if (this.FormData.TravauxAdresse.length == 0) {
-        this.errors_text = "Ce champ est obligatoire";
-        this.errors = true;
-      } else {
-        this.errors_text = "";
-        this.errors = false;
-      }
       this.next = "done";
-      this.previous = "statusProjet";
+      this.previous = "travaux";
     } else if (this.current == "done") {
       if (this.request == true) {
         this.FormData.post(
@@ -5637,6 +5889,11 @@ const _sfc_main = {
 };
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_Head = resolveComponent("Head");
+  const _component_utilisateurIdentite = resolveComponent("utilisateurIdentite");
+  const _component_utilisateurTelephone = resolveComponent("utilisateurTelephone");
+  const _component_utilisateurEmail = resolveComponent("utilisateurEmail");
+  const _component_travauxAddress = resolveComponent("travauxAddress");
+  const _component_CodePostal = resolveComponent("CodePostal");
   const _component_LogementType = resolveComponent("LogementType");
   const _component_LogementConstruction = resolveComponent("LogementConstruction");
   const _component_LogementSurface = resolveComponent("LogementSurface");
@@ -5645,13 +5902,8 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   const _component_utilisateurStatut = resolveComponent("utilisateurStatut");
   const _component_menageComposition = resolveComponent("menageComposition");
   const _component_menageRevenus = resolveComponent("menageRevenus");
-  const _component_utilisateurIdentite = resolveComponent("utilisateurIdentite");
-  const _component_utilisateurTelephone = resolveComponent("utilisateurTelephone");
-  const _component_utilisateurEmail = resolveComponent("utilisateurEmail");
   const _component_selectTravaux = resolveComponent("selectTravaux");
   const _component_electricityBill = resolveComponent("electricityBill");
-  const _component_KilowattsPerYear = resolveComponent("KilowattsPerYear");
-  const _component_TaxIncome = resolveComponent("TaxIncome");
   const _component_RoofType = resolveComponent("RoofType");
   const _component_RoofOrientation = resolveComponent("RoofOrientation");
   const _component_isolationSurface = resolveComponent("isolationSurface");
@@ -5660,24 +5912,23 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   const _component_chaudeSanitaire = resolveComponent("chaudeSanitaire");
   const _component_spaceExterior = resolveComponent("spaceExterior");
   const _component_statusProject = resolveComponent("statusProject");
-  const _component_travauxAddress = resolveComponent("travauxAddress");
   _push(`<!--[-->`);
   _push(ssrRenderComponent(_component_Head, { title: "Estimez votre prime énergie et demandez votre devis" }, null, _parent));
   _push(`<div class="flex"><div class="hidden md:block w-3/12 px-6 pt-12 bg-white overflow-hidden">`);
-  if (this.current == "type" || this.current == "construc" || this.current == "surface" || this.current == "energie" || this.current == "typeEnergie") {
+  if (this.current == "utilisateurIdentite" || this.current == "utilisateurTelephone" || this.current == "utilisateurEmail" || this.current == "travauxAdresse" || this.current == "codePostal") {
+    _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-20 bg-green-200 rounded-lg"> </span><p class="Capitalize font-bold text-black">Vos informations</p></div>`);
+  } else {
+    _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-20 bg-gray-100 rounded-lg"> </span><p class="Capitalize font-bold text-gray-200">Vos informations</p></div>`);
+  }
+  if (this.current == "type" || this.current == "construc" || this.current == "surface" || this.current == "energie" || this.current == "typeEnergie" || this.current == "userStatut" || this.current == "menageCompos" || this.current == "menageReven") {
     _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-12 bg-green-200 rounded-lg"> </span><p class="Capitalize font-bold text-black leading-10">Votre logement</p></div>`);
   } else {
     _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-12 bg-gray-100 rounded-lg"> </span><p class="Capitalize font-bold text-gray-200 leading-10">Votre logement</p></div>`);
   }
-  if (this.current == "travaux" || this.current == "electricityBill" || this.current == "kilowattsPerYear" || this.current == "taxIncome" || this.current == "roofType" || this.current == "roofOrientation" || this.current == "interiorSurface" || this.current == "exteriorSurface" || this.current == "exteriorRevetement" || this.current == "surfaceChauffee" || this.current == "chaudeSanitaire" || this.current == "espaceExterior" || this.current == "statusProjet" || this.current == "travauxAdresse") {
+  if (this.current == "travaux" || this.current == "electricityBill" || this.current == "kilowattsPerYear" || this.current == "taxIncome" || this.current == "roofType" || this.current == "roofOrientation" || this.current == "interiorSurface" || this.current == "exteriorSurface" || this.current == "exteriorRevetement" || this.current == "surfaceChauffee" || this.current == "chaudeSanitaire" || this.current == "espaceExterior" || this.current == "statusProjet") {
     _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-12 bg-green-200 rounded-lg"> </span><p class="Capitalize font-bold text-black">Votre projet</p></div>`);
   } else {
     _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-12 bg-gray-100 rounded-lg"> </span><p class="Capitalize font-bold text-gray-200">Votre projet</p></div>`);
-  }
-  if (this.current == "userStatut" || this.current == "menageCompos" || this.current == "menageReven" || this.current == "utilisateurIdentite" || this.current == "utilisateurTelephone" || this.current == "utilisateurEmail") {
-    _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-20 bg-green-200 rounded-lg"> </span><p class="Capitalize font-bold text-black">Vos informations</p></div>`);
-  } else {
-    _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-20 bg-gray-100 rounded-lg"> </span><p class="Capitalize font-bold text-gray-200">Vos informations</p></div>`);
   }
   if (this.current == "done") {
     _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-4 bg-green-200 rounded-lg"> </span><p class="Capitalize font-bold text-black">Dernière étape</p></div>`);
@@ -5685,12 +5936,65 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     _push(`<div class="flex items-center gap-2 mb-4"><span class="w-2 h-20 bg-gray-100 rounded-lg"> </span><p class="Capitalize font-bold text-gray-200">Dernière étape</p></div>`);
   }
   _push(`</div><div class="relative w-full md:w-9/12 p-4 md:p-6 min-h-screen">`);
-  if (this.current != "type" && this.current != "done") {
+  if (this.current != "utilisateurIdentite" && this.current != "done") {
     _push(`<div class="inline-block mb-8 p-4 rounded hover:bg-slate-200 cursor-pointer"><i class="fa-solid fa-arrow-left" style="${ssrRenderStyle({ "color": "#74efa6" })}"></i>   <span class="font-semibold capitalize">retour</span></div>`);
   } else {
     _push(`<!---->`);
   }
   _push(`<div>`);
+  if (this.current == "utilisateurIdentite") {
+    _push(ssrRenderComponent(_component_utilisateurIdentite, {
+      firstName: this.FormData.Client.FirstName,
+      lastName: this.FormData.Client.LastName,
+      gender: this.FormData.Client.Gender,
+      error: this.errors_text,
+      "onUpdate:firstName": $options.getFirstName,
+      "onUpdate:lastName": $options.getLastName,
+      onGenderValue: $options.getGender
+    }, null, _parent));
+  } else {
+    _push(`<!---->`);
+  }
+  if (this.current == "utilisateurTelephone") {
+    _push(ssrRenderComponent(_component_utilisateurTelephone, {
+      phoneNumber: this.FormData.Client.PhoneNumber,
+      error: this.errors_text,
+      getNext: $options.getNext,
+      onPhoneNumber: $options.getPhoneNumber
+    }, null, _parent));
+  } else {
+    _push(`<!---->`);
+  }
+  if (this.current == "utilisateurEmail") {
+    _push(ssrRenderComponent(_component_utilisateurEmail, {
+      eMail: this.FormData.Client.EMail,
+      error: this.errors_text,
+      getNext: $options.getNext,
+      onEMail: $options.getEmail
+    }, null, _parent));
+  } else {
+    _push(`<!---->`);
+  }
+  if (this.current == "travauxAdresse") {
+    _push(ssrRenderComponent(_component_travauxAddress, {
+      TravauxAdresse: this.FormData.TravauxAdresse,
+      error_address: this.errors_text,
+      getNext: $options.getNext,
+      "onUpdate:modelValue": $options.getTravauxAdresse
+    }, null, _parent));
+  } else {
+    _push(`<!---->`);
+  }
+  if (this.current == "codePostal") {
+    _push(ssrRenderComponent(_component_CodePostal, {
+      Code: this.FormData.Client.CodePostal,
+      error_Postal: this.errors_text,
+      getNext: $options.getNext,
+      onCodePostal: $options.getCodePostal
+    }, null, _parent));
+  } else {
+    _push(`<!---->`);
+  }
   if (this.current == "type") {
     _push(ssrRenderComponent(_component_LogementType, {
       onLogementType: $options.getLogementType,
@@ -5758,39 +6062,6 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   } else {
     _push(`<!---->`);
   }
-  if (this.current == "utilisateurIdentite") {
-    _push(ssrRenderComponent(_component_utilisateurIdentite, {
-      firstName: this.FormData.Client.FirstName,
-      lastName: this.FormData.Client.LastName,
-      gender: this.FormData.Client.Gender,
-      error: this.errors_text,
-      "onUpdate:firstName": $options.getFirstName,
-      "onUpdate:lastName": $options.getLastName,
-      onGenderValue: $options.getGender
-    }, null, _parent));
-  } else {
-    _push(`<!---->`);
-  }
-  if (this.current == "utilisateurTelephone") {
-    _push(ssrRenderComponent(_component_utilisateurTelephone, {
-      phoneNumber: this.FormData.Client.PhoneNumber,
-      error: this.errors_text,
-      getNext: $options.getNext,
-      onPhoneNumber: $options.getPhoneNumber
-    }, null, _parent));
-  } else {
-    _push(`<!---->`);
-  }
-  if (this.current == "utilisateurEmail") {
-    _push(ssrRenderComponent(_component_utilisateurEmail, {
-      eMail: this.FormData.Client.EMail,
-      error: this.errors_text,
-      getNext: $options.getNext,
-      onEMail: $options.getEmail
-    }, null, _parent));
-  } else {
-    _push(`<!---->`);
-  }
   if (this.current == "travaux") {
     _push(ssrRenderComponent(_component_selectTravaux, {
       worksIds: this.FormData.TravauxIds,
@@ -5806,25 +6077,6 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
       error: $data.errors_text,
       getNext: $options.getNext,
       "onUpdate:modelValue": $options.getCurrentElectricityBill
-    }, null, _parent));
-  } else {
-    _push(`<!---->`);
-  }
-  if (this.current == "kilowattsPerYear") {
-    _push(ssrRenderComponent(_component_KilowattsPerYear, {
-      modelValue: this.FormData.kilowattsPerYear,
-      getNext: $options.getNext,
-      "onUpdate:modelValue": $options.getKilowattsPerYear
-    }, null, _parent));
-  } else {
-    _push(`<!---->`);
-  }
-  if (this.current == "taxIncome") {
-    _push(ssrRenderComponent(_component_TaxIncome, {
-      modelValue: this.FormData.taxIncome,
-      error: $data.errors_text,
-      getNext: $options.getNext,
-      "onUpdate:modelValue": $options.getTaxIncome
     }, null, _parent));
   } else {
     _push(`<!---->`);
@@ -5911,18 +6163,8 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   } else {
     _push(`<!---->`);
   }
-  if (this.current == "travauxAdresse") {
-    _push(ssrRenderComponent(_component_travauxAddress, {
-      TravauxAdresse: this.FormData.TravauxAdresse,
-      error_address: this.errors_text,
-      getNext: $options.getNext,
-      "onUpdate:modelValue": $options.getTravauxAdresse
-    }, null, _parent));
-  } else {
-    _push(`<!---->`);
-  }
   if (this.current == "done") {
-    _push(`<div><p class="break-word text-base md:text-lg text-center text-slate-900 font-bold w-10/12 md:w-8/12 md:p-10 p-4 m-auto bg-slate-50 shadow leading-10 rounded"> Merci pour le temps que vous avez consacré sur ce parcours, On va vous contacter prochainement pour vous accompagner dans votre projet.<br><br><a href="/" class="p-4 rounded text-white bg-slate-800">Ok Merci</a></p></div>`);
+    _push(`<div class="mt-6 md:mt-12"><p class="text-sm md:text-base font-bold w-full md:w-8/12 text-center p-8 md:p-12 m-auto !leading-loose text-slate-900 bg-slate-50 shadow rounded"> Merci pour le temps que vous avez consacré sur ce parcours, On va vous contacter prochainement pour vous accompagner dans votre projet. <a href="/" class="table mx-auto mt-6 p-4 text-sm rounded text-white bg-slate-500 hover:bg-slate-600">Ok Merci</a></p></div>`);
   } else {
     _push(`<!---->`);
   }
@@ -5934,7 +6176,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   }
   if (this.current != "done") {
     _push(`<div class="fixed w-full py-4 bg-slate-100 flex left-0 bottom-0 md:left-1/4 md:w-9/12">`);
-    if ($data.errors == false) {
+    if (this.errors == false) {
       _push(`<a class="cursor-pointer m-auto uppercase bg-gradient-to-r from-teal-500 to-green-300 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-20 py-3 rounded-full font-bold text-white"> Suivant </a>`);
     } else {
       _push(`<a class="cursor-pointer m-auto uppercase bg-gradient-to-r from-gray-500 to-gray-200 hover:shadow-gray-500 shadow-lg shadow-gray-500/50 px-20 py-3 rounded-full font-bold text-black"> Suivant </a>`);
@@ -5952,7 +6194,7 @@ _sfc_main.setup = (props, ctx) => {
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
-const __vite_glob_0_40 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_41 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: index
 }, Symbol.toStringTag, { value: "Module" }));
@@ -5961,7 +6203,7 @@ createServer(
     page,
     render: renderToString,
     resolve: (name) => {
-      const pages = /* @__PURE__ */ Object.assign({ "./Pages/404.vue": __vite_glob_0_0, "./Pages/AppelezNous.vue": __vite_glob_0_1, "./Pages/Auth/ConfirmPassword.vue": __vite_glob_0_2, "./Pages/Auth/ForgotPassword.vue": __vite_glob_0_3, "./Pages/Auth/Login.vue": __vite_glob_0_4, "./Pages/Auth/Register.vue": __vite_glob_0_5, "./Pages/Auth/ResetPassword.vue": __vite_glob_0_6, "./Pages/Auth/VerifyEmail.vue": __vite_glob_0_7, "./Pages/Dashboard.vue": __vite_glob_0_8, "./Pages/Home.vue": __vite_glob_0_9, "./Pages/IntermediatePage.vue": __vite_glob_0_10, "./Pages/LandingPage.vue": __vite_glob_0_11, "./Pages/Orders.vue": __vite_glob_0_12, "./Pages/Profile/Edit.vue": __vite_glob_0_13, "./Pages/Profile/Partials/DeleteUserForm.vue": __vite_glob_0_14, "./Pages/Profile/Partials/UpdatePasswordForm.vue": __vite_glob_0_15, "./Pages/Profile/Partials/UpdateProfileInformationForm.vue": __vite_glob_0_16, "./Pages/home/FourthSection.vue": __vite_glob_0_17, "./Pages/home/MailSection.vue": __vite_glob_0_18, "./Pages/home/ThirdSection.vue": __vite_glob_0_19, "./Pages/home/secondeSection.vue": __vite_glob_0_20, "./Pages/mailer.vue": __vite_glob_0_21, "./Pages/project/Logement/EnergieType.vue": __vite_glob_0_22, "./Pages/project/Logement/LogementConstruction.vue": __vite_glob_0_23, "./Pages/project/Logement/LogementEnergie.vue": __vite_glob_0_24, "./Pages/project/Logement/LogementSurface.vue": __vite_glob_0_25, "./Pages/project/Logement/LogementType.vue": __vite_glob_0_26, "./Pages/project/Work/ElectricityBill.vue": __vite_glob_0_27, "./Pages/project/Work/KilowattsPerYear.vue": __vite_glob_0_28, "./Pages/project/Work/RoofOrientations.vue": __vite_glob_0_29, "./Pages/project/Work/RoofType.vue": __vite_glob_0_30, "./Pages/project/Work/TaxIncome.vue": __vite_glob_0_31, "./Pages/project/Work/chaudeSanitaire.vue": __vite_glob_0_32, "./Pages/project/Work/isolationRevetement.vue": __vite_glob_0_33, "./Pages/project/Work/isolationSurface.vue": __vite_glob_0_34, "./Pages/project/Work/selectTravaux.vue": __vite_glob_0_35, "./Pages/project/Work/spaceExterior.vue": __vite_glob_0_36, "./Pages/project/Work/statusProject.vue": __vite_glob_0_37, "./Pages/project/Work/surfaceChauffee.vue": __vite_glob_0_38, "./Pages/project/Work/travauxAddress.vue": __vite_glob_0_39, "./Pages/project/index.vue": __vite_glob_0_40, "./Pages/project/personalInfos/menageCompos.vue": __vite_glob_0_41, "./Pages/project/personalInfos/menageRevenus.vue": __vite_glob_0_42, "./Pages/project/personalInfos/utilisateurIdentite.vue": __vite_glob_0_43, "./Pages/project/personalInfos/utilisateurMail.vue": __vite_glob_0_44, "./Pages/project/personalInfos/utilisateurStatut.vue": __vite_glob_0_45, "./Pages/project/personalInfos/utilisateurTelephone.vue": __vite_glob_0_46, "./Pages/viewOrder.vue": __vite_glob_0_47 });
+      const pages = /* @__PURE__ */ Object.assign({ "./Pages/404.vue": __vite_glob_0_0, "./Pages/AboutUs.vue": __vite_glob_0_1, "./Pages/AppelezNous.vue": __vite_glob_0_2, "./Pages/Auth/ConfirmPassword.vue": __vite_glob_0_3, "./Pages/Auth/ForgotPassword.vue": __vite_glob_0_4, "./Pages/Auth/Login.vue": __vite_glob_0_5, "./Pages/Auth/Register.vue": __vite_glob_0_6, "./Pages/Auth/ResetPassword.vue": __vite_glob_0_7, "./Pages/Auth/VerifyEmail.vue": __vite_glob_0_8, "./Pages/ContactUs.vue": __vite_glob_0_9, "./Pages/Dashboard.vue": __vite_glob_0_10, "./Pages/Home.vue": __vite_glob_0_11, "./Pages/IntermediatePage.vue": __vite_glob_0_12, "./Pages/LandingPage.vue": __vite_glob_0_13, "./Pages/Orders.vue": __vite_glob_0_14, "./Pages/Profile/Edit.vue": __vite_glob_0_15, "./Pages/Profile/Partials/DeleteUserForm.vue": __vite_glob_0_16, "./Pages/Profile/Partials/UpdatePasswordForm.vue": __vite_glob_0_17, "./Pages/Profile/Partials/UpdateProfileInformationForm.vue": __vite_glob_0_18, "./Pages/home/FirstS.vue": __vite_glob_0_19, "./Pages/home/FourthS.vue": __vite_glob_0_20, "./Pages/home/MailSection.vue": __vite_glob_0_21, "./Pages/home/SecondeS.vue": __vite_glob_0_22, "./Pages/home/ThirdS.vue": __vite_glob_0_23, "./Pages/mailer.vue": __vite_glob_0_24, "./Pages/project/Logement/EnergieType.vue": __vite_glob_0_25, "./Pages/project/Logement/LogementConstruction.vue": __vite_glob_0_26, "./Pages/project/Logement/LogementEnergie.vue": __vite_glob_0_27, "./Pages/project/Logement/LogementSurface.vue": __vite_glob_0_28, "./Pages/project/Logement/LogementType.vue": __vite_glob_0_29, "./Pages/project/Work/ElectricityBill.vue": __vite_glob_0_30, "./Pages/project/Work/RoofOrientations.vue": __vite_glob_0_31, "./Pages/project/Work/RoofType.vue": __vite_glob_0_32, "./Pages/project/Work/chaudeSanitaire.vue": __vite_glob_0_33, "./Pages/project/Work/isolationRevetement.vue": __vite_glob_0_34, "./Pages/project/Work/isolationSurface.vue": __vite_glob_0_35, "./Pages/project/Work/selectTravaux.vue": __vite_glob_0_36, "./Pages/project/Work/spaceExterior.vue": __vite_glob_0_37, "./Pages/project/Work/statusProject.vue": __vite_glob_0_38, "./Pages/project/Work/surfaceChauffee.vue": __vite_glob_0_39, "./Pages/project/Work/travauxAddress.vue": __vite_glob_0_40, "./Pages/project/index.vue": __vite_glob_0_41, "./Pages/project/personalInfos/codePostal.vue": __vite_glob_0_42, "./Pages/project/personalInfos/menageCompos.vue": __vite_glob_0_43, "./Pages/project/personalInfos/menageRevenus.vue": __vite_glob_0_44, "./Pages/project/personalInfos/utilisateurIdentite.vue": __vite_glob_0_45, "./Pages/project/personalInfos/utilisateurMail.vue": __vite_glob_0_46, "./Pages/project/personalInfos/utilisateurStatut.vue": __vite_glob_0_47, "./Pages/project/personalInfos/utilisateurTelephone.vue": __vite_glob_0_48, "./Pages/viewOrder.vue": __vite_glob_0_49 });
       return pages[`./Pages/${name}.vue`];
     },
     setup({ App, props, plugin }) {

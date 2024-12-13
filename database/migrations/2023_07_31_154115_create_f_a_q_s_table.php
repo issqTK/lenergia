@@ -15,7 +15,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('f_a_q_s', function (Blueprint $table) {
-            DB::statement('SET SESSION sql_require_primary_key=0');
+            #DB::statement('SET SESSION sql_require_primary_key=0');
             $table->id();
             $table->foreignIdFor(Work::class);
             $table->text('h3');
