@@ -40,7 +40,7 @@
             :style="showMenu ? 'right:0' : 'right:-100%'"
         >
             <SmallScreenMenu
-                @showingNavigation="getShowingNav"
+                @showing-navigation="updateShowingNav"
                 :showingNavigation="showMenu"
                 :esWorks="esWorks"
                 :chWorks="chWorks"
@@ -62,8 +62,8 @@
 import { ref, onMounted, onUnmounted, computed } from "vue";
 import { usePage } from "@inertiajs/vue3";
 import { Link } from "@inertiajs/vue3";
-import SmallScreenMenu from "./BigScreen.vue";
-import BigScreenMenu from "./SmallScreen.vue";
+import BigScreenMenu  from "./BigScreen.vue";
+import SmallScreenMenu from "./SmallScreen.vue";
 
 const page = usePage();
 
@@ -94,7 +94,7 @@ const showNav = () => {
             mobile.value.classList.remove("top-less");
         }
         showMenu.value = true;
-    } else console.log("no");
+    }
 };
 
 const handleScroll = () => {
@@ -115,7 +115,9 @@ const handleScroll = () => {
     }
 };
 
-const getShowingNav = (value) => showMenu.value = value;
+const updateShowingNav = (value) => {
+    showMenu.value = value;
+};
 
 onMounted(() => {
     fakeHeight();
