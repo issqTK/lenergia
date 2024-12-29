@@ -1,0 +1,256 @@
+import { withCtx, unref, createTextVNode, createVNode, withModifiers, useSSRContext } from "vue";
+import { ssrRenderComponent } from "vue/server-renderer";
+import { G as GuestLayout } from "./GuestLayout-36a367d8.js";
+import { _ as _sfc_main$1, a as _sfc_main$2, b as _sfc_main$3 } from "./TextInput-0364e26d.js";
+import { P as PrimaryButton } from "./PrimaryButton-5dca8134.js";
+import { useForm, Head, Link } from "@inertiajs/vue3";
+import "./btnDevis-59098679.js";
+import "./_plugin-vue_export-helper-cc2b3d55.js";
+const _sfc_main = {
+  __name: "Register",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const form = useForm({
+      name: "",
+      email: "",
+      password: "",
+      password_confirmation: ""
+    });
+    const submit = () => {
+      form.post(route("register"), {
+        onFinish: () => form.reset("password", "password_confirmation")
+      });
+    };
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(ssrRenderComponent(GuestLayout, _attrs, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(ssrRenderComponent(unref(Head), { title: "Register" }, null, _parent2, _scopeId));
+            _push2(`<div class="w-full md:w-6/12 p-6 m-auto mt-6 bg-white shadow-lg rounded"${_scopeId}><form${_scopeId}><div${_scopeId}>`);
+            _push2(ssrRenderComponent(_sfc_main$1, {
+              for: "name",
+              value: "Nom complet"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$2, {
+              id: "name",
+              type: "text",
+              class: "mt-1 block w-full",
+              modelValue: unref(form).name,
+              "onUpdate:modelValue": ($event) => unref(form).name = $event,
+              required: "",
+              autofocus: "",
+              autocomplete: "name"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$3, {
+              class: "mt-2",
+              message: unref(form).errors.name
+            }, null, _parent2, _scopeId));
+            _push2(`</div><div class="mt-4"${_scopeId}>`);
+            _push2(ssrRenderComponent(_sfc_main$1, {
+              for: "email",
+              value: "Email"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$2, {
+              id: "email",
+              type: "email",
+              class: "mt-1 block w-full",
+              modelValue: unref(form).email,
+              "onUpdate:modelValue": ($event) => unref(form).email = $event,
+              required: "",
+              autocomplete: "username"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$3, {
+              class: "mt-2",
+              message: unref(form).errors.email
+            }, null, _parent2, _scopeId));
+            _push2(`</div><div class="mt-4"${_scopeId}>`);
+            _push2(ssrRenderComponent(_sfc_main$1, {
+              for: "password",
+              value: "Mot de passe"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$2, {
+              id: "password",
+              type: "password",
+              class: "mt-1 block w-full",
+              modelValue: unref(form).password,
+              "onUpdate:modelValue": ($event) => unref(form).password = $event,
+              required: "",
+              autocomplete: "new-password"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$3, {
+              class: "mt-2",
+              message: unref(form).errors.password
+            }, null, _parent2, _scopeId));
+            _push2(`</div><div class="mt-4"${_scopeId}>`);
+            _push2(ssrRenderComponent(_sfc_main$1, {
+              for: "password_confirmation",
+              value: "Confirmer le mot de passe"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$2, {
+              id: "password_confirmation",
+              type: "password",
+              class: "mt-1 block w-full",
+              modelValue: unref(form).password_confirmation,
+              "onUpdate:modelValue": ($event) => unref(form).password_confirmation = $event,
+              required: "",
+              autocomplete: "new-password"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$3, {
+              class: "mt-2",
+              message: unref(form).errors.password_confirmation
+            }, null, _parent2, _scopeId));
+            _push2(`</div><div class="flex items-center justify-end mt-4"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(Link), {
+              href: _ctx.route("login"),
+              class: "underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(` Déjà enregistré? `);
+                } else {
+                  return [
+                    createTextVNode(" Déjà enregistré? ")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(ssrRenderComponent(PrimaryButton, {
+              class: ["ml-4", { "opacity-25": unref(form).processing }],
+              disabled: unref(form).processing
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(` S&#39;inscrire `);
+                } else {
+                  return [
+                    createTextVNode(" S'inscrire ")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</div></form></div>`);
+          } else {
+            return [
+              createVNode(unref(Head), { title: "Register" }),
+              createVNode("div", { class: "w-full md:w-6/12 p-6 m-auto mt-6 bg-white shadow-lg rounded" }, [
+                createVNode("form", {
+                  onSubmit: withModifiers(submit, ["prevent"])
+                }, [
+                  createVNode("div", null, [
+                    createVNode(_sfc_main$1, {
+                      for: "name",
+                      value: "Nom complet"
+                    }),
+                    createVNode(_sfc_main$2, {
+                      id: "name",
+                      type: "text",
+                      class: "mt-1 block w-full",
+                      modelValue: unref(form).name,
+                      "onUpdate:modelValue": ($event) => unref(form).name = $event,
+                      required: "",
+                      autofocus: "",
+                      autocomplete: "name"
+                    }, null, 8, ["modelValue", "onUpdate:modelValue"]),
+                    createVNode(_sfc_main$3, {
+                      class: "mt-2",
+                      message: unref(form).errors.name
+                    }, null, 8, ["message"])
+                  ]),
+                  createVNode("div", { class: "mt-4" }, [
+                    createVNode(_sfc_main$1, {
+                      for: "email",
+                      value: "Email"
+                    }),
+                    createVNode(_sfc_main$2, {
+                      id: "email",
+                      type: "email",
+                      class: "mt-1 block w-full",
+                      modelValue: unref(form).email,
+                      "onUpdate:modelValue": ($event) => unref(form).email = $event,
+                      required: "",
+                      autocomplete: "username"
+                    }, null, 8, ["modelValue", "onUpdate:modelValue"]),
+                    createVNode(_sfc_main$3, {
+                      class: "mt-2",
+                      message: unref(form).errors.email
+                    }, null, 8, ["message"])
+                  ]),
+                  createVNode("div", { class: "mt-4" }, [
+                    createVNode(_sfc_main$1, {
+                      for: "password",
+                      value: "Mot de passe"
+                    }),
+                    createVNode(_sfc_main$2, {
+                      id: "password",
+                      type: "password",
+                      class: "mt-1 block w-full",
+                      modelValue: unref(form).password,
+                      "onUpdate:modelValue": ($event) => unref(form).password = $event,
+                      required: "",
+                      autocomplete: "new-password"
+                    }, null, 8, ["modelValue", "onUpdate:modelValue"]),
+                    createVNode(_sfc_main$3, {
+                      class: "mt-2",
+                      message: unref(form).errors.password
+                    }, null, 8, ["message"])
+                  ]),
+                  createVNode("div", { class: "mt-4" }, [
+                    createVNode(_sfc_main$1, {
+                      for: "password_confirmation",
+                      value: "Confirmer le mot de passe"
+                    }),
+                    createVNode(_sfc_main$2, {
+                      id: "password_confirmation",
+                      type: "password",
+                      class: "mt-1 block w-full",
+                      modelValue: unref(form).password_confirmation,
+                      "onUpdate:modelValue": ($event) => unref(form).password_confirmation = $event,
+                      required: "",
+                      autocomplete: "new-password"
+                    }, null, 8, ["modelValue", "onUpdate:modelValue"]),
+                    createVNode(_sfc_main$3, {
+                      class: "mt-2",
+                      message: unref(form).errors.password_confirmation
+                    }, null, 8, ["message"])
+                  ]),
+                  createVNode("div", { class: "flex items-center justify-end mt-4" }, [
+                    createVNode(unref(Link), {
+                      href: _ctx.route("login"),
+                      class: "underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    }, {
+                      default: withCtx(() => [
+                        createTextVNode(" Déjà enregistré? ")
+                      ]),
+                      _: 1
+                    }, 8, ["href"]),
+                    createVNode(PrimaryButton, {
+                      class: ["ml-4", { "opacity-25": unref(form).processing }],
+                      disabled: unref(form).processing
+                    }, {
+                      default: withCtx(() => [
+                        createTextVNode(" S'inscrire ")
+                      ]),
+                      _: 1
+                    }, 8, ["class", "disabled"])
+                  ])
+                ], 40, ["onSubmit"])
+              ])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+    };
+  }
+};
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/Register.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+export {
+  _sfc_main as default
+};

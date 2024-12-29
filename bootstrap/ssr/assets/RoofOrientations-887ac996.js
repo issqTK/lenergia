@@ -1,0 +1,29 @@
+import { ssrInterpolate, ssrRenderClass } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./_plugin-vue_export-helper-cc2b3d55.js";
+const _sfc_main = {
+  props: ["roofOrientation", "getNext"],
+  emits: ["roof-orientation"],
+  methods: {
+    showOtions() {
+      document.getElementById("select").classList.toggle("!block");
+    },
+    select(text) {
+      this.$emit("roof-orientation", text);
+      document.getElementById("select").classList.remove("!block");
+    }
+  }
+};
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<!--[--><h3 class="flex items-center justify-center font-bold md:font-extrabold text-xl md:text-2xl mb-6"> Quel est l&#39;orientation de votre toiture ? </h3><span class="w-12 h-2 bg-green-200 m-auto mb-6 block rounded"></span><p class="font-bold md:font-extrabold text-lg md:text-xl text-center mb-12">Sélectionné une orientation de votre toit</p><div class="relative mt-2 md:w-8/12 w-9/12 mx-auto"><button type="button" class="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label"><span class="flex items-center"><span class="ml-3 block truncate">${ssrInterpolate(this.roofOrientation.length != 0 ? this.roofOrientation : "Select un item")}</span></span><span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2"><svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" clip-rule="evenodd"></path></svg></span></button><ul id="select" class="hidden absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3"><li class="${ssrRenderClass([this.roofOrientation == "Sud" ? "!bg-gray-100" : "", "hover:bg-gray-100 text-gray-900 relative cursor-default select-none py-2 pl-3 pr-9"])}" id="listbox-option-0" role="option"><div class="flex items-center"><span class="font-normal ml-3 block truncate">Sud</span></div><span class="${ssrRenderClass([this.roofOrientation == "Sud" ? "!inline-block" : "", "hidden text-indigo-600 absolute inset-y-1 right-3 flex justify-center items-center"])}"><svg class="h-5 w-5 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg></span></li><li class="${ssrRenderClass([this.roofOrientation == "Est - Ouest" ? "!bg-gray-100" : "", "hover:bg-gray-100 text-gray-900 relative cursor-default select-none py-2 pl-3 pr-9"])}" id="listbox-option-0" role="option"><div class="flex items-center"><span class="font-normal ml-3 block truncate">Est - Ouest</span></div><span class="${ssrRenderClass([this.roofOrientation == "Est - Ouest" ? "!inline-block" : "", "hidden text-indigo-600 absolute inset-y-1 right-3 flex justify-center items-center"])}"><svg class="h-5 w-5 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg></span></li><li class="${ssrRenderClass([this.roofOrientation == "Sud - Est" ? "!bg-gray-100" : "", "hover:bg-gray-100 text-gray-900 relative cursor-default select-none py-2 pl-3 pr-9"])}" id="listbox-option-0" role="option"><div class="flex items-center"><span class="font-normal ml-3 block truncate">Sud - Est</span></div><span class="${ssrRenderClass([this.roofOrientation == "Sud - Est" ? "!inline-block" : "", "hidden text-indigo-600 absolute inset-y-1 right-3 flex justify-center items-center"])}"><svg class="h-5 w-5 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg></span></li><li class="${ssrRenderClass([this.roofOrientation == "Sud - Ouest" ? "!bg-gray-100" : "", "hover:bg-gray-100 text-gray-900 relative cursor-default select-none py-2 pl-3 pr-9"])}" id="listbox-option-0" role="option"><div class="flex items-center"><span class="font-normal ml-3 block truncate">Sud - Ouest</span></div><span class="${ssrRenderClass([this.roofOrientation == "Sud - Ouest" ? "!inline-block" : "", "hidden text-indigo-600 absolute inset-y-1 right-3 flex justify-center items-center"])}"><svg class="h-5 w-5 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg></span></li></ul></div><!--]-->`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/project/Work/RoofOrientations.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const RoofOrientation = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  RoofOrientation as default
+};

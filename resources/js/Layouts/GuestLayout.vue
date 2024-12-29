@@ -30,8 +30,8 @@ export default {
             <div class=" w-full md:w-3/12">
                 <div class="flex gap-2 mb-4">
                     <span class="italic">Suivez nous</span>
-                    <span class="fb"></span>
-                    <span class="in"></span>
+                    <span class="fb"><img src="/images/socieux/fb-light.png" ></span>
+                    <span class="in"><img src="/images/socieux/in-light.png" ></span>
                 </div>
                 <div class="flex flex-col gap-4">
                     <p class="text-xl">Un projet ?</p>
@@ -75,10 +75,6 @@ export default {
     </footer>
 </template>
 <style scoped>
-.fb{ background: url('/images/socieux/fb-light.png'); }
-.in{ background: url('/images/socieux/in-light.png');}
-.fb:hover{ background: url('/images/socieux/fb-dark.png'); background-size: contain;}
-.in:hover{ background: url('/images/socieux/in-dark.png'); background-size: contain;}
 .fb, .in{
     display: block;
     width: 30px;
