@@ -40,7 +40,7 @@
                                              <tr>
                                                 <td align="center" class="r6-i nl2go-default-textstyle" style="color: #414141; font-family: Palatino; font-size: 16px; line-height: 1.5; word-break: break-word; padding-left: 30px; padding-right: 30px; text-align: center;">
                                                    <div>
-                                                      <p style="margin: 0;"><a href="{{ mirror }}" style="color: #14b8a6; text-decoration: underline;"><span style="color: #858588; font-size: 12px;"><u>Afficher dans le navigateur</u></span></a></p>
+                                                      <p style="margin: 0;"><a href="https://lenergia.fr/view-mail-content" style="color: #14b8a6; text-decoration: underline;"><span style="color: #858588; font-size: 12px;"><u>Afficher dans le navigateur</u></span></a></p>
                                                    </div>
                                                 </td>
                                              </tr>
