@@ -378,9 +378,9 @@
                                              <tr>
                                                 <td align="right" valign="top" class="r40-i nl2go-default-textstyle" style="color: #414141; font-family: Palatino; font-size: 16px; word-break: break-word; line-height: 1.1; text-align: right;">
                                                    <div>
-                                                      <p style="margin: 0;"><a href="https://" target="_blank" style="color: #14b8a6; text-decoration: underline;"><span style="font-size: 12px;"><u>Confidentialité</u></span></a></p>
-                                                      <p style="margin: 0;"><a href="https://" target="_blank" style="color: #14b8a6; text-decoration: underline;"><span style="font-size: 12px;"><u>Imprint</u></span></a></p>
-                                                      <p style="margin: 0;"><a href="{{ unsubscribe }}" target="_blank" style="color: #14b8a6; text-decoration: underline;"><span style="font-size: 12px;"><u>Se désinscrire</u></span></a></p>
+                                                      <p style="margin: 0;"><a href="https://lenergia.fr/about" target="_blank" style="color: #14b8a6; text-decoration: underline;"><span style="font-size: 12px;"><u>Confidentialité</u></span></a></p>
+                                                      <p style="margin: 0;"><span style="font-size: 12px;"><u>Imprint</u></span></p>
+                                                      
                                                    </div>
                                                 </td>
                                              </tr>
