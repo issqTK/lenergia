@@ -122,7 +122,7 @@
                                                       <tr>
                                                          <td class="r20-c nl2go-default-textstyle" align="left" style="color: #414141; font-family: Palatino; font-size: 16px; line-height: 1.5; word-break: break-word; padding-top: 15px; text-align: left; valign: top;">
                                                             <div>
-                                                               <p style="margin: 0;"><span style="font-family: Verdana, geneva, sans-serif, Arial;"><strong>Bonjour</strong></span>{{$name}}<strong>,</strong></p>
+                                                               <p style="margin: 0;"><span style="font-family: Verdana, geneva, sans-serif, Arial;"><strong>Bonjour</strong></span> {{$name}}<strong>,</strong></p>
                                                                <p style="margin: 0;"><span style="font-family: Verdana, geneva, sans-serif, Arial;">Merci pour le temps que vous avez consacré à discuter avec notre conseiller. Nous sommes ravis de constater votre intérêt pour le projet de rénovation énergétique. Comme évoqué lors de notre appel, votre maison répond aux critères d’éligibilité, et nous souhaitons maintenant avancer ensemble dans les étapes suivantes.</span></p>
                                                             </div>
                                                          </td>
