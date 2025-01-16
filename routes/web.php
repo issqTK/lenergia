@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [OrderController::class, 'viewAll'])->name('all');
         Route::post('/update-client/{orderId}', [OrderController::class, 'storeClient']);
         Route::post('/update-order/{orderId}', [OrderController::class, 'storeOrder']);
+        #Route::delete('/delete-order/{orderId}', [OrderController::class, 'seleteOrder']);
         Route::post('/create-work/{orderId}', [OrderController::class, 'createWork']);
         Route::get('/delete-work', [OrderController::class, 'deleteWork']);
         Route::post('/review-state/{orderId}', [OrderController::class, 'reviewState']);
