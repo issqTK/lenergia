@@ -130,7 +130,6 @@ This approach is optimized for call-center and sales teams.
 ![responsive 1](screenshots/4.png)
 ![responsive 2](screenshots/5.png)
 ![responsive 3](screenshots/6.png)
-![responsive 4](screenshots/7.png)
 
 ---
 
