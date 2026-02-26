@@ -1,66 +1,143 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌱 Lenergia – Energy & Renovation Services Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Lenergia is a commercial web platform designed to answer real call-center and lead-generation needs for the energy and home-renovation sector.
 
-## About Laravel
+The platform allows users to browse energy and renovation services, follow a guided wizard to apply for a solution, and submit qualified requests that can later be handled by a commercial team.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Lenergia focuses on:
 
-## Learning Laravel
+- high-conversion user experience
+- step-by-step application wizard
+- structured service catalog
+- SEO-ready service pages
+- centralized content management through database seeders
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Typical user journey:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. Select a service (solar, heating, insulation, etc.)
+2. Complete a multi-step wizard
+3. Submit a request
+4. The request is stored in the system
+5. A commercial agent contacts and follows up with the client
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## ✨ Main Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Multi-service catalog (solar, heating, insulation, smart devices)
+- Guided multi-step wizard
+- Lead storage for call-center workflows
+- SEO-optimized pages (slug, meta title, structured titles)
+- Service icons and images (SVG, images, alt attributes)
+- Fully seeder-driven content
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## 🧩 Services Catalog
 
-## Contributing
+The platform uses a `works` table populated through a database seeder.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Services are grouped by category using the `type` field.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### ☀️ Solar & Renewable Energy (`type = es`)
 
-## Security Vulnerabilities
+- Panneaux solaires photovoltaïques  
+- Panneaux solaires thermiques  
+- Panneaux solaires hybrides  
+- Ballon thermodynamique / chauffe-eau thermodynamique  
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Some services reference public renovation and energy incentives such as  
+**:contentReference[oaicite:0]{index=0}**.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 🔥 Heating Systems (`type = ch`)
+
+- Pompe à chaleur  
+- Poêles à granulés  
+- Système solaire combiné  
+
+---
+
+### 🧱 Insulation (`type = i`)
+
+- Isolation des murs par l’intérieur  
+- Isolation des murs par l’extérieur  
+
+---
+
+### 🌡 Smart & Control Devices (`type = t`)
+
+- Thermostat connecté  
+
+---
+
+## 🧠 Data Model – `works` Table
+
+Each service is defined inside a database seeder and contains the following fields:
+
+| Field        | Description                                  |
+|-------------|----------------------------------------------|
+| `type`      | Service category (es, ch, i, t)               |
+| `name`      | Display name                                 |
+| `title`     | Main page title                               |
+| `description` | Rich HTML content                         |
+| `line_text` | Marketing call-to-action                     |
+| `slug`      | SEO-friendly URL                             |
+| `meta_title`| SEO meta title                               |
+| `svg`       | Icon file                                    |
+| `img`       | Main image                                   |
+| `img_alt`   | Image alt text                               |
+
+This structure allows:
+
+- centralized service management
+- consistent SEO output
+- easy extension of the platform
+
+---
+
+## 🧭 Wizard & Lead Generation Flow
+
+The wizard dynamically adapts to the selected service and collects:
+
+- project information
+- housing and installation context
+- user contact details
+
+The system then:
+
+- validates the request
+- stores it for later processing
+- allows the commercial team to contact the client
+
+This approach is optimized for call-center and sales teams.
+
+---
+
+## 📸 Screenshots
+
+![Welcome Page](screenshots/0.png)  
+![Wizard 1](screenshots/1.png)  
+![Wizard 2](screenshots/2.png)
+![wizard 3](screenshots/3.png)
+![responsive 1](screenshots/4.png)
+![responsive 2](screenshots/5.png)
+![responsive 3](screenshots/6.png)
+![responsive 4](screenshots/7.png)
+
+---
+
+## 🛠 Installation (Local Development)
+
+Clone the repository:
+
+```bash
+git clone https://github.com/issqTK/lenergia.git
+cd lenergia
